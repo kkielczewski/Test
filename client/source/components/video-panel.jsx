@@ -200,7 +200,7 @@ class VideoPanel extends React.Component {
 
   render() {
     return (
-      <div className='videoPanel' >
+      <div className='videoPanel playlistPanel' >
         <div className='video' >
           <iframe width="560" height="315" src={'https://www.youtube.com/embed/' + this.props.video.snippet.resourceId.videoId + '?rel=0'} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>

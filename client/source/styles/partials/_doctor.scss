@@ -68,14 +68,6 @@
 
       .playlistItem {
         cursor: pointer;
-        display:-webkit-flex;
-        display:-webkit-box;
-        display:-moz-flex;
-        display:-moz-box;
-        display:-ms-flexbox;
-        display:flex;
-		flex-direction: row;
-        flex-wrap: nowrap;
         min-height: 80px;
         border-style: solid;
         border-width: 1px 0 0;
@@ -86,6 +78,7 @@
           width: 80px;
           height: 60px;
           margin: 10px 20px;
+		  float: left;
         }
 
         .title {
@@ -108,7 +101,7 @@
       } */
 
       &.active {
-        padding-bottom: 420px;
+        padding-bottom: 480px;
         transition: 1.5s ease 0.5s;
         /* .video {
           position: absolute;
