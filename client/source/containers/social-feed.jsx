@@ -6,7 +6,7 @@ import FacebookItem from '../components/facebook-item';
 
 class SocialFeed extends React.Component {
 	componentDidMount() {
-		window.twttr.ready().then(() => { window.twttr.widgets.createTweet('1026547971389775878', document.getElementById('tweets'), { width: '300' }); });
+		window.twttr.ready().then(() => { window.twttr.widgets.createTweet('1026547971389775878', document.getElementById('tweets'), { width: '300', margin: '15px auto' }); });
 	}
   render() {
     return (
