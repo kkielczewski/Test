@@ -30,7 +30,6 @@ class Videos extends React.Component {
     return (
       <div className='videoFeed' >
         {this.state.currentVideos.map(video => <VideoPanel video={video} />)}
-        <div style={{ margin: 'auto', display: 'block' }} >
           <Pagination
           hideDisabled
           hideFirstLastPages
@@ -46,7 +45,6 @@ class Videos extends React.Component {
           nextPageText='>'
           onChange={this.handlePageChange}
           />
-        </div>
       </div>
     );
   }
