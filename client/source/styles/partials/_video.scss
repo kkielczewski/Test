@@ -74,7 +74,7 @@
       box-sizing: border-box;
       width: 20%;
 	  border-style: solid;
-	  border-width: 0 1px;
+	  border-width: 1px;
       height: 56px;
       background: #fff;
       text-align: center;
@@ -111,23 +111,24 @@
 
 @media screen and (max-width: 600px) {
   .videoPanel {
+	height: 431px;
     .sidePanel {
-      .value {
-        font-size: 12px;
-        font-weight: 600;
-        padding-top: 12px;
-      }
-      
-      .name {
-        font-size: 17px;
-        font-weight: 600;
-      }
-
-      .nameOnly {
-        font-size: 14px;
-        font-weight: 600;
-        padding-top: 22px;
-      }
+	  .like{
+	    width: 33%;
+	  }
+	  .dislike {
+	    width: 34%;
+	  }
+	  .subscribe {
+	    width: 33%;
+	  }
+	  .shareFacebook {
+		clear: left;
+	    width: 50%;
+	  }
+	  .shareTwitter {
+	    width: 50%;
+	  }
     }
   }
 }
