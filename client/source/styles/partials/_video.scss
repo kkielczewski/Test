@@ -37,8 +37,9 @@
   display:-moz-box;
   display:-ms-flexbox;
   display:flex;
-	flex-direction: column;
-	margin: 30px auto;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  margin: 30px auto;
   border-style: solid;
   border-width: 2px;
   border-color: black;
@@ -62,7 +63,14 @@
 
   .sidePanel {
     font-family: 'Open Sans', Helvetica, sans-serif;
-    display: block;
+    display:-webkit-flex;
+    display:-webkit-box;
+    display:-moz-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:flex;
+	flex-direction: row;
+	-webkit-flex-direction: row;
 	border-style: solid;
 	border-width: 2px 0 0 0;
     border-color: black;
@@ -70,21 +78,30 @@
     .box {
       display:block;
       box-sizing: border-box;
+      width: 100%;
+      height: 56px;
       background: #fff;
+      text-align: center;
       transition: all .4s ease-in-out;
-	  border-style: solid;
-	  border-width: 0 1px 0;
-      width: 62px;
+      
       &:hover {
         background: #ebe9e9;
         cursor: pointer;
       }
+
+      &:nth-child(n) {
+        margin: 0 1px;
+      }
     }
 
+    span {
+	    display: block;
+    }
     
     .value {
 	    font-size: 20px;
       font-weight: 600;
+      padding-top: 5px;
     }
     
     .name {
@@ -95,6 +112,7 @@
     .nameOnly {
       font-size: 20px;
       font-weight: 600;
+      padding-top: 16px;
     }
   }
 }
