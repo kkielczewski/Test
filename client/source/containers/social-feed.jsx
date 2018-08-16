@@ -17,7 +17,7 @@ class SocialFeed extends React.Component {
           source="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAllecco%2Fposts%2F1973284962721956&width=500&show_text=true&appId=293440537856514&height=788"
           width="500"
           height="788" />
-          <Tweet className="tweeterItem" tweetId="1026547971389775878" />
+          <div className='twitterItem' ><Tweet tweetId="1026547971389775878" /></div>
         </MediaQuery>
         <MediaQuery query="(max-width: 1299px)" >
           <MediaQuery query="(min-width: 993px)" >
@@ -29,7 +29,7 @@ class SocialFeed extends React.Component {
             source="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAllecco%2Fposts%2F1973284962721956&width=300&show_text=true&appId=293440537856514&height=788"
             width="300"
             height="788" />
-            <Tweet className="twitterItem" options={{ width: '300' }} tweetId="1026547971389775878" />
+            <div className='twitterItem' ><Tweet options={{ width: '300' }} tweetId="1026547971389775878" /></div>
           </MediaQuery>
           <MediaQuery query="(max-width: 992px)" >
             <MediaQuery query="(min-width: 600px)">
@@ -41,7 +41,7 @@ class SocialFeed extends React.Component {
               source="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAllecco%2Fposts%2F1973284962721956&width=500&show_text=true&appId=293440537856514&height=788"
               width="500"
               height="788" />
-              <Tweet className="twitterItem" options={{ width: '500' }} tweetId="1026547971389775878" />
+              <div className='twitterItem' ><Tweet options={{ width: '500' }} tweetId="1026547971389775878" /></div>
             </MediaQuery>
             <MediaQuery query="(max-width: 599px)">
               <FacebookItem
@@ -52,7 +52,7 @@ class SocialFeed extends React.Component {
               source="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FAllecco%2Fposts%2F1973284962721956&width=300&show_text=true&appId=293440537856514&height=788"
               width="300"
               height="788" />
-              <Tweet className="twitterItem" options={{ width: '300' }} tweetId="1026547971389775878" />
+              <div className='twitterItem' ><Tweet options={{ width: '300' }} tweetId="1026547971389775878" /></div>
             </MediaQuery>
           </MediaQuery>
         </MediaQuery>
