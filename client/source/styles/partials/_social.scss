@@ -24,10 +24,6 @@
   border-width: 2px 0 0;
   border-color: #d82923;
   background: white;
-  
-  .twitter-tweet-rendered {
-    margin: 15px auto;
-  }
 }
 
 .facebookItem {
@@ -39,6 +35,10 @@
 .twitterItem {
   display: block;
   margin: 30px auto;
+  width: 100%;
+  .twitter-tweet-rendered {
+    margin: 15px auto;
+  }
 }
 
 @media screen and (max-width: 599px) {
