@@ -4,7 +4,7 @@ import { getVideoStats, postYoutube } from '../utils/youtube-utils';
 
 let GoogleAuth;
 
-toastr.options = { positionClass: 'toast-bottom-right' };
+toastr.options = { closeButton: true, positionClass: 'toast-bottom-right' };
 
 function setSigninStatus() {
   const user = GoogleAuth.currentUser.get();

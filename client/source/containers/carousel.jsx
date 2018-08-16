@@ -1,6 +1,7 @@
 import React from 'react';
 import { CSSTransitionGroup } from 'react-transition-group';
 import MediaQuery from 'react-responsive';
+import Swipeable from 'react-swipeable';
 import CarouselSlot from '../components/carousel-slot';
 
 class Carousel extends React.Component {
@@ -60,6 +61,7 @@ class Carousel extends React.Component {
   render() {
     return (
       <div className="carMain" >
+		<Swipeable onSwipedLeft={this.rightClick} onSwipedRight={this.leftClick} >
         <MediaQuery query="(min-width: 1520px)" >
           <div id="carousel" style={{ width: '1504px' }} >
             <div className="arrowbtn arrowbtn-left" onClick={this.leftClick}></div>
@@ -100,6 +102,7 @@ class Carousel extends React.Component {
             </MediaQuery>
           </MediaQuery>
         </MediaQuery>
+		</Swipeable>
       </div>
     );
   }
