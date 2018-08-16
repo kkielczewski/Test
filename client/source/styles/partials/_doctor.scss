@@ -74,6 +74,7 @@
         display:-moz-box;
         display:-ms-flexbox;
         display:flex;
+		flex-direction: row;
         flex-wrap: nowrap;
         min-height: 80px;
         border-style: solid;
