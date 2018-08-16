@@ -63,22 +63,18 @@
 
   .sidePanel {
     font-family: 'Open Sans', Helvetica, sans-serif;
-    display:-webkit-flex;
-    display:-webkit-box;
-    display:-moz-flex;
-    display:-moz-box;
-    display:-ms-flexbox;
-    display:flex;
-	flex-direction: row;
-	-webkit-flex-direction: row;
+    display: block;
 	border-style: solid;
 	border-width: 2px 0 0 0;
     border-color: black;
     background: black;
     .box {
       display:block;
+	  float:left;
       box-sizing: border-box;
-      width: 100%;
+      width: 20%;
+	  border-style: solid;
+	  border-width: 0 1px;
       height: 56px;
       background: #fff;
       text-align: center;
@@ -87,10 +83,6 @@
       &:hover {
         background: #ebe9e9;
         cursor: pointer;
-      }
-
-      &:nth-child(n) {
-        margin: 0 1px;
       }
     }
 
