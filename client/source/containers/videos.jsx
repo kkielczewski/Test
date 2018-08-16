@@ -28,29 +28,25 @@ class Videos extends React.Component {
 
   render() {
     return (
-	  <div>
-        <div className='videoFeed' >
-          {this.state.currentVideos.map(video => <VideoPanel video={video} />)}
-		</div>
-		<div style={{ background: 'white' }} >
-			<div style={{ margin: 'auto', display: 'block', width: '288px' }} >
-			<Pagination
-			hideDisabled
-			hideFirstLastPages
-			activePage={this.state.activePage}
-			itemsCountPerPage={4}
-			totalItemsCount={this.state.totalCount}
-			pageRangeDisplayed={5}
-            activeClass="activeli"
-            activeLinkClass="active"
-            linkClassPrev="prev"
-            linkClassNext="next"
-            prevPageText="<"
-            nextPageText='>'
-            onChange={this.handlePageChange}
-            />
-          </div>
-		</div>
+      <div className='videoFeed' >
+        {this.state.currentVideos.map(video => <VideoPanel video={video} />)}
+        <div style={{ margin: 'auto', display: 'block' }} >
+          <Pagination
+          hideDisabled
+          hideFirstLastPages
+          activePage={this.state.activePage}
+          itemsCountPerPage={4}
+          totalItemsCount={this.state.totalCount}
+          pageRangeDisplayed={5}
+          activeClass="activeli"
+          activeLinkClass="active"
+          linkClassPrev="prev"
+          linkClassNext="next"
+          prevPageText="<"
+          nextPageText='>'
+          onChange={this.handlePageChange}
+          />
+        </div>
       </div>
     );
   }
