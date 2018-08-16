@@ -1,0 +1,83 @@
+// Components
+@import "partials/carousel";
+@import "partials/video";
+@import "partials/social";
+@import "partials/doctor";
+// Main Page
+* {
+  box-sizing: border-box;
+}
+
+body {
+  // background: linear-gradient(to top right, #c4dfe6 20%, #66a5ad 100%);
+  background: #f1f1f1;
+  margin: 0;
+}
+
+.loadingSpinner {
+  margin: 15px auto;
+  height: 50px;
+  width: 50px;
+  animation: rotate 1s infinite linear;
+  border: 11px solid #d82923;
+  border-right-color: transparent;
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  0%    { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
+}
+
+.tvRow {
+  display:-webkit-flex;
+  display:-webkit-box;
+  display:-moz-flex;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:flex;
+  flex-wrap: nowrap;
+}
+
+.tvSide {
+  display:block;
+  flex: 30%;
+  padding: 10px;
+}
+
+.tvMain {
+  display:block;
+  flex: 70%;
+  padding: 10px;
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .tvRow {
+    flex-wrap: wrap;
+  }
+}
+
+.navItem {
+  display:block;
+  background: #fff;
+  text-align: center;
+  padding: 12px 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3) inset;
+}
+.navItem:hover {
+  background: #f1f1f1;
+}
+
+@media screen and (max-width: 600px) {
+  .tvMain {
+    padding: 10px 0;
+  }
+
+  .tvSide {
+    padding: 10px 0;
+  }
+}

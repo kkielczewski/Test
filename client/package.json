@@ -1,0 +1,52 @@
+{
+  "name": "ALLECCO-TV",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --profile --colors --env.env=dev",
+    "start": "cross-env NODE_ENV=production webpack -p --progress --profile --colors --env.env=production"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "promise-polyfill": "^8.0.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-js-pagination": "^3.0.2",
+    "react-onclickoutside": "^6.7.1",
+    "react-responsive": "^5.0.0",
+    "react-router-dom": "^4.3.1",
+    "react-transition-group": "1.x",
+    "react-twitter-widgets": "^1.7.1",
+    "toastr": "^2.1.4",
+    "whatwg-fetch": "^2.0.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.0.2",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.2",
+    "postcss-loader": "^2.1.6",
+    "react-hot-loader": "^4.3.4",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  }
+}

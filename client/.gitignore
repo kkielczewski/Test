@@ -1,0 +1,4 @@
+/node_modules/
+
+# VSCode workspace settings.
+/.vscode/

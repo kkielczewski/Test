@@ -1,0 +1,48 @@
+.socialLabel {
+  text-align: center;
+  min-height: 30px;
+  max-height: 60px;
+  max-width: 140px;
+  background: #d82923;
+  color: white;
+  font-size: 23px;
+  padding-top: 3px;
+  margin: auto 0 auto auto;
+}
+
+.socialFeed {
+  display:-webkit-flex;
+  display:-webkit-box;
+  display:-moz-flex;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-width: 2px 0 0;
+  border-color: #d82923;
+  background: white;
+}
+
+.facebookItem {
+  display:block;
+  margin: 30px auto;
+  background: white;
+}
+
+.twitterItem {
+  margin: 30px auto;
+}
+
+@media screen and (max-width: 599px) {
+  .facebookItem {
+    margin: 15px auto;
+    background: white;
+  }
+
+  .twitterItem {
+    margin: 15px auto;
+  }
+}
