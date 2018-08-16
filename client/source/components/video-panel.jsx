@@ -205,20 +205,20 @@ class VideoPanel extends React.Component {
           <iframe width="560" height="315" src={'https://www.youtube.com/embed/' + this.props.video.snippet.resourceId.videoId + '?rel=0'} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
         <div className='sidePanel' >
-          <div class="box" onClick={ this.likeVideo} >
+          <div class="box like" onClick={ this.likeVideo} >
             <span class="nameOnly">Like</span>
           </div>
-          <div class="box" onClick={ this.dislikeVideo}>
+          <div class="box dislike" onClick={ this.dislikeVideo}>
             <span class="nameOnly">Dislike</span>
           </div>
-          <div class="box" onClick={ this.subscribe } >
+          <div class="box subscribe" onClick={ this.subscribe } >
             <span class="nameOnly">Subscribe</span>
           </div>
-          <div class="box" onClick={ this.shareFacebook } >
+          <div class="box shareFacebook" onClick={ this.shareFacebook } >
             <span class="value">Share on</span>
             <span class="name">Facebook</span>
           </div>
-          <div class="box" onClick={ this.shareTwitter } >
+          <div class="box shareTwitter" onClick={ this.shareTwitter } >
             <span class="value">Share on</span>
             <span class="name">Twitter</span>
           </div>
