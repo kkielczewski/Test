@@ -139,6 +139,11 @@
   padding: 0;
   border-radius: 50px;
   margin: 10px auto;
+  -webkit-margin-before: 10px;
+  -webkit-margin-after: 10px;
+  -webkit-margin-start: auto;
+  -webkit-margin-end: auto;
+  -webkit-padding-start: unset;
 }
 .pagination li {
   display: inline;
