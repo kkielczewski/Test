@@ -24,10 +24,14 @@
   border-width: 2px 0 0;
   border-color: #d82923;
   background: white;
+  
+  .twitter-tweet-rendered {
+  margin: 15px auto;
 }
 
 .facebookItem {
   display:block;
+  margin: 30px auto;
   background: white;
 }
 
@@ -38,6 +42,7 @@
 
 @media screen and (max-width: 599px) {
   .facebookItem {
+    margin: 15px auto;
     background: white;
   }
 
