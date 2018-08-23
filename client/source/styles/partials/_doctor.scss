@@ -24,7 +24,7 @@
       max-width: 320px;
 
       .avatar {
-        margin: 40px 0 0;
+        margin: 30px 0 0;
       }
 
       .name {
@@ -67,25 +67,27 @@
       }
 
       .playlistItem {
+        position: relative;
         cursor: pointer;
-        min-height: 80px;
+        min-height: 120px;
         border-style: solid;
         border-width: 1px 0 0;
         border-color: black;
 
         .thumbnail {
           display:block;
-          width: 80px;
-          height: 60px;
-          margin: 10px 20px;
-		  float: left;
+          float: left;
+          position: absolute;
+          left: 20px;
+          top: 0;
+          bottom: 0;
+          margin: auto;
         }
 
         .title {
           display:block;
           font-weight: 600;
-          width: 626px;
-          padding: 15px;
+          padding: 20px 15px 15px 160px;
         }
       }
 
@@ -149,5 +151,43 @@
   .docFeed {
     margin: 0;
     border-style: none;
+    .docMain {
+      .container {
+        .name {
+          font-size: 16px;
+        }
+      }
+      .description {
+        font-size: 17px;
+      }
+    }
+    .playlist {
+      font-size: 14px;
+      .playlistContainer {
+        .playlistItem {
+          min-height: 80px;
+          .thumbnail {
+            height: 60px;
+            width: 80px;
+          }
+          .title {
+            padding: 20px 15px 15px 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .docFeed {
+    .docMain {
+      .description {
+        font-size: 15px;
+      }
+    }
+    .playlist {
+      font-size: 12px;
+    }
   }
 }

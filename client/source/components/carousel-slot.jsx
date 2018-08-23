@@ -15,13 +15,10 @@ class CarouselSlot extends React.Component {
     const link = '/doctor/' + this.props.person.id;
     return (
       <div className={className}>
-        <div className="container">
+        <NavLink to={link} className="container">
           <img src={Avatar} alt="Portret" className="portrait" />
           {this.props.person.id}
-        </div>
-        <div className="middle" >
-          <NavLink to={link} className="button" >Details</NavLink>
-        </div>
+        </NavLink>
       </div>
     );
   }
