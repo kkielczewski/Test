@@ -45,7 +45,7 @@ $level3-left: 62px;
 
 .arrowbtn {
   position: absolute;
-  z-index: 1000;
+  z-index: 100;
   width: $btn-size;
   height: 210px;
   background: $btn-bg;
@@ -91,7 +91,7 @@ $level3-left: 62px;
   }
 }
 
-.item {
+.carouselItem {
   text-align: center;
   color: white;
   font-size: 20px;

@@ -1,0 +1,576 @@
+
+// Videos List
+
+.videoPicture {
+  height: 400px;
+}
+
+.videoContainer {
+  display: flex;
+}
+
+.videoList {
+  margin: 0 0 auto auto;
+  height: 1567px;
+  position: relative;
+
+  .videoNav {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .card {
+    width: 560px;
+    height: 315px;
+    margin: 60px;
+    border-radius: 1.5em!important;
+
+    .listImage {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+      border-radius: 1.5em!important;
+    }
+  
+    .listContent {
+      z-index: 2;
+      border-style: none;
+      position: absolute;
+      bottom: 0;
+      padding: 15px 20px;
+      font-size: 28px;
+
+      .description {
+        display: none;
+      }
+    }
+  }
+
+  .card:nth-child(odd) {
+    clear: left;
+    float: left;
+    margin-top: 0;
+  }
+
+  .card:first-child {
+    margin-top: 0;
+  }
+}
+
+.newsletterContainer {
+  height: 1627px;
+  width: 42%;
+}
+
+.newsletter {
+  height: 1440px;
+  width: 792px;
+  margin: 60px!important;
+  border-radius: 1.5em!important;
+  padding: 1em 3em!important;
+
+  .header {
+    font-size: 34px!important;
+    margin-top: 80px!important;
+    margin-bottom: 30px;
+  }
+  .paragraph {
+    font-size: 51px;
+    margin-bottom: 80px;
+  }
+
+  .input {
+    font-size : 3em;
+    width: 90%;
+    margin-bottom: 80px;
+
+    input {
+      padding: 0.5em 0.6em;
+      border-radius: 0.5em;
+    }
+  }
+
+  .checkbox {
+    font-size: 23px;
+    margin-bottom: 90px;
+    line-height: unset;
+    label {
+      padding-left: 54px;
+    }
+    label::before {
+      width: 51px;
+      height: 51px;
+    }
+    label::after {
+      font-size: 51px;
+      width: 51px;
+      height: 51px;
+    }
+  }
+
+  .button {
+    margin-bottom: 40px;
+    font-size: 3em;
+    padding: 0.75em 3.5em;
+    border-radius: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .videoList {
+    height: 1159px;
+
+    .card {
+      width: 432px;
+      height: 243px;
+      margin: 30px;
+    
+      .listContent {
+        font-size: 20px;
+      }
+    }
+  
+    .card:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  .newsletterContainer {
+    height: 1163px;
+    width: 39%;
+  }
+  
+  .newsletter {
+    height: 1062px;
+    width: 432px;
+    margin: 30px !important;
+    padding: 1em 1em !important;
+
+    .header {
+      font-size: 28px!important;
+      margin-top: 60px!important;
+    }
+    .paragraph {
+      font-size: 29px;
+      margin-bottom: 40px;
+    }
+  
+    .input {
+      font-size : 2em;
+      margin-bottom: 40px;
+    }
+  
+    .checkbox {
+      font-size: 17px;
+      margin-bottom: 50px;
+      label {
+        padding-left: 38px;
+      }
+      label::before {
+        width: 34px;
+        height: 34px;
+      }
+      label::after {
+        width: 34px;
+        height: 34px;
+        font-size: 34px;
+      }
+    }
+  
+    .button {
+      font-size: 2em;
+    }
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .newsletterContainer {
+    width: 38%;
+  }
+}
+
+@media screen and (max-width: 1810px) {
+  .newsletterContainer {
+    width: 37%;
+  }
+}
+@media screen and (max-width: 1680px) {
+  .newsletterContainer {
+    width: 36%;
+  }
+}
+
+@media screen and (max-width: 1530px) {
+  .newsletterContainer {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .videoList {
+    height: 847px;
+
+    .card {
+      width: 320px;
+      height: 180px;
+      margin: 15px;
+
+      .listContent {
+        font-size: 15px;
+      }
+    }
+  
+    .card:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  .newsletterContainer {
+    height: 862px;
+    width: 38%;
+  }
+  
+  .newsletter {
+    height: 766px;
+    width: 320px;
+    margin: 15px !important;
+
+    .header {
+      font-size: 20px!important;
+      margin-top: 15px!important;
+      margin-bottom: 20px;
+    }
+    .paragraph {
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+  
+    .input {
+      font-size : 1.5em;
+      margin-bottom: 30px;
+    }
+  
+    .checkbox {
+      font-size: 14px;
+      margin-bottom: 20px;
+      label {
+        padding-left: 32px;
+      }
+      label::before {
+        width: 28px;
+        height: 28px;
+      }
+      label::after {
+        width: 28px;
+        height: 28px;
+        font-size: 28px;
+      }
+    }
+  
+    .button {
+      font-size: 1.5em;
+    }
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .newsletterContainer {
+    width: 37%;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .newsletterContainer {
+    width: 36%;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .newsletterContainer {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .newsletterContainer {
+    width: 34%;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .videoPicture {
+    height: 300px;
+  }
+  .videoContainer {
+    display: unset;
+  }
+
+  .videoList {
+    height: auto;
+    width: 746px;
+    margin: auto;
+
+    .videoNav {
+      position: unset;
+    }
+
+    .card {
+      width: 368px;
+      height: 207px;
+      margin: 10px 10px 10px 0;
+    }
+
+    .card:first-child {
+      margin-top: unset;
+    }
+  }
+  
+  .newsletterContainer {
+    height: 520px;
+    width: 100%;
+
+  }
+  
+  .newsletter {
+    height: 512px;
+    width: 710px;
+    margin: auto !important;
+
+    .header {
+      margin-bottom: 10px;
+    }
+    .paragraph {
+      font-size: 26px;
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .videoPicture {
+    height: 200px;
+  }
+  .videoList {
+    width: 480px;
+    margin: auto;
+
+    .card {
+      width: 480px;
+      height: 270px;
+      margin: 10px auto;
+    }
+
+    .card:first-child {
+      margin-top: 20px;
+    }
+  }
+  
+  .newsletterContainer {
+    height: 100%;
+    width: 100%;
+
+  }
+  
+  .newsletter {
+    height: 100%;
+    width: 100%;
+    border-radius: unset !important;
+
+    .button {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .videoList {
+    width: 400px;
+    margin: auto;
+
+    .card {
+      width: 400px;
+      height: 225px;
+      margin: 10px auto;
+
+      .listContent {
+        font-size: 13px;
+      }
+    }
+
+    .card:first-child {
+      margin-top: 20px;
+    }
+  }
+  
+  .newsletterContainer {
+    height: 100%;
+    width: 100%;
+
+  }
+  
+  .newsletter {
+    height: 100%;
+    width: 100%;
+    border-radius: unset !important;
+
+    .button {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .videoList {
+    width: 100%;
+    margin: auto;
+
+    .card {
+      width: 100%;
+      height: 171px;
+      margin: 0;
+      border-radius: 0 !important;
+      border-style: solid;
+      border-width: 1px;
+      border-color: white;
+
+      .listContent {
+        padding: 10px;
+      }
+
+      .listImage {
+        border-radius: 0 !important;
+      }
+    }
+
+    .card:first-child {
+      margin-top: 20px;
+    }
+  }
+}
+
+// Main Movies
+
+.mainMovies {
+  display: flex;
+  width: 2085px;
+  margin: auto;
+
+  .card {
+    width: 480px;
+    height: 270px;
+    margin: auto;
+    border-radius: 1.5em!important;
+
+    .listImage {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+      border-radius: 1.5em!important;
+    }
+  
+    .listContent {
+      z-index: 2;
+      border-style: none;
+      position: absolute;
+      bottom: 0;
+      padding: 15px 20px;
+      font-size: 28px;
+
+      .description {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .mainMovies {
+    width: 1386px;
+
+    .card {
+      width: 432px;
+      height: 243px;
+
+      .listContent {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .mainMovies {
+    width: 1020px;
+
+    .card {
+      width: 320px;
+      height: 180px;
+
+      .listContent {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .mainMovies {
+    width: 760px;
+    flex-wrap: wrap;
+
+    .card {
+      width: 368px;
+      height: 207px;
+      margin-top: 20px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .mainMovies {
+    display: unset;
+
+    .card {
+      width: 480px;
+      height: 270px;
+      margin: 20px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mainMovies {
+    .card {
+      width: 400px;
+      height: 225px;
+      margin: 10px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .mainMovies {
+    display: unset;
+
+    .card {
+      width: 100%;
+      height: 171px;
+      margin: 0!important;
+      border-radius: 0 !important;
+      border-style: solid;
+      border-width: 1px;
+      border-color: white;
+
+      .listImage {
+        border-radius: 0 !important;
+      }
+    }
+  }
+}

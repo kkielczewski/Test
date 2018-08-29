@@ -24,7 +24,7 @@ module.exports = [
     ]
   },
   {
-    test: /\.(woff|woff2)$/,
+    test: /\.(woff|woff2|eot|ttf)$/,
     exclude: /(node_modules)/,
     loader: 'url-loader?prefix=font/&limit=5000'
   },

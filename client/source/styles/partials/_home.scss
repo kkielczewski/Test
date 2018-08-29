@@ -1,0 +1,460 @@
+.homeTitle {
+  font-size: 3em;
+}
+
+// Video Carousel
+.videoCarousel {
+  width: 1660px;
+  margin: auto;
+  overflow: hidden;
+
+  .videoCard {
+    padding: 10px;
+
+    .videoImage {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+    }
+
+    .videoContent {
+      z-index: 2;
+      border-style: none;
+      position: absolute;
+      bottom: 0;
+      padding: 5px;
+      font-size: 10px;
+    }
+  }
+
+  .slick-prev {
+    z-index: 60;
+    transform: scale(3);
+    left: 28%;
+  }
+
+  .slick-next {
+    z-index: 60;
+    transform: scale(3);
+    right: 28%;
+  }
+  .slick-list {
+    overflow: visible;
+    height: 481px;
+    top: 70px;
+  }
+
+  .card {
+    transition: 1s ease;
+    overflow: hidden;
+    width: 100%;
+    margin: 73px 0;
+    min-height: 315px;
+  }
+
+  .slick-center .card {
+    transform: scale(1.5);
+    z-index: 50;
+    transition: 1s ease;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .videoCarousel {
+    width: 1360px;
+
+    .slick-list {
+      height: 412px;
+    }
+
+    .card {
+      min-height: 261px;
+    }
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .videoCarousel {
+    width: 1056px;
+
+    .slick-prev {
+      left: 21%;
+    }
+
+    .slick-next {
+      right: 21%;
+    }
+
+    .slick-list {
+      height: 407px;
+      top: 92px;
+    }
+
+    .card {
+      min-height: 198px;
+    }
+
+    .slick-center .card {
+      transform: scale(2);
+    }
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .videoCarousel {
+    width: 752px;
+
+    .slick-prev {
+      transform: scale(4);
+      left: 5%;
+    }
+  
+    .slick-next {
+      transform: scale(4);
+      right: 5%;
+    }
+
+    .slick-list {
+      height: 443px;
+      top: 0;
+    }
+
+    .card {
+      min-height: 423px;
+      transform: scale(1);
+    }
+
+    .slick-center .card {
+      transform: scale(1);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .videoCarousel {
+    width: 100%;
+
+    .slick-prev {
+      left: 8%;
+    }
+  
+    .slick-next {
+      right: 8%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .videoCarousel {
+    width: 100%;
+
+    .slick-prev {
+      left: 13%;
+    }
+  
+    .slick-next {
+      right: 13%;
+    }
+
+    .slick-list {
+      height: 372px;
+    }
+
+    .card {
+      min-height: 352px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .videoCarousel {
+    .slick-list {
+      height: 330px;
+    }
+
+    .card {
+      min-height: 310px;
+    }
+  }
+}
+
+// Doctor Carousel
+
+.doctorCarousel {
+  width: 1500px;
+  margin: 90px auto 40px;
+  top: -75px;
+
+  .card {
+    border-radius: 0;
+  }
+
+  .ui.card>:only-child {
+    border-radius: 0!important;
+  }
+
+  .slick-arrow::before {
+    opacity: 1;
+    color: #db2828;
+    z-index: 1;
+  }
+
+  .slick-prev {
+    transform: scale(4);
+    left: -50px;
+  }
+
+  .slick-next {
+    transform: scale(4);
+    right: -50px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .doctorCarousel {
+    width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .doctorCarousel {
+    width: 900px;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .doctorCarousel {
+    width: 600px;
+
+    .slick-prev {
+      left: -40px;
+    }
+
+    .slick-next {
+      right: -40px;
+    }
+
+    .slick-arrow {
+      transform: scale(3);
+    }
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .doctorCarousel {
+    width: 300px;
+
+    .slick-arrow {
+      transform: scale(4);
+    }
+
+    .videoCard {
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .doctorCarousel {
+    .slick-arrow {
+      visibility: hidden;
+      left: 20%;
+    }
+  }
+}
+
+//Survey
+
+.survey {
+  background:gray;
+  position: relative;
+  height: 530px;
+  top: -75px;
+
+  .surveySegment {
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .segment{
+      height: 100%;
+      padding: 35px;
+      border-radius: 2em;
+
+      .header {
+        font-size: 5em;
+      }
+
+      .paragraph {
+        font-size: 32px;
+        width: 80%;
+        margin: auto auto 25px auto;
+      }
+
+      .input {
+        font-size: 2em;
+        width: 60%;
+        margin-bottom: 10px;
+        input {
+          padding: 0.5em 1em;
+          border-radius: 2em;
+          text-align: center;
+        }
+      }
+
+      .ui.button {
+        font-size: 2em;
+        padding: 0.75em 3.5em;
+        border-radius: 1.75em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .survey {
+    height: 535px;
+    .surveySegment {
+      .segment {
+        .paragraph {
+          width: 100%;
+        }
+        .input {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .survey {
+    .surveySegment {
+      width: 90%;
+      .segment {
+        padding: 15px;
+
+        .input {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .survey {
+    height: 440px;
+    .surveySegment {
+      .segment {
+        .header {
+          font-size: 4em;
+        }
+        .paragraph {
+          font-size: 24px;
+        }
+        .ui.button {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .survey {
+    height: 265px;
+    .surveySegment {
+      width: 100%;
+      height: 100%;
+      .segment {
+        padding: 15px 5px;
+        border-radius: 0;
+        .header {
+          font-size: 3em;
+        }
+        .paragraph {
+          font-size: 16px;
+        }
+        .input {
+          font-size: 1em;
+          width: 90%;
+        }
+        .ui.button {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
+
+// Main Articles
+
+.mainArticles {
+  display: flex;
+  width: 1660px;
+  margin: auto;
+  .ui.card {
+    margin: auto;
+    height: 480px;
+    width: 315px;
+    border-radius: 1.5em;
+  }
+  .ui.card>:first-child {
+    border-radius: 1.5em 1.5em 0 0!important;
+    height: 75%;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .mainArticles {
+    width: 1360px;
+  }
+}
+
+@media screen and (max-width: 1370px) {
+  .mainArticles {
+    width: 1056px;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .mainArticles {
+    width: 752px;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .mainArticles {
+    width: 100%;
+  }
+}
+
+// Product Carousel
+.productCarousel {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+
+  .slick-arrow {
+    left: 8%;
+    visibility: hidden;
+  }
+
+  .card {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+  }
+}

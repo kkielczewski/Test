@@ -22,7 +22,7 @@ const items = [{ id: '1', name: 'Bob', picture: '' },
 class MainFeed extends React.Component {
   render() {
     return (
-      <div style={{ marginTop: '35px', boxShadow: '0px -5px 10px 0px rgba(0,0,0,0.3)' }} >
+      <div style={{ marginTop: '80px', boxShadow: '0px -5px 10px 0px rgba(0,0,0,0.3)' }} >
         <Carousel items={items} active ={0} />
         <div className="tvRow" >
           <div className="tvMain" >

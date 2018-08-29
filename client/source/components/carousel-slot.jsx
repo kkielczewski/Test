@@ -11,7 +11,7 @@ class CarouselSlot extends React.Component {
   }
 
   render() {
-    const className = 'item level' + this.props.level;
+    const className = 'carouselItem level' + this.props.level;
     const link = '/doctor/' + this.props.person.id;
     return (
       <div className={className}>
