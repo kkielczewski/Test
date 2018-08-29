@@ -98,7 +98,7 @@
   .checkbox {
     font-size: 23px;
     margin-bottom: 90px;
-    line-height: unset;
+    line-height: normal;
     label {
       padding-left: 54px;
     }
@@ -307,7 +307,7 @@
     height: 300px;
   }
   .videoContainer {
-    display: unset;
+    display: inline;
   }
 
   .videoList {
@@ -316,7 +316,7 @@
     margin: auto;
 
     .videoNav {
-      position: unset;
+      position: relative;
     }
 
     .card {
@@ -326,7 +326,7 @@
     }
 
     .card:first-child {
-      margin-top: unset;
+      margin-top: 0;
     }
   }
   
@@ -378,7 +378,7 @@
   .newsletter {
     height: 100%;
     width: 100%;
-    border-radius: unset !important;
+    border-radius: 0 !important;
 
     .button {
       margin-bottom: 20px;
@@ -415,7 +415,7 @@
   .newsletter {
     height: 100%;
     width: 100%;
-    border-radius: unset !important;
+    border-radius: 0 !important;
 
     .button {
       margin-bottom: 20px;
@@ -535,7 +535,7 @@
 
 @media screen and (max-width: 760px) {
   .mainMovies {
-    display: unset;
+    display: inline;
 
     .card {
       width: 480px;
@@ -557,8 +557,6 @@
 
 @media screen and (max-width: 400px) {
   .mainMovies {
-    display: unset;
-
     .card {
       width: 100%;
       height: 171px;
