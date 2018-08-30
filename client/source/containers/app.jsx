@@ -8,6 +8,7 @@ import NavBar from '../components/nav-bar';
 import Home from './home';
 import Video from './video';
 import Articles from './articles';
+import VideoPage from './video-page';
 
 class App extends React.Component {
   render() {
@@ -19,6 +20,7 @@ class App extends React.Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/video" component={Video} />
             <Route exact path="/blog" component={Articles} />
+            <Route exact path="/video/:id" component={VideoPage} />
           </Switch>
         </div>
       </BrowserRouter>
