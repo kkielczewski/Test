@@ -64,6 +64,12 @@ async function getAllVideos(playlist) {
   return videos;
 }
 
+async function getVideo(video) {
+  const object = await getYoutube(`videos?key=AIzaSyBAvkC4SNGj2oa19dL-AvWs7W5j-mLZJsk&id=${video}&part=snippet`)
+    .then((data) => { return data.items[0]; });
+  return object;
+}
+
 async function getSomeVideos(playlist) {
   let object = await getYoutube(`playlistItems?key=AIzaSyBAvkC4SNGj2oa19dL-AvWs7W5j-mLZJsk&playlistId=${playlist}&part=snippet&maxResults=48`)
     .then((data) => { return { videos: data.items, totalCount: data.pageInfo.totalResults }; });
@@ -82,6 +88,7 @@ export {
   postYoutube,
   destroyYoutube,
   getAllVideos,
+  getVideo,
   getSomeVideos,
   getVideoStats
 };

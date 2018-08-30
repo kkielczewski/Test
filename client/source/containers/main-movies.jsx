@@ -15,8 +15,6 @@ class MainArticles extends React.Component {
   async componentDidMount() {
     const object = await getSomeVideos('UUlYlNvdBOuwuQZrCle9BrcA');
 
-    console.log(object);
-
     this.setState({ allVideos: object.videos });
   }
 
