@@ -1,3 +1,7 @@
+.otherMovies {
+  margin-bottom: 30px;
+}
+
 .videoPageContainer {
   width: 1700px;
   margin: auto;
@@ -8,6 +12,10 @@
       width: 1280px;
       height: 720px;
       border-radius: 1.5em!important;
+
+      .content {
+        border: none;
+      }
     }
 
     .videoImage {
@@ -26,7 +34,8 @@
       .header {
         float: left;
         width: 65%;
-        font-size: 38px;
+        font-size: 32px;
+        margin-bottom: 15px;
       }
 
       .buttons {
@@ -41,9 +50,13 @@
     .description {
       clear: both;
       width: 1280px;
-      font-size: 24px;
-      padding: 0 20px;
+      font-size: 21px;
+      padding: 0 16px;
       margin-bottom: 20px;
+
+      .header {
+        font-size: 26px;
+      }
     }
   }
 
@@ -59,27 +72,54 @@
       }
 
       .social {
-        width: 237px;
+        width: 281px;
         margin: auto;
 
         .button {
-          font-size: 2em;
+          font-size: 3em;
+          padding: 20px 40px;
         }
       }
-
-      .card {
-        width: 352px;
-        height: 198px;
-        border-radius: 1.5em!important;
-
-        .Image {
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          left: 0px;
-          top: 0px;
-          z-index: 1;
+      .lastAM {
+        .card {
+          width: 352px;
+          height: 198px;
           border-radius: 1.5em!important;
+
+          .content {
+            border: none;
+          }
+
+          .Image {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 1;
+            border-radius: 1.5em!important;
+          }
+        }
+      }
+      .articleProducts {
+        .card {
+          width: 300px;
+          margin: 10px auto;
+          .imageContainer {
+            position: relative;
+            height: 270px;
+
+            .Image {
+              max-width: 100%;
+              max-height: 100%;
+              position: absolute;
+              margin: auto;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+            }
+          }
         }
       }
     }
@@ -98,14 +138,75 @@
     }
   }
   .details{
-    padding-top: 30px; 
+    padding-top: 20px; 
     .header {
-      font-size: 45px;
+      font-size: 32px;
     }
 
     .description {
+      font-size: 21px;
+      min-height: 410px;
+    }
+  }
+}
+
+.advice {
+  width: 1700px;
+  margin: auto auto 40px auto;
+  .input {
+    input {
+      border-radius: 1.5rem !important;
+    }
+  }
+}
+
+.otherArticles {
+  display: flex;
+  width: 2085px;
+  margin: auto;
+
+  .card {
+    width: 480px;
+    height: 270px;
+    margin: auto;
+    border-radius: 1.5em!important;
+
+    .Image {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+      border-radius: 1.5em!important;
+    }
+  
+    .articleContent {
+      z-index: 2;
+      border-style: none;
+      position: absolute;
+      bottom: 0;
+      padding: 15px 20px;
       font-size: 28px;
-      min-height: 386px;
+
+      .description {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .otherArticles {
+    width: 1386px;
+
+    .card {
+      width: 432px;
+      height: 243px;
+
+      .articleContent {
+        font-size: 20px;
+      }
     }
   }
 }
@@ -132,7 +233,11 @@
       }
       .description {
         width: 960px;
-        font-size: 22px;
+        font-size: 20px;
+
+        .header {
+          font-size: 24px;
+        }
       }
     }
   }
@@ -143,10 +248,13 @@
         font-size: 26px;
       }
       .description {
-        font-size: 22px;
-        min-height: 406px;
+        font-size: 20px;
+        min-height: 417px;
       }
     }
+  }
+  .advice {
+    width: 1375px;
   }
 }
 
@@ -162,7 +270,7 @@
         width: 640px;
         .header {
           width: 64%;
-          font-size: 20px;
+          font-size: 22px;
         }
         .buttons {
           .button {
@@ -172,7 +280,7 @@
       }
       .description {
         width: 640px;
-        font-size: 18px;
+        font-size: 16px;
       }
     }
     .sidePanel {
@@ -180,15 +288,23 @@
         margin: auto auto auto 30px;
         width: 300px;
 
-        .card {
-          width: 320px;
-          height: 180px;
-        }
+        .lastAM {
+          .card {
+            width: 300px;
+            height: 180px;
+          }
         
-        .social {
-          width: 178px;
-          .button {
-            font-size: 1.5em;
+          .social {
+            width: 201px;
+            .button {
+              font-size: 2em;
+              padding: 15px 30px;
+            }
+          }
+        }
+        .articleProducts {
+          .card {
+            width: 270px;
           }
         }
       }
@@ -208,8 +324,25 @@
         font-size: 20px;
       }
       .description {
-        font-size: 18px;
-        min-height: 406px;
+        font-size: 16px;
+        min-height: 264px;
+      }
+    }
+  }
+
+  .advice {
+    width: 970px;
+  }
+
+  .otherArticles {
+    width: 1020px;
+
+    .card {
+      width: 320px;
+      height: 180px;
+
+      .articleContent {
+        font-size: 15px;
       }
     }
   }
@@ -241,6 +374,33 @@
     .details {
       min-height: 268px;
     }
+  }
+  .advice {
+    width: 720px;
+    .header {
+      font-size: 24px !important;
+    }
+    .input {
+      font-size: 1.3em !important;
+    }
+  }
+  .otherMovies {
+    .header {
+      font-size: 24px !important;
+    }
+  }
+  .otherArticles {
+    width: 760px;
+    flex-wrap: wrap;
+
+    .card {
+      width: 368px;
+      height: 207px;
+      margin-top: 20px !important;
+    }
+  }
+  .recomendedProducts {
+    font-size: 24px !important;
   }
 }
 
@@ -294,6 +454,18 @@
       }
     }
   }
+  .advice {
+    width: 100%;
+  }
+  .otherArticles {
+    display: inline;
+
+    .card {
+      width: 480px;
+      height: 270px;
+      margin: 20px auto;
+    }
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -310,6 +482,16 @@
           }
         }
       }
+    }
+  }
+  .advice {
+    margin: auto auto 30px auto;
+  }
+  .otherArticles {
+    .card {
+      width: 400px;
+      height: 225px;
+      margin: 10px auto;
     }
   }
 }
@@ -334,6 +516,37 @@
       .expertImage {
         width: 100%;
         padding: 10px;
+      }
+    }
+  }
+  .advice {
+    .header {
+      font-size: 20px !important;
+    }
+    .input {
+      font-size: 1em !important;
+    }
+  }
+  .otherMovies {
+    .header {
+      font-size: 20px !important;
+    }
+  }
+  .recomendedProducts {
+    font-size: 20px !important;
+  }
+  .otherArticles {
+    .card {
+      width: 100%;
+      height: 171px;
+      margin: 0!important;
+      border-radius: 0 !important;
+      border-style: solid;
+      border-width: 1px;
+      border-color: white;
+
+      .Image {
+        border-radius: 0 !important;
       }
     }
   }

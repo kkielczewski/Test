@@ -259,6 +259,14 @@
   .doctorCarousel {
     width: 300px;
 
+    .slick-prev {
+      left: -50px;
+    }
+
+    .slick-next {
+      right: -50px;
+    }
+
     .slick-arrow {
       transform: scale(4);
     }
@@ -420,13 +428,25 @@
   margin: auto;
   .ui.card {
     margin: auto;
-    height: 480px;
-    width: 315px;
+    height: 280px;
+    width: 320px;
     border-radius: 1.5em;
+
+    .content {
+      .description {
+        margin-top: 0 !important;
+      }
+    }
   }
   .ui.card>:first-child {
     border-radius: 1.5em 1.5em 0 0!important;
-    height: 75%;
+    height: 180px;
+  }
+}
+
+@media screen and (min-width: 2171px) {
+  .mainArticles {
+    width: 1980px;
   }
 }
 
@@ -438,19 +458,78 @@
 
 @media screen and (max-width: 1370px) {
   .mainArticles {
-    width: 1056px;
+    width: 1020px;
   }
 }
 
-@media screen and (max-width: 1070px) {
+@media screen and (max-width: 1024px) {
+  .mainArticlesContainer {
+    width: 645px;
+    margin: auto;
+  }
   .mainArticles {
-    width: 752px;
+    width: 645px;
+    display: inline-block;
+
+    .ui.card {
+      margin: auto auto 10px 0 !important;
+    }
+
+    .ui.card:nth-child(odd) {
+      clear: both;
+      float: left;
+      margin: auto 5px 10px auto !important;
+    }
   }
 }
 
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 768px) {
+  .mainArticlesContainer {
+    width: 485px;
+  }
+  .mainArticles {
+    width: 485px;
+
+    .ui.card {
+      width: 240px;
+      height: 255px;
+    }
+    .ui.card>:first-child {
+      height: 135px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mainArticlesContainer {
+    width: 100%;
+  }
   .mainArticles {
     width: 100%;
+
+    .ui.card {
+      width: 49%;
+      border-radius: 0 !important;
+    }
+    .ui.card>:first-child {
+      border-radius: 0 !important;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .mainArticles {
+    .ui.card {
+      width: 100%;
+      height: 290px;
+    }
+    .ui.card>:first-child {
+      height: 180px !important;
+    }
+    .ui.card:nth-child(odd) {
+      clear: none;
+      float: none;
+    }
   }
 }
 

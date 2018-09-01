@@ -164,7 +164,7 @@ class Video extends React.Component {
         </div>
 
         <Header dividing textAlign='center' size='huge' >Ostatnie Artykuły</Header>
-        <MainArticles />
+        <MainArticles max={6} />
         <Header textAlign='center' size='huge' >Polecane produkty</Header>
         <Slider {...productsSettings} >
           {this.state.allProducts.map(product => <ProductCard product={product} />)}

@@ -124,7 +124,7 @@ class Articles extends React.Component {
         <div className='videoContainer' >
           <Responsive minWidth='761' style={{ margin: 'auto 0 auto auto' }} >
           <div className='videoList' >
-            {this.state.currentArticles.map(article => <ArticleCard article={article} image={ArticlePlaceholder} imageClass='listImage' contentClass='listContent' />)}
+            {this.state.currentArticles.map(article => <ArticleCard id='1' article={article} image={ArticlePlaceholder} imageClass='listImage' contentClass='listContent' />)}
             <div className='videoNav' >
               <Pagination
               hideFirstLastPages
@@ -145,7 +145,7 @@ class Articles extends React.Component {
           </Responsive>
           <Responsive maxWidth='760'>
           <div className='videoList' >
-            {this.state.currentArticles.slice(0, 4).map(article => <ArticleCard article={article} image={ArticlePlaceholder} imageClass='listImage' contentClass='listContent' />)}
+            {this.state.currentArticles.slice(0, 4).map(article => <ArticleCard id='1' article={article} image={ArticlePlaceholder} imageClass='listImage' contentClass='listContent' />)}
             <div className='videoNav' >
               <Pagination
               hideFirstLastPages

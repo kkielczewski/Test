@@ -167,8 +167,8 @@ class Home extends React.Component {
         </Slider>
         <Survey/>
         <Header dividing textAlign='center' size='huge' >Ostatnie Artykuły</Header>
-        <MainArticles />
-        <Header textAlign='center' size='huge' >Polecane produkty</Header>
+        <MainArticles max={5} />
+        <Header className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>
         <Slider {...productsSettings} >
           {this.state.allProducts.map(product => <ProductCard product={product} />)}
         </Slider>

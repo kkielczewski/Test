@@ -1,176 +1,49 @@
 import React from 'react';
-import { Header, Button, Image, Icon, Input, Responsive } from 'semantic-ui-react';
+import { Header, Button, Image, Input, Responsive } from 'semantic-ui-react';
 import Slider from 'react-slick';
-import toastr from 'toastr';
+import { getSomeVideos } from '../utils/youtube-utils';
 import VideoCard from '../components/video-card';
-import VideoCardBig from '../components/video-card-big';
+import ArticleCard from '../components/article-card';
+import ArticleCardBig from '../components/article-card-big';
 import ProductCard from '../components/product-card';
-import { getVideo, getSomeVideos } from '../utils/youtube-utils';
+import ProductCardSmall from '../components/product-card-small';
 import Avatar from '../assets/images/avatarPlaceholder.png';
-
-// Youtube API
-
-let GoogleAuth;
-
-toastr.options = { closeButton: true, positionClass: 'toast-bottom-right' };
-
-function setSigninStatus() {
-  const user = GoogleAuth.currentUser.get();
-  const isAuthorized = user.hasGrantedScopes('https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtubepartner');
-  // Toggle button text and displayed statement based on current auth status.
-}
-
-function updateSigninStatus(isSignedIn) {
-  setSigninStatus();
-}
-
-function initClient() {
-  // Initialize the gapi.client object, which app uses to make API requests.
-  // Get client ID from API Console.
-  // 'scope' field specifies space-delimited list of access scopes
-
-  window.gapi.client.init({
-    clientId: '291647179251-29n2qbqb6qb2msl65o1v1rl8fpb5fgui.apps.googleusercontent.com',
-    discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest'],
-    scope: 'https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtubepartner'
-  }).then(() => {
-    GoogleAuth = window.gapi.auth2.getAuthInstance();
-
-    // Listen for sign-in state changes.
-    GoogleAuth.isSignedIn.listen(updateSigninStatus);
-
-    // Handle initial sign-in state. (Determine if user is already signed in.)
-    setSigninStatus();
-  });
-}
-
-/**
- * Load the API's client and auth2 modules.
- * Call the initClient function after the modules load.
- */
-function handleClientLoad() {
-  window.gapi.load('client:auth2', initClient);
-}
-
-function handleAuthClick(event) {
-  // Sign user in after click on auth button.
-  GoogleAuth.signIn();
-}
-
-function createResource(properties) {
-  const resource = {};
-  const normalizedProps = properties;
-  for (const p in properties) {
-    const value = properties[p];
-    if (p && p.substr(-2, 2) === '[]') {
-      const adjustedName = p.replace('[]', '');
-      if (value) {
-        normalizedProps[adjustedName] = value.split(',');
-      }
-      delete normalizedProps[p];
-    }
-  }
-  for (const p in normalizedProps) {
-    // Leave properties that don't have values out of inserted resource.
-    if (normalizedProps.hasOwnProperty(p) && normalizedProps[p]) {
-      const propArray = p.split('.');
-      let ref = resource;
-      for (let pa = 0; pa < propArray.length; pa += 1) {
-        const key = propArray[pa];
-        if (pa === propArray.length - 1) {
-          ref[key] = normalizedProps[p];
-        } else {
-          ref = ref[key] = ref[key] || {};
-        }
-      }
-    }
-  }
-  return resource;
-}
-
-function removeEmptyParams(params) {
-  for (const p in params) {
-    if (!params[p] || params[p] === 'undefined') {
-      delete params[p];
-    }
-  }
-  return params;
-}
-
-function executeRequest(request, rating) {
-  request.execute((response) => {
-    if (rating === 'like') {
-      toastr.info('Thank you for liking the video.');
-    }
-    if (rating === 'subscribe') {
-      toastr.info('Thank you for subscribing to our youtube channel.');
-    }
-  });
-}
-
-function buildApiRequest(requestMethod, path, params, properties, rating) {
-  params = removeEmptyParams(params);
-  let request;
-  if (properties) {
-    const resource = createResource(properties);
-    request = window.gapi.client.request({
-      body: resource,
-      method: requestMethod,
-      path,
-      params
-    });
-  } else {
-    request = window.gapi.client.request({
-      method: requestMethod,
-      path,
-      params
-    });
-  }
-  executeRequest(request, rating);
-}
-
-function videosRate(params) {
-  params = removeEmptyParams(params); // See full sample for function
-  const request = window.gapi.client.youtube.videos.rate(params);
-  executeRequest(request, params.rating);
-}
-
-function defineRequest(id, rating) {
-  videosRate({ id, rating });
-}
-
+import ArticlePlaceholder from '../assets/images/article-placeholder.png';
 
 class VideoPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       allProducts: [],
-      allVideos: [],
+      allArticles: [],
       expertVideos: [],
-      id: '',
-      image: '',
+      expertArticles: [],
       title: '',
-      expert: ''
+      content: []
     };
 
+    this.resolveDescription = this.resolveDescription.bind(this);
     this.shareFacebook = this.shareFacebook.bind(this);
     this.shareTwitter = this.shareTwitter.bind(this);
-    this.likeVideo = this.likeVideo.bind(this);
-    this.subscribe = this.subscribe.bind(this);
   }
 
   async componentDidMount() {
-    handleClientLoad();
-    const object = await getVideo(this.props.match.params.id);
     const allObject = await getSomeVideos('UUlYlNvdBOuwuQZrCle9BrcA');
 
     const all = [];
 
     allObject.videos.forEach((element) => {
-      if (element.snippet.title.indexOf(object.snippet.title.slice(0, object.snippet.title.indexOf(','))) !== -1) {
+      if (element.snippet.title.indexOf('Wanda Baltaza') !== -1) {
         all.push(element);
       }
     });
+
+    const object = [
+      { type: 'title', text: 'Czy istnieje skuteczna szczepionka na odporność? Czy można szczepić za pomocą doustnych granulek? Po jakie preparaty wzmacniające odporność możemy sięgnąć bez recepty? Oto porady eksperta allecco.pl.'},
+      { type: 'paragraph', text: 'Szczepionka na odporność zawiera lizaty bakteryjne, czyli zabite komórki bakterii lub ich fragmenty. Mają one na celu aktywowanie naszego układu odpornościowego, stymulowanie jego komórek do pracy. Szczepionka wywołuje cały szereg reakcji w naszym organizmie, podobnych do tych, które mają miejsce kiedy dochodzi do prawdziwego zachorowania. Jednak w przypadku szczepionki, komórki odpornościowe uczą się radzić sobie z bakteriami, bez ryzyka wywołania choroby.'},
+      { type: 'paragraph', text: 'Szczepionka na odporność silnie stymuluje układ immunologiczny i powoduje, że przy kolejnym kontakcie z żywymi bakteriami, organizm będzie umiał lepiej sobie poradzić. U osób, którym podano taką szczepionkę na odporność, zachorowania są rzadsze i mają łagodniejszy przebieg w porównaniu z osobami, które nie są szczepione.' },
+      { type: 'title', text: 'Szczepionka na odporność dla dzieci i dla dorosłych' },
+      { type: 'paragraph', text: 'Szczepionka na odporność polecana jest przede wszystkim dzieciom i innym osobom, które często cierpią na nawracające infekcje dróg oddechowych – choroby gardła, krtani, oskrzeli czy płuc. Jest dosyć bezpieczna i dobrze tolerowana nawet przez najmłodszych. Szczepionka na odporność dla dzieci i dla osób dorosłych dostępna jest tylko na podstawie recepty. Większość z nas kojarzy szczepionki głównie z zastrzykami, jednak szczepionka na odporność ma inną postać – kapsułek, granulatu, tabletek podjęzykowych lub kropli do nosa.' }];
 
     const products = [{ link: '/doctor/1', name: 'product1', price: '1', thumbnail: '' },
       { link: '/doctor/2', name: 'product2', price: '2', thumbnail: '' },
@@ -187,7 +60,14 @@ class VideoPage extends React.Component {
       { link: '/doctor/13', name: 'product13', price: '13', thumbnail: '' },
       { link: '/doctor/14', name: 'product14', price: '14', thumbnail: '' }];
 
-    this.setState({ allProducts: products, allVideos: allObject.videos, id: object.id, image: object.snippet.thumbnails.maxres.url, title: object.snippet.title, expert: object.snippet.title.slice(0, object.snippet.title.indexOf(',')), expertVideos: all });
+    const articles = [{ link: '/article/1', title: '1', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', thumbnails: '' },
+      { link: '/article/2', title: '2', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', thumbnails: '' },
+      { link: '/article/3', title: '3', description: 'Lorem ipsum dolor sit amet.', thumbnails: '' },
+      { link: '/article/4', title: '4', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', thumbnails: '' },
+      { link: '/article/5', title: '5', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', thumbnails: '' },
+      { link: '/article/6', title: '6', description: 'Lorem ipsum dolor sit amet, consectetur.', thumbnails: '' }];
+
+    this.setState({ allProducts: products, allArticles: articles, expertVideos: all, expertArticles: articles, expert: 'Wanda Baltaza', title: 'Tytuł', content: object });
   }
 
   shareFacebook() {
@@ -202,25 +82,16 @@ class VideoPage extends React.Component {
     return false;
   }
 
-  async likeVideo() {
-    if (!GoogleAuth.isSignedIn.get()) {
-      await GoogleAuth.signIn();
-    }
-    defineRequest(this.state.id, 'like');
-  }
-
-  async subscribe() {
-    if (!GoogleAuth.isSignedIn.get()) {
-      await GoogleAuth.signIn();
-    }
-    buildApiRequest('POST',
-      '/youtube/v3/subscriptions',
-      { part: 'snippet' },
-      {
-        'snippet.resourceId.kind': 'youtube#channel',
-        'snippet.resourceId.channelId': 'UClYlNvdBOuwuQZrCle9BrcA'
-      },
-      'subscribe');
+  resolveDescription() {
+    const tmp = [];
+    this.state.content.forEach((element) => {
+      if (element.type === 'title') {
+        tmp.push(<Header size='huge' >{element.text}</Header>);
+      } else if (element.type === 'paragraph') {
+        tmp.push(<div className='paragraph' >{element.text}</div>);
+      }
+    });
+    return tmp;
   }
 
   render() {
@@ -278,27 +149,28 @@ class VideoPage extends React.Component {
       <div style={{ marginTop: '80px' }}>
         <div className='videoPageContainer' >
           <div className='main' >
-            <VideoCardBig imageClass='videoImage' id={this.state.id} image={this.state.image} />
+            <ArticleCardBig imageClass='videoImage' image={ArticlePlaceholder} />
             <div className='title' >
               <Header>{this.state.title}</Header>
-              <div className='buttons' >
-                <Button color='blue' onClick={this.subscribe} ><Icon name='share' />Subskrybuj na YT</Button>
-              </div>
             </div>
             <div className='description' >
-            Opis filmu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              {this.resolveDescription()}
             </div>
           </div>
           <div className='sidePanel' >
             <div className='center' >
-              <Header>OSTATNIE FILMY</Header>
+              <Header>OSTATNIE ARTYKUŁY</Header>
               <div className='lastAM' >
-                {this.state.allVideos.slice(0, 3).map(video => <VideoCard imageClass='Image' video={video} />)}
+                {this.state.allArticles.slice(0, 3).map(article => <ArticleCard id='1' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
               </div>
               <Header>UDOSTĘPNIJ</Header>
               <div className='social' >
                 <Button onClick={this.shareFacebook} color='facebook' icon='facebook' />
                 <Button onClick={this.shareTwitter} color='twitter' icon='twitter' />
+              </div>
+              <Header>PRODUKTY WSPOMNIANE W ARTYKULE</Header>
+              <div className='articleProducts' >
+                {this.state.allProducts.slice(0, 5).map(product => <ProductCardSmall imageClass='Image' contentClass='content' product={product} />)}
               </div>
             </div>
           </div>
@@ -315,7 +187,7 @@ class VideoPage extends React.Component {
         </div>
         </div>
         <div className='advice' >
-          <Header textAlign='center' size='huge' >Co chciałbyś zobaczyć w następnym filmie tego eksperta?</Header>
+          <Header textAlign='center' size='huge' >Co chciałbyś zobaczyć w następnym artykule tego eksperta?</Header>
           <Input size='massive' fluid placeholder='...' />
         </div>
         <div className='otherMovies' >
@@ -338,6 +210,29 @@ class VideoPage extends React.Component {
           <Responsive maxWidth={760} >
             <div className='mainMovies' >
             {this.state.expertVideos.slice(0, 4).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
+            </div>
+          </Responsive>
+        </div>
+        <div className='otherMovies' >
+          <Header textAlign='center' size='huge' >Inne artykuły experta:</Header>
+          <Responsive minWidth={2171} >
+            <div className='otherArticles' >
+            {this.state.expertArticles.slice(0, 4).map(article => <ArticleCard id='2' contentClass='articleContent' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
+            </div>
+          </Responsive>
+          <Responsive minWidth={1021} maxWidth={2170} >
+            <div className='otherArticles' >
+            {this.state.expertArticles.slice(0, 3).map(article => <ArticleCard id='2' contentClass='articleContent' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
+            </div>
+          </Responsive>
+          <Responsive minWidth={761} maxWidth={1020} >
+            <div className='otherArticles' >
+            {this.state.expertArticles.slice(0, 4).map(article => <ArticleCard id='2' contentClass='articleContent' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
+            </div>
+          </Responsive>
+          <Responsive maxWidth={760} >
+            <div className='otherArticles' >
+            {this.state.expertArticles.slice(0, 4).map(article => <ArticleCard id='2' contentClass='articleContent' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
             </div>
           </Responsive>
         </div>

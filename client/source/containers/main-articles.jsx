@@ -16,37 +16,38 @@ class MainArticles extends React.Component {
       { link: '/article/2', title: '2', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', thumbnails: '' },
       { link: '/article/3', title: '3', description: 'Lorem ipsum dolor sit amet.', thumbnails: '' },
       { link: '/article/4', title: '4', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', thumbnails: '' },
-      { link: '/article/5', title: '5', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', thumbnails: '' },];
+      { link: '/article/5', title: '5', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', thumbnails: '' },
+      { link: '/article/6', title: '6', description: 'Lorem ipsum dolor sit amet, consectetur.', thumbnails: '' }];
 
     this.setState({ allArticles: articles });
   }
 
   render() {  
     return (
-      <div>
-        <Responsive minWidth={1701} >
+      <div className='mainArticlesContainer' >
+      <Responsive minWidth={2171} >
           <div className='mainArticles' >
-            {this.state.allArticles.map(article => <ArticleCard className='articleCard mainArticleCard' image={ArticlePlaceholder} article={article} />)}
+            {this.state.allArticles.slice(0, this.props.max).map(article => <ArticleCard id='1' className='articleCard mainArticleCard' image={ArticlePlaceholder} article={article} />)}
+          </div>
+        </Responsive>
+        <Responsive minWidth={1701} maxWidth={2170} >
+          <div className='mainArticles' >
+            {this.state.allArticles.slice(0, 5).map(article => <ArticleCard id='1' className='articleCard mainArticleCard' image={ArticlePlaceholder} article={article} />)}
           </div>
         </Responsive>
         <Responsive minWidth={1371} maxWidth={1700} >
           <div className='mainArticles' >
-          {this.state.allArticles.slice(0, 4).map(article => <ArticleCard className='articleCard mainArticleCard' image={ArticlePlaceholder} article={article} />)}
+          {this.state.allArticles.slice(0, 4).map(article => <ArticleCard id='1' className='articleCard mainArticleCard' image={ArticlePlaceholder} article={article} />)}
           </div>
         </Responsive>
         <Responsive minWidth={1025} maxWidth={1370} >
           <div className='mainArticles' >
-          {this.state.allArticles.slice(0, 3).map(article => <ArticleCard className='articleCard mainArticleCard' image={ArticlePlaceholder} article={article} />)}
+          {this.state.allArticles.slice(0, 3).map(article => <ArticleCard id='1' className='articleCard mainArticleCard' image={ArticlePlaceholder} article={article} />)}
           </div>
         </Responsive>
-        <Responsive minWidth={671} maxWidth={1024} >
+        <Responsive maxWidth={1024} >
           <div className='mainArticles' >
-          {this.state.allArticles.slice(0, 2).map(article => <ArticleCard className='articleCard mainArticleCard' image={ArticlePlaceholder} article={article} />)}
-          </div>
-        </Responsive>
-        <Responsive maxWidth={670} >
-          <div className='mainArticles' >
-          {this.state.allArticles.slice(0, 1).map(article => <ArticleCard className='articleCard mainArticleCard' image={ArticlePlaceholder} article={article} />)}
+          {this.state.allArticles.slice(0, 4).map(article => <ArticleCard id='1' className='articleCard mainArticleCard' image={ArticlePlaceholder} article={article} />)}
           </div>
         </Responsive>
       </div>
