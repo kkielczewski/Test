@@ -153,7 +153,9 @@
 .advice {
   width: 1700px;
   margin: auto auto 40px auto;
+  text-align: center;
   .input {
+    width: 1700px;
     input {
       border-radius: 1.5rem !important;
     }
@@ -255,6 +257,9 @@
   }
   .advice {
     width: 1375px;
+    .input {
+      width: 1375px;
+    }
   }
 }
 
@@ -279,6 +284,9 @@
         }
       }
       .description {
+        .header {
+          font-size: 18px;
+        }
         width: 640px;
         font-size: 16px;
       }
@@ -332,6 +340,9 @@
 
   .advice {
     width: 970px;
+    .input {
+      width: 970px;
+    }
   }
 
   .otherArticles {
@@ -382,6 +393,7 @@
     }
     .input {
       font-size: 1.3em !important;
+      width: 720px;
     }
   }
   .otherMovies {
@@ -456,6 +468,9 @@
   }
   .advice {
     width: 100%;
+    .input {
+      width: 100%;
+    }
   }
   .otherArticles {
     display: inline;

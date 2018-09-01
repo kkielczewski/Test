@@ -188,7 +188,7 @@ class VideoPage extends React.Component {
         </div>
         <div className='advice' >
           <Header textAlign='center' size='huge' >Co chciałbyś zobaczyć w następnym artykule tego eksperta?</Header>
-          <Input size='massive' fluid placeholder='...' />
+          <Input size='massive' placeholder='...' />
         </div>
         <div className='otherMovies' >
           <Header textAlign='center' size='huge' >Inne filmy experta:</Header>
