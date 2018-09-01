@@ -156,8 +156,10 @@
   text-align: center;
   .input {
     width: 1700px;
+    margin: auto;
     input {
       border-radius: 1.5rem !important;
+      width: 100%;
     }
   }
 }
@@ -469,7 +471,7 @@
   .advice {
     width: 100%;
     .input {
-      width: 100%;
+      width: 500px;
     }
   }
   .otherArticles {
@@ -501,6 +503,9 @@
   }
   .advice {
     margin: auto auto 30px auto;
+    .input {
+      width: 400px;
+    }
   }
   .otherArticles {
     .card {
@@ -540,6 +545,7 @@
     }
     .input {
       font-size: 1em !important;
+      width: 300px;
     }
   }
   .otherMovies {
