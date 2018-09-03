@@ -10,6 +10,8 @@ import Video from './video';
 import Articles from './articles';
 import VideoPage from './video-page';
 import ArticlePage from './article-page';
+import Experts from './experts';
+import ExpertPage from './expert-page';
 
 class App extends React.Component {
   render() {
@@ -23,6 +25,8 @@ class App extends React.Component {
             <Route exact path="/blog" component={Articles} />
             <Route exact path="/video/:id" component={VideoPage} />
             <Route exact path="/article/:id" component={ArticlePage} />
+            <Route exact path="/expert" component={Experts} />
+            <Route exact path="/expert/:id" component={ExpertPage} />
           </Switch>
         </div>
       </BrowserRouter>

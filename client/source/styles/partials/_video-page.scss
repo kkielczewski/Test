@@ -1,10 +1,23 @@
 .otherMovies {
   margin-bottom: 30px;
+  .header {
+    font-size: 38px !important;
+  }
+}
+
+.pictureHeader {
+  font-size: 38px;
+  width: 2045px;
+  margin: auto auto 10px;
+}
+
+.recomendedProducts {
+  font-size: 38px !important;
 }
 
 .videoPageContainer {
   width: 1700px;
-  margin: auto;
+  margin: 83px auto auto;
   .main {
     margin: auto 0 60px auto;
     float: left;
@@ -140,7 +153,7 @@
   .details{
     padding-top: 20px; 
     .header {
-      font-size: 32px;
+      font-size: 38px;
     }
 
     .description {
@@ -154,20 +167,16 @@
   width: 1700px;
   margin: auto auto 40px auto;
   text-align: center;
-  .inputContainer {
-    position: relative;
+  clear: both;
+  .header {
+    font-size: 38px !important;
+  }
+  .input {
     width: 1700px;
     margin: auto;
-    text-align: center;
-    .input {
-      position: relative;
-      width: 1700px;
-      margin: auto;
-      text-align: center;
-      input {
-        border-radius: 1.5rem !important;
-        width: 100%;
-      }
+    input {
+      border-radius: 1.5rem !important;
+      width: 100%;
     }
   }
 }
@@ -209,6 +218,15 @@
 }
 
 @media screen and (max-width: 2170px) {
+  .pictureHeader {
+    width: 1404px;
+    font-size: 32px;
+  }
+  .advice {
+    .header {
+      font-size: 32px !important;
+    }
+  }
   .otherArticles {
     width: 1386px;
 
@@ -220,6 +238,15 @@
         font-size: 20px;
       }
     }
+  }
+  .otherMovies {
+    .header {
+      font-size: 32px !important;
+    }
+  }
+  
+  .recomendedProducts {
+    font-size: 32px !important;
   }
 }
 
@@ -267,18 +294,25 @@
   }
   .advice {
     width: 1375px;
-    .inputContainer {
+    .input {
       width: 1375px;
-      position: relative;
-      .input {
-        width: 1375px;
-        position: relative;
-      }
     }
   }
 }
 
 @media screen and (max-width: 1420px) {
+  .pictureHeader {
+    width: 972px;
+    font-size: 28px;
+  }
+  .recomendedProducts {
+    font-size: 28px !important;
+  }
+  .otherMovies {
+    .header {
+      font-size: 28px !important;
+    }
+  }
   .videoPageContainer {
     width: 970px;
     .main {
@@ -355,13 +389,11 @@
 
   .advice {
     width: 970px;
-    .inputContainer {
+    .header {
+      font-size: 28px !important;
+    }
+    .input {
       width: 970px;
-      position: relative;
-      .input {
-        width: 970px;
-        position: relative;
-      }
     }
   }
 
@@ -380,6 +412,13 @@
 }
 
 @media screen and (max-width: 1020px) {
+  .pictureHeader {
+    width: 746px;
+    font-size: 24px;
+  }
+  .recomendedProducts {
+    font-size: 24px !important;
+  }
   .videoPageContainer {
     width: 720px;
     .main {
@@ -411,14 +450,9 @@
     .header {
       font-size: 24px !important;
     }
-    .inputContainer {
+    .input {
+      font-size: 1.3em !important;
       width: 720px;
-      position: relative;
-      .input {
-        font-size: 1.3em !important;
-        width: 720px;
-        position: relative;
-      }
     }
   }
   .otherMovies {
@@ -441,7 +475,10 @@
   }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
+  .pictureHeader {
+    width: 496px;
+  }
   .videoPageContainer {
     width: 100%;
     .main {
@@ -492,14 +529,9 @@
     }
   }
   .advice {
-    width: 100%;
-    .inputContainer {
+    width: 500px;
+    .input {
       width: 500px;
-      position: relative;
-      .input {
-        width: 500px;
-        position: relative;
-      }
     }
   }
   .otherArticles {
@@ -514,6 +546,9 @@
 }
 
 @media screen and (max-width: 500px) {
+  .pictureHeader {
+    width: 400px;
+  }
   .videoPageContainer {
     .main {
       .card {
@@ -530,14 +565,10 @@
     }
   }
   .advice {
+    width: 100%;
     margin: auto auto 30px auto;
-    .inputContainer {
-      width: 400px;
-      position: relative;
-      .input {
-        width: 400px;
-        position: relative;
-      }
+    .input {
+      width: 100%;
     }
   }
   .otherArticles {
@@ -550,6 +581,9 @@
 }
 
 @media screen and (max-width: 400px) {
+  .pictureHeader {
+    width: 100%;
+  }
   .videoPageContainer {
     .main {
       .card {
@@ -573,22 +607,9 @@
     }
   }
   .advice {
-    .header {
-      font-size: 20px !important;
-    }
-    .inputContainer {
-      width: 300px;
-      position: relative;
-      .input {
-        font-size: 1em !important;
-        width: 300px;
-        position: relative;
-      }
-    }
-  }
-  .otherMovies {
-    .header {
-      font-size: 20px !important;
+    .input {
+      font-size: 1em !important;
+      width: 100%;
     }
   }
   .recomendedProducts {

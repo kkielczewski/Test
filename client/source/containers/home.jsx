@@ -22,13 +22,13 @@ class Home extends React.Component {
   async componentDidMount() {
     const object = await getSomeVideos('UUlYlNvdBOuwuQZrCle9BrcA');
 
-    const doctors = [{ link: '/doctor/1', thumbnail: '' },
-      { link: '/doctor/2', thumbnail: '' },
-      { link: '/doctor/3', thumbnail: '' },
-      { link: '/doctor/4', thumbnail: '' },
-      { link: '/doctor/5', thumbnail: '' },
-      { link: '/doctor/6', thumbnail: '' },
-      { link: '/doctor/7', thumbnail: '' }];
+    const doctors = [{ link: '/expert/1', thumbnail: '' },
+      { link: '/expert/2', thumbnail: '' },
+      { link: '/expert/3', thumbnail: '' },
+      { link: '/expert/4', thumbnail: '' },
+      { link: '/expert/5', thumbnail: '' },
+      { link: '/expert/6', thumbnail: '' },
+      { link: '/expert/7', thumbnail: '' }];
 
     const products = [{ link: '/doctor/1', name: 'product1', price: '1', thumbnail: '' },
       { link: '/doctor/2', name: 'product2', price: '2', thumbnail: '' },
@@ -163,14 +163,14 @@ class Home extends React.Component {
         </Slider>
         <Header dividing textAlign='center' size='huge' >Wybierz swojego eksperta</Header>
         <Slider {...doctorSettings} >
-          {this.state.allDoctors.map(doctor => <DoctorCard doctor={doctor} />)}
+          {this.state.allDoctors.map(doctor => <DoctorCard contentClass='doctorContent' link={doctor.link} />)}
         </Slider>
         <Survey/>
         <Header dividing textAlign='center' size='huge' >Ostatnie Artykuły</Header>
         <MainArticles max={5} />
         <Header className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>
         <Slider {...productsSettings} >
-          {this.state.allProducts.map(product => <ProductCard product={product} />)}
+          {this.state.allProducts.map(product => <ProductCard imageClass='Image' product={product} />)}
         </Slider>
       </div>
     );

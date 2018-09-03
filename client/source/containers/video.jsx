@@ -111,15 +111,13 @@ class Video extends React.Component {
     return (
       <div style={{ marginTop: '53px' }}>
         <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} >
-          <div style={{ position: 'absolute', left: '0', bottom: '0', padding: '1% 5%', fontSize: '4em' }} >Filmy</div>
+          <div style={{ position: 'absolute', left: '0', bottom: '0', width: '100%'}} ><div className='pictureHeader' >Filmy</div></div>
         </div>
         <div className='videoContainer' >
-          <Responsive minWidth='761' style={{ margin: 'auto 0 auto auto' }} >
           <div className='videoList' >
             {this.state.currentVideos.map(video => <VideoCard video={video} image={VideoPlaceholder} imageClass='listImage' contentClass='listContent' />)}
             <div className='videoNav' >
               <Pagination
-              hideDisabled
               hideFirstLastPages
               activePage={this.state.activePage}
               itemsCountPerPage={8}
@@ -135,29 +133,6 @@ class Video extends React.Component {
               />
             </div>
           </div>
-          </Responsive>
-          <Responsive maxWidth='760' >
-          <div className='videoList' >
-            {this.state.currentVideos.slice(0,4).map(video => <VideoCard video={video} image={VideoPlaceholder} imageClass='listImage' contentClass='listContent' />)}
-            <div className='videoNav' >
-              <Pagination
-              hideDisabled
-              hideFirstLastPages
-              activePage={this.state.activePage}
-              itemsCountPerPage={4}
-              totalItemsCount={this.state.totalCount}
-              pageRangeDisplayed={5}
-              activeClass="activeli"
-              activeLinkClass="active"
-              linkClassPrev="prev"
-              linkClassNext="next"
-              prevPageText="<"
-              nextPageText='>'
-              onChange={this.handlePageChange4}
-              />
-            </div>
-          </div>
-          </Responsive>
           <div className='newsletterContainer' >
             <Newsletter />
           </div>

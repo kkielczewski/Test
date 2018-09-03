@@ -10,6 +10,7 @@
 
   .videoCard {
     padding: 10px;
+    outline-color: white;
 
     .videoImage {
       width: 100%;
@@ -202,6 +203,67 @@
 
   .card {
     border-radius: 0;
+    overflow: hidden;
+    width: 100%;
+    min-height: 280px;
+
+    .Image {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+    }
+
+    
+
+    .black {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+      border-radius: 0!important;
+      background: black;
+      opacity: 0;
+      transition: all .4s ease-in-out;
+    }
+
+    .doctorContent {
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 40px;
+      margin: auto;
+      text-align: center;
+      z-index: 2;
+      border: none !important;
+      padding: 0;
+      opacity: 0;
+      transition: all .4s ease-in-out;
+
+      .header {
+        font-size: 30px !important;
+        color: white;
+        padding: 5px;
+      }
+    }
+  }
+
+  .card:hover {
+    .black {
+      opacity: 0.7;
+      transition: all .4s ease-in-out;
+    }
+    .doctorContent {
+      opacity: 1;
+      transition: all .4s ease-in-out;
+    }
   }
 
   .ui.card>:only-child {
@@ -255,20 +317,46 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .doctorCarousel {
+    .card {
+      .doctorContent {
+        opacity: 1;
+        background-color: white;
+        height: 75px;
+        top: auto;
+        border: solid !important;
+        border-width: 1px !important;
+        border-color: lightgray !important;
+
+        .header {
+          color: black;
+          font-size: 28px;
+        }
+      }
+    }
+    .card:hover {
+      .black {
+        opacity: 0;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 766px) {
   .doctorCarousel {
     width: 300px;
 
     .slick-prev {
-      left: -50px;
+      left: -30px;
     }
 
     .slick-next {
-      right: -50px;
+      right: -30px;
     }
 
     .slick-arrow {
-      transform: scale(4);
+      transform: scale(2);
     }
 
     .videoCard {
@@ -534,6 +622,9 @@
 }
 
 // Product Carousel
+.recomendedProducts {
+  clear: both;
+}
 .productCarousel {
   width: 100%;
   margin: auto;

@@ -15,6 +15,7 @@ class NavBar extends React.Component {
           <NavLink className="item" to="/" style={{ padding: '13px 10px' }} >HOME</NavLink>
           <NavLink className="item" to="/video" style={{ padding: '13px 10px' }} >VIDEO</NavLink>
           <NavLink className="item" to="/blog" style={{ padding: '13px 10px' }} >BLOG</NavLink>
+          <NavLink className="item" to="/expert" style={{ padding: '13px 10px' }} >EKSPERCI</NavLink>
         </Menu.Menu>
         <div className='socialTab' >
           <a href='https://www.facebook.com/Allecco/'><Button className='navSocialButtonFacebook' circular color='facebook' icon='facebook' /></a>

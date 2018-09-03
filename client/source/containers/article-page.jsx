@@ -146,7 +146,7 @@ class VideoPage extends React.Component {
       ]
     };
     return (
-      <div style={{ marginTop: '80px' }}>
+      <div style={{ marginTop: '53px' }}>
         <div className='videoPageContainer' >
           <div className='main' >
             <ArticleCardBig imageClass='videoImage' image={ArticlePlaceholder} />
@@ -188,7 +188,7 @@ class VideoPage extends React.Component {
         </div>
         <div className='advice' >
           <Header textAlign='center' size='huge' >Co chciałbyś zobaczyć w następnym artykule tego eksperta?</Header>
-          <div className='inputContainer' ><Input size='massive' placeholder='...' /></div>
+          <Input size='massive' placeholder='...' />
         </div>
         <div className='otherMovies' >
           <Header textAlign='center' size='huge' >Inne filmy experta:</Header>
