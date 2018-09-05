@@ -358,10 +358,10 @@
     }
   }
   .doctorContainer {
-    height: 1634px;
+    height: 1774px;
   }
   .doctorContainerArticles {
-    height: 2595px;
+    height: 2735px;
   }
   .expertMovieList {
     width: 100%;
@@ -370,7 +370,7 @@
       width: 100%;
       height: 198px;
       border-radius: 0 !important;
-      margin-bottom: 0;
+      margin-bottom: 20px;
       border-style: solid;
       border-width: 1px;
       border-color: lightgray;
@@ -387,13 +387,124 @@
       width: 100%;
       height: 318px;
       border-radius: 0 !important;
-      margin-bottom: 0;
+      margin-bottom: 20px;
       border-style: solid;
       border-width: 1px;
       border-color: lightgray;
 
       .Image {
         height: 198px;
+        border-radius: 0 !important;
+      }
+    }
+  }
+}
+
+// Main Movies
+
+.expertMovies {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1980px;
+  margin: auto;
+
+  .card {
+    width: 640px;
+    height: 360px;
+    margin: 10px;
+    margin-top: 10px !important;
+    border-radius: 1.5em!important;
+
+    .listImage {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 1;
+      border-radius: 1.5em!important;
+    }
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .expertMovies {
+    width: 1404px;
+
+    .card {
+      width: 448px;
+      height: 252px;
+
+      .listContent {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .expertMovies {
+    width: 972px;
+
+    .card {
+      width: 304px;
+      height: 171px;
+
+      .listContent {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .expertMovies {
+    width: 746px;
+    flex-wrap: wrap;
+
+    .card {
+      width: 368px;
+      height: 207px;
+      margin-top: 2px !important;
+      margin: 2px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .expertMovies {
+    display: inline;
+
+    .card {
+      width: 496px;
+      height: 279px;
+      margin: 10px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .expertMovies {
+    .card {
+      width: 400px;
+      height: 225px;
+      margin: 10px auto;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .expertMovies {
+    .card {
+      width: 100%;
+      height: 196px;
+      margin: 0 0 20px!important;
+      border-radius: 0 !important;
+      border-style: solid;
+      border-width: 1px;
+      border-color: white;
+
+      .listImage {
         border-radius: 0 !important;
       }
     }

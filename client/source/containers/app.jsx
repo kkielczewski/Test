@@ -16,7 +16,7 @@ import ExpertPage from './expert-page';
 class App extends React.Component {
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter forceRefresh={true} >
         <div>
           <NavBar />
           <Switch>

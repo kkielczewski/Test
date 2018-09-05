@@ -192,49 +192,15 @@ class VideoPage extends React.Component {
         </Segment>
         <div className='otherMovies' >
           <Header textAlign='center' size='huge' >Inne filmy experta:</Header>
-          <Responsive minWidth={2171} >
-            <div className='mainMovies' >
-            {this.state.expertVideos.slice(0, 4).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
+            <div className='expertMovies' >
+            {this.state.expertVideos.slice(0, 6).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
             </div>
-          </Responsive>
-          <Responsive minWidth={1021} maxWidth={2170} >
-            <div className='mainMovies' >
-            {this.state.expertVideos.slice(0, 3).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
-            </div>
-          </Responsive>
-          <Responsive minWidth={761} maxWidth={1020} >
-            <div className='mainMovies' >
-            {this.state.expertVideos.slice(0, 4).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
-            </div>
-          </Responsive>
-          <Responsive maxWidth={760} >
-            <div className='mainMovies' >
-            {this.state.expertVideos.slice(0, 4).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
-            </div>
-          </Responsive>
         </div>
         <div className='otherMovies' >
           <Header textAlign='center' size='huge' >Inne artykuły experta:</Header>
-          <Responsive minWidth={2171} >
             <div className='otherArticles' >
-            {this.state.expertArticles.slice(0, 4).map(article => <ArticleCard id='2' contentClass='articleContent' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
+            {this.state.expertArticles.slice(0, 6).map(article => <ArticleCard id='2' contentClass='articleContent' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
             </div>
-          </Responsive>
-          <Responsive minWidth={1021} maxWidth={2170} >
-            <div className='otherArticles' >
-            {this.state.expertArticles.slice(0, 3).map(article => <ArticleCard id='2' contentClass='articleContent' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
-            </div>
-          </Responsive>
-          <Responsive minWidth={761} maxWidth={1020} >
-            <div className='otherArticles' >
-            {this.state.expertArticles.slice(0, 4).map(article => <ArticleCard id='2' contentClass='articleContent' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
-            </div>
-          </Responsive>
-          <Responsive maxWidth={760} >
-            <div className='otherArticles' >
-            {this.state.expertArticles.slice(0, 4).map(article => <ArticleCard id='2' contentClass='articleContent' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
-            </div>
-          </Responsive>
         </div>
         <Header className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>
         <Slider {...productsSettings} >

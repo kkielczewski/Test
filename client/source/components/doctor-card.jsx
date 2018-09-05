@@ -28,7 +28,7 @@ class DoctorCard extends React.Component {
   render() {
     return (
       <Card>
-        <div onMouseDown={this.MouseDown} onMouseUp={this.MouseUp} style={{ position: 'absolute', width: '100%', height: '100%', zIndex: '100' }} ></div>
+        <div onMouseDown={this.MouseDown} onMouseUp={this.MouseUp} style={{ position: 'absolute', top: '0', width: '100%', height: '100%', zIndex: '100', cursor: 'pointer' }} ></div>
         <Image src={DoctorPlaceholder} className={this.props.imageClass} />
         <div className='black' />
         <Card.Content className={this.props.contentClass} >

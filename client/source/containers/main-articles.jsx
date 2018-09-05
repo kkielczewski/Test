@@ -1,5 +1,4 @@
 import React from 'react';
-import { Responsive } from 'semantic-ui-react';
 import ArticleCard from '../components/article-card';
 import ArticlePlaceholder from '../assets/images/article-placeholder.png';
 
@@ -25,31 +24,9 @@ class MainArticles extends React.Component {
   render() {  
     return (
       <div className='mainArticlesContainer' >
-      <Responsive minWidth={2171} >
-          <div className='mainArticles' >
-            {this.state.allArticles.slice(0, this.props.max).map(article => <ArticleCard id='1' className='articleCard mainArticleCard' image={ArticlePlaceholder} article={article} />)}
-          </div>
-        </Responsive>
-        <Responsive minWidth={1701} maxWidth={2170} >
-          <div className='mainArticles' >
-            {this.state.allArticles.slice(0, 5).map(article => <ArticleCard id='1' className='articleCard mainArticleCard' image={ArticlePlaceholder} article={article} />)}
-          </div>
-        </Responsive>
-        <Responsive minWidth={1371} maxWidth={1700} >
-          <div className='mainArticles' >
-          {this.state.allArticles.slice(0, 4).map(article => <ArticleCard id='1' className='articleCard mainArticleCard' image={ArticlePlaceholder} article={article} />)}
-          </div>
-        </Responsive>
-        <Responsive minWidth={1025} maxWidth={1370} >
-          <div className='mainArticles' >
-          {this.state.allArticles.slice(0, 3).map(article => <ArticleCard id='1' className='articleCard mainArticleCard' image={ArticlePlaceholder} article={article} />)}
-          </div>
-        </Responsive>
-        <Responsive maxWidth={1024} >
-          <div className='mainArticles' >
-          {this.state.allArticles.slice(0, 4).map(article => <ArticleCard id='1' className='articleCard mainArticleCard' image={ArticlePlaceholder} article={article} />)}
-          </div>
-        </Responsive>
+        <div className='mainArticles' >
+          {this.state.allArticles.slice(0, 6).map(article => <ArticleCard id='1' className='articleCard mainArticleCard' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
+        </div>
       </div>
     );
   }

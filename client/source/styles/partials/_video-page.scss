@@ -166,23 +166,25 @@
 
 .otherArticles {
   display: flex;
-  width: 2085px;
+  flex-wrap: wrap;
+  width: 1980px;
   margin: auto;
 
   .card {
-    width: 480px;
-    height: 270px;
-    margin: auto;
+    width: 640px;
+    height: 480px;
+    margin: 10px;
+    margin-top: 10px !important;
     border-radius: 1.5em!important;
 
     .Image {
       width: 100%;
-      height: 100%;
+      height: 270px;
       position: absolute;
       left: 0px;
       top: 0px;
       z-index: 1;
-      border-radius: 1.5em!important;
+      border-radius: 1.5em 1.5em 0 0!important;
     }
   
     .articleContent {
@@ -190,11 +192,14 @@
       border-style: none;
       position: absolute;
       bottom: 0;
-      padding: 15px 20px;
-      font-size: 28px;
+      height: 120px;
 
+      .header {
+        font-size: 26px !important;
+      }
       .description {
-        display: none;
+        margin-top: 0 !important;
+        font-size: 16px;
       }
     }
   }
@@ -263,11 +268,11 @@
     width: 1404px;
 
     .card {
-      width: 464px;
-      height: 261px;
+      width: 448px;
+      height: 381px;
 
-      .articleContent {
-        font-size: 20px;
+      .Image {
+        height: 261px;
       }
     }
   }
@@ -370,14 +375,24 @@
   }
 
   .otherArticles {
-    width: 1020px;
+    width: 972px;
 
     .card {
-      width: 320px;
-      height: 180px;
+      width: 304px;
+      height: 271px;
+
+      .Image {
+        height: 171px;;
+      }
 
       .articleContent {
-        font-size: 15px;
+        height: 100px;
+        .header {
+          font-size: 20px !important;
+        }
+        .description {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -423,13 +438,17 @@
     }
   }
   .otherArticles {
-    width: 760px;
+    width: 744px;
     flex-wrap: wrap;
 
     .card {
       width: 368px;
-      height: 207px;
-      margin-top: 20px !important;
+      height: 307px;
+      margin-top: 2px !important;
+      margin: 2px;
+      .Image {
+        height: 198px;
+      }
     }
   }
   .recomendedProducts {
@@ -494,9 +513,22 @@
     display: inline;
 
     .card {
-      width: 480px;
-      height: 270px;
-      margin: 20px auto;
+      width: 496px;
+      height: 399px;
+      margin: 10px auto;
+
+      .Image {
+        height: 279px;
+      }
+      .articleContent {
+        height: 120px;
+        .header {
+          font-size: 26px !important;
+        }
+        .description {
+          font-size: 16px;
+        }
+      }
     }
   }
 }
@@ -531,8 +563,21 @@
   .otherArticles {
     .card {
       width: 400px;
-      height: 225px;
+      height: 325px;
       margin: 10px auto;
+
+      .Image {
+        height: 225px;
+      }
+      .articleContent {
+        height: 100px;
+        .header {
+          font-size: 20px !important;
+        }
+        .description {
+          font-size: 12px;
+        }
+      }
     }
   }
 }
@@ -546,7 +591,7 @@
     .main {
       .card {
         width: 100%;
-        height: 171px;
+        height: 196px;
         border-radius: 0 !important;
 
         .videoImage {
@@ -578,14 +623,15 @@
   .otherArticles {
     .card {
       width: 100%;
-      height: 171px;
-      margin: 0!important;
+      height: 296px;
+      margin: 0 0 20px!important;
       border-radius: 0 !important;
       border-style: solid;
       border-width: 1px;
       border-color: white;
 
       .Image {
+        height: 196px;
         border-radius: 0 !important;
       }
     }

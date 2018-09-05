@@ -424,8 +424,8 @@
 
     .card {
       width: 100%;
-      height: 171px;
-      margin: 0;
+      height: 198px;
+      margin: 0 0 20px;
       border-radius: 0 !important;
       border-style: solid;
       border-width: 1px;
@@ -456,13 +456,15 @@
 
 .mainMovies {
   display: flex;
+  flex-wrap: wrap;
   width: 1980px;
   margin: auto;
 
   .card {
-    width: 480px;
-    height: 270px;
-    margin: auto;
+    width: 640px;
+    height: 360px;
+    margin: 10px;
+    margin-top: 10px !important;
     border-radius: 1.5em!important;
 
     .listImage {
@@ -474,19 +476,6 @@
       z-index: 1;
       border-radius: 1.5em!important;
     }
-  
-    .listContent {
-      z-index: 2;
-      border-style: none;
-      position: absolute;
-      bottom: 0;
-      padding: 15px 20px;
-      font-size: 28px;
-
-      .description {
-        display: none;
-      }
-    }
   }
 }
 
@@ -495,12 +484,8 @@
     width: 1404px;
 
     .card {
-      width: 464px;
-      height: 261px;
-
-      .listContent {
-        font-size: 20px;
-      }
+      width: 448px;
+      height: 252px;
     }
   }
 }
@@ -510,12 +495,8 @@
     width: 972px;
 
     .card {
-      width: 320px;
-      height: 180px;
-
-      .listContent {
-        font-size: 15px;
-      }
+      width: 304px;
+      height: 171px;
     }
   }
 }
@@ -528,7 +509,8 @@
     .card {
       width: 368px;
       height: 207px;
-      margin-top: 10px !important;
+      margin-top: 2px !important;
+      margin: 2px;
     }
   }
 }
@@ -540,7 +522,7 @@
     .card {
       width: 496px;
       height: 279px;
-      margin: 20px auto;
+      margin: 10px auto;
     }
   }
 }
@@ -559,8 +541,8 @@
   .mainMovies {
     .card {
       width: 100%;
-      height: 171px;
-      margin: 0!important;
+      height: 196px;
+      margin: 0 0 20px!important;
       border-radius: 0 !important;
       border-style: solid;
       border-width: 1px;

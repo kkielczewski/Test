@@ -21,7 +21,6 @@ class Video extends React.Component {
       totalCount: null
     };
     this.handlePageChange = this.handlePageChange.bind(this);
-    this.handlePageChange4 = this.handlePageChange4.bind(this);
   }
 
   async componentDidMount() {
@@ -48,12 +47,6 @@ class Video extends React.Component {
   handlePageChange(pageNumber) {
     const offset = (pageNumber - 1) * 8;
     const currentItems = this.state.allVideos.slice(offset, offset + 8);
-    this.setState({ activePage: pageNumber, currentVideos: currentItems });
-  }
-
-  handlePageChange4(pageNumber) {
-    const offset = (pageNumber - 1) * 4;
-    const currentItems = this.state.allVideos.slice(offset, offset + 4);
     this.setState({ activePage: pageNumber, currentVideos: currentItems });
   }
 
@@ -137,9 +130,8 @@ class Video extends React.Component {
             <Newsletter />
           </div>
         </div>
-
         <Header dividing textAlign='center' size='huge' >Ostatnie Artykuły</Header>
-        <MainArticles max={6} />
+        <MainArticles />
         <Header textAlign='center' size='huge' >Polecane produkty</Header>
         <Slider {...productsSettings} >
           {this.state.allProducts.map(product => <ProductCard product={product} />)}

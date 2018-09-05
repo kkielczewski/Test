@@ -1,5 +1,4 @@
 import React from 'react';
-import { Responsive } from 'semantic-ui-react';
 import VideoCard from '../components/video-card';
 import { getSomeVideos } from '../utils/youtube-utils';
 
@@ -20,26 +19,9 @@ class MainArticles extends React.Component {
   render() {
     return (
       <div>
-        <Responsive minWidth={2171} >
-          <div className='mainMovies' >
-          {this.state.allVideos.slice(0, 4).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
-          </div>
-        </Responsive>
-        <Responsive minWidth={1021} maxWidth={2170} >
-          <div className='mainMovies' >
-          {this.state.allVideos.slice(0, 3).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
-          </div>
-        </Responsive>
-        <Responsive minWidth={761} maxWidth={1020} >
-          <div className='mainMovies' >
-          {this.state.allVideos.slice(0, 4).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
-          </div>
-        </Responsive>
-        <Responsive maxWidth={760} >
-          <div className='mainMovies' >
-          {this.state.allVideos.slice(0, 4).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
-          </div>
-        </Responsive>
+        <div className='mainMovies' >
+        {this.state.allVideos.slice(0, 6).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
+        </div>
       </div>
     );
   }
