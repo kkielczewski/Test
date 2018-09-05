@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Button, Image, Input, Responsive } from 'semantic-ui-react';
+import { Header, Button, Image, Input, Responsive, Segment } from 'semantic-ui-react';
 import Slider from 'react-slick';
 import { getSomeVideos } from '../utils/youtube-utils';
 import VideoCard from '../components/video-card';
@@ -186,10 +186,10 @@ class VideoPage extends React.Component {
           </div>
         </div>
         </div>
-        <div className='advice' >
-          <Header textAlign='center' size='huge' >Co chciałbyś zobaczyć w następnym artykule tego eksperta?</Header>
-          <Input size='massive' placeholder='...' />
-        </div>
+        <Segment className='advice' textAlign='center'>
+          <Header textAlign='center' size='medium' >Co chciałbyś zobaczyć w następnym filmie tego eksperta?</Header>
+          <Input placeholder='...' />
+        </Segment>
         <div className='otherMovies' >
           <Header textAlign='center' size='huge' >Inne filmy experta:</Header>
           <Responsive minWidth={2171} >

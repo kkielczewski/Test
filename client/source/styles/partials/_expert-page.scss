@@ -8,7 +8,16 @@
 }
 
 .doctorContainer {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  .header {
+    font-size: 38px !important;
+  }
+}
+
+.doctorContainerArticles {
+  margin-bottom: 30px;
+  margin-top: 30px;
   .header {
     font-size: 38px !important;
   }
@@ -24,7 +33,7 @@
     width: 640px;
     height: 360px;
     margin: 30px;
-    border-radius: 0!important;
+    border-radius: 1.5em !important;
 
     .Image {
       width: 100%;
@@ -33,7 +42,7 @@
       left: 0px;
       top: 0px;
       z-index: 1;
-      border-radius: 0!important;
+      border-radius: 1.5em !important;
     }
   }
 
@@ -65,16 +74,22 @@
     width: 640px;
     height: 480px;
     margin: 30px;
-    border-radius: 0!important;
+    border-radius: 1.5em !important;
 
     .Image {
       height: 360px;
       z-index: 1;
-      border-radius: 0!important;
+      border-radius: 1.5em 1.5em 0 0 !important;
     }
 
     .content {
-      font-size: 16px;
+      .header {
+        font-size: 26px !important;
+      }
+      .description {
+        font-size: 16px;
+        margin-top: 0 !important;
+      }
     }
   }
 
@@ -107,6 +122,11 @@
       font-size: 32px !important;
     }
   }
+  .doctorContainerArticles {
+    .header {
+      font-size: 32px !important;
+    }
+  }
   .expertMovieList {
     width: 1404px;
 
@@ -135,6 +155,11 @@
       font-size: 28px !important;
     }
   }
+  .doctorContainerArticles {
+    .header {
+      font-size: 28px !important;
+    }
+  }
   .expertInfo {
     .expertDescription {
       width: 972px;
@@ -158,6 +183,14 @@
       .Image {
         height: 171px;
       }
+      .content {
+        .header {
+          font-size: 22px !important;
+        }
+        .description {
+          font-size: 14px;
+        }
+      }
     }
   }
 }
@@ -170,6 +203,13 @@
     }
   }
   .doctorContainer {
+    height: 908px;
+    .header {
+      font-size: 24px !important;
+    }
+  }
+  .doctorContainerArticles {
+    height: 1388px;
     .header {
       font-size: 24px !important;
     }
@@ -243,6 +283,12 @@
       width: 496px;
     }
   }
+  .doctorContainer {
+    height: 2352px;
+  }
+  .doctorContainerArticles {
+    height: 3312px;
+  }
   .expertMovieList {
     width: 496px;
 
@@ -277,6 +323,12 @@
       width: 400px;
     }
   }
+  .doctorContainer {
+    height: 1920px;
+  }
+  .doctorContainerArticles {
+    height: 2880px;
+  }
   .expertMovieList {
     width: 400px;
 
@@ -305,12 +357,27 @@
       width: 100%;
     }
   }
+  .doctorContainer {
+    height: 1634px;
+  }
+  .doctorContainerArticles {
+    height: 2595px;
+  }
   .expertMovieList {
     width: 100%;
 
     .card {
       width: 100%;
       height: 198px;
+      border-radius: 0 !important;
+      margin-bottom: 0;
+      border-style: solid;
+      border-width: 1px;
+      border-color: lightgray;
+
+      .Image {
+        border-radius: 0 !important;
+      }
     }
   }
   .expertArticleList {
@@ -319,9 +386,15 @@
     .card {
       width: 100%;
       height: 318px;
+      border-radius: 0 !important;
+      margin-bottom: 0;
+      border-style: solid;
+      border-width: 1px;
+      border-color: lightgray;
 
       .Image {
         height: 198px;
+        border-radius: 0 !important;
       }
     }
   }

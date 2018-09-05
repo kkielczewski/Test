@@ -13,17 +13,18 @@
 
 .recomendedProducts {
   font-size: 38px !important;
+  padding-top: 15px;
 }
 
 .videoPageContainer {
-  width: 1700px;
+  width: 1980px;
   margin: 83px auto auto;
   .main {
     margin: auto 0 60px auto;
     float: left;
     .card {
-      width: 1280px;
-      height: 720px;
+      width: 1408px;
+      height: 792px;
       border-radius: 1.5em!important;
 
       .content {
@@ -42,11 +43,11 @@
     }
 
     .title {
-      width: 1280px;
+      width: 1408px;
       padding: 0 15px;
       .header {
         float: left;
-        width: 65%;
+        width: 80%;
         font-size: 32px;
         margin-bottom: 15px;
       }
@@ -62,7 +63,7 @@
 
     .description {
       clear: both;
-      width: 1280px;
+      width: 1408px;
       font-size: 21px;
       padding: 0 16px;
       margin-bottom: 20px;
@@ -78,7 +79,7 @@
 
     .center {
       margin: auto auto auto 60px;
-      width: 352px;
+      width: 512px;
 
       .header {
         font-size: 23px;
@@ -95,8 +96,8 @@
       }
       .lastAM {
         .card {
-          width: 352px;
-          height: 198px;
+          width: 512px;
+          height: 288px;
           border-radius: 1.5em!important;
 
           .content {
@@ -140,7 +141,7 @@
 }
 
 .expertContainer {
-  width: 1700px;
+  width: 1980px;
   margin: auto;
 
   .imageContainer {
@@ -159,24 +160,6 @@
     .description {
       font-size: 21px;
       min-height: 410px;
-    }
-  }
-}
-
-.advice {
-  width: 1700px;
-  margin: auto auto 40px auto;
-  text-align: center;
-  clear: both;
-  .header {
-    font-size: 38px !important;
-  }
-  .input {
-    width: 1700px;
-    margin: auto;
-    input {
-      border-radius: 1.5rem !important;
-      width: 100%;
     }
   }
 }
@@ -222,37 +205,8 @@
     width: 1404px;
     font-size: 32px;
   }
-  .advice {
-    .header {
-      font-size: 32px !important;
-    }
-  }
-  .otherArticles {
-    width: 1386px;
-
-    .card {
-      width: 432px;
-      height: 243px;
-
-      .articleContent {
-        font-size: 20px;
-      }
-    }
-  }
-  .otherMovies {
-    .header {
-      font-size: 32px !important;
-    }
-  }
-  
-  .recomendedProducts {
-    font-size: 32px !important;
-  }
-}
-
-@media screen and (max-width: 1700px) {
   .videoPageContainer {
-    width: 1375px;
+    width: 1404px;
     .main {
       .card {
         width: 960px;
@@ -279,9 +233,22 @@
         }
       }
     }
+
+    .sidePanel {
+      .center {
+        width: 384px;
+
+        .lastAM {
+          .card {
+            width: 384px;
+            height: 216px;
+          }
+        }
+      }
+    }
   }
   .expertContainer {
-    width: 1375px;
+    width: 1404px;
     .details {
       .header {
         font-size: 26px;
@@ -292,11 +259,26 @@
       }
     }
   }
-  .advice {
-    width: 1375px;
-    .input {
-      width: 1375px;
+  .otherArticles {
+    width: 1404px;
+
+    .card {
+      width: 464px;
+      height: 261px;
+
+      .articleContent {
+        font-size: 20px;
+      }
     }
+  }
+  .otherMovies {
+    .header {
+      font-size: 32px !important;
+    }
+  }
+  
+  .recomendedProducts {
+    font-size: 32px !important;
   }
 }
 
@@ -314,7 +296,7 @@
     }
   }
   .videoPageContainer {
-    width: 970px;
+    width: 972px;
     .main {
       .card {
         width: 640px;
@@ -342,7 +324,7 @@
     }
     .sidePanel {
       .center {
-        margin: auto auto auto 30px;
+        margin: auto auto auto 32px;
         width: 300px;
 
         .lastAM {
@@ -368,7 +350,7 @@
     }
   }
   .expertContainer {
-    width: 970px;
+    width: 972px;
 
     .imageContainer {
       .expertImage {
@@ -384,16 +366,6 @@
         font-size: 16px;
         min-height: 264px;
       }
-    }
-  }
-
-  .advice {
-    width: 970px;
-    .header {
-      font-size: 28px !important;
-    }
-    .input {
-      width: 970px;
     }
   }
 
@@ -420,19 +392,19 @@
     font-size: 24px !important;
   }
   .videoPageContainer {
-    width: 720px;
+    width: 736px;
     .main {
       clear: both;
       .card {
-        width: 720px;
-        height: 365px;
+        width: 736px;
+        height: 374px;
       }
       .title {
-        width: 720px;
+        width: 736px;
         margin: 10px auto;
       }
       .description {
-        width: 720px;
+        width: 736px;
       }
     }
     .sidePanel {
@@ -440,19 +412,9 @@
     }
   }
   .expertContainer {
-    width: 720px;
+    width: 746px;
     .details {
       min-height: 268px;
-    }
-  }
-  .advice {
-    width: 720px;
-    .header {
-      font-size: 24px !important;
-    }
-    .input {
-      font-size: 1.3em !important;
-      width: 720px;
     }
   }
   .otherMovies {
@@ -480,16 +442,16 @@
     width: 496px;
   }
   .videoPageContainer {
-    width: 100%;
+    width: 496px;
     .main {
       margin: auto 0 30px auto;
       .card {
-        width: 480px;
-        height: 270px;
+        width: 496px;
+        height: 279px;
         margin: auto;
       }
       .title {
-        width: 100%;
+        width: 496px;
         .header {
           width: 100%;
         }
@@ -501,12 +463,12 @@
         }
       }
       .description {
-        width: 100%;
+        width: 496px;
       }
     }
   }
   .expertContainer {
-    width: 100%;
+    width: 496px;
 
     .imageContainer {
       float: none;
@@ -524,14 +486,8 @@
       }
       .description {
         min-height: 0;
-        padding: 0 10px;
+        padding: 0 8px;
       }
-    }
-  }
-  .advice {
-    width: 500px;
-    .input {
-      width: 500px;
     }
   }
   .otherArticles {
@@ -550,26 +506,27 @@
     width: 400px;
   }
   .videoPageContainer {
+    width: 400px;
     .main {
       .card {
         width: 400px;
         height: 225px;
       }
       .title {
+        width: 400px;
         .buttons {
           .button {
             font-size: 15.5px;
           }
         }
       }
+      .description {
+        width: 400px;
+      }
     }
   }
-  .advice {
-    width: 100%;
-    margin: auto auto 30px auto;
-    .input {
-      width: 100%;
-    }
+  .expertContainer {
+    width: 400px;
   }
   .otherArticles {
     .card {
@@ -585,6 +542,7 @@
     width: 100%;
   }
   .videoPageContainer {
+    width: 100%;
     .main {
       .card {
         width: 100%;
@@ -595,21 +553,23 @@
           border-radius: 0 !important;
         }
       }
+      .title {
+        width: 100%;
+        padding: 0 8px;
+      }
+      .description {
+        width: 100%;
+        padding: 0 8px;
+      }
     }
   }
   .expertContainer {
+    width: 100%;
     .imageContainer {
       width: 100%;
       .expertImage {
         width: 100%;
-        padding: 10px;
       }
-    }
-  }
-  .advice {
-    .input {
-      font-size: 1em !important;
-      width: 100%;
     }
   }
   .recomendedProducts {

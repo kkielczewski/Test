@@ -20,7 +20,6 @@ class Articles extends React.Component {
       totalCount: null
     };
     this.handlePageChange = this.handlePageChange.bind(this);
-    this.handlePageChange4 = this.handlePageChange4.bind(this);
   }
 
   async componentDidMount() {
@@ -50,18 +49,12 @@ class Articles extends React.Component {
       { link: '/doctor/13', name: 'product13', price: '13', thumbnail: '' },
       { link: '/doctor/14', name: 'product14', price: '14', thumbnail: '' }];
 
-    this.setState({ allArticles: articles, allProducts: products, currentArticles: articles.slice(0, 8), totalCount: 10 });
+    this.setState({ allArticles: articles, allProducts: products, currentArticles: articles.slice(0, 6), totalCount: 10 });
   }
 
   handlePageChange(pageNumber) {
-    const offset = (pageNumber - 1) * 8;
-    const currentItems = this.state.allArticles.slice(offset, offset + 8);
-    this.setState({ activePage: pageNumber, currentArticles: currentItems });
-  }
-
-  handlePageChange4(pageNumber) {
-    const offset = (pageNumber - 1) * 4;
-    const currentItems = this.state.allArticles.slice(offset, offset + 4);
+    const offset = (pageNumber - 1) * 6;
+    const currentItems = this.state.allArticles.slice(offset, offset + 6);
     this.setState({ activePage: pageNumber, currentArticles: currentItems });
   }
 
@@ -121,14 +114,14 @@ class Articles extends React.Component {
         <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} >
           <div style={{ position: 'absolute', left: '0', bottom: '0', width: '100%' }} ><div className='pictureHeader' >Artykuły</div></div>
         </div>
-        <div className='videoContainer' >
+        <div className='articleContainer' >
           <div className='videoList' >
-            {this.state.currentArticles.map(article => <ArticleCard id='1' article={article} image={ArticlePlaceholder} imageClass='listImage' contentClass='listContent' />)}
+            {this.state.currentArticles.map(article => <ArticleCard id='1' article={article} image={ArticlePlaceholder} imageClass='listImage' />)}
             <div className='videoNav' >
               <Pagination
               hideFirstLastPages
               activePage={this.state.activePage}
-              itemsCountPerPage={8}
+              itemsCountPerPage={6}
               totalItemsCount={this.state.totalCount}
               pageRangeDisplayed={5}
               activeClass="activeli"

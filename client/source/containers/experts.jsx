@@ -116,7 +116,7 @@ class Experts extends React.Component {
         <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} >
         <div style={{ position: 'absolute', left: '0', bottom: '0', width: '100%'}} ><div className='pictureHeader' >Eksperci</div></div>
         </div>
-        <div className='doctorContainer' >
+        <div className='doctorsContainer' >
           <div className='doctorList' >
             {this.state.currentExperts.map(expert => <DoctorCard link={expert.link} contentClass='doctorContent' imageClass='Image' />)}
             <div className='doctorNav' >
