@@ -76,8 +76,7 @@ class Home extends React.Component {
       infinite: true,
       centerPadding: '0px',
       slidesToShow: 3,
-      speed: 1000,
-      focusOnSelect: true,
+      speed: 500,
       swipeToSlide: true,
       responsive: [
         {
@@ -95,12 +94,12 @@ class Home extends React.Component {
       centerPadding: '0px',
       slidesToShow: 4,
       speed: 300,
-      focusOnSelect: true,
       swipeToSlide: true,
+      autoplay: true,
       autoplaySpeed: 3000,
       responsive: [
         {
-          breakpoint: 2171,
+          breakpoint: 1420,
           settings: {
             slidesToShow: 3
           }
@@ -119,8 +118,7 @@ class Home extends React.Component {
       infinite: true,
       centerPadding: '0px',
       slidesToShow: 7,
-      speed: 1000,
-      focusOnSelect: true,
+      speed: 300,
       swipeToSlide: true,
       autoplay: true,
       autoplaySpeed: 3000,
@@ -164,7 +162,7 @@ class Home extends React.Component {
       ]
     };
     return (
-      <div style={{ marginTop: '80px' }}>
+      <div style={{ marginTop: '60px' }}>
         <Header dividing textAlign='center' size='huge' className='homeTitle' >Allecco.tv TWÓJ PORTAL O ZDROWIU</Header>
         <Responsive minWidth='769' >
           <Slider {...videoSettings} >

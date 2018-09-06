@@ -25,6 +25,49 @@ body {
   line-height: normal;
 }
 
+.mainRoot {
+  overflow: visible !important;
+}
+
+.mainSidebar {
+  background: #db2828 !important;
+  z-index: 102 !important;
+  position: fixed !important;
+  top: 52px !important;
+}
+
+.mainOverlay {
+  z-index: 101 !important;
+}
+
+.mainContent {
+  overflow: visible !important;
+  
+  .mobileNavbar {
+    height: 53px;
+    .left.menu {
+      margin-right: 0 !important;
+      .button {
+        width: 65px;
+        margin: 0;
+        padding: 0 25px;
+
+        i {
+          margin: 0;
+          font-size: 2em;
+        }
+      }
+    }
+
+    img {
+      padding: 6.5px 65px 6.5px 0 !important;
+      width: 190px;
+      height: 53px;
+      margin: auto auto auto 0;
+    }
+  }
+}
+
 .socialTab {
   position: relative;
   height: 53px;

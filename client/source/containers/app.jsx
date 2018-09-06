@@ -18,7 +18,7 @@ class App extends React.Component {
     return (
       <BrowserRouter forceRefresh={true} >
         <div>
-          <NavBar />
+          <NavBar>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/video" component={Video} />
@@ -28,6 +28,7 @@ class App extends React.Component {
             <Route exact path="/expert" component={Experts} />
             <Route exact path="/expert/:id" component={ExpertPage} />
           </Switch>
+          </NavBar>
         </div>
       </BrowserRouter>
     );

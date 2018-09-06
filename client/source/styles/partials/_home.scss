@@ -65,17 +65,21 @@
   }
 
   .card {
-    transition: 1s ease;
+    transition: 0.5s ease;
     overflow: hidden;
     width: 100%;
     margin: 73px 0;
     min-height: 360px;
   }
 
+  .slick-active .card {
+    z-index: 25;
+  }
+
   .slick-center .card {
     transform: scale(1.5);
     z-index: 50;
-    transition: 1s ease;
+    transition: 0.5s ease;
   }
 }
 
@@ -311,7 +315,7 @@
     width: 1240px;
 
     .card {
-      height: 414px;
+      height: 310px;
     }
   }
 }
@@ -378,7 +382,7 @@
 
       .doctorContent {
         position: absolute;
-        bottom: 0;
+        bottom: -1px;
         width: 100%;
         height: 75px;
         margin: auto;
@@ -391,6 +395,7 @@
         border-width: 1px 0 0 0 !important;
         border-color: lightgray !important;
         display: flex;
+        border-radius: 0 !important;
 
         .header {
           font-size: 28px !important;
