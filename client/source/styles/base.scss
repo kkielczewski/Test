@@ -13,6 +13,7 @@
 @import "partials/experts";
 @import "partials/expert-page";
 @import "partials/articles";
+@import "partials/info";
 
 // Main Page
 * {
@@ -34,6 +35,9 @@ body {
   z-index: 102 !important;
   position: fixed !important;
   top: 52px !important;
+  overflow: hidden;
+  overflow-y: hidden !important;
+  width: 260px;
 }
 
 .mainOverlay {

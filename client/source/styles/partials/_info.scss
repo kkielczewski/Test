@@ -1,0 +1,431 @@
+.infoDescriptionContainer {
+  margin-top: 20px;
+  .description {
+    display: flex;
+    width: 1980px;
+    margin: auto;
+
+    img {
+      width: 604px;
+    }
+
+    .text {
+      width: 1366px;
+      margin-left: 10px;
+
+      p {
+        font-style: italic;
+        font-size: 22px;
+        margin-bottom: 3px;
+      }
+      ul {
+        font-style: italic;
+        font-size: 22px;
+        margin: 4px;
+      }
+      .title {
+        font-size: 34px;
+        font-weight: 600;
+      }
+      .paragraphTitle {
+        font-size: 28px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.infoNewsletter {
+  margin-top: 20px;
+  .newsletter {
+    width: 1980px;
+    margin: auto;
+    padding: 20px 60px;
+    .header {
+      font-size: 34px;
+      margin-top: 20px;
+    }
+    .paragraph {
+      font-size: 49px;
+      line-height: 51px;
+      margin-bottom: 20px;
+    }
+    .input {
+      font-size: 30px;
+      width: 1770px;
+      margin-bottom: 20px;
+      input {
+        border-radius: 0.5em;
+        padding: 20px 34px;
+      }
+    }
+    .checkbox {
+      font-size: 23px;
+      line-height: 26px;
+      margin-bottom: 20px;
+      label {
+        padding-left: 42px;
+      }
+      label::before {
+        width: 40px;
+        height: 40px;
+      }
+      label::after {
+        font-size: 40px;
+        width: 40px;
+        height: 28px;
+        top: 6px;
+      }
+    }
+    .button {
+      font-size: 34px;
+      padding: 25px 100px;
+      border-radius: 0.5em;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .infoDescriptionContainer {
+    .description {
+      width: 1404px;
+  
+      img {
+        width: 500px;
+      }
+  
+      .text {
+        width: 868px;
+  
+        p {
+          font-size: 18px;
+          line-height: 21px;
+        }
+        ul {
+          font-size: 18px;
+          line-height: 21px;
+        }
+        .title {
+          font-size: 30px;
+          line-height: 30px
+        }
+        .paragraphTitle {
+          font-size: 21px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+  
+  .infoNewsletter {
+    .newsletter {
+      width: 1404px;
+      .header {
+        font-size: 24px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .paragraph {
+        font-size: 32px;
+        line-height: 34px;
+        margin-bottom: 15px;
+      }
+      .input {
+        font-size: 20px;
+        width: 1200px;
+        margin-bottom: 15px;
+      }
+      .checkbox {
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 10px;
+        label {
+          padding-left: 33px;
+        }
+        label::before {
+          width: 30px;
+          height: 30px;
+        }
+        label::after {
+          font-size: 30px;
+          width: 30px;
+          height: 30px;
+          top: 5px;
+        }
+      }
+      .button {
+        font-size: 20px;
+        padding: 20px 70px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .infoDescriptionContainer {
+    .description {
+      width: 972px;
+  
+      img {
+        width: 355px;
+        height: 355px;
+        margin: auto;
+      }
+  
+      .text {
+        width: 607px;
+  
+        p {
+          font-size: 17px;
+          line-height: 17px;
+          margin-bottom: 5px;
+        }
+        ul {
+          font-size: 16px;
+          line-height: 17px;
+        }
+        .title {
+          font-size: 26px;
+          line-height: 27px
+        }
+        .paragraphTitle {
+          font-size: 20px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+  
+  .infoNewsletter {
+    .newsletter {
+      width: 972px;
+      .header {
+        font-size: 22px;
+      }
+      .paragraph {
+        font-size: 25px;
+        line-height: 27px;
+      }
+      .input {
+        font-size: 18px;
+        width: 785px;
+        input {
+          padding: 15px 25px;
+        }
+      }
+      .checkbox {
+        font-size: 14px;
+        line-height: 15px;
+        label::before {
+          width: 27px;
+          height: 27px;
+        }
+        label::after {
+          font-size: 27px;
+          width: 27px;
+          height: 27px;
+          top: 6px;
+        }
+      }
+      .button {
+        font-size: 18px;
+        padding: 15px 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .infoDescriptionContainer {
+    .description {
+      width: 746px;
+      display: inherit;
+  
+      img {
+        width: 300px;
+        height: 300px;
+        float: left;
+        margin-right: 10px;
+      }
+  
+      .text {
+        width: 746px;
+        margin: 0px;
+  
+        p {
+          line-height: 20px;
+          margin-bottom: 3px;
+        }
+      }
+    }
+  }
+  
+  .infoNewsletter {
+    .newsletter {
+      width: 746px;
+      padding: 20px 20px;
+      .header {
+        font-size: 19px;
+      }
+      .paragraph {
+        font-size: 21px;
+        line-height: 22px;
+      }
+      .input {
+        font-size: 17px;
+        width: 640px;
+        input {
+          padding: 10px 20px;
+        }
+      }
+      .checkbox {
+        font-size: 13px;
+        line-height: 14px;
+        label::before {
+          width: 20px;
+          height: 20px;
+        }
+        label::after {
+          font-size: 20px;
+          width: 20px;
+          height: 20px;
+          top: 2px;
+        }
+      }
+      .button {
+        font-size: 16px;
+        padding: 10px 35px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .infoDescriptionContainer {
+    .description {
+      width: 496px;
+  
+      img {
+        width: 375px;
+        height: 375px;
+        float: none;
+        display: inherit;
+        margin: auto;
+      }
+  
+      .text {
+        width: 486px;
+        margin: 10px;
+      }
+    }
+  }
+  
+  .infoNewsletter {
+    .newsletter {
+      width: 496px;
+      padding: 10px 10px;
+      .header {
+        font-size: 17px;
+      }
+      .paragraph {
+        font-size: 18px;
+        line-height: 20px;
+      }
+      .input {
+        display: block;
+        width: 420px;
+        margin: 0 auto 15px auto;
+        input {
+          width: 100%;
+        }
+      }
+      .checkbox {
+        font-size: 12px;
+        label {
+          padding-left: 24px;
+        }
+      }
+      .button {
+        font-size: 16px;
+        padding: 10px 35px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .infoDescriptionContainer {
+    .description {
+      width: 400px;
+  
+      img {
+        width: 375px;
+        height: 375px;
+      }
+  
+      .text {
+        width: 380px;
+      }
+    }
+  }
+  
+  .infoNewsletter {
+    .newsletter {
+      width: 400px;
+      padding: 5px 5px;
+      .header {
+        font-size: 15px;
+      }
+      .paragraph {
+        font-size: 16px;
+        line-height: 18px;
+      }
+      .input {
+        width: 340px;
+        font-size: 15px;
+        input {
+          padding: 8px 15px;
+        }
+      }
+      .checkbox {
+        font-size: 10px;
+      }
+      .button {
+        font-size: 16px;
+        padding: 10px 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .infoDescriptionContainer {
+    .description {
+      width: 100%;
+  
+      img {
+        width: 100%;
+        height: 350px;
+      }
+  
+      .text {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+      }
+    }
+  }
+  
+  .infoNewsletter {
+    .newsletter {
+      width: 100%;
+      .input {
+        width: 280px;
+      }
+    }
+  }
+}

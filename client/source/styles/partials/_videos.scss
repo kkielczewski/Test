@@ -2,7 +2,7 @@
 // Videos List
 
 .videoPicture {
-  height: 400px;
+  height: 300px;
 }
 
 .videoContainer {
@@ -89,6 +89,8 @@
     }
 
     .input {
+      width: 600px;
+      display: block;
       font-size : 3em;
       margin: auto auto 80px auto;
 
@@ -172,7 +174,8 @@
       }
   
       .input {
-        font-size : 2em;
+        width: 375px;
+        font-size: 2em;
         margin: auto auto 40px auto;
       }
   
@@ -201,6 +204,9 @@
 }
 
 @media screen and (max-width: 1420px) {
+  .videoPicture {
+    height: 250px;
+  }
   .videoContainer {
     width: 972px;
     .videoList {
@@ -248,6 +254,7 @@
       .input {
         font-size : 1.5em;
         margin: auto auto 30px auto;
+        width: 230px;
       }
   
       .checkbox {
@@ -276,7 +283,7 @@
 
 @media screen and (max-width: 1020px) {
   .videoPicture {
-    height: 300px;
+    height: 200px;
   }
     .videoContainer {
       display: inline;
@@ -328,7 +335,7 @@
 
 @media screen and (max-width: 768px) {
   .videoPicture {
-    height: 200px;
+    height: 175px;
   }
   .videoContainer {
   .videoList {
@@ -363,7 +370,7 @@
     }
 
     .input {
-      width: 480px;
+      width: 425px;
     }
 
     .button {

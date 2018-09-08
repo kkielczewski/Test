@@ -75,6 +75,8 @@
       margin-bottom: 80px;
     }
     .input {
+      display: block;
+      width: 600px;
       font-size : 3em;
       margin: auto auto 80px auto;
       input {
@@ -148,7 +150,8 @@
         margin-bottom: 40px;
       }
       .input {
-        font-size : 2em;
+        width: 375px;
+        font-size: 2em;
         margin: auto auto 40px auto;
       }
       .checkbox {
@@ -222,7 +225,8 @@
         margin-bottom: 30px;
       }
       .input {
-        font-size : 1.5em;
+        width: 230px;
+        font-size: 1.5em;
         margin: auto auto 30px auto;
       }
       .checkbox {
@@ -323,7 +327,7 @@
         font-size: 22px;
       }
       .input {
-        width: 480px;
+        width: 425px;
       }
       .button {
         margin-bottom: 20px;

@@ -12,6 +12,8 @@ import VideoPage from './video-page';
 import ArticlePage from './article-page';
 import Experts from './experts';
 import ExpertPage from './expert-page';
+import Info from './info';
+import Contact from './contact';
 
 class App extends React.Component {
   render() {
@@ -27,6 +29,8 @@ class App extends React.Component {
             <Route exact path="/article/:id" component={ArticlePage} />
             <Route exact path="/expert" component={Experts} />
             <Route exact path="/expert/:id" component={ExpertPage} />
+            <Route exact path="/info" component={Info} />
+            <Route exact path="/contact" component={Contact} />
           </Switch>
           </NavBar>
         </div>
