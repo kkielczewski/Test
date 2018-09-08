@@ -223,7 +223,7 @@ class Home extends React.Component {
         </Responsive>
         <Survey/>
         <Header dividing textAlign='center' size='huge' >Ostatnie Artykuły</Header>
-        <MainArticles max={5} />
+        <MainArticles />
         <Header className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>
         <Slider {...productsSettings} >
           {this.state.allProducts.map(product => <ProductCard imageClass='Image' product={product} />)}

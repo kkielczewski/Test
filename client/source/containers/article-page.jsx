@@ -7,6 +7,7 @@ import ArticleCard from '../components/article-card';
 import ArticleCardBig from '../components/article-card-big';
 import ProductCard from '../components/product-card';
 import ProductCardSmall from '../components/product-card-small';
+import Advice from '../components/advice';
 import Avatar from '../assets/images/avatarPlaceholder.png';
 import ArticlePlaceholder from '../assets/images/article-placeholder.png';
 
@@ -186,10 +187,7 @@ class VideoPage extends React.Component {
           </div>
         </div>
         </div>
-        <Segment className='advice' textAlign='center'>
-          <Header textAlign='center' size='medium' >Co chciałbyś zobaczyć w następnym filmie tego eksperta?</Header>
-          <Input placeholder='...' />
-        </Segment>
+        <Advice />
         <div className='otherMovies' >
           <Header textAlign='center' size='huge' >Inne filmy experta:</Header>
             <div className='expertMovies' >

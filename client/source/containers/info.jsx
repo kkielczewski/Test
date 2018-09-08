@@ -7,7 +7,6 @@ import MoviesPlaceholder from '../assets/images/movies-placeholder.png';
 import Default from '../assets/images/default.jpg';
 
 class Info extends React.Component {
-  
   constructor(props) {
     super(props);
     this.state = {
@@ -105,7 +104,7 @@ class Info extends React.Component {
               <ul>
                 <li><b>Jeśli masz pytania, polecamy kontakt z opiekunem klienta.</b> Możesz dzwonić: 032 744 35 34 lub 0 801 889 885. Czeka na Ciebie od poniedziałku do piątku w godz. 8:00-16:00. Możesz też napisać: info@allecco.pl.</li>
                 <li><b>Jeżeli potrzebujesz porady farmaceuty,</b> napisz do eksperta allecco.pl: farmaceuta@allecco.pl</li>
-                <li><b>W naszej czytelni na pewno znajdziesz coś dla siebie:</b> www.allecco.pl/czytelnia</li>
+                <li><b>W naszej czytelni na pewno znajdziesz coś dla siebie:</b> <a href="//allecco.pl/czytelnia" >www.allecco.pl/czytelnia</a></li>
               </ul>
               <p>Dziękujemy, że jesteś z nami - zespół allecco.pl</p>
             </div>

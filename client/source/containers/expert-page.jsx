@@ -5,6 +5,7 @@ import VideoCard from '../components/video-card';
 import VideoCardBig from '../components/video-card-big';
 import ArticleCard from '../components/article-card';
 import ProductCard from '../components/product-card';
+import Advice from '../components/advice';
 import { getSomeVideos } from '../utils/youtube-utils';
 import Avatar from '../assets/images/avatarPlaceholder.png';
 import MoviesPlaceholder from '../assets/images/movies-placeholder.png';
@@ -147,10 +148,7 @@ class VideoPage extends React.Component {
             </div>
           </Responsive>
         </div>
-        <Segment className='advice' textAlign='center'>
-          <Header textAlign='center' size='medium' >Co chciałbyś zobaczyć w następnym filmie tego eksperta?</Header>
-          <Input placeholder='...' />
-        </Segment>
+        <Advice />
         <div className='doctorContainerArticles' >
           <Header textAlign='center' size='huge' >Artykuły eksperta</Header>
           <Responsive minWidth={1021} >

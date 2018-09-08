@@ -5,6 +5,7 @@
   margin: auto !important;
   border: none !important;
   box-shadow: none !important;
+  clear: both;
 
   .header {
     font-size: 38px!important;
@@ -12,11 +13,18 @@
 
   .input {
     font-size : 2em;
+    margin-bottom: 20px;
 
     input {
       border-radius: 0.5em;
       width: 1900px;
     }
+  }
+
+  .button {
+    font-size: 34px;
+    padding: 25px 100px;
+    border-radius: 0.5em;
   }
 }
 
@@ -32,6 +40,11 @@
       input {
         width: 1324px;
       }
+    }
+
+    .button {
+      font-size: 20px;
+      padding: 20px 70px;
     }
   }
 }
@@ -51,6 +64,11 @@
         width: 932px;
       }
     }
+
+    .button {
+      font-size: 18px;
+      padding: 15px 50px;
+    }
   }
 }
 
@@ -66,6 +84,11 @@
       input {
         width: 706px;
       }
+    }
+
+    .button {
+      font-size: 16px;
+      padding: 10px 35px;
     }
   }
 }
@@ -96,6 +119,10 @@
       input {
         width: 390px;
       }
+    }
+
+    .button {
+      padding: 10px 30px;
     }
   }
 }
