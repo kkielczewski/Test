@@ -126,7 +126,7 @@ class VideoPage extends React.Component {
       ]
     };
     return (
-      <div style={{ marginTop: '53px' }}>
+      <div className='mainContainer' >
         <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} >
           <div style={{ position: 'absolute', left: '0', bottom: '0', width: '100%'}} ><div className='pictureHeader' >{this.state.name}</div></div>
         </div>

@@ -276,7 +276,7 @@ class VideoPage extends React.Component {
       ]
     };
     return (
-      <div style={{ marginTop: '53px' }}>
+      <div className='mainContainer' >
         <div className='videoPageContainer' >
           <div className='main' >
             <VideoCardBig imageClass='videoImage' id={this.state.id} image={this.state.image} />

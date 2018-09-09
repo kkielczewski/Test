@@ -162,7 +162,7 @@ class Home extends React.Component {
       ]
     };
     return (
-      <div style={{ marginTop: '60px' }}>
+      <div className='mainContainer' >
         <Header dividing textAlign='center' size='huge' className='homeTitle' >Allecco.tv TWÓJ PORTAL O ZDROWIU</Header>
         <Responsive minWidth='769' >
           <Slider {...videoSettings} >

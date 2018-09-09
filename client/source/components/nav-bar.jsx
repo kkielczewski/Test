@@ -32,9 +32,9 @@ class NavBar extends React.Component {
   render() {
     const { children } = this.props;
     return (
-      <div>
-        <Responsive minWidth='769' >
-          <Menu color='red' inverted fixed='top' >
+      <div style={{ height: '100%' }} >
+        <Responsive minWidth='769' style={{ display: 'flex', flexDirection: 'column', height: '100%' }} >
+          <Menu color='red' inverted fixed='top' style={{ flex: 'none' }}  >
             <img src={miniLogo} className='item' style={{ padding: '9px' }} />
             <Menu.Menu position='right' >
               <NavLink className="item" to="/" style={{ padding: '13px 10px' }} >HOME</NavLink>

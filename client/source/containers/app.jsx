@@ -14,12 +14,13 @@ import Experts from './experts';
 import ExpertPage from './expert-page';
 import Info from './info';
 import Contact from './contact';
+import Footer from './footer';
 
 class App extends React.Component {
   render() {
     return (
       <BrowserRouter forceRefresh={true} >
-        <div>
+        <div style={{ height: '100%' }} >
           <NavBar>
           <Switch>
             <Route exact path="/" component={Home} />
@@ -32,6 +33,7 @@ class App extends React.Component {
             <Route exact path="/info" component={Info} />
             <Route exact path="/contact" component={Contact} />
           </Switch>
+          <Footer />
           </NavBar>
         </div>
       </BrowserRouter>

@@ -25,9 +25,89 @@ body {
   margin: 0;
   line-height: normal;
 }
+// Footer
 
+.footer {
+  flex: none;
+  background-color: #db2828;
+  color: white;
+  .footerContent {
+    width: 1980px;
+    margin: auto;
+    height: 100px;
+    position: relative;
+
+    .copyright {
+      font-size: 20px;
+      padding: 5px;
+    }
+    .goToTop {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto auto 20px auto;
+      width: 119px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .footer {
+    .footerContent {
+      width: 1404px;
+    }
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .footer {
+    .footerContent {
+      width: 972px;
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .footer {
+    .footerContent {
+      width: 746px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    .footerContent {
+      width: 100%;
+      .copyright {}
+      .goToTop {
+        display: none;
+      }
+    }
+  }
+}
+
+// Whatever
 .mainRoot {
   overflow: visible !important;
+}
+
+.mainContainer {
+  flex: 1 0 auto; /* 2 */
+  padding: var(--space) var(--space) 0;
+  width: 100%;
+  margin-top: 53px;
+}
+
+.mainContainer::after {
+  content: '\00a0'; /* &nbsp; */
+  display: block;
+  margin-top: var(--space);
+  height: 0px;
+  visibility: hidden;
 }
 
 .mainSidebar {
