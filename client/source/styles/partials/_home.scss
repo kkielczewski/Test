@@ -1,4 +1,5 @@
 .homeTitle {
+  margin-top: 10px !important;
   font-size: 3em;
 }
 
@@ -778,7 +779,7 @@
   clear: both;
 }
 .productCarousel {
-  width: 100%;
+  width: 1980px;
   margin: auto;
   overflow: hidden;
 
@@ -789,10 +790,77 @@
 
   .card {
     width: 100%;
+    height: 390px;
     border-radius: 0;
+    padding: 10px;
     box-shadow: none;
-    border-style: solid;
-    border-width: 1px;
-    border-color: lightgray;
+
+    .productPicture {
+      position: relative;
+      height: 260px;
+      border-style: solid !important;
+      border-width: 1px 1px 0 1px !important;
+      border-color: lightgray !important;
+      .image {
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+    .content {
+      border-style: solid;
+      border-width: 0 1px 1px 1px;
+      border-color: lightgray;
+      text-align: center;
+      .header {
+        font-size: 20px !important;
+        height: 75px;
+        overflow: hidden;
+        margin-bottom: 10px;
+      }
+      .description {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 0 !important;
+        color: #db2828;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .productCarousel {
+    width: 1404px;
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .productCarousel {
+    width: 972px;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .productCarousel {
+    width: 744px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .productCarousel {
+    width: 100%;
+    .slick-list {
+      width: 480px;
+      overflow: visible;
+
+      .card {
+        padding: 2px;
+      }
+    }
   }
 }

@@ -39,20 +39,14 @@ class Home extends React.Component {
       { link: '/expert/6', thumbnail: '' },
       { link: '/expert/7', thumbnail: '' }];
 
-    const products = [{ link: '/doctor/1', name: 'product1', price: '1', thumbnail: '' },
-      { link: '/doctor/2', name: 'product2', price: '2', thumbnail: '' },
-      { link: '/doctor/3', name: 'product3', price: '3', thumbnail: '' },
-      { link: '/doctor/4', name: 'product4', price: '4', thumbnail: '' },
-      { link: '/doctor/5', name: 'product5', price: '5', thumbnail: '' },
-      { link: '/doctor/6', name: 'product6', price: '6', thumbnail: '' },
-      { link: '/doctor/7', name: 'product7', price: '7', thumbnail: '' },
-      { link: '/doctor/8', name: 'product8', price: '8', thumbnail: '' },
-      { link: '/doctor/9', name: 'product9', price: '9', thumbnail: '' },
-      { link: '/doctor/10', name: 'product10', price: '10', thumbnail: '' },
-      { link: '/doctor/11', name: 'product11', price: '11', thumbnail: '' },
-      { link: '/doctor/12', name: 'product12', price: '12', thumbnail: '' },
-      { link: '/doctor/13', name: 'product13', price: '13', thumbnail: '' },
-      { link: '/doctor/14', name: 'product14', price: '14', thumbnail: '' }];
+    const products = [{ link: '1050,daktarin-krem-15-g.html', name: 'Daktarin krem 15 g', price: '20,16', thumbnail: '/img/product/1050/kind/1' },
+      { link: '21180,4-flex-30-saszetki-kolagen-nowej-generacji-witamina-c.html', name: '4 Flex 30 sasz.-zdrowe kości ,stawy,ścięgna', price: '77,70', thumbnail: '/img/product/21180/kind/1' },
+      { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
+      { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' },
+      { link: '1050,daktarin-krem-15-g.html', name: 'Daktarin krem 15 g', price: '20,16', thumbnail: '/img/product/1050/kind/1' },
+      { link: '21180,4-flex-30-saszetki-kolagen-nowej-generacji-witamina-c.html', name: '4 Flex 30 sasz.-zdrowe kości ,stawy,ścięgna', price: '77,70', thumbnail: '/img/product/21180/kind/1' },
+      { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
+      { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' }];
 
     this.setState({ allVideos: object.videos, currentVideos: object.videos.slice(0, 4), totalVideos: object.totalCount, allDoctors: doctors, currentDoctors: doctors.slice(0, 4), totalCount: 7, allProducts: products });
   }
@@ -118,45 +112,34 @@ class Home extends React.Component {
       infinite: true,
       centerPadding: '0px',
       slidesToShow: 7,
+      slidesToScroll: 3,
       speed: 300,
       swipeToSlide: true,
       autoplay: true,
       autoplaySpeed: 3000,
       responsive: [
         {
-          breakpoint: 1700,
+          breakpoint: 2170,
           settings: {
             slidesToShow: 6
           }
         },
         {
-          breakpoint: 1370,
-          settings: {
-            slidesToShow: 5
-          }
-        },
-        {
-          breakpoint: 1070,
+          breakpoint: 1420,
           settings: {
             slidesToShow: 4
           }
         },
         {
-          breakpoint: 768,
+          breakpoint: 1020,
           settings: {
             slidesToShow: 3
           }
         },
         {
-          breakpoint: 500,
+          breakpoint: 768,
           settings: {
-            slidesToShow: 2
-          }
-        },
-        {
-          breakpoint: 400,
-          settings: {
-            slidesToShow: 1
+            slidesToScroll: 2
           }
         }
       ]
@@ -225,9 +208,11 @@ class Home extends React.Component {
         <Header dividing textAlign='center' size='huge' >Ostatnie Artykuły</Header>
         <MainArticles />
         <Header className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>
-        <Slider {...productsSettings} >
-          {this.state.allProducts.map(product => <ProductCard imageClass='Image' product={product} />)}
-        </Slider>
+        <div>
+          <Slider {...productsSettings} >
+            {this.state.allProducts.map(product => <ProductCard imageClass='Image' product={product} />)}
+          </Slider>
+        </div>
       </div>
     );
   }

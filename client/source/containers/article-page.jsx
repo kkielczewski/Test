@@ -46,20 +46,14 @@ class VideoPage extends React.Component {
       { type: 'title', text: 'Szczepionka na odporność dla dzieci i dla dorosłych' },
       { type: 'paragraph', text: 'Szczepionka na odporność polecana jest przede wszystkim dzieciom i innym osobom, które często cierpią na nawracające infekcje dróg oddechowych – choroby gardła, krtani, oskrzeli czy płuc. Jest dosyć bezpieczna i dobrze tolerowana nawet przez najmłodszych. Szczepionka na odporność dla dzieci i dla osób dorosłych dostępna jest tylko na podstawie recepty. Większość z nas kojarzy szczepionki głównie z zastrzykami, jednak szczepionka na odporność ma inną postać – kapsułek, granulatu, tabletek podjęzykowych lub kropli do nosa.' }];
 
-    const products = [{ link: '/doctor/1', name: 'product1', price: '1', thumbnail: '' },
-      { link: '/doctor/2', name: 'product2', price: '2', thumbnail: '' },
-      { link: '/doctor/3', name: 'product3', price: '3', thumbnail: '' },
-      { link: '/doctor/4', name: 'product4', price: '4', thumbnail: '' },
-      { link: '/doctor/5', name: 'product5', price: '5', thumbnail: '' },
-      { link: '/doctor/6', name: 'product6', price: '6', thumbnail: '' },
-      { link: '/doctor/7', name: 'product7', price: '7', thumbnail: '' },
-      { link: '/doctor/8', name: 'product8', price: '8', thumbnail: '' },
-      { link: '/doctor/9', name: 'product9', price: '9', thumbnail: '' },
-      { link: '/doctor/10', name: 'product10', price: '10', thumbnail: '' },
-      { link: '/doctor/11', name: 'product11', price: '11', thumbnail: '' },
-      { link: '/doctor/12', name: 'product12', price: '12', thumbnail: '' },
-      { link: '/doctor/13', name: 'product13', price: '13', thumbnail: '' },
-      { link: '/doctor/14', name: 'product14', price: '14', thumbnail: '' }];
+      const products = [{ link: '1050,daktarin-krem-15-g.html', name: 'Daktarin krem 15 g', price: '20,16', thumbnail: '/img/product/1050/kind/1' },
+      { link: '21180,4-flex-30-saszetki-kolagen-nowej-generacji-witamina-c.html', name: '4 Flex 30 sasz.-zdrowe kości ,stawy,ścięgna', price: '77,70', thumbnail: '/img/product/21180/kind/1' },
+      { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
+      { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' },
+      { link: '1050,daktarin-krem-15-g.html', name: 'Daktarin krem 15 g', price: '20,16', thumbnail: '/img/product/1050/kind/1' },
+      { link: '21180,4-flex-30-saszetki-kolagen-nowej-generacji-witamina-c.html', name: '4 Flex 30 sasz.-zdrowe kości ,stawy,ścięgna', price: '77,70', thumbnail: '/img/product/21180/kind/1' },
+      { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
+      { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' }];
 
     const articles = [{ link: '/article/1', title: '1', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', thumbnails: '' },
       { link: '/article/2', title: '2', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', thumbnails: '' },
