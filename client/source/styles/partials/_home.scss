@@ -688,8 +688,9 @@
     width: 744px;
 
     .ui.card {
-      width: 352px;
-      height: 298px;
+      width: 368px;
+      height: 307px;
+      margin: 2px;
 
       .Image {
         height: 198px;
@@ -709,7 +710,7 @@
     .ui.card {
       width: 496px;
       height: 399px;
-      margin: 0 0 20px;
+      margin: 10px auto;
 
       .Image {
         height: 279px;
@@ -736,6 +737,7 @@
     .ui.card {
       width: 400px;
       height: 325px;
+      margin: 0 0 20px;
 
       .Image {
         height: 225px;
@@ -817,6 +819,7 @@
       border-width: 0 1px 1px 1px;
       border-color: lightgray;
       text-align: center;
+      padding: 10px;
       .header {
         font-size: 20px !important;
         height: 75px;
@@ -855,11 +858,45 @@
   .productCarousel {
     width: 100%;
     .slick-list {
-      width: 480px;
+      width: 1072px;
       overflow: visible;
 
       .card {
         padding: 2px;
+        .content {
+          padding: 5px;
+          .header {
+            font-size: 15px !important;
+          }
+          .description {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .productCarousel {
+    .slick-list {
+      width: 872px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .productCarousel {
+    .slick-list {
+      .card {
+        .content {
+          .header {
+            font-size: 14px !important;
+          }
+          .description {
+            font-size: 14px;
+          }
+        }
       }
     }
   }

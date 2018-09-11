@@ -8,7 +8,7 @@ import ProductCard from '../components/product-card';
 import Survey from '../components/survey';
 import MainArticles from './main-articles';
 import { getSomeVideos } from '../utils/youtube-utils';
-import VideoPlaceholder from '../assets/images/video-placeholder.jpg'
+import VideoPlaceholder from '../assets/images/video-placeholder.jpg';
 
 class Home extends React.Component {
   constructor(props) {
@@ -207,7 +207,7 @@ class Home extends React.Component {
         <Survey/>
         <Header dividing textAlign='center' size='huge' >Ostatnie Artykuły</Header>
         <MainArticles />
-        <Header className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>
+        <Header dividing className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>
         <div>
           <Slider {...productsSettings} >
             {this.state.allProducts.map(product => <ProductCard imageClass='Image' product={product} />)}

@@ -205,6 +205,10 @@
   }
 }
 
+.mentionedProducts {
+  font-size: 24px !important;
+}
+
 @media screen and (max-width: 2170px) {
   .pictureHeader {
     width: 1404px;
@@ -337,13 +341,12 @@
             width: 300px;
             height: 180px;
           }
-        
-          .social {
-            width: 201px;
-            .button {
-              font-size: 2em;
-              padding: 15px 30px;
-            }
+        }
+        .social {
+          width: 201px;
+          .button {
+            font-size: 2em;
+            padding: 15px 30px;
           }
         }
         .articleProducts {
@@ -414,6 +417,14 @@
       .title {
         width: 736px;
         margin: 10px auto;
+        .buttons {
+          .social {
+            margin-top: 2px;
+            .button {
+              width: 72px;
+            }
+          }
+        }
       }
       .description {
         width: 736px;
@@ -421,6 +432,48 @@
     }
     .sidePanel {
       display: none;
+    }
+  }
+  .articleProductsSmall {
+    width: 744px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    .card {
+      height: 370px;
+      width: 228px;
+      margin: 10px !important;
+      .imageContainer {
+        position: relative;
+        height: 260px;
+        .Image {
+          max-width: 100%;
+          max-height: 100%;
+          position: absolute;
+          margin: auto;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: 0;
+        }
+      }
+      .content {
+        border-top: none;
+        text-align: center;
+        padding: 10px;
+        .header {
+          font-size: 20px !important;
+          height: 75px;
+          overflow: hidden;
+          margin-bottom: 10px;
+        }
+        .description {
+          font-size: 20px;
+          font-weight: 600;
+          margin-top: 0 !important;
+          color: #db2828;
+        }
+      }
     }
   }
   .expertContainer {
@@ -476,12 +529,23 @@
           .button {
             font-size: 18px;
           }
+          .blue {
+            float: left;
+          }
+          .social {
+            .button {
+              width: 117px;
+            }
+          }
         }
       }
       .description {
         width: 496px;
       }
     }
+  }
+  .articleProductsSmall {
+    width: 496px;
   }
   .expertContainer {
     width: 496px;
@@ -547,10 +611,29 @@
           .button {
             font-size: 15.5px;
           }
+          .blue {
+            float: none;
+          }
         }
       }
       .description {
         width: 400px;
+      }
+    }
+  }
+  .articleProductsSmall {
+    width: 400px;
+    .card {
+      width: 190px;
+      margin: 5px !important;
+      .content {
+        padding: 5px;
+        .header {
+          font-size: 15px !important;
+        }
+        .description {
+          font-size: 15px;
+        }
       }
     }
   }
@@ -605,6 +688,25 @@
       }
     }
   }
+  .articleProductsSmall {
+    width: 100%;
+    .card {
+      width: 100%;
+      height: 325px;
+      .imageContainer {
+        height: 200;
+      }
+      .content {
+        padding: 10px;
+        .header {
+          font-size: 20px !important;
+        }
+        .description {
+          font-size: 20px;
+        }
+      }
+    }
+  }
   .expertContainer {
     width: 100%;
     .imageContainer {
@@ -632,5 +734,8 @@
         border-radius: 0 !important;
       }
     }
+  }
+  .mentionedProducts {
+    font-size: 20px !important;
   }
 }

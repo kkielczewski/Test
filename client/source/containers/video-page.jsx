@@ -2,6 +2,7 @@ import React from 'react';
 import { Header, Button, Image, Icon, Input, Responsive, Segment } from 'semantic-ui-react';
 import Slider from 'react-slick';
 import toastr from 'toastr';
+import MainMovies from './main-movies';
 import VideoCard from '../components/video-card';
 import VideoCardBig from '../components/video-card-big';
 import ProductCard from '../components/product-card';
@@ -173,20 +174,14 @@ class VideoPage extends React.Component {
       }
     });
 
-    const products = [{ link: '/doctor/1', name: 'product1', price: '1', thumbnail: '' },
-      { link: '/doctor/2', name: 'product2', price: '2', thumbnail: '' },
-      { link: '/doctor/3', name: 'product3', price: '3', thumbnail: '' },
-      { link: '/doctor/4', name: 'product4', price: '4', thumbnail: '' },
-      { link: '/doctor/5', name: 'product5', price: '5', thumbnail: '' },
-      { link: '/doctor/6', name: 'product6', price: '6', thumbnail: '' },
-      { link: '/doctor/7', name: 'product7', price: '7', thumbnail: '' },
-      { link: '/doctor/8', name: 'product8', price: '8', thumbnail: '' },
-      { link: '/doctor/9', name: 'product9', price: '9', thumbnail: '' },
-      { link: '/doctor/10', name: 'product10', price: '10', thumbnail: '' },
-      { link: '/doctor/11', name: 'product11', price: '11', thumbnail: '' },
-      { link: '/doctor/12', name: 'product12', price: '12', thumbnail: '' },
-      { link: '/doctor/13', name: 'product13', price: '13', thumbnail: '' },
-      { link: '/doctor/14', name: 'product14', price: '14', thumbnail: '' }];
+    const products = [{ link: '1050,daktarin-krem-15-g.html', name: 'Daktarin krem 15 g', price: '20,16', thumbnail: '/img/product/1050/kind/1' },
+      { link: '21180,4-flex-30-saszetki-kolagen-nowej-generacji-witamina-c.html', name: '4 Flex 30 sasz.-zdrowe kości ,stawy,ścięgna', price: '77,70', thumbnail: '/img/product/21180/kind/1' },
+      { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
+      { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' },
+      { link: '1050,daktarin-krem-15-g.html', name: 'Daktarin krem 15 g', price: '20,16', thumbnail: '/img/product/1050/kind/1' },
+      { link: '21180,4-flex-30-saszetki-kolagen-nowej-generacji-witamina-c.html', name: '4 Flex 30 sasz.-zdrowe kości ,stawy,ścięgna', price: '77,70', thumbnail: '/img/product/21180/kind/1' },
+      { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
+      { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' }];
 
     this.setState({ allProducts: products, allVideos: allObject.videos, id: object.id, image: object.snippet.thumbnails.maxres.url, title: object.snippet.title, expert: object.snippet.title.slice(0, object.snippet.title.indexOf(',')), expertVideos: all });
   }
@@ -238,39 +233,27 @@ class VideoPage extends React.Component {
       autoplaySpeed: 3000,
       responsive: [
         {
-          breakpoint: 1700,
+          breakpoint: 2170,
           settings: {
             slidesToShow: 6
           }
         },
         {
-          breakpoint: 1370,
-          settings: {
-            slidesToShow: 5
-          }
-        },
-        {
-          breakpoint: 1070,
+          breakpoint: 1420,
           settings: {
             slidesToShow: 4
           }
         },
         {
-          breakpoint: 768,
+          breakpoint: 1020,
           settings: {
             slidesToShow: 3
           }
         },
         {
-          breakpoint: 500,
+          breakpoint: 768,
           settings: {
-            slidesToShow: 2
-          }
-        },
-        {
-          breakpoint: 400,
-          settings: {
-            slidesToShow: 1
+            slidesToScroll: 2
           }
         }
       ]
@@ -284,6 +267,12 @@ class VideoPage extends React.Component {
               <Header>{this.state.title}</Header>
               <div className='buttons' >
                 <Button color='blue' onClick={this.subscribe} ><Icon name='share' />Subskrybuj na YT</Button>
+                <Responsive maxWidth='1020' >
+                <div className='social' >
+                  <Button onClick={this.shareFacebook} color='facebook' icon='facebook' />
+                  <Button onClick={this.shareTwitter} color='twitter' icon='twitter' />
+                </div>
+                </Responsive>
               </div>
             </div>
             <div className='description' >
@@ -317,7 +306,7 @@ class VideoPage extends React.Component {
         </div>
         <Advice />
         <div className='otherMovies' >
-          <Header textAlign='center' size='huge' >Inne filmy experta:</Header>
+          <Header dividing textAlign='center' size='huge' >Inne filmy experta:</Header>
           <Responsive minWidth={2171} >
             <div className='mainMovies' >
             {this.state.expertVideos.slice(0, 4).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
@@ -328,18 +317,17 @@ class VideoPage extends React.Component {
             {this.state.expertVideos.slice(0, 3).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
             </div>
           </Responsive>
-          <Responsive minWidth={761} maxWidth={1020} >
-            <div className='mainMovies' >
-            {this.state.expertVideos.slice(0, 4).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
-            </div>
-          </Responsive>
-          <Responsive maxWidth={760} >
+          <Responsive maxWidth={1020} >
             <div className='mainMovies' >
             {this.state.expertVideos.slice(0, 4).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
             </div>
           </Responsive>
         </div>
-        <Header className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>
+        <Responsive maxWidth='1020' >
+          <Header dividing textAlign='center' size='huge' >Ostatnie Filmy</Header>
+          <MainMovies />
+        </Responsive>
+        <Header dividing className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>
         <Slider {...productsSettings} >
           {this.state.allProducts.map(product => <ProductCard product={product} />)}
         </Slider>

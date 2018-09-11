@@ -36,20 +36,14 @@ class Experts extends React.Component {
       { link: '/expert/13', thumbnail: '' },
       { link: '/expert/14', thumbnail: '' }];
 
-    const products = [{ link: '/expert/1', name: 'product1', price: '1', thumbnail: '' },
-      { link: '/expert/2', name: 'product2', price: '2', thumbnail: '' },
-      { link: '/expert/3', name: 'product3', price: '3', thumbnail: '' },
-      { link: '/expert/4', name: 'product4', price: '4', thumbnail: '' },
-      { link: '/expert/5', name: 'product5', price: '5', thumbnail: '' },
-      { link: '/expert/6', name: 'product6', price: '6', thumbnail: '' },
-      { link: '/expert/7', name: 'product7', price: '7', thumbnail: '' },
-      { link: '/expert/8', name: 'product8', price: '8', thumbnail: '' },
-      { link: '/expert/9', name: 'product9', price: '9', thumbnail: '' },
-      { link: '/expert/10', name: 'product10', price: '10', thumbnail: '' },
-      { link: '/expert/11', name: 'product11', price: '11', thumbnail: '' },
-      { link: '/expert/12', name: 'product12', price: '12', thumbnail: '' },
-      { link: '/expert/13', name: 'product13', price: '13', thumbnail: '' },
-      { link: '/expert/14', name: 'product14', price: '14', thumbnail: '' }];
+    const products = [{ link: '1050,daktarin-krem-15-g.html', name: 'Daktarin krem 15 g', price: '20,16', thumbnail: '/img/product/1050/kind/1' },
+      { link: '21180,4-flex-30-saszetki-kolagen-nowej-generacji-witamina-c.html', name: '4 Flex 30 sasz.-zdrowe kości ,stawy,ścięgna', price: '77,70', thumbnail: '/img/product/21180/kind/1' },
+      { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
+      { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' },
+      { link: '1050,daktarin-krem-15-g.html', name: 'Daktarin krem 15 g', price: '20,16', thumbnail: '/img/product/1050/kind/1' },
+      { link: '21180,4-flex-30-saszetki-kolagen-nowej-generacji-witamina-c.html', name: '4 Flex 30 sasz.-zdrowe kości ,stawy,ścięgna', price: '77,70', thumbnail: '/img/product/21180/kind/1' },
+      { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
+      { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' }];
 
     this.setState({ allProducts: products, allExperts: doctors, currentExperts: doctors.slice(0,9), totalCount: 14 });
   }
@@ -74,39 +68,27 @@ class Experts extends React.Component {
       autoplaySpeed: 3000,
       responsive: [
         {
-          breakpoint: 1700,
+          breakpoint: 2170,
           settings: {
-            slidesToShow: 3
+            slidesToShow: 6
           }
         },
         {
-          breakpoint: 1370,
-          settings: {
-            slidesToShow: 5
-          }
-        },
-        {
-          breakpoint: 1070,
+          breakpoint: 1420,
           settings: {
             slidesToShow: 4
           }
         },
         {
-          breakpoint: 768,
+          breakpoint: 1020,
           settings: {
             slidesToShow: 3
           }
         },
         {
-          breakpoint: 500,
+          breakpoint: 768,
           settings: {
-            slidesToShow: 2
-          }
-        },
-        {
-          breakpoint: 400,
-          settings: {
-            slidesToShow: 1
+            slidesToScroll: 2
           }
         }
       ]
@@ -139,7 +121,7 @@ class Experts extends React.Component {
         </div>
         <Header dividing textAlign='center' size='huge' >Ostatnie Filmy</Header>
         <MainMovies />
-        <Header textAlign='center' size='huge' >Polecane produkty</Header>
+        <Header dividing textAlign='center' size='huge' >Polecane produkty</Header>
         <Slider {...productsSettings} >
           {this.state.allProducts.map(product => <ProductCard product={product} />)}
         </Slider>

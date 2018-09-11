@@ -5,6 +5,7 @@ import { getSomeVideos } from '../utils/youtube-utils';
 import VideoCard from '../components/video-card';
 import ArticleCard from '../components/article-card';
 import ArticleCardBig from '../components/article-card-big';
+import MainArticles from './main-articles';
 import ProductCard from '../components/product-card';
 import ProductCardSmall from '../components/product-card-small';
 import Advice from '../components/advice';
@@ -62,7 +63,7 @@ class VideoPage extends React.Component {
       { link: '/article/5', title: '5', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', thumbnails: '' },
       { link: '/article/6', title: '6', description: 'Lorem ipsum dolor sit amet, consectetur.', thumbnails: '' }];
 
-    this.setState({ allProducts: products, allArticles: articles, expertVideos: all, expertArticles: articles, expert: 'Wanda Baltaza', title: 'Tytuł', content: object });
+    this.setState({ allProducts: products, allArticles: articles, expertVideos: all, expertArticles: articles, expert: 'Wanda Baltaza', title: 'Szczepionki na odporność - jak działają, czy są skuteczne?', content: object });
   }
 
   shareFacebook() {
@@ -103,39 +104,27 @@ class VideoPage extends React.Component {
       autoplaySpeed: 3000,
       responsive: [
         {
-          breakpoint: 1700,
+          breakpoint: 2170,
           settings: {
             slidesToShow: 6
           }
         },
         {
-          breakpoint: 1370,
-          settings: {
-            slidesToShow: 5
-          }
-        },
-        {
-          breakpoint: 1070,
+          breakpoint: 1420,
           settings: {
             slidesToShow: 4
           }
         },
         {
-          breakpoint: 768,
+          breakpoint: 1020,
           settings: {
             slidesToShow: 3
           }
         },
         {
-          breakpoint: 500,
+          breakpoint: 768,
           settings: {
-            slidesToShow: 2
-          }
-        },
-        {
-          breakpoint: 400,
-          settings: {
-            slidesToShow: 1
+            slidesToScroll: 2
           }
         }
       ]
@@ -147,6 +136,14 @@ class VideoPage extends React.Component {
             <ArticleCardBig imageClass='videoImage' image={ArticlePlaceholder} />
             <div className='title' >
               <Header>{this.state.title}</Header>
+              <Responsive maxWidth='1020' >
+                <div className='buttons' >
+                  <div className='social' >
+                    <Button onClick={this.shareFacebook} color='facebook' icon='facebook' />
+                    <Button onClick={this.shareTwitter} color='twitter' icon='twitter' />
+                  </div>
+                </div>
+              </Responsive>
             </div>
             <div className='description' >
               {this.resolveDescription()}
@@ -170,6 +167,12 @@ class VideoPage extends React.Component {
             </div>
           </div>
         </div>
+        <Responsive style={{ clear: 'both', marginBottom: '30px' }} maxWidth='1020' >
+          <Header className='mentionedProducts' dividing textAlign='center' size='huge' >PRODUKTY WSPOMNIANE W ARTYKULE</Header>
+          <div className='articleProductsSmall' >
+            {this.state.allProducts.slice(0, 5).map(product => <ProductCardSmall imageClass='Image' contentClass='content' product={product} />)}
+          </div>
+        </Responsive>
         <div style={{ clear: 'both', marginBottom: '30px' }} >
         <div className='expertContainer' >
           <div className='imageContainer' >
@@ -183,18 +186,22 @@ class VideoPage extends React.Component {
         </div>
         <Advice />
         <div className='otherMovies' >
-          <Header textAlign='center' size='huge' >Inne filmy experta:</Header>
+          <Header dividing textAlign='center' size='huge' >Inne filmy experta:</Header>
             <div className='expertMovies' >
             {this.state.expertVideos.slice(0, 6).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
             </div>
         </div>
         <div className='otherMovies' >
-          <Header textAlign='center' size='huge' >Inne artykuły experta:</Header>
+          <Header dividing textAlign='center' size='huge' >Inne artykuły experta:</Header>
             <div className='otherArticles' >
             {this.state.expertArticles.slice(0, 6).map(article => <ArticleCard id='2' contentClass='articleContent' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
             </div>
         </div>
-        <Header className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>
+        <Responsive maxWidth='1020' >
+          <Header dividing textAlign='center' size='huge' >Ostatnie Artykuły</Header>
+          <MainArticles />
+        </Responsive>
+        <Header dividing className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>
         <Slider {...productsSettings} >
           {this.state.allProducts.map(product => <ProductCard product={product} />)}
         </Slider>
