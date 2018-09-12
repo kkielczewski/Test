@@ -230,7 +230,6 @@
       position: absolute;
       left: 0px;
       top: 0px;
-      z-index: 1;
     }
 
     .black {
@@ -239,7 +238,6 @@
       position: absolute;
       left: 0px;
       top: 0px;
-      z-index: 1;
       border-radius: 0!important;
       background: black;
       opacity: 0;
@@ -256,7 +254,6 @@
       height: 40px;
       margin: auto;
       text-align: center;
-      z-index: 2;
       border: none !important;
       padding: 0;
       opacity: 0;
@@ -339,6 +336,34 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .doctorCarousel {
+    .card {
+      .black {
+        display: none;
+      }
+      .doctorContent {
+        opacity: 1;
+        top: auto;
+        height: 75px;
+        margin: auto;
+        background-color: white;
+        border: solid !important;
+        border-width: 1px!important;
+        border-color: lightgray !important;
+        display: flex;
+
+        .header {
+          font-size: 28px !important;
+          padding: 5px;
+          margin: auto;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1020px) {
   .doctorCarousel {
     width: 670px;
@@ -402,6 +427,7 @@
           font-size: 28px !important;
           padding: 5px;
           margin: auto;
+          color: black;
         }
       }
     }
@@ -620,22 +646,28 @@
   margin: auto;
   .ui.card {
     margin: 10px;
-    height: 480px;
+    height: 470px;
     width: 640px;
     border-radius: 1.5em;
 
     .Image {
       border-radius: 1.5em 1.5em 0 0!important;
       height: 360px;
+      width: 100%;
     }
 
     .content {
+      padding: 5px 10px;
+      height: 105px;
+      overflow: hidden;
       .header {
         font-size: 26px;
+        color: black;
       }
       .description {
         font-size: 16px;
         margin-top: 0 !important;
+        color: black;
       }
     }
   }
@@ -646,7 +678,7 @@
     width: 1404px;
 
     .ui.card {
-      height: 372px;
+      height: 360px;
       width: 448px;
       .Image {
         height: 252px;
@@ -661,13 +693,14 @@
     width: 972px;
 
     .ui.card {
-      height: 271px;
+      height: 255px;
       width: 304px;
 
       .Image {
         height: 171px;
       }
       .content {
+        height: 80px;
         .header {
           font-size: 20px;
         }
@@ -689,11 +722,11 @@
 
     .ui.card {
       width: 368px;
-      height: 307px;
+      height: 290px;
       margin: 2px;
 
       .Image {
-        height: 198px;
+        height: 207px;
       }
     }
   }
@@ -709,13 +742,14 @@
 
     .ui.card {
       width: 496px;
-      height: 399px;
+      height: 385px;
       margin: 10px auto;
 
       .Image {
         height: 279px;
       }
       .content {
+        height: 105px;
         .header {
           font-size: 26px;
         }
@@ -736,13 +770,14 @@
 
     .ui.card {
       width: 400px;
-      height: 325px;
+      height: 310px;
       margin: 0 0 20px;
 
       .Image {
         height: 225px;
       }
       .content {
+        height: 80px;
         .header {
           font-size: 20px;
         }
@@ -762,7 +797,7 @@
     width: 100%;
     .ui.card {
       width: 100%;
-      height: 298px;
+      height: 280px;
       border-radius: 0 !important;
       border-style: solid;
       border-width: 1px;
@@ -799,7 +834,7 @@
 
     .productPicture {
       position: relative;
-      height: 260px;
+      height: 240px;
       border-style: solid !important;
       border-width: 1px 1px 0 1px !important;
       border-color: lightgray !important;
@@ -825,6 +860,7 @@
         height: 75px;
         overflow: hidden;
         margin-bottom: 10px;
+        color: black;
       }
       .description {
         font-size: 20px;

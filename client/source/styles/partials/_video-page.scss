@@ -18,7 +18,7 @@
 
 .videoPageContainer {
   width: 1980px;
-  margin: 73px auto auto;
+  margin: 25px auto auto;
   .main {
     margin: auto 0 60px auto;
     float: left;
@@ -97,28 +97,46 @@
       .lastAM {
         .card {
           width: 512px;
-          height: 288px;
+          height: 395px;
           border-radius: 1.5em!important;
 
           .content {
             border: none;
+            height: 100px;
+            overflow: hidden;
+            padding: 5px 10px;
+            .header {
+              font-size: 26px !important;
+              color: black;
+            }
           }
 
           .Image {
             width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            z-index: 1;
+            height: 288px;
+            border-radius: 1.5em 1.5em 0 0!important;
+          }
+        }
+      }
+      .lastAMVideo {
+        .card {
+          width: 512px;
+          height: 288px;
+          border-radius: 1.5em!important;
+
+          .Image {
+            width: 100%;
+            height: 288px;
             border-radius: 1.5em!important;
           }
         }
       }
       .articleProducts {
+        display: flex;
+        flex-wrap: wrap;
         .card {
-          width: 300px;
-          margin: 10px auto;
+          width: 250px;
+          margin: 3px;
           .imageContainer {
             position: relative;
             height: 270px;
@@ -132,6 +150,21 @@
               bottom: 0;
               left: 0;
               right: 0;
+            }
+          }
+          .content {
+            text-align: center;
+            padding: 10px;
+            height: 110px;
+            .header {
+              height: 75px;
+              font-size: 20px !important;
+              overflow: hidden;
+              color: black;
+            }
+            .description {
+              font-size: 20px;
+              color: #db2828;
             }
           }
         }
@@ -172,34 +205,26 @@
 
   .card {
     width: 640px;
-    height: 480px;
+    height: 470px;
     margin: 10px;
     margin-top: 10px !important;
     border-radius: 1.5em!important;
 
     .Image {
       width: 100%;
-      height: 270px;
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      z-index: 1;
+      height: 360px;
       border-radius: 1.5em 1.5em 0 0!important;
     }
   
     .articleContent {
-      z-index: 2;
       border-style: none;
-      position: absolute;
-      bottom: 0;
-      height: 120px;
+      height: 105px;
+      padding: 5px 10px;
+      overflow: hidden;
 
       .header {
         font-size: 26px !important;
-      }
-      .description {
-        margin-top: 0 !important;
-        font-size: 16px;
+        color: black;
       }
     }
   }
@@ -250,7 +275,31 @@
         .lastAM {
           .card {
             width: 384px;
+            height: 300px;
+            .Image {
+              height: 216px;
+            }
+            .content {
+              height: 80px;
+              .header {
+                font-size: 20px !important;
+              }
+            }
+          }
+        }
+        .lastAMVideo {
+          .card {
+            width: 384px;
             height: 216px;
+            .Image {
+              height: 216px;
+            }
+          }
+        }
+        .articleProducts {
+          .card {
+            margin: 2px;
+            width: 185px;
           }
         }
       }
@@ -273,10 +322,10 @@
 
     .card {
       width: 448px;
-      height: 381px;
+      height: 360px;
 
       .Image {
-        height: 261px;
+        height: 252px;
       }
     }
   }
@@ -309,7 +358,7 @@
     .main {
       .card {
         width: 640px;
-        height: 320px;
+        height: 360px;
       }
       .title {
         width: 640px;
@@ -339,7 +388,27 @@
         .lastAM {
           .card {
             width: 300px;
-            height: 180px;
+            height: 255px;
+            .Image {
+              height: 171px;
+            }
+          }
+        }
+        .lastAMVideo {
+          .card {
+            width: 300px;
+            height: 171px;
+            .Image {
+              height: 171px;
+            }
+          }
+        }
+        .articleProducts {
+          .card {
+            width: 145px;
+            .imageContainer {
+              height: 200px;
+            }
           }
         }
         .social {
@@ -347,11 +416,6 @@
           .button {
             font-size: 2em;
             padding: 15px 30px;
-          }
-        }
-        .articleProducts {
-          .card {
-            width: 270px;
           }
         }
       }
@@ -382,14 +446,14 @@
 
     .card {
       width: 304px;
-      height: 271px;
+      height: 255px;
 
       .Image {
         height: 171px;;
       }
 
       .articleContent {
-        height: 100px;
+        height: 80px;
         .header {
           font-size: 20px !important;
         }
@@ -440,7 +504,7 @@
     display: flex;
     flex-wrap: wrap;
     .card {
-      height: 370px;
+      height: 380px;
       width: 228px;
       margin: 10px !important;
       .imageContainer {
@@ -466,6 +530,7 @@
           height: 75px;
           overflow: hidden;
           margin-bottom: 10px;
+          color: black;
         }
         .description {
           font-size: 20px;
@@ -493,11 +558,11 @@
 
     .card {
       width: 368px;
-      height: 307px;
+      height: 290px;
       margin-top: 2px !important;
       margin: 2px;
       .Image {
-        height: 198px;
+        height: 207px;
       }
     }
   }
@@ -575,14 +640,14 @@
 
     .card {
       width: 496px;
-      height: 399px;
+      height: 385px;
       margin: 10px auto;
 
       .Image {
         height: 279px;
       }
       .articleContent {
-        height: 120px;
+        height: 105px;
         .header {
           font-size: 26px !important;
         }
@@ -625,7 +690,11 @@
     width: 400px;
     .card {
       width: 190px;
+      height: 350px;
       margin: 5px !important;
+      .imageContainer {
+        height: 230px;
+      }
       .content {
         padding: 5px;
         .header {
@@ -643,14 +712,13 @@
   .otherArticles {
     .card {
       width: 400px;
-      height: 325px;
-      margin: 10px auto;
+      height: 310px;
 
       .Image {
         height: 225px;
       }
       .articleContent {
-        height: 100px;
+        height: 80px;
         .header {
           font-size: 20px !important;
         }
@@ -691,10 +759,11 @@
   .articleProductsSmall {
     width: 100%;
     .card {
-      width: 100%;
+      width: 49%;
       height: 325px;
+      margin: 5px auto !important;
       .imageContainer {
-        height: 200;
+        height: 200px;
       }
       .content {
         padding: 10px;
@@ -722,7 +791,7 @@
   .otherArticles {
     .card {
       width: 100%;
-      height: 296px;
+      height: 280px;
       margin: 0 0 20px!important;
       border-radius: 0 !important;
       border-style: solid;

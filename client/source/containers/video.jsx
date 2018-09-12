@@ -51,7 +51,8 @@ class Video extends React.Component {
       infinite: true,
       centerPadding: '0px',
       slidesToShow: 7,
-      speed: 1000,
+      slidesToScroll: 3,
+      speed: 300,
       focusOnSelect: true,
       swipeToSlide: true,
       autoplay: true,
@@ -66,13 +67,13 @@ class Video extends React.Component {
         {
           breakpoint: 1420,
           settings: {
-            slidesToShow: 4
+            slidesToShow: 5
           }
         },
         {
           breakpoint: 1020,
           settings: {
-            slidesToShow: 3
+            slidesToShow: 4
           }
         },
         {

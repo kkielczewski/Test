@@ -28,11 +28,13 @@
   height: auto;
   width: 1980px;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
 
   .card {
     width: 640px;
     height: 360px;
-    margin: 30px;
+    margin: 10px !important;
     border-radius: 1.5em !important;
 
     .Image {
@@ -45,23 +47,6 @@
       border-radius: 1.5em !important;
     }
   }
-
-  .card:nth-child(3n+1) {
-    clear: left;
-    float: left;
-    margin-top: 0;
-    margin-left: 0;
-  }
-
-  .card:nth-child(3n+2) {
-      float: left;
-      margin-top: 0;
-      margin-left: 0;
-  }
-
-  .card:first-child {
-    margin-top: 0;
-  }
 }
 
 .expertArticleList {
@@ -69,45 +54,35 @@
   height: auto;
   width: 1980px;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
 
   .card {
     width: 640px;
-    height: 480px;
-    margin: 30px;
+    height: 470px;
+    margin: 10px !important;
     border-radius: 1.5em !important;
 
     .Image {
       height: 360px;
+      width: 100%;
       z-index: 1;
       border-radius: 1.5em 1.5em 0 0 !important;
     }
 
     .content {
+      padding: 5px 10px;
+      overflow: hidden;
+      height: 105px;
       .header {
         font-size: 26px !important;
+        color: black;
       }
       .description {
         font-size: 16px;
         margin-top: 0 !important;
       }
     }
-  }
-
-  .card:nth-child(3n+1) {
-    clear: left;
-    float: left;
-    margin-top: 0;
-    margin-left: 0;
-  }
-
-  .card:nth-child(3n+2) {
-      float: left;
-      margin-top: 0;
-      margin-left: 0;
-  }
-
-  .card:first-child {
-    margin-top: 0;
   }
 }
 
@@ -140,7 +115,7 @@
 
     .card {
       width: 448px;
-      height: 372px;
+      height: 360px;
 
       .Image {
         height: 252px;
@@ -178,14 +153,14 @@
 
     .card {
       width: 304px;
-      height: 291px;
+      height: 255px;
 
       .Image {
         height: 171px;
       }
       .content {
         .header {
-          font-size: 22px !important;
+          font-size: 20px !important;
         }
         .description {
           font-size: 14px;
@@ -203,13 +178,11 @@
     }
   }
   .doctorContainer {
-    height: 908px;
     .header {
       font-size: 24px !important;
     }
   }
   .doctorContainerArticles {
-    height: 1388px;
     .header {
       font-size: 24px !important;
     }
@@ -220,26 +193,7 @@
     .card {
       width: 368px;
       height: 207px;
-      margin: 10px;
-    }
-
-    .card:nth-child(n) {
-      clear: none !important;
-      float: none !important;
-    }
-
-    .card:nth-child(2n+1) {
-      clear: left !important;
-      float: left !important;
-      margin-top: 0;
-      margin-left: 0;
-    }
-
-    .card:nth-child(2n+2) {
-        float: left !important;
-        margin-top: 0;
-        margin-left: 0;
-        margin-right: 0;
+      margin: 2px !important;
     }
   }
   .expertArticleList {
@@ -247,32 +201,15 @@
 
     .card {
       width: 368px;
-      height: 327px;
-      margin: 10px;
+      height: 290px;
+      margin: 2px !important;
 
       .Image {
         height: 207px;
       }
-    }
-
-    .card:nth-child(n) {
-      clear: none !important;
-      float: none !important;
-    }
-
-    .card:nth-child(2n+1) {
-      clear: left !important;
-      float: left !important;
-      margin-top: 0;
-      margin-left: 0;
-    }
-
-    .card:nth-child(2n+2) {
-        float: left !important;
-        margin-top: 0;
-        margin-left: 0;
-        
-      margin-right: 0;
+      .content {
+        height: 80px;
+      }
     }
   }
 }
@@ -283,21 +220,13 @@
       width: 496px;
     }
   }
-  .doctorContainer {
-    height: 2352px;
-  }
-  .doctorContainerArticles {
-    height: 3312px;
-  }
   .expertMovieList {
     width: 496px;
 
     .card {
       width: 496px;
       height: 279px;
-      margin-bottom: 10px;
-      clear: none !important;
-      float: none !important;
+      margin: 10px auto !important;
     }
   }
   .expertArticleList {
@@ -305,13 +234,18 @@
 
     .card {
       width: 496px;
-      height: 399px;
-      margin-bottom: 10px;
-      clear: none !important;
-      float: none !important;
+      height: 385px;
+      margin: 10px auto !important;
 
       .Image {
         height: 279px;
+      }
+
+      .content {
+        height: 105px;
+        .header {
+          font-size: 26px !important;
+        }
       }
     }
   }
@@ -322,12 +256,6 @@
     .expertDescription {
       width: 400px;
     }
-  }
-  .doctorContainer {
-    height: 1920px;
-  }
-  .doctorContainerArticles {
-    height: 2880px;
   }
   .expertMovieList {
     width: 400px;
@@ -342,10 +270,16 @@
 
     .card {
       width: 400px;
-      height: 345px;
+      height: 310px;
 
       .Image {
         height: 225px;
+      }
+      .content {
+        height: 80px;
+        .header {
+          font-size: 20px !important;
+        }
       }
     }
   }
@@ -356,12 +290,6 @@
     .expertDescription {
       width: 100%;
     }
-  }
-  .doctorContainer {
-    height: 1774px;
-  }
-  .doctorContainerArticles {
-    height: 2735px;
   }
   .expertMovieList {
     width: 100%;
@@ -385,7 +313,7 @@
 
     .card {
       width: 100%;
-      height: 318px;
+      height: 280px;
       border-radius: 0 !important;
       margin-bottom: 20px;
       border-style: solid;

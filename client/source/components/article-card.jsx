@@ -6,12 +6,12 @@ class ArticleCard extends React.Component {
   render() {
     return (
       <Card>
-        <Image src={this.props.image} className={this.props.imageClass} />
-        <Card.Content className={this.props.contentClass} >
-          <Card.Header>{this.props.article.title}</Card.Header>
-          <Card.Description>{this.props.article.description}</Card.Description>
-        </Card.Content>
-        <NavLink style={{ zIndex: '10', height: '100%', width: '100%', position: 'absolute', top: '0', cursor: 'pointer' }} to={`/article/${this.props.id}`} />
+        <a href={`/article/${this.props.id}`} >
+          <Image src={this.props.image} className={this.props.imageClass} />
+          <Card.Content className={this.props.contentClass} >
+            <Card.Header>{this.props.article.title}</Card.Header>
+          </Card.Content>
+        </a>
       </Card>
     );
   }

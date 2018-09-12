@@ -89,7 +89,6 @@ class Home extends React.Component {
       slidesToShow: 4,
       speed: 300,
       swipeToSlide: true,
-      autoplay: true,
       autoplaySpeed: 3000,
       responsive: [
         {
@@ -127,13 +126,13 @@ class Home extends React.Component {
         {
           breakpoint: 1420,
           settings: {
-            slidesToShow: 4
+            slidesToShow: 5
           }
         },
         {
           breakpoint: 1020,
           settings: {
-            slidesToShow: 3
+            slidesToShow: 4
           }
         },
         {

@@ -35,18 +35,18 @@ class VideoPage extends React.Component {
       }
     });
 
-    const articles = [{ link: '/article/1', title: '1', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', thumbnails: '' },
-      { link: '/article/2', title: '2', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', thumbnails: '' },
-      { link: '/article/3', title: '3', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet.', thumbnails: '' },
-      { link: '/article/4', title: '4', author: 'Lucyna Malec', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', thumbnails: '' },
-      { link: '/article/5', title: '5', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', thumbnails: '' },
-      { link: '/article/6', title: '6', author: 'Lucyna Malec', description: 'Lorem ipsum dolor sit amet, consectetur.', thumbnails: '' },
-      { link: '/article/7', title: '7', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', thumbnails: '' },
-      { link: '/article/8', title: '8', author: 'Lucyna Malec', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', thumbnails: '' },
-      { link: '/article/9', title: '9', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet.', thumbnails: '' },
-      { link: '/article/10', title: '10', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', thumbnails: '' },
-      { link: '/article/11', title: '11', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', thumbnails: '' },
-      { link: '/article/12', title: '12', author: 'Lucyna Malec', description: 'Lorem ipsum dolor sit amet, consectetur.', thumbnails: '' }];
+    const articles = [{ link: '/article/1', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', thumbnails: '' },
+      { link: '/article/2', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', thumbnails: '' },
+      { link: '/article/3', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet.', thumbnails: '' },
+      { link: '/article/4', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Lucyna Malec', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', thumbnails: '' },
+      { link: '/article/5', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', thumbnails: '' },
+      { link: '/article/6', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Lucyna Malec', description: 'Lorem ipsum dolor sit amet, consectetur.', thumbnails: '' },
+      { link: '/article/7', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', thumbnails: '' },
+      { link: '/article/8', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Lucyna Malec', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', thumbnails: '' },
+      { link: '/article/9', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet.', thumbnails: '' },
+      { link: '/article/10', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', thumbnails: '' },
+      { link: '/article/11', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', thumbnails: '' },
+      { link: '/article/12', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Lucyna Malec', description: 'Lorem ipsum dolor sit amet, consectetur.', thumbnails: '' }];
 
     const allArticles = [];
 
@@ -75,7 +75,8 @@ class VideoPage extends React.Component {
       infinite: true,
       centerPadding: '0px',
       slidesToShow: 7,
-      speed: 1000,
+      slidesToScroll: 3,
+      speed: 300,
       focusOnSelect: true,
       swipeToSlide: true,
       autoplay: true,
@@ -90,13 +91,13 @@ class VideoPage extends React.Component {
         {
           breakpoint: 1420,
           settings: {
-            slidesToShow: 4
+            slidesToShow: 5
           }
         },
         {
           breakpoint: 1020,
           settings: {
-            slidesToShow: 3
+            slidesToShow: 4
           }
         },
         {

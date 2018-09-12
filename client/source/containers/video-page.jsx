@@ -226,7 +226,8 @@ class VideoPage extends React.Component {
       infinite: true,
       centerPadding: '0px',
       slidesToShow: 7,
-      speed: 1000,
+      slidesToScroll: 3,
+      speed: 300,
       focusOnSelect: true,
       swipeToSlide: true,
       autoplay: true,
@@ -241,13 +242,13 @@ class VideoPage extends React.Component {
         {
           breakpoint: 1420,
           settings: {
-            slidesToShow: 4
+            slidesToShow: 5
           }
         },
         {
           breakpoint: 1020,
           settings: {
-            slidesToShow: 3
+            slidesToShow: 4
           }
         },
         {
@@ -282,7 +283,7 @@ class VideoPage extends React.Component {
           <div className='sidePanel' >
             <div className='center' >
               <Header>OSTATNIE FILMY</Header>
-              <div className='lastAM' >
+              <div className='lastAMVideo' >
                 {this.state.allVideos.slice(0, 3).map(video => <VideoCard imageClass='Image' video={video} />)}
               </div>
               <Header>UDOSTĘPNIJ</Header>
