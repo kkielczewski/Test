@@ -6,7 +6,7 @@ class ArticleCard extends React.Component {
   render() {
     return (
       <Card>
-        <a href={`/article/${this.props.id}`} >
+        <a draggable='false' href={`/article/${this.props.id}`} >
           <Image src={this.props.image} className={this.props.imageClass} />
           <Card.Content className={this.props.contentClass} >
             <Card.Header>{this.props.article.title}</Card.Header>

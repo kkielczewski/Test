@@ -114,6 +114,9 @@
 @media screen and (max-width: 1024px) {
   .doctorList {
     .card {
+      .black {
+        display: none;
+      }
       .doctorContent {
         opacity: 1;
         background-color: white;

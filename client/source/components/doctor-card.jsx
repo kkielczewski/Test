@@ -7,7 +7,7 @@ class DoctorCard extends React.Component {
   render() {
     return (
       <Card>
-        <a href={this.props.link} >
+        <a draggable='false' href={this.props.link} >
         <Image src={DoctorPlaceholder} className={this.props.imageClass} />
         <div className='black' />
         <Card.Content className={this.props.contentClass} >

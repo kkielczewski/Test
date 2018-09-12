@@ -6,7 +6,7 @@ class VideoCard extends React.Component {
   render() {
     return (
       <Card>
-        <a href={`/video/${this.props.video.snippet.resourceId.videoId}`} >
+        <a draggable='false' href={`/video/${this.props.video.snippet.resourceId.videoId}`} >
           <Image src={this.props.video.snippet.thumbnails.maxres.url} className={this.props.imageClass} />
         </a>
       </Card>

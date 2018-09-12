@@ -5,7 +5,7 @@ class DoctorCard extends React.Component {
   render() {
     return (
       <Card>
-        <a href={`//allecco.pl/${this.props.product.link}`} >
+        <a draggable='false' href={`//allecco.pl/${this.props.product.link}`} >
           <div className='productPicture' ><Image src={`//allecco.pl/${this.props.product.thumbnail}`} /></div>
           <Card.Content >
             <Card.Header>{this.props.product.name}</Card.Header>
