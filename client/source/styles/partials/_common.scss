@@ -10,7 +10,7 @@
   .header {
     font-size: 38px!important;
   }
-
+  .form {
   .input {
     font-size : 2em;
     margin-bottom: 20px;
@@ -27,6 +27,7 @@
     border-radius: 0.5em;
   }
 }
+}
 
 @media screen and (max-width: 2170px) {
   .advice {
@@ -35,7 +36,7 @@
     .header {
       font-size: 32px!important;
     }
-
+    .form {
     .input {
       input {
         width: 1324px;
@@ -48,6 +49,7 @@
     }
   }
 }
+}
 
 @media screen and (max-width: 1420px) {
   .advice {
@@ -57,7 +59,7 @@
     .header {
       font-size: 28px!important;
     }
-  
+    .form {
     .input {
       font-size : 1.5em;
       input {
@@ -70,6 +72,7 @@
       padding: 15px 50px;
     }
   }
+  }
 }
 
 @media screen and (max-width: 1020px) {
@@ -79,6 +82,7 @@
     .header {
       font-size: 24px !important;
     }
+    .form {
     .input {
       font-size: 1.3em;
       input {
@@ -91,6 +95,7 @@
       padding: 10px 35px;
     }
   }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -100,12 +105,14 @@
     .header {
       font-size: 24px !important;
     }
+    .form {
     .input {
       font-size: 1.3em;
       input {
         width: 456px;
       }
     }
+  }
   }
 }
 
@@ -114,7 +121,7 @@
     width: 100%;
     border-radius: 0 !important;
     padding: 15px 5px !important;
-
+    .form {
     .input {
       input {
         width: 390px;
@@ -125,6 +132,7 @@
       padding: 10px 30px;
     }
   }
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -132,11 +140,13 @@
     .header {
       font-size: 18px !important;
     }
+    .form {
     .input {
       font-size: 1em;
       input {
         width: 300px;
       }
     }
+  }
   }
 }

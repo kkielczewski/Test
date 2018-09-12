@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Header, Input, Button } from 'semantic-ui-react';
+import { Segment, Header, Input, Button, Form } from 'semantic-ui-react';
 
 class Survey extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class Survey extends React.Component {
   }
 
   validateEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   }
 
@@ -22,7 +22,7 @@ class Survey extends React.Component {
   }
 
   handleClick() {
-    if(this.validateEmail(this.state.email)) {
+    if (this.validateEmail(this.state.email)) {
       console.log('Przeszło.');
     } else {
       console.log('Niepoprawny email');
@@ -36,10 +36,12 @@ class Survey extends React.Component {
         <Segment raised textAlign='center'>
           <Header textAlign='center' size='huge' >ANKIETA</Header>
           <div className='paragraph' >Twórz serwis Allecco.tv razem z nami. Weź udział w ankiecie i zdecyduj jakie treści przygotują nasi eksperci. Wpisz swój adres e-mail i odbierz ankiete:</div>
+          <Form onSubmit={this.handleClick}>
           <Input onChange={this.changeEmail} placeholder='Email...' />
           <div>
-            <Button onClick={this.handleClick} color='red' >Wyślij</Button>
+            <Button color='red' >Wyślij</Button>
           </div>
+          </Form>
         </Segment>
         </div>
       </div>

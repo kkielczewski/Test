@@ -307,25 +307,13 @@ class VideoPage extends React.Component {
         </div>
         <Advice />
         <div className='otherMovies' >
-          <Header dividing textAlign='center' size='huge' >Inne filmy experta:</Header>
-          <Responsive minWidth={2171} >
-            <div className='mainMovies' >
-            {this.state.expertVideos.slice(0, 4).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
-            </div>
-          </Responsive>
-          <Responsive minWidth={1021} maxWidth={2170} >
-            <div className='mainMovies' >
-            {this.state.expertVideos.slice(0, 3).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
-            </div>
-          </Responsive>
-          <Responsive maxWidth={1020} >
-            <div className='mainMovies' >
-            {this.state.expertVideos.slice(0, 4).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
-            </div>
-          </Responsive>
+          <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Inne filmy experta:</Header>
+          <div className='mainMovies' >
+            {this.state.expertVideos.slice(0, 6).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
+          </div>
         </div>
         <Responsive maxWidth='1020' >
-          <Header dividing textAlign='center' size='huge' >Ostatnie Filmy</Header>
+          <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Ostatnie Filmy</Header>
           <MainMovies />
         </Responsive>
         <Header dividing className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>

@@ -122,9 +122,9 @@ class Articles extends React.Component {
           </div>
         </div>
 
-        <Header dividing textAlign='center' size='huge' >Ostatnie Filmy</Header>
+        <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Ostatnie Filmy</Header>
         <MainMovies />
-        <Header dividing textAlign='center' size='huge' >Polecane produkty</Header>
+        <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Polecane produkty</Header>
         <Slider {...productsSettings} >
           {this.state.allProducts.map(product => <ProductCard product={product} />)}
         </Slider>

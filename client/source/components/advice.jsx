@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Header, Input, Button } from 'semantic-ui-react';
+import { Segment, Header, Input, Button, Form } from 'semantic-ui-react';
 
 class Advice extends React.Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class Advice extends React.Component {
   }
 
   handleClick() {
-    if(this.state.text) {
+    if (this.state.text) {
       console.log('Przeszło.');
     } else {
       console.log('Zostawiłeś puste pole.');
@@ -27,8 +27,10 @@ class Advice extends React.Component {
     return (
       <Segment className='advice' textAlign='center'>
         <Header textAlign='center' size='medium' >Co chciałbyś zobaczyć w następnym filmie lub artykule tego eksperta?</Header>
-        <Input onChange={this.changeText} placeholder='...' />
-        <Button onClick={this.handleClick} color='red' >Wyślij</Button>
+        <Form onSubmit={this.handleClick} >
+          <Input onChange={this.changeText} placeholder='...' />
+          <Button color='red' >Wyślij</Button>
+        </Form>
       </Segment>
     );
   }

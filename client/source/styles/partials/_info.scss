@@ -1,17 +1,18 @@
 .infoDescriptionContainer {
   margin-top: 20px;
   .description {
-    display: flex;
     width: 1980px;
     margin: auto;
+    min-height: 604px;
 
     img {
       width: 604px;
+      float: left;
     }
 
     .text {
       width: 1366px;
-      margin-left: 10px;
+      margin-left: 614px;
 
       p {
         font-style: italic;
@@ -91,6 +92,7 @@
   .infoDescriptionContainer {
     .description {
       width: 1404px;
+      min-height: 500px;
   
       img {
         width: 500px;
@@ -98,6 +100,7 @@
   
       .text {
         width: 868px;
+        margin-left: 510px;
   
         p {
           font-size: 18px;
@@ -169,15 +172,17 @@
   .infoDescriptionContainer {
     .description {
       width: 972px;
+      min-height: 355px;
   
       img {
         width: 355px;
         height: 355px;
-        margin: auto;
+        margin-right: 6px;
       }
   
       .text {
-        width: 607px;
+        width: 960px;
+        margin-left: 0;
   
         p {
           font-size: 17px;
@@ -243,12 +248,11 @@
   .infoDescriptionContainer {
     .description {
       width: 746px;
-      display: inherit;
+      min-height: 300px;
   
       img {
         width: 300px;
         height: 300px;
-        float: left;
         margin-right: 10px;
       }
   
@@ -308,6 +312,7 @@
   .infoDescriptionContainer {
     .description {
       width: 496px;
+      height: auto;
   
       img {
         width: 375px;

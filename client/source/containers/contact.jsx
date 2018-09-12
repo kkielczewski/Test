@@ -90,7 +90,7 @@ class Contact extends React.Component {
         <div className='infoNewsletter' >
           <Newsletter />
         </div>
-        <Header dividing textAlign='center' size='huge' >Polecane produkty</Header>
+        <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Polecane produkty</Header>
         <Slider {...productsSettings} >
           {this.state.allProducts.map(product => <ProductCard product={product} />)}
         </Slider>

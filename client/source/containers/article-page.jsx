@@ -187,19 +187,19 @@ class VideoPage extends React.Component {
         </div>
         <Advice />
         <div className='otherMovies' >
-          <Header dividing textAlign='center' size='huge' >Inne filmy experta:</Header>
+          <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Inne filmy experta:</Header>
             <div className='expertMovies' >
             {this.state.expertVideos.slice(0, 6).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
             </div>
         </div>
         <div className='otherMovies' >
-          <Header dividing textAlign='center' size='huge' >Inne artykuły experta:</Header>
+          <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Inne artykuły experta:</Header>
             <div className='otherArticles' >
             {this.state.expertArticles.slice(0, 6).map(article => <ArticleCard id='2' contentClass='articleContent' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
             </div>
         </div>
         <Responsive maxWidth='1020' >
-          <Header dividing textAlign='center' size='huge' >Ostatnie Artykuły</Header>
+          <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Ostatnie Artykuły</Header>
           <MainArticles />
         </Responsive>
         <Header dividing className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>

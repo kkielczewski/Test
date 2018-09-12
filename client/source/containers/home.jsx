@@ -174,7 +174,7 @@ class Home extends React.Component {
             </div>
           </div>
         </Responsive>
-        <Header dividing textAlign='center' size='huge' >Wybierz swojego eksperta</Header>
+        <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Wybierz swojego eksperta</Header>
         <Responsive minWidth='769' >
           <Slider {...doctorSettings} >
             {this.state.allDoctors.map(doctor => <DoctorCard contentClass='doctorContent' imageClass='Image' link={doctor.link} />)}
@@ -204,7 +204,7 @@ class Home extends React.Component {
           </div>
         </Responsive>
         <Survey/>
-        <Header dividing textAlign='center' size='huge' >Ostatnie Artykuły</Header>
+        <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Ostatnie Artykuły</Header>
         <MainArticles />
         <Header dividing className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>
         <div>

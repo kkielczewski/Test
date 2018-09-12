@@ -640,8 +640,6 @@
 // Main Articles
 
 .mainArticles {
-  display: flex;
-  flex-wrap: wrap;
   width: 1980px;
   margin: auto;
   .ui.card {
@@ -649,6 +647,7 @@
     height: 470px;
     width: 640px;
     border-radius: 1.5em;
+    float: left;
 
     .Image {
       border-radius: 1.5em 1.5em 0 0!important;

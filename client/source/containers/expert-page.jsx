@@ -119,7 +119,7 @@ class VideoPage extends React.Component {
           </div>
         </div>
         <div className='doctorContainer' >
-          <Header dividing textAlign='center' size='huge' >Filmy eksperta</Header>
+          <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Filmy eksperta</Header>
           <Responsive minWidth={1021} >
             <div className='expertMovieList' >
             {this.state.expertVideos.slice(0, 9).map(video => <VideoCard imageClass='Image' contentClass='listContent' video={video} />)}
@@ -133,7 +133,7 @@ class VideoPage extends React.Component {
         </div>
         <Advice />
         <div className='doctorContainerArticles' >
-          <Header dividing textAlign='center' size='huge' >Artykuły eksperta</Header>
+          <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Artykuły eksperta</Header>
           <Responsive minWidth={1021} >
             <div className='expertArticleList' >
             {this.state.expertArticles.slice(0, 9).map(article => <ArticleCard id='1' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
