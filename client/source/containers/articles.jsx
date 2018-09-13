@@ -43,12 +43,12 @@ class Articles extends React.Component {
       { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
       { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' }];
 
-    this.setState({ allArticles: articles, allProducts: products, currentArticles: articles.slice(0, 6), totalCount: 10 });
+    this.setState({ allArticles: articles, allProducts: products, currentArticles: articles.slice(0, 9), totalCount: 10 });
   }
 
   handlePageChange(pageNumber) {
-    const offset = (pageNumber - 1) * 6;
-    const currentItems = this.state.allArticles.slice(offset, offset + 6);
+    const offset = (pageNumber - 1) * 9;
+    const currentItems = this.state.allArticles.slice(offset, offset + 9);
     this.setState({ activePage: pageNumber, currentArticles: currentItems });
   }
 
@@ -94,17 +94,17 @@ class Articles extends React.Component {
     };
     return (
       <div className='mainContainer' >
-        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} >
-          <div style={{ position: 'absolute', left: '0', bottom: '0', width: '100%' }} ><div className='pictureHeader' >Artykuły</div></div>
-        </div>
+        <div className='blueStripe' ></div>
+        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} />
         <div className='articleContainer' >
           <div className='videoList' >
+            <Header className='recomendedProducts articlesHeader' textAlign='center' size='huge' >Artykuły</Header>
             {this.state.currentArticles.map(article => <ArticleCard id='1' article={article} image={ArticlePlaceholder} imageClass='listImage' />)}
             <div className='videoNav' >
               <Pagination
               hideFirstLastPages
               activePage={this.state.activePage}
-              itemsCountPerPage={6}
+              itemsCountPerPage={9}
               totalItemsCount={this.state.totalCount}
               pageRangeDisplayed={5}
               activeClass="activeli"
@@ -121,13 +121,16 @@ class Articles extends React.Component {
             <Newsletter />
           </div>
         </div>
-
-        <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Ostatnie Filmy</Header>
-        <MainMovies />
-        <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Polecane produkty</Header>
-        <Slider {...productsSettings} >
-          {this.state.allProducts.map(product => <ProductCard product={product} />)}
-        </Slider>
+        <div className='whiteContainer whiteMainMovies' >
+          <Header className='recomendedProducts mainMoviesHeader' dividing textAlign='center' size='huge' >Najnowsze Filmy</Header>
+          <MainMovies />
+        </div>
+        <div className='whiteContainer' >
+          <Header className='recomendedProducts productHeader' dividing textAlign='center' size='huge' >Polecane produkty</Header>
+          <Slider {...productsSettings} >
+            {this.state.allProducts.map(product => <ProductCard product={product} />)}
+          </Slider>
+        </div>
       </div>
     );
   }

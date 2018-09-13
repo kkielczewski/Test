@@ -86,11 +86,11 @@ class Video extends React.Component {
     };
     return (
       <div className='mainContainer' >
-        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} >
-          <div style={{ position: 'absolute', left: '0', bottom: '0', width: '100%' }} ><div className='pictureHeader' >Filmy</div></div>
-        </div>
+        <div className='blueStripe' ></div>
+        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} />
         <div className='videoContainer' >
           <div className='videoList' >
+            <Header className='recomendedProducts moviesHeader' textAlign='center' size='huge' >Filmy</Header>
             {this.state.currentVideos.map(video => <VideoCard video={video} image={VideoPlaceholder} imageClass='listImage' contentClass='listContent' />)}
             <div className='videoNav' >
               <Pagination
@@ -113,12 +113,16 @@ class Video extends React.Component {
             <Newsletter />
           </div>
         </div>
-        <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Ostatnie Artykuły</Header>
-        <MainArticles />
-        <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Polecane produkty</Header>
-        <Slider {...productsSettings} >
-          {this.state.allProducts.map(product => <ProductCard product={product} />)}
-        </Slider>
+        <div className='whiteContainer videoMainArticles' >
+          <Header className='recomendedProducts mainArticlesHeader' dividing textAlign='center' size='huge' >Najnowsze Artykuły</Header>
+          <MainArticles />
+        </div>
+        <div className='whiteContainer' >
+          <Header className='recomendedProducts productHeader' dividing textAlign='center' size='huge' >Polecane produkty</Header>
+          <Slider {...productsSettings} >
+            {this.state.allProducts.map(product => <ProductCard product={product} />)}
+          </Slider>
+        </div>
       </div>
     );
   }

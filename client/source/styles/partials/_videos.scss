@@ -4,17 +4,24 @@
 .videoPicture {
   height: 300px;
 }
-
+.moviesHeader {
+  width: 175px;
+  position: relative;
+  top: 10px;
+}
 .videoContainer {
   display: flex;
   width: 1980px;
-  margin: auto;
+  margin: 130px auto auto;
 
   .videoList {
     margin: 0 0 auto auto;
     height: 1559px;
-    width: 1224px;
+    width: 1225px;
     position: relative;
+    background-color: white;
+    border-radius: 2em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15);
 
     .videoNav {
       width: 100%;
@@ -25,11 +32,10 @@
     }
 
     .card {
-      width: 592px;
-      height: 333px;
-      margin: 40px;
-      margin-left: 0;
-      border-radius: 1.5em!important;
+      width: 560px;
+      height: 315px;
+      margin: 35px;
+      border-radius: 2em!important;
 
       .listImage {
         width: 100%;
@@ -38,37 +44,24 @@
         left: 0px;
         top: 0px;
         z-index: 1;
-        border-radius: 1.5em!important;
-      }
-  
-      .listContent {
-        z-index: 2;
-        border-style: none;
-        position: absolute;
-        bottom: 0;
-        padding: 15px 20px;
-        font-size: 28px;
-
-        .description {
-          display: none;
-        }
+        border-radius: 2em!important;
       }
     }
 
-    .card:nth-child(odd) {
+    .card:nth-child(even) {
       clear: left;
       float: left;
       margin-top: 0;
     }
 
-    .card:first-child {
-      margin-top: 40px;
+    .card:nth-child(2) {
+      margin-top: 35px;
     }
   }
 
   .newsletterContainer {
     height: 1559px;
-    width: 756px;
+    width: 755px;
   }
 
   .newsletter {
@@ -76,13 +69,16 @@
     width: 716px;
     margin: 40px!important;
     margin-right: 0 !important;
-    border-radius: 1.5em!important;
-    padding: 1em 1em !important;
+    border-radius: 2em!important;
+    padding: 15px !important;
+    position: relative;
+    top: 15px;
 
     .header {
       font-size: 34px!important;
       margin-top: 90px!important;
       margin-bottom: 30px;
+      color: #db2828;
     }
     .paragraph {
       font-size: 49px;
@@ -130,40 +126,38 @@
 }
 
 @media screen and (max-width: 2170px) {
+  .moviesHeader {
+    width: 145px;
+  }
   .videoContainer {
     width: 1404px;
 
     .videoList {
-      height: 1175px;
-      width: 921px;
+      height: 1200px;
+      width: 922px;
 
       .card {
-        width: 448px;
-        height: 252px;
-        margin: 25px;
-        margin-left: 0;
-    
-        .listContent {
-          font-size: 20px;
-        }
+        width: 416px;
+        height: 234px;
+        margin: 30px;
+        box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
       }
   
-      .card:first-child {
-        margin-top: 25px;
+      .card:nth-child(2) {
+        margin-top: 30px;
       }
     }
   
     .newsletterContainer {
-      height: 1175px;
-      width: 483px;
+      height: 1200px;
+      width: 482px;
     }
   
     .newsletter {
       height: 1083px;
       width: 458px;
       margin: 25px !important;
-      margin-right: 0 !important;
-      padding: 1em 1em !important;
+      top: 35px;
 
       .header {
         font-size: 31px!important;
@@ -205,34 +199,32 @@
 }
 
 @media screen and (max-width: 1420px) {
+  .moviesHeader {
+    width: 120px;
+  }
   .videoPicture {
     height: 250px;
   }
   .videoContainer {
     width: 972px;
     .videoList {
-      height: 847px;
-      width: 655px;
+      height: 875px;
+      width: 653px;
 
       .card {
-        width: 320px;
-        height: 180px;
+        width: 304px;
+        height: 171px;
         margin: 15px;
-        margin-left: 0;
-
-        .listContent {
-          font-size: 15px;
-        }
       }
   
-      .card:first-child {
+      .card:nth-child(2) {
         margin-top: 15px;
       }
     }
   
     .newsletterContainer {
-      height: 847px;
-      width: 317px;
+      height: 875px;
+      width: 319px;
     }
   
     .newsletter {
@@ -283,15 +275,20 @@
 }
 
 @media screen and (max-width: 1020px) {
+  .moviesHeader {
+    width: 100px;
+  }
   .videoPicture {
     height: 200px;
   }
     .videoContainer {
       display: inline;
+      position: relative;
+      top: 70px;
 
     .videoList {
       height: auto;
-      width: 746px;
+      width: 749px;
       margin: auto;
 
       .videoNav {
@@ -299,19 +296,16 @@
       }
 
       .card {
-        width: 368px;
-        height: 207px;
-        margin: 10px 10px 10px 0;
-      }
-
-      .card:first-child {
-        margin-top: 0;
+        width: 352px;
+        height: 198px;
+        margin: 15px;
       }
     }
   
     .newsletterContainer {
-      height: auto;
+      height: 410px;
       width: 100%;
+      margin-top: 30px;
     }
   
     .newsletter {
@@ -373,32 +367,36 @@
   }
   .videoContainer {
   .videoList {
-    width: 496px;
+    width: 100%;
     margin: auto;
 
     .card {
-      width: 496px;
-      height: 279px;
+      width: 480px;
+      height: 270px;
       margin: 10px auto;
     }
 
     .card:first-child {
       margin-top: 20px;
     }
+    .card:nth-child(even) {
+      float: none;
+    }
+  }
+
+  .newsletterContainer {
+    height: 550px;
+    margin-top: 50px;
   }
   
   .newsletter {
-    width: 496px;
+    width: 100%;
     border-radius: 0 !important;
     padding: 10px !important;
 
-    .header {
-      font-size: 17px !important;
-      margin-top: 10px !important;
-    }
     .paragraph {
-      font-size: 18px;
-      line-height: 20px;
+      font-size: 25px;
+      line-height: 27px;
       margin-bottom: 15px;
     }
 
@@ -444,10 +442,9 @@
 
 @media screen and (max-width: 500px) {
   .videoContainer {
+    top: 30px;
   .videoList {
-    width: 400px;
-    margin: auto;
-
+    border-radius: 0;
     .card {
       width: 400px;
       height: 225px;
@@ -462,31 +459,35 @@
       margin-top: 20px;
     }
   }
+
+  .newsletterContainer {
+    height: 575px;
+    margin-top: 30px;
+  }
   
   .newsletter {
-    width: 400px;
     border-radius: 0 !important;
     padding: 5px !important;
 
     .header {
-      font-size: 15px !important;
+      font-size: 17px !important;
     }
 
     .paragraph {
-      font-size: 16px;
-      line-height: 18px;
+      font-size: 21px;
+      line-height: 23px;
     }
 
     .input {
       width: 340px;
-      font-size: 15px;
+      font-size: 17px;
       input {
         padding: 8px 15px;
       }
     }
 
     .checkbox {
-      font-size: 10px;
+      font-size: 12px;
     }
 
     .button {
@@ -524,6 +525,9 @@
       margin-top: 20px;
     }
   }
+  .newsletterContainer {
+    height: 620px;
+  }
   .newsletter {
     width: 100%;
     .input {
@@ -535,17 +539,27 @@
 
 // Main Movies
 
+.mainMoviesHeader {
+  width: 350px;
+}
+
+.whiteMainMovies {
+  height: auto;
+}
+
 .mainMovies {
   width: 1980px;
   margin: auto;
+  overflow: hidden;
 
   .card {
-    width: 640px;
-    height: 360px;
-    margin: 10px;
-    margin-top: 10px !important;
-    border-radius: 1.5em!important;
+    width: 608px;
+    height: 342px;
+    margin: 26px;
+    margin-top: 26px !important;
+    border-radius: 2em!important;
     float: left;
+    box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 
     .listImage {
       width: 100%;
@@ -554,23 +568,31 @@
       left: 0px;
       top: 0px;
       z-index: 1;
-      border-radius: 1.5em!important;
+      border-radius: 2em!important;
     }
   }
 }
 
 @media screen and (max-width: 2170px) {
+  .mainMoviesHeader {
+    width: 290px;
+  }
   .mainMovies {
     width: 1404px;
 
     .card {
       width: 448px;
       height: 252px;
+      margin: 10px;
+      margin-top: 10px !important;
     }
   }
 }
 
 @media screen and (max-width: 1420px) {
+  .mainMoviesHeader {
+    width: 250px;
+  }
   .mainMovies {
     width: 972px;
 
@@ -582,20 +604,30 @@
 }
 
 @media screen and (max-width: 1020px) {
+  .whiteMainMovies {
+    margin-top: 140px !important;
+  }
+  .videoMainArticles {
+    margin-top: 140px !important;
+  }
+  .mainMoviesHeader {
+    width: 220px;
+  }
   .mainMovies {
     width: 746px;
-    flex-wrap: wrap;
 
     .card {
-      width: 368px;
-      height: 207px;
-      margin-top: 2px !important;
-      margin: 2px;
+      width: 352px;
+      height: 198px;
+      margin: 10px;
     }
   }
 }
 
 @media screen and (max-width: 768px) {
+  .videoMainArticles {
+    margin-top: 30px !important;
+  }
   .mainMovies {
     width: 496px;
 
@@ -608,6 +640,9 @@
 }
 
 @media screen and (max-width: 500px) {
+  .whiteMainMovies {
+    margin-top: 30px !important;
+  }
   .mainMovies {
     width: 400px;
     .card {

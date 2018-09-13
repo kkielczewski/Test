@@ -9,6 +9,7 @@ import Survey from '../components/survey';
 import MainArticles from './main-articles';
 import { getSomeVideos } from '../utils/youtube-utils';
 import VideoPlaceholder from '../assets/images/video-placeholder.jpg';
+import MoviesPlaceholder from '../assets/images/movies-placeholder.png';
 
 class Home extends React.Component {
   constructor(props) {
@@ -69,17 +70,9 @@ class Home extends React.Component {
       centerMode: true,
       infinite: true,
       centerPadding: '0px',
-      slidesToShow: 3,
+      slidesToShow: 1,
       speed: 500,
-      swipeToSlide: true,
-      responsive: [
-        {
-          breakpoint: 1420,
-          settings: {
-            slidesToShow: 1
-          }
-        }
-      ]
+      swipeToSlide: true
     };
     const doctorSettings = {
       className: 'doctorCarousel',
@@ -145,7 +138,10 @@ class Home extends React.Component {
     };
     return (
       <div className='mainContainer' >
-        <Header dividing textAlign='center' size='huge' className='homeTitle' >Allecco.tv TWÓJ PORTAL O ZDROWIU</Header>
+        <div className='blueStripe' ></div>
+        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} />
+        <div className='whiteContainer' >
+        <Header className='recomendedProducts videoHeader' textAlign='center' size='huge' >Allecco.tv TWÓJ PORTAL O ZDROWIU</Header>
         <Responsive minWidth='769' >
           <Slider {...videoSettings} >
             {this.state.allVideos.map(video => <div className='videoCard'><VideoCard video={video} image={VideoPlaceholder} imageClass='videoImage' contentClass='videoContent' /></div>)}
@@ -174,7 +170,13 @@ class Home extends React.Component {
             </div>
           </div>
         </Responsive>
-        <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Wybierz swojego eksperta</Header>
+        </div>
+        <div className='whiteContainer' >
+          <Header className='recomendedProducts mainArticlesHeader'  textAlign='center' size='huge' >Najnowsze Artykuły</Header>
+          <MainArticles />
+        </div>
+        <div className='whiteContainer' >
+        <Header className='recomendedProducts doctorHeader'  textAlign='center' size='huge' >Wybierz swojego eksperta</Header>
         <Responsive minWidth='769' >
           <Slider {...doctorSettings} >
             {this.state.allDoctors.map(doctor => <DoctorCard contentClass='doctorContent' imageClass='Image' link={doctor.link} />)}
@@ -203,14 +205,15 @@ class Home extends React.Component {
             </div>
           </div>
         </Responsive>
+        </div>
         <Survey/>
-        <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Ostatnie Artykuły</Header>
-        <MainArticles />
-        <Header dividing className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>
+        <div className='whiteContainer' >
+        <Header className='recomendedProducts productHeader' textAlign='center' size='huge' >Polecane produkty</Header>
         <div>
           <Slider {...productsSettings} >
             {this.state.allProducts.map(product => <ProductCard imageClass='Image' product={product} />)}
           </Slider>
+        </div>
         </div>
       </div>
     );

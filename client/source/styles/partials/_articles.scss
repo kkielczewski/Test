@@ -1,15 +1,24 @@
 
 // Videos List
 
+.articlesHeader {
+  width: 185px;
+  position: relative;
+  top: 10px;
+}
+
 .articleContainer {
   display: flex;
   width: 1980px;
-  margin: auto;
+  margin: 130px auto auto;
   .videoList {
     margin: 0 0 auto auto;
-    height: 1546px;
-    width: 1224px;
+    height: 1710px;
+    width: 1240px;
     position: relative;
+    background-color: white;
+    border-radius: 2em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15);
     .videoNav {
       width: 100%;
       text-align: center;
@@ -18,58 +27,62 @@
       clear: both;
     }
     .card {
-      width: 592px;
-      height: 445px;
+      width: 360px;
+      height: 480px;
       margin: 40px;
-      margin-left: 0;
-      border-radius: 1.5em!important;
+      border-radius: 2em!important;
+      box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
       .listImage {
         width: 100%;
         height: 333px;
-        border-radius: 1.5em 1.5em 0 0 !important;
+        border-radius: 2em 2em 0 0 !important;
       }
       .content {
-        height: 105px;
+        height: 140px;
         padding: 5px 10px;
         overflow: hidden;
         .header {
           font-size: 26px !important;
           color: black;
         }
-        .description {
-          font-size: 16px;
-          margin-top: 0 !important;
-          color: black;
-        }
       }
     }
-    .card:nth-child(odd) {
+    .card:nth-child(3n+2) {
       clear: left;
       float: left;
       margin-top: 0;
     }
-    .card:first-child {
+    .card:nth-child(3n+3) {
+      float: left;
+      margin-left: 0;
+    }
+    .card:nth-child(2) {
       margin-top: 40px;
+    }
+    .card:nth-child(3n+6) {
+      margin-top: 0;
     }
   }
   .newsletterContainer {
-    height: 1546px;
-    width: 756px;
+    height: 1710px;
+    width: 740px;
   }
   .newsletter {
-    height: 1415px;
-    width: 716px;
+    height: 1520px;
+    width: 700px;
     margin: 40px!important;
     margin-right: 0 !important;
-    border-radius: 1.5em!important;
-    padding: 1em 1em !important;
+    border-radius: 2em!important;
+    padding: 15px !important;
+    position: relative;
+    top: 60px;
     .header {
       font-size: 34px!important;
       margin-top: 90px!important;
       margin-bottom: 30px;
     }
     .paragraph {
-      font-size: 49px;
+      font-size: 48px;
       margin-bottom: 80px;
     }
     .input {
@@ -110,35 +123,49 @@
 }
 
 @media screen and (max-width: 2170px) {
+  .articlesHeader {
+    width: 160px;
+  }
   .articleContainer {
     width: 1404px;
     .videoList {
-      height: 1230px;
-      width: 921px;
+      height: 1400px;
+      width: 940px;
       .card {
-        width: 448px;
-        height: 355px;
-        margin: 25px;
-        margin-left: 0;
+        width: 300px;
+        height: 400px;
+        margin: 10px;
+        margin-top: 20px;
         .listImage {
-          height: 252px;
+          height: 300px;
+        }
+        .content {
+          height: 95px;
+          .header {
+            font-size: 18px !important;
+          }
         }
       }
-      .card:first-child {
-        margin-top: 25px;
+      .card:nth-child(3n+2) {
+        margin-top: 10px;
+      }
+      .card:nth-child(3n+6) {
+        margin-top: 10px;
+      }
+      .card:nth-child(2) {
+        margin-top: 20px;
       }
     }
     .newsletterContainer {
-      height: 1230px;
-      width: 483px;
+      height: 1400px;
+      width: 464px;
     }
     .newsletter {
       height: 1115px;
-      width: 458px;
+      width: 439px;
       margin: 25px !important;
-      margin-right: 0 !important;
       margin-top: 25px !important;
-      padding: 1em 1em !important;
+      top: 120px;
       .header {
         font-size: 31px!important;
         margin-top: 87px!important;
@@ -177,51 +204,58 @@
 }
 
 @media screen and (max-width: 1420px) {
+  .articlesHeader {
+    width: 150px;
+  }
   .articleContainer {
     width: 972px;
     .videoList {
-      height: 920px;
-      width: 655px;
+      height: 1040px;
+      width: 670px;
       .card {
-        width: 320px;
-        height: 265px;
-        margin: 15px;
-        margin-left: 0;
+        width: 210px;
+        height: 280px;
+        margin: 10px;
+        margin-top: 20px;
         .listImage {
-          height: 180px;
+          height: 200px;
         }
         .content {
-          height: 80px;
+          height: 75px;
           .header {
-            font-size: 20px !important;
-          }
-          .description {
-            font-size: 14px;
+            font-size: 14px !important;
           }
         }
       }
-      .card:first-child {
-        margin-top: 15px;
+      .card:nth-child(3n+2) {
+        margin-top: 10px;
+      }
+      .card:nth-child(3n+6) {
+        margin-top: 10px;
+      }
+      .card:nth-child(2) {
+        margin-top: 20px;
       }
     }
     .newsletterContainer {
-      height: 920px;
-      width: 317px;
+      height: 1040px;
+      width: 302px;
     }
     .newsletter {
-      height: 825px;
-      width: 302px;
+      height: 820px;
+      width: 287px;
       margin: 15px !important;
       margin-right: 0 !important;
       margin-top: 15px !important;
-      padding: 0.5em 0.5em !important;
+      padding: 6px !important;
+      top: 95px;
       .header {
         font-size: 18px!important;
         margin-top: 80px!important;
         margin-bottom: 20px;
       }
       .paragraph {
-        font-size: 20px;
+        font-size: 19px;
         margin-bottom: 30px;
       }
       .input {
@@ -230,7 +264,7 @@
         margin: auto auto 30px auto;
       }
       .checkbox {
-        font-size: 14px;
+        font-size: 13px;
         margin-bottom: 20px;
         label {
           padding-left: 32px;
@@ -254,36 +288,49 @@
 }
 
 @media screen and (max-width: 1020px) {
+  .articlesHeader {
+    width: 130px;
+  }
   .articleContainer {
     display: inline;
+    position: relative;
+    top: 70px;
     .videoList {
       height: auto;
-      width: 746px;
+      width: 742px;
       margin: auto;
       .videoNav {
         position: relative;
       }
       .card {
-        width: 368px;
-        height: 290px;
-        margin: 10px 10px 10px 0;
+        width: 234px;
+        height: 312px;
+        margin: 10px;
+        margin-top: 20px;
         .listImage {
-          height: 207px;
+          height: 220px;
+        }
+        .content {
+          height: 80px;
+          .header {
+            font-size: 16px !important;
+          }
         }
       }
-      .card:first-child {
-        margin-top: 0;
+      .card:nth-child(2) {
+        margin-top: 20px;
       }
     }
     .newsletterContainer {
-      height: 520px;
+      height: auto;
       width: 100%;
     }
     .newsletter {
-      height: 512px;
+      height: auto;
       width: 746px;
-      margin: auto !important;
-      padding: 1.5em 1.5em !important;
+      overflow: hidden;
+      margin: 70px auto !important;
+      top: 0;
       .header {
         margin-bottom: 10px;
         margin-top: 20px !important;
@@ -294,6 +341,9 @@
       .input {
         width: 640px;
       }
+      .button {
+        margin-bottom: 20px;
+      }
     }
   }
 }
@@ -301,29 +351,36 @@
 @media screen and (max-width: 768px) {
   .articleContainer {
     .videoList {
-      width: 496px;
+      width: 100%;
       margin: auto;
       .card {
-        width: 496px;
-        height: 360px;
+        width: 330px;
+        height: 440px;
         margin: 10px auto;
+        float: none !important;
         .listImage {
-          height: 279px;
+          height: 340px;
+        }
+        .content {
+          height: 95px;
+          .header {
+            font-size: 18px !important;
+          }
         }
       }
-      .card:first-child {
-        margin-top: 20px;
+      .card:nth-child(even) {
+        float: none;
       }
-    }
-    .newsletterContainer {
-      height: 100%;
-      width: 100%;
+      .card:nth-child(3n+3) {
+        margin-left: auto;
+      }
     }
     .newsletter {
       height: 100%;
       width: 100%;
       border-radius: 0 !important;
       padding: 0.5em !important;
+      margin: 30px auto !important;
       .paragraph {
         font-size: 22px;
       }
@@ -339,20 +396,9 @@
 
 @media screen and (max-width: 500px) {
   .articleContainer {
+    top: 30px;
     .videoList {
-      width: 400px;
-      margin: auto;
-      .card {
-        width: 400px;
-        height: 305px;
-        margin: 10px auto;
-        .listImage {
-          height: 225px;
-        }
-      }
-      .card:first-child {
-        margin-top: 20px;
-      }
+      border-radius: 0;
     }
     .newsletterContainer {
       height: 100%;
@@ -379,7 +425,7 @@
       margin: auto;
       .card {
         width: 100%;
-        height: 285px;
+        height: 400px;
         margin: 0 0 20px;
         border-radius: 0 !important;
         border-style: solid;
@@ -387,7 +433,13 @@
         border-color: white;
         .listImage {
           border-radius: 0 !important;
-          height: 198px;
+          height: 295px;
+        }
+        .content {
+          height: 105px;
+          .header {
+            font-size: 20px;
+          }
         }
       }
       .card:first-child {

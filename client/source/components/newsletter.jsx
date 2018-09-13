@@ -49,7 +49,7 @@ class Newsletter extends React.Component {
     return (
       <Segment className='newsletter' raised textAlign='center'>
         <Header textAlign='center' size='medium' >Zapisz się do newslettera</Header>
-        <div className='paragraph' >Twórz serwis Allecco.tv razem z nami. Weż udział w ankiecie i zdecyduj jakie treści przygotują nasi eksperci. Wpisz swój adres e-mail i odbierz ankiete:</div>
+        <div className='paragraph' >Twórz serwis Allecco.tv razem z nami. Weż udział w ankiecie i zdecyduj jakie treści przygotują nasi eksperci. Wpisz swój adres email i odbierz ankiete:</div>
         <Form onSubmit={this.handleClick} >
         <Input onChange={this.changeEmail} placeholder='Email...' />
         <Checkbox value={true} onChange={this.changeCheckOne} label="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also." />

@@ -69,6 +69,7 @@ class Info extends React.Component {
     };
     return (
       <div className='mainContainer' >
+        <div className='blueStripe' ></div>
         <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} >
           <div style={{ position: 'absolute', left: '0', bottom: '0', width: '100%' }} ><div className='pictureHeader' >O Nas</div></div>
         </div>

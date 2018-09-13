@@ -1,17 +1,24 @@
 .homeTitle {
-  margin-top: 10px !important;
-  font-size: 3em;
+  margin-top: 60px !important;
 }
 
 // Video Carousel
-.videoCarousel {
+.videoHeader {
+  width: 740px;
+}
+.videoCarouselContainer {
   width: 1980px;
   margin: auto;
-  overflow: hidden;
+  background-color: white;
+}
+.videoCarousel {
+  width: 1600px;
+  margin: auto;
 
   .videoCard {
     padding: 10px;
     outline-color: white;
+    height: 900px;
 
     .videoImage {
       width: 100%;
@@ -33,8 +40,8 @@
   }
 
   .slick-arrow {
-    width: 64px;
-    height: 64px;
+    width: 80px;
+    height: 80px;
     z-index: 1;
     background-color: white;
     border-radius: 50%;
@@ -44,108 +51,73 @@
     opacity: 1;
     color: #db2828;
     z-index: 1;
-    font-size: 80px;
+    font-size: 100px;
     position: relative;
-    left: -8px;
+    left: -10px;
     top: -3px;
   }
 
   .slick-prev {
-    z-index: 60;
-    left: 24%;
+    left: -77px;
   }
 
   .slick-next {
-    z-index: 60;
-    right: 24%;
-  }
-  .slick-list {
-    overflow: visible;
-    height: 550px;
-    top: 82px;
+    right: -77px;
   }
 
   .card {
-    transition: 0.5s ease;
     overflow: hidden;
     width: 100%;
     margin: 73px 0;
-    min-height: 360px;
-  }
-
-  .slick-active .card {
-    z-index: 25;
-  }
-
-  .slick-center .card {
-    transform: scale(1.5);
-    z-index: 50;
-    transition: 0.5s ease;
+    height: 100%;
   }
 }
 
 @media screen and (max-width: 2170px) {
+  .videoHeader {
+    width: 640px;
+  }
   .videoCarousel {
-    width: 1404px;
-
-    .slick-list {
-      top: 55px;
-      height: 384px;
-    }
-
-    .card {
-      min-height: 252px;
+    width: 1200px;
+    .videoCard {
+      height: 675px;
     }
   }
 }
 
 @media screen and (max-width: 1420px) {
+  .videoHeader {
+    width: 580px;
+  }
   .videoCarousel {
-    width: 880px;
-    overflow: visible;
-
-    .slick-prev {
-      left: -2.5%;
-    }
-
-    .slick-next {
-      right: -2.5%;
-    }
-
-    .slick-list {
-      height: 520px;
-      top: 0;
-      overflow: hidden;
-    }
-
-    .card {
-      min-height: 495px;
-    }
-
-    .slick-center .card {
-      transform: scale(1);
+    width: 800px;
+    .videoCard {
+      height: 450px;
     }
   }
 }
 
 @media screen and (max-width: 1020px) {
+  .videoHeader {
+    width: 460px;
+  }
   .videoCarousel {
     width: 640px;
-
+    .videoCard {
+      height: 360px;
+    }
+    .slick-arrow {
+      width: 50px;
+      height: 50px;
+    }
+    .slick-arrow::before {
+      font-size: 64px;
+    }
     .slick-prev {
-      left: -3%;
+      left: -45px;
     }
-  
     .slick-next {
-      right: -3%;
-    }
-
-    .slick-list {
-      height: 385px;
-    }
-
-    .card {
-      min-height: 360px;
+      right: -45px;
     }
   }
 }
@@ -181,6 +153,9 @@
 }
 
 @media screen and (max-width: 500px) {
+  .videoHeader {
+    width: 325px;
+  }
   .homeVideosContainer {
     .homeVideos {
       width: 400px;
@@ -194,6 +169,9 @@
 }
 
 @media screen and (max-width: 400px) {
+  .videoHeader {
+    width: 275px;
+  }
   .homeVideosContainer {
     .homeVideos {
       width: 100%;
@@ -212,11 +190,12 @@
 }
 
 // Doctor Carousel
-
+.doctorHeader {
+  width: 530px;
+}
 .doctorCarousel {
   width: 1820px;
-  margin: 90px auto 40px;
-  top: -75px;
+  margin: 10px auto;
 
   .card {
     border-radius: 0;
@@ -309,9 +288,11 @@
 }
 
 @media screen and (max-width: 2170px) {
+  .doctorHeader {
+    width: 450px;
+  }
   .doctorCarousel {
     width: 1240px;
-
     .card {
       height: 310px;
     }
@@ -319,6 +300,9 @@
 }
 
 @media screen and (max-width: 1420px) {
+  .doctorHeader {
+    width: 385px;
+  }
   .doctorCarousel {
     width: 900px;
 
@@ -365,6 +349,9 @@
 }
 
 @media screen and (max-width: 1020px) {
+  .doctorHeader {
+    width: 325px;
+  }
   .doctorCarousel {
     width: 670px;
 
@@ -383,7 +370,6 @@
 }
 
 .homeExpertsContainer {
-  margin-bottom: 130px;
   .homeExperts {
     width: 496px;
     margin: auto;
@@ -440,7 +426,6 @@
 
 @media screen and (max-width: 500px) {
   .homeExpertsContainer {
-    margin-bottom: 110px;
     .homeExperts {
       width: 400px;
 
@@ -453,6 +438,9 @@
 }
 
 @media screen and (max-width: 400px) {
+  .doctorHeader {
+    width: 275px;
+  }
   .homeExpertsContainer {
     .homeExperts {
       width: 100%;
@@ -468,10 +456,9 @@
 //Survey
 
 .survey {
-  background:gray;
   position: relative;
-  height: 530px;
-  top: -75px;
+  height: 413px;
+  margin-top: 130px;
 
   .surveySegment {
     width: 1980px;
@@ -488,7 +475,11 @@
       border-radius: 2em;
 
       .header {
-        font-size: 5em;
+        font-size: 70px;
+        color: #db2828;
+        border-style: solid;
+        width: 380px;
+        margin: 0 auto 20px;
       }
 
       .paragraph {
@@ -523,6 +514,10 @@
     .surveySegment {
       width: 1404px;
       .segment {
+        .header {
+          font-size: 50px;
+          width: 300px;
+        }
         .input {
           width: 800px;
         }
@@ -533,11 +528,15 @@
 
 @media screen and (max-width: 1420px) {
   .survey {
-    height: 570px;
+    height: 452px;
     .surveySegment {
       width: 972px;
       height: 452px;
       .segment {
+        .header {
+          font-size: 44px;
+          width: 250px;
+        }
         .paragraph {
           width: 100%;
         }
@@ -551,6 +550,8 @@
 
 @media screen and (max-width: 1020px) {
   .survey {
+    height: 362px;
+    margin-top: 70px;
     .surveySegment {
       width: 744px;
       height: 362px;
@@ -558,7 +559,8 @@
         padding: 15px;
 
         .header {
-          font-size: 4em;
+          font-size: 40px;
+          width: 225px;
         }
 
         .paragraph {
@@ -576,15 +578,16 @@
 
 @media screen and (max-width: 768px) {
   .survey {
-    height: 310px;
+    height: 371px;
     .surveySegment {
       width: 100%;
-      height: auto;
+      height: 371px;
       .segment {
         height: auto;
         border-radius: 0;
         .header {
-          font-size: 4em;
+          font-size: 36px;
+          width: 210px;
         }
         .paragraph {
           font-size: 24px;
@@ -603,12 +606,15 @@
 
 @media screen and (max-width: 500px) {
   .survey {
-    height: 210px;
+    height: 266px;
+    margin-top: 30px;
     .surveySegment {
+      height: 266px;
       .segment {
         padding: 15px 5px;
         .header {
-          font-size: 3em;
+          font-size: 26px;
+          width: 155px;
         }
         .paragraph {
           font-size: 16px;
@@ -627,7 +633,9 @@
 
 @media screen and (max-width: 400px) {
   .survey {
+    height: 290px;
     .surveySegment {
+      height: 290px;
       .segment {
         .input {
           width: 300px;
@@ -639,19 +647,23 @@
 
 // Main Articles
 
+.mainArticlesHeader {
+  width: 375px;
+}
 .mainArticles {
-  width: 1980px;
+  width: 1880px;
+  height: 620px;
   margin: auto;
   .ui.card {
     margin: 10px;
-    height: 470px;
-    width: 640px;
+    height: 600px;
+    width: 450px;
     border-radius: 1.5em;
     float: left;
 
     .Image {
       border-radius: 1.5em 1.5em 0 0!important;
-      height: 360px;
+      height: 490px;
       width: 100%;
     }
 
@@ -673,14 +685,18 @@
 }
 
 @media screen and (max-width: 2170px) {
+  .mainArticlesHeader {
+    width: 350px;
+  }
   .mainArticles {
     width: 1404px;
+    height: 460px;
 
     .ui.card {
-      height: 360px;
-      width: 448px;
+      height: 440px;
+      width: 330px;
       .Image {
-        height: 252px;
+        height: 335px;
       }
     }
   }
@@ -688,23 +704,24 @@
 
 
 @media screen and (max-width: 1420px) {
+  .mainArticlesHeader {
+    width: 300px;
+  }
   .mainArticles {
     width: 972px;
+    height: 307px;
 
     .ui.card {
-      height: 255px;
-      width: 304px;
+      height: 297px;
+      width: 223px;
 
       .Image {
-        height: 171px;
+        height: 210px;
       }
       .content {
         height: 80px;
         .header {
-          font-size: 20px;
-        }
-        .description {
-          font-size: 12px;
+          font-size: 16px;
         }
       }
     }
@@ -712,20 +729,30 @@
 }
 
 @media screen and (max-width: 1020px) {
+  .mainArticlesHeader {
+    width: 270px;
+  }
   .mainArticlesContainer {
     width: 744px;
     margin: auto;
   }
   .mainArticles {
-    width: 744px;
+    width: 700px;
+    height: 900px;
 
     .ui.card {
-      width: 368px;
-      height: 290px;
-      margin: 2px;
+      width: 330px;
+      height: 440px;
+      margin: 10px;
 
       .Image {
-        height: 207px;
+        height: 335px;
+      }
+      .content {
+        height: 105px;
+        .header {
+          font-size: 20px;
+        }
       }
     }
   }
@@ -733,27 +760,24 @@
 
 @media screen and (max-width: 768px) {
   .mainArticlesContainer {
-    width: 496px;
+    width: 420px;
   }
   .mainArticles {
-    width: 496px;
-    display: inline-block;
+    width: 420px;
+    height: 2320px;
 
     .ui.card {
-      width: 496px;
-      height: 385px;
+      width: 420px;
+      height: 560px;
       margin: 10px auto;
 
       .Image {
-        height: 279px;
+        height: 450px;
       }
       .content {
         height: 105px;
         .header {
-          font-size: 26px;
-        }
-        .description {
-          font-size: 16px;
+          font-size: 20px;
         }
       }
     }
@@ -762,26 +786,23 @@
 
 @media screen and (max-width: 500px) {
   .mainArticlesContainer {
-    width: 400px;
+    width: 330px;
   }
   .mainArticles {
-    width: 400px;
+    width: 330px;
+    height: 1840px;
 
     .ui.card {
-      width: 400px;
-      height: 310px;
+      width: 330px;
+      height: 440px;
       margin: 0 0 20px;
 
       .Image {
-        height: 225px;
+        height: 335px;
       }
       .content {
-        height: 80px;
         .header {
           font-size: 20px;
-        }
-        .description {
-          font-size: 12px;
         }
       }
     }
@@ -794,16 +815,17 @@
   }
   .mainArticles {
     width: 100%;
+    height: 1680px;
     .ui.card {
       width: 100%;
-      height: 280px;
+      height: 400px;
       border-radius: 0 !important;
       border-style: solid;
       border-width: 1px;
       border-color: lightgray;
 
       .Image {
-        height: 198px;
+        height: 295px;
         border-radius: 0 !important;
       }
     }
@@ -811,9 +833,14 @@
 }
 
 // Product Carousel
+.productHeader {
+  width: 360px;
+}
+
 .recomendedProducts {
   clear: both;
 }
+
 .productCarousel {
   width: 1980px;
   margin: auto;
@@ -872,18 +899,27 @@
 }
 
 @media screen and (max-width: 2170px) {
+  .productHeader {
+    width: 300px;
+  }
   .productCarousel {
     width: 1404px;
   }
 }
 
 @media screen and (max-width: 1420px) {
+  .productHeader {
+    width: 275px;
+  }
   .productCarousel {
     width: 972px;
   }
 }
 
 @media screen and (max-width: 1020px) {
+  .productHeader {
+    width: 235px;
+  }
   .productCarousel {
     width: 744px;
   }
@@ -921,6 +957,9 @@
 }
 
 @media screen and (max-width: 400px) {
+  .productHeader {
+    width: 200px;
+  }
   .productCarousel {
     .slick-list {
       .card {

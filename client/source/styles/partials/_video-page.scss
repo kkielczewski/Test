@@ -14,7 +14,12 @@
 
 .recomendedProducts {
   font-size: 38px !important;
-  padding-top: 15px !important;
+  margin: auto !important;
+  color: #db2828 !important;
+  border-style: solid !important;
+  padding: 10px !important;
+  border-bottom-color: #db2828 !important;
+  border-bottom-width: 2px !important;
 }
 
 .videoPageContainer {
@@ -569,6 +574,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .recomendedProducts {
+    margin-bottom: 10px !important;
+  }
   .pictureHeader {
     width: 496px;
   }

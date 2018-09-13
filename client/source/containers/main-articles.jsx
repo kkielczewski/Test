@@ -25,7 +25,7 @@ class MainArticles extends React.Component {
     return (
       <div className='mainArticlesContainer' >
         <div className='mainArticles' >
-          {this.state.allArticles.slice(0, 6).map(article => <ArticleCard id='1' className='articleCard mainArticleCard' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
+          {this.state.allArticles.slice(0, 4).map(article => <ArticleCard id='1' className='articleCard mainArticleCard' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
         </div>
       </div>
     );
