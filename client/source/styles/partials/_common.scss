@@ -4,29 +4,27 @@
   padding: 35px 40px !important;
   margin: auto !important;
   border: none !important;
-  box-shadow: none !important;
+  box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15) !important;
   clear: both;
 
   .header {
     font-size: 38px!important;
+    color: #db2828;
   }
   .form {
-  .input {
-    font-size : 2em;
-    margin-bottom: 20px;
-
-    input {
+    textarea {
+      font-size : 2em;
+      margin-bottom: 20px;
       border-radius: 0.5em;
       width: 1900px;
     }
-  }
 
-  .button {
-    font-size: 34px;
-    padding: 25px 100px;
-    border-radius: 0.5em;
+    .button {
+      font-size: 34px;
+      padding: 25px 100px;
+      border-radius: 0.5em;
+    }
   }
-}
 }
 
 @media screen and (max-width: 2170px) {
@@ -37,18 +35,16 @@
       font-size: 32px!important;
     }
     .form {
-    .input {
-      input {
+      textarea {
         width: 1324px;
       }
-    }
 
-    .button {
-      font-size: 20px;
-      padding: 20px 70px;
+      .button {
+        font-size: 20px;
+        padding: 20px 70px;
+      }
     }
   }
-}
 }
 
 @media screen and (max-width: 1420px) {
@@ -60,18 +56,16 @@
       font-size: 28px!important;
     }
     .form {
-    .input {
-      font-size : 1.5em;
-      input {
+      textarea {
+        font-size : 1.5em;
         width: 932px;
       }
-    }
 
-    .button {
-      font-size: 18px;
-      padding: 15px 50px;
+      .button {
+        font-size: 18px;
+        padding: 15px 50px;
+      }
     }
-  }
   }
 }
 
@@ -83,55 +77,61 @@
       font-size: 24px !important;
     }
     .form {
-    .input {
-      font-size: 1.3em;
-      input {
+      textarea {
+        font-size: 1.3em;
         width: 706px;
       }
-    }
 
-    .button {
-      font-size: 16px;
-      padding: 10px 35px;
+      .button {
+        font-size: 16px;
+        padding: 10px 35px;
+      }
     }
-  }
   }
 }
 
 @media screen and (max-width: 768px) {
   .advice {
-    width: 496px;
+    width: 100%;
+    padding: 15px 100px !important;
 
     .header {
       font-size: 24px !important;
     }
     .form {
-    .input {
-      font-size: 1.3em;
-      input {
+      textarea {
+        font-size: 1.3em;
         width: 456px;
       }
     }
   }
+}
+
+@media screen and (max-width: 656px) {
+  .advice {
+    padding: 15px 41px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .advice {
+    padding: 15px 20px;
   }
 }
 
 @media screen and (max-width: 500px) {
   .advice {
-    width: 100%;
     border-radius: 0 !important;
     padding: 15px 5px !important;
     .form {
-    .input {
-      input {
-        width: 390px;
+      textarea {
+          width: 390px;
+      }
+
+      .button {
+        padding: 10px 30px;
       }
     }
-
-    .button {
-      padding: 10px 30px;
-    }
-  }
   }
 }
 
@@ -141,12 +141,10 @@
       font-size: 18px !important;
     }
     .form {
-    .input {
-      font-size: 1em;
-      input {
+      textarea {
+        font-size: 1em;
         width: 300px;
       }
     }
-  }
   }
 }

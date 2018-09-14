@@ -71,11 +71,11 @@ class Contact extends React.Component {
     return (
       <div className='mainContainer' >
         <div className='blueStripe' ></div>
-        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} >
-          <div style={{ position: 'absolute', left: '0', bottom: '0', width: '100%'}} ><div className='pictureHeader' >Kontakt</div></div>
-        </div>
+        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} />
         <div className='infoDescriptionContainer' >
+          <div className='whiteContainer' >
           <div className='description' >
+          <Header className='recomendedProducts articlesHeader' textAlign='center' size='huge' >Kontakt</Header>
             <img src={Default} />
             <div className='text' >
             <p className='title' >BIURO OBSŁUGI KLIENTA</p>
@@ -87,14 +87,17 @@ class Contact extends React.Component {
             <p>Administratorem serwisu allecco.pl jest MEDICARE-GALENICA Sp. z o.o. z siedzibą przy ulicy Białobrzeskiej 45 w Mysłowicach, NIP 954-21-84-194, KRS 0000066774 (Sąd Rejonowy Katowice - Wschód w Katowicach; Wydział VIII  Gospodarczy Krajowego Rejestru Sądowego) </p>
             </div>
           </div>
+          </div>
         </div>
         <div className='infoNewsletter' >
           <Newsletter />
         </div>
-        <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Polecane produkty</Header>
-        <Slider {...productsSettings} >
-          {this.state.allProducts.map(product => <ProductCard product={product} />)}
-        </Slider>
+        <div className='whiteContainer' >
+          <Header className='recomendedProducts productHeader' dividing textAlign='center' size='huge' >Polecane produkty</Header>
+          <Slider {...productsSettings} >
+            {this.state.allProducts.map(product => <ProductCard product={product} />)}
+          </Slider>
+        </div>
       </div>
     );
   }

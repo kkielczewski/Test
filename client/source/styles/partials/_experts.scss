@@ -10,6 +10,11 @@
   height: auto;
   width: 1380px;
 
+  .articlesHeader {
+    position: relative;
+    top: -10px;
+  }
+
   .doctorNav {
     width: 100%;
     text-align: center;
@@ -83,30 +88,40 @@
     }
   }
 
-  .card:nth-child(3n+1) {
+  .card:nth-child(3n+2) {
     clear: left;
     float: left;
     margin-top: 0;
   }
 
-  .card:nth-child(3n+2) {
+  .card:nth-child(3n+3) {
       float: left;
       margin-top: 0;
       margin-left: 0;
   }
 
-  .card:first-child {
+  .card:nth-child(2) {
     margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .doctorList {
+    width: 1260px;
+    .card {
+      width: 420px;
+      height: 420px;
+    }
   }
 }
 
 @media screen and (max-width: 1420px) {
   .doctorList {
-    width: 960px;
+    width: 870px;
 
     .card {
-      width: 320px;
-      height: 320px;
+      width: 290px;
+      height: 290px;
     }
   }
 }
@@ -140,15 +155,15 @@
 
 @media screen and (max-width: 1020px) {
   .doctorList {
-    width: 759px;
+    width: 690px;
 
     .doctorNav {
       position: relative;
     }
 
     .card {
-      width: 253px;
-      height: 253px;
+      width: 230px;
+      height: 230px;
     }
   }
 }

@@ -70,11 +70,11 @@ class Info extends React.Component {
     return (
       <div className='mainContainer' >
         <div className='blueStripe' ></div>
-        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} >
-          <div style={{ position: 'absolute', left: '0', bottom: '0', width: '100%' }} ><div className='pictureHeader' >O Nas</div></div>
-        </div>
+        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} />
         <div className='infoDescriptionContainer' >
+          <div className='whiteContainer' >
           <div className='description' >
+            <Header className='recomendedProducts articlesHeader' textAlign='center' size='huge' >O Nas</Header>
             <img src={Default} />
             <div className='text' >
               <p className='title'>Kim jesteśmy?</p>
@@ -92,14 +92,17 @@ class Info extends React.Component {
               <p>Dziękujemy, że jesteś z nami - zespół allecco.pl</p>
             </div>
           </div>
+          </div>
         </div>
         <div className='infoNewsletter' >
           <Newsletter />
         </div>
-        <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Polecane produkty</Header>
-        <Slider {...productsSettings} >
-          {this.state.allProducts.map(product => <ProductCard product={product} />)}
-        </Slider>
+        <div className='whiteContainer' >
+          <Header className='recomendedProducts productHeader' dividing textAlign='center' size='huge' >Polecane produkty</Header>
+          <Slider {...productsSettings} >
+            {this.state.allProducts.map(product => <ProductCard product={product} />)}
+          </Slider>
+        </div>
       </div>
     );
   }

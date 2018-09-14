@@ -17,9 +17,12 @@ class Articles extends React.Component {
       currentArticles: [],
       allProducts: [],
       activePage: 1,
-      totalCount: null
+      totalCount: null,
+      windowWidth: 999999
     };
     this.handlePageChange = this.handlePageChange.bind(this);
+    this.handlePageChangeSmall = this.handlePageChangeSmall.bind(this);
+    this.handleUpdate = this.handleUpdate.bind(this);
   }
 
   async componentDidMount() {
@@ -43,13 +46,39 @@ class Articles extends React.Component {
       { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
       { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' }];
 
-    this.setState({ allArticles: articles, allProducts: products, currentArticles: articles.slice(0, 9), totalCount: 10 });
+    let slice = articles.slice(0, 9);
+
+    if (window.innerWidth < 769) {
+      slice = articles.slice(0, 8);
+    } else {
+      slice = articles.slice(0, 9);
+    }
+
+    this.setState({ allArticles: articles, allProducts: products, currentArticles: slice, totalCount: 10, windowWidth: window.innerWidth });
   }
 
   handlePageChange(pageNumber) {
     const offset = (pageNumber - 1) * 9;
     const currentItems = this.state.allArticles.slice(offset, offset + 9);
     this.setState({ activePage: pageNumber, currentArticles: currentItems });
+  }
+
+  handlePageChangeSmall(pageNumber) {
+    const offset = (pageNumber - 1) * 8;
+    const currentItems = this.state.allArticles.slice(offset, offset + 8);
+    this.setState({ activePage: pageNumber, currentArticles: currentItems });
+  }
+
+  handleUpdate() {
+    if (window.innerWidth != this.state.windowWidth) {
+      if (window.innerWidth < 769 && this.state.windowWidth > 768) {
+        this.setState({ activePage: 1, currentArticles: this.state.allArticles.slice(0, 8), windowWidth: window.innerWidth });
+      } else if (this.state.windowWidth < 769 && window.innerWidth > 768) {
+        this.setState({ activePage: 1, currentArticles: this.state.allArticles.slice(0, 9), windowWidth: window.innerWidth });
+      } else {
+        this.setState({ windowWidth: window.innerWidth });
+      }
+    }
   }
 
   render() {
@@ -96,6 +125,7 @@ class Articles extends React.Component {
       <div className='mainContainer' >
         <div className='blueStripe' ></div>
         <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} />
+        <Responsive minWidth='769' onUpdate={this.handleUpdate} >
         <div className='articleContainer' >
           <div className='videoList' >
             <Header className='recomendedProducts articlesHeader' textAlign='center' size='huge' >Artykuły</Header>
@@ -121,6 +151,36 @@ class Articles extends React.Component {
             <Newsletter />
           </div>
         </div>
+        </Responsive>
+        <Responsive maxWidth='768' >
+        <div className='articleContainerSmall' >
+          <div className='videoList' >
+            <div className='smallArticlesContainer'>
+            <Header className='recomendedProducts articlesHeader' textAlign='center' size='huge' >Artykuły</Header>
+            {this.state.currentArticles.map(article => <ArticleCard id='1' article={article} image={ArticlePlaceholder} imageClass='listImage' />)}
+            <div className='videoNav' >
+              <Pagination
+              hideFirstLastPages
+              activePage={this.state.activePage}
+              itemsCountPerPage={8}
+              totalItemsCount={this.state.totalCount}
+              pageRangeDisplayed={5}
+              activeClass="activeli"
+              activeLinkClass="active"
+              linkClassPrev="prev"
+              linkClassNext="next"
+              prevPageText="<"
+              nextPageText='>'
+              onChange={this.handlePageChangeSmall}
+              />
+            </div>
+            </div>
+          </div>
+          <div className='newsletterContainer' >
+            <Newsletter />
+          </div>
+        </div>
+        </Responsive>
         <div className='whiteContainer whiteMainMovies' >
           <Header className='recomendedProducts mainMoviesHeader' dividing textAlign='center' size='huge' >Najnowsze Filmy</Header>
           <MainMovies />

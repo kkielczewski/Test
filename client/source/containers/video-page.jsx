@@ -296,6 +296,7 @@ class VideoPage extends React.Component {
           </div>
         </div>
         <div style={{ clear: 'both', marginBottom: '30px' }} >
+        <div className='whiteContainer' >
         <div className='expertContainer' >
           <div className='imageContainer' >
             <Image src={Avatar} className='expertImage' />
@@ -306,21 +307,28 @@ class VideoPage extends React.Component {
           </div>
         </div>
         </div>
+        </div>
         <Advice />
-        <div className='otherMovies' >
-          <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Inne filmy experta:</Header>
-          <div className='mainMovies' >
-            {this.state.expertVideos.slice(0, 6).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
+        <div className='whiteContainer' >
+          <div className='otherMovies' >
+            <Header className='recomendedProducts productHeader' dividing textAlign='center' size='huge' >Inne filmy experta</Header>
+            <div className='mainMovies' >
+              {this.state.expertVideos.slice(0, 6).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
+            </div>
           </div>
         </div>
         <Responsive maxWidth='1020' >
-          <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Ostatnie Filmy</Header>
-          <MainMovies />
+          <div className='whiteContainer' >
+            <Header className='recomendedProducts mainMoviesHeader' dividing textAlign='center' size='huge' >Najnowsze Filmy</Header>
+            <MainMovies />
+          </div>
         </Responsive>
-        <Header dividing className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>
-        <Slider {...productsSettings} >
-          {this.state.allProducts.map(product => <ProductCard product={product} />)}
-        </Slider>
+        <div className='whiteContainer' >
+          <Header dividing className='recomendedProducts productHeader' textAlign='center' size='huge' >Polecane produkty</Header>
+          <Slider {...productsSettings} >
+            {this.state.allProducts.map(product => <ProductCard product={product} />)}
+          </Slider>
+        </div>
       </div>
     );
   }

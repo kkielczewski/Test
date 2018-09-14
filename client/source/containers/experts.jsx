@@ -97,11 +97,11 @@ class Experts extends React.Component {
     return (
       <div className='mainContainer' >
         <div className='blueStripe' ></div>
-        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} >
-        <div style={{ position: 'absolute', left: '0', bottom: '0', width: '100%'}} ><div className='pictureHeader' >Eksperci</div></div>
-        </div>
+        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} />
         <div className='doctorsContainer' >
+          <div className='whiteContainer' >
           <div className='doctorList' >
+          <Header className='recomendedProducts articlesHeader' textAlign='center' size='huge' >Eskperci</Header>
             {this.state.currentExperts.map(expert => <DoctorCard link={expert.link} contentClass='doctorContent' imageClass='Image' />)}
             <div className='doctorNav' >
               <Pagination
@@ -120,13 +120,18 @@ class Experts extends React.Component {
               />
             </div>
           </div>
+          </div>
         </div>
-        <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Ostatnie Filmy</Header>
-        <MainMovies />
-        <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Polecane produkty</Header>
-        <Slider {...productsSettings} >
-          {this.state.allProducts.map(product => <ProductCard product={product} />)}
-        </Slider>
+        <div className='whiteContainer' >
+          <Header className='recomendedProducts mainMoviesHeader' dividing textAlign='center' size='huge' >Najnowsze Filmy</Header>
+          <MainMovies />
+        </div>
+        <div className='whiteContainer' >
+          <Header className='recomendedProducts productHeader' dividing textAlign='center' size='huge' >Polecane produkty</Header>
+          <Slider {...productsSettings} >
+            {this.state.allProducts.map(product => <ProductCard product={product} />)}
+          </Slider>
+        </div>
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Header, Input, Button, Form } from 'semantic-ui-react';
+import { Segment, Header, TextArea, Button, Form } from 'semantic-ui-react';
 
 class Advice extends React.Component {
   constructor(props) {
@@ -28,7 +28,7 @@ class Advice extends React.Component {
       <Segment className='advice' textAlign='center'>
         <Header textAlign='center' size='medium' >Co chciałbyś zobaczyć w następnym filmie lub artykule tego eksperta?</Header>
         <Form onSubmit={this.handleClick} >
-          <Input onChange={this.changeText} placeholder='...' />
+          <TextArea onChange={this.changeText} placeholder='...' />
           <Button color='red' >Wyślij</Button>
         </Form>
       </Segment>
