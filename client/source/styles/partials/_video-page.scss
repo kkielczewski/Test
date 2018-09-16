@@ -13,6 +13,7 @@
 }
 
 .recomendedProducts {
+  position: relative;
   font-size: 38px !important;
   margin: auto !important;
   color: #db2828 !important;
@@ -20,6 +21,8 @@
   padding: 10px !important;
   border-bottom-color: #db2828 !important;
   border-bottom-width: 2px !important;
+  margin-bottom: 50px !important;
+  margin-top: 40px !important;
 }
 
 .videoPageContainer {
@@ -31,7 +34,6 @@
     .card {
       width: 1408px;
       height: 792px;
-      border-radius: 1.5em!important;
 
       .content {
         border: none;
@@ -45,7 +47,6 @@
       left: 0px;
       top: 0px;
       z-index: 1;
-      border-radius: 1.5em!important;
     }
 
     .title {
@@ -104,7 +105,6 @@
         .card {
           width: 512px;
           height: 395px;
-          border-radius: 1.5em!important;
 
           .content {
             border: none;
@@ -120,7 +120,6 @@
           .Image {
             width: 100%;
             height: 288px;
-            border-radius: 1.5em 1.5em 0 0!important;
           }
         }
       }
@@ -128,12 +127,10 @@
         .card {
           width: 512px;
           height: 288px;
-          border-radius: 1.5em!important;
 
           .Image {
             width: 100%;
             height: 288px;
-            border-radius: 1.5em!important;
           }
         }
       }
@@ -211,13 +208,11 @@
     height: 470px;
     margin: 10px;
     margin-top: 10px !important;
-    border-radius: 1.5em!important;
     float: left;
 
     .Image {
       width: 100%;
       height: 360px;
-      border-radius: 1.5em 1.5em 0 0!important;
     }
   
     .articleContent {
@@ -341,6 +336,7 @@
   
   .recomendedProducts {
     font-size: 32px !important;
+    margin-bottom: 35px !important;
   }
 }
 
@@ -351,6 +347,8 @@
   }
   .recomendedProducts {
     font-size: 28px !important;
+    margin-bottom: 20px !important;
+    margin-top: 25px !important;
   }
   .otherMovies {
     .header {
@@ -745,11 +743,6 @@
       .card {
         width: 100%;
         height: 196px;
-        border-radius: 0 !important;
-
-        .videoImage {
-          border-radius: 0 !important;
-        }
       }
       .title {
         width: 100%;
@@ -799,14 +792,12 @@
       width: 100%;
       height: 280px;
       margin: 0 0 20px!important;
-      border-radius: 0 !important;
       border-style: solid;
       border-width: 1px;
       border-color: white;
 
       .Image {
         height: 196px;
-        border-radius: 0 !important;
       }
     }
   }

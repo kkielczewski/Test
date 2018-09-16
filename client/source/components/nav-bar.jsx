@@ -34,7 +34,7 @@ class NavBar extends React.Component {
     return (
       <div style={{ height: '100%' }} >
         <Responsive minWidth='769' style={{ display: 'flex', flexDirection: 'column', height: '100%' }} >
-          <Menu borderless fixed='top' style={{ flex: 'none' }}  >
+          <Menu borderless fixed='top' style={{ flex: 'none', boxShadow: '0 2px 10px 8px rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15)' }}  >
             <div className='navBarContainer' >
             <div style={{ height: '53px' }} ></div>
             <img src={miniLogo} className='item' style={{ padding: '9px', float: 'left' }} />

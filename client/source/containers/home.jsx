@@ -79,21 +79,27 @@ class Home extends React.Component {
       centerMode: true,
       infinite: true,
       centerPadding: '0px',
-      slidesToShow: 4,
+      slidesToShow: 5,
       speed: 300,
       swipeToSlide: true,
       autoplaySpeed: 3000,
       responsive: [
         {
+          breakpoint: 2170,
+          settings: {
+            slidesToShow: 4
+          }
+        },
+        {
           breakpoint: 1420,
           settings: {
-            slidesToShow: 3
+            slidesToShow: 4
           }
         },
         {
           breakpoint: 1020,
           settings: {
-            slidesToShow: 2
+            slidesToShow: 3
           }
         }
       ]
@@ -139,81 +145,85 @@ class Home extends React.Component {
     return (
       <div className='mainContainer' >
         <div className='blueStripe' ></div>
-        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} />
+        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center`, boxShadow: 'rgba(34, 36, 38, 0.12) 0px 2px 10px 8px, rgba(34, 36, 38, 0.15) 0px 2px 10px 0px' }} />
         <div className='whiteContainer' >
-        <Header className='recomendedProducts videoHeader' textAlign='center' size='huge' >Allecco.tv TWÓJ PORTAL O ZDROWIU</Header>
-        <Responsive minWidth='769' >
-          <Slider {...videoSettings} >
-            {this.state.allVideos.map(video => <div className='videoCard'><VideoCard video={video} image={VideoPlaceholder} imageClass='videoImage' contentClass='videoContent' /></div>)}
-          </Slider>
-        </Responsive>
-        <Responsive maxWidth='768' >
-          <div className='homeVideosContainer' >
-            <div className='homeVideos' >
-            {this.state.currentVideos.map(video => <div className='videoCard'><VideoCard video={video} image={VideoPlaceholder} imageClass='videoImage' contentClass='videoContent' /></div>)}
-              <div className='videoNav' >
-                <Pagination
-                hideFirstLastPages
-                activePage={this.state.activeVideos}
-                itemsCountPerPage={4}
-                totalItemsCount={this.state.totalVideos}
-                pageRangeDisplayed={5}
-                activeClass="activeli"
-                activeLinkClass="active"
-                linkClassPrev="prev"
-                linkClassNext="next"
-                prevPageText="<"
-                nextPageText='>'
-                onChange={this.handleVideosChange}
-                />
+          <div className='background whiteVideos' />
+          <Header className='recomendedProducts videoHeader' textAlign='center' size='huge' >Allecco.tv TWÓJ PORTAL O ZDROWIU</Header>
+          <Responsive minWidth='769' >
+            <Slider {...videoSettings} >
+              {this.state.allVideos.map(video => <div className='videoCard'><VideoCard video={video} image={VideoPlaceholder} imageClass='videoImage' contentClass='videoContent' /></div>)}
+            </Slider>
+          </Responsive>
+          <Responsive maxWidth='768' >
+            <div className='homeVideosContainer' >
+              <div className='homeVideos' >
+              {this.state.currentVideos.map(video => <div className='videoCard'><VideoCard video={video} image={VideoPlaceholder} imageClass='videoImage' contentClass='videoContent' /></div>)}
+                <div className='videoNav' >
+                  <Pagination
+                  hideFirstLastPages
+                  activePage={this.state.activeVideos}
+                  itemsCountPerPage={4}
+                  totalItemsCount={this.state.totalVideos}
+                  pageRangeDisplayed={5}
+                  activeClass="activeli"
+                  activeLinkClass="active"
+                  linkClassPrev="prev"
+                  linkClassNext="next"
+                  prevPageText="<"
+                  nextPageText='>'
+                  onChange={this.handleVideosChange}
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </Responsive>
+          </Responsive>
         </div>
         <div className='whiteContainer' >
-          <Header className='recomendedProducts mainArticlesHeader'  textAlign='center' size='huge' >Najnowsze Artykuły</Header>
+          <div className='background whiteArticles' />
+          <Header className='recomendedProducts mainArticlesHeader' textAlign='center' size='huge' >Najnowsze Artykuły</Header>
           <MainArticles />
         </div>
         <div className='whiteContainer' >
-        <Header className='recomendedProducts doctorHeader'  textAlign='center' size='huge' >Wybierz swojego eksperta</Header>
-        <Responsive minWidth='769' >
-          <Slider {...doctorSettings} >
-            {this.state.allDoctors.map(doctor => <DoctorCard contentClass='doctorContent' imageClass='Image' link={doctor.link} />)}
-          </Slider>
-        </Responsive>
-        <Responsive maxWidth='768' >
-          <div className='homeExpertsContainer' >
-            <div className='homeExperts' >
-              {this.state.currentDoctors.map(doctor => <DoctorCard contentClass='doctorContent' imageClass='Image' link={doctor.link} />)}
-              <div className='videoNav' >
-                <Pagination
-                hideFirstLastPages
-                activePage={this.state.activePage}
-                itemsCountPerPage={4}
-                totalItemsCount={this.state.totalCount}
-                pageRangeDisplayed={5}
-                activeClass="activeli"
-                activeLinkClass="active"
-                linkClassPrev="prev"
-                linkClassNext="next"
-                prevPageText="<"
-                nextPageText='>'
-                onChange={this.handlePageChange}
-                />
+          <div className='background whiteDoctor' />
+          <Header className='recomendedProducts doctorHeader' textAlign='center' size='huge' >Wybierz swojego eksperta</Header>
+          <Responsive minWidth='769' >
+            <Slider {...doctorSettings} >
+              {this.state.allDoctors.map(doctor => <DoctorCard contentClass='doctorContent' imageClass='Image' link={doctor.link} />)}
+            </Slider>
+          </Responsive>
+          <Responsive maxWidth='768' >
+            <div className='homeExpertsContainer' >
+              <div className='homeExperts' >
+                {this.state.currentDoctors.map(doctor => <DoctorCard contentClass='doctorContent' imageClass='Image' link={doctor.link} />)}
+                <div className='videoNav' >
+                  <Pagination
+                  hideFirstLastPages
+                  activePage={this.state.activePage}
+                  itemsCountPerPage={4}
+                  totalItemsCount={this.state.totalCount}
+                  pageRangeDisplayed={5}
+                  activeClass="activeli"
+                  activeLinkClass="active"
+                  linkClassPrev="prev"
+                  linkClassNext="next"
+                  prevPageText="<"
+                  nextPageText='>'
+                  onChange={this.handlePageChange}
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </Responsive>
+          </Responsive>
         </div>
         <Survey/>
         <div className='whiteContainer' >
-        <Header className='recomendedProducts productHeader' textAlign='center' size='huge' >Polecane produkty</Header>
-        <div>
-          <Slider {...productsSettings} >
-            {this.state.allProducts.map(product => <ProductCard imageClass='Image' product={product} />)}
-          </Slider>
-        </div>
+          <div className='background whiteProduct' />
+          <Header className='recomendedProducts productHeader' textAlign='center' size='huge' >Polecane produkty</Header>
+          <div>
+            <Slider {...productsSettings} >
+              {this.state.allProducts.map(product => <ProductCard imageClass='Image' product={product} />)}
+            </Slider>
+          </div>
         </div>
       </div>
     );

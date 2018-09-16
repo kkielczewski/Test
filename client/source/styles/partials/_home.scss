@@ -20,6 +20,10 @@
     outline-color: white;
     height: 900px;
 
+    .card {
+      box-shadow: 0 2px 10px 6px rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15);
+    }
+
     .videoImage {
       width: 100%;
       height: 100%;
@@ -94,6 +98,19 @@
     .videoCard {
       height: 450px;
     }
+    .slick-arrow {
+      width: 50px;
+      height: 50px;
+    }
+    .slick-arrow::before {
+      font-size: 64px;
+    }
+    .slick-prev {
+      left: -40px;
+    }
+    .slick-next {
+      right: -46px;
+    }
   }
 }
 
@@ -105,19 +122,6 @@
     width: 640px;
     .videoCard {
       height: 360px;
-    }
-    .slick-arrow {
-      width: 50px;
-      height: 50px;
-    }
-    .slick-arrow::before {
-      font-size: 64px;
-    }
-    .slick-prev {
-      left: -45px;
-    }
-    .slick-next {
-      right: -45px;
     }
   }
 }
@@ -202,36 +206,33 @@
     overflow: hidden;
     width: 100%;
     height: 455px;
+    padding: 20px;
+    background-color: transparent;
+    box-shadow: none;
+
+    a {
+      box-shadow: 0 2px 10px 4px rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15);
+    }
 
     .Image {
-      width: 100%;
-      height: 100%;
+      width: 324px;
+      height: 415px;
       position: absolute;
-      left: 0px;
-      top: 0px;
+      left: 20px;
+      top: 20px;
     }
 
     .black {
       width: 100%;
       height: 100%;
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      border-radius: 0!important;
       background: black;
       opacity: 0;
       transition: all .4s ease-in-out;
     }
 
     .doctorContent {
-      position: absolute;
-      bottom: 0;
-      top: 0;
-      left: 0;
-      right: 0;
       width: 100%;
-      height: 40px;
-      margin: auto;
+      height: 100%;
       text-align: center;
       border: none !important;
       padding: 0;
@@ -239,9 +240,16 @@
       transition: all .4s ease-in-out;
 
       .header {
-        font-size: 30px !important;
+        font-size: 34px;
+        width: 324px;
         color: white;
         padding: 5px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: 0;
+        margin-right: -50%;
+        transform: translate(-50%,-50%);
       }
     }
   }
@@ -279,11 +287,11 @@
   }
 
   .slick-prev {
-    left: -70px;
+    left: -50px;
   }
 
   .slick-next {
-    right: -70px;
+    right: -50px;
   }
 }
 
@@ -292,9 +300,18 @@
     width: 450px;
   }
   .doctorCarousel {
-    width: 1240px;
+    width: 1270px;
     .card {
-      height: 310px;
+      height: 387px;
+      .Image {
+        width: 278px;
+        height: 347px;
+      }
+      .doctorContent {
+        .header {
+          width: 278px;
+        }
+      }
     }
   }
 }
@@ -315,7 +332,19 @@
     }
 
     .card {
-      height: 300px;
+      padding: 10px;
+      height: 276px;
+      .Image {
+        top: 10px;
+        left: 10px;
+        width: 205px;
+        height: 256px;
+      }
+      .doctorContent {
+        .header {
+          width: 205px;
+        }
+      }
     }
   }
 }
@@ -328,20 +357,25 @@
       }
       .doctorContent {
         opacity: 1;
-        top: auto;
-        height: 75px;
+        width: 205px;
+        height: 60px;
         margin: auto;
         background-color: white;
         border: solid !important;
         border-width: 1px!important;
         border-color: lightgray !important;
         display: flex;
+        position: absolute;
+        bottom: 10px;
+        overflow: hidden;
 
         .header {
-          font-size: 28px !important;
+          font-size: 20px;
           padding: 5px;
           margin: auto;
           color: black;
+          width: 100%;
+          height: 100%;
         }
       }
     }
@@ -353,10 +387,17 @@
     width: 325px;
   }
   .doctorCarousel {
-    width: 670px;
+    width: 672px;
 
     .card {
-      height: 335px;
+      height: 255px;
+      .Image {
+        width: 204px;
+        height: 235px;
+      }
+      .doctorContent {
+        width: 204px;
+      }
     }
 
     .slick-prev {
@@ -410,7 +451,7 @@
         border-radius: 0 !important;
 
         .header {
-          font-size: 28px !important;
+          font-size: 28px;
           padding: 5px;
           margin: auto;
           color: black;
@@ -457,12 +498,12 @@
 
 .survey {
   position: relative;
-  height: 413px;
-  margin-top: 130px;
+  height: 565px;
+  margin-top: 70px;
 
   .surveySegment {
     width: 1980px;
-    height: 413px;
+    height: 565px;
     position: absolute;
     margin: auto;
     top: 0;
@@ -470,40 +511,66 @@
     left: 0;
     right: 0;
 
+    img {
+      width: 980px;
+      height: 450px;
+      float: left;
+      position: relative;
+      top: 65px;
+      box-shadow: 0 2px 10px 6px rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15);
+    }
+
     .segment{
-      padding: 35px;
-      border-radius: 2em;
+      width: 1000px;
+      float: right;
+      text-align: left;
+      padding: 60px 35px;
+      box-shadow: 0 2px 10px 8px rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15);
+      border-radius: 0;
 
       .header {
-        font-size: 70px;
+        font-size: 50px;
         color: #db2828;
         border-style: solid;
-        width: 380px;
-        margin: 0 auto 20px;
+        width: 300px;
+        margin-bottom: 40px;
       }
 
       .paragraph {
-        font-size: 32px;
+        font-size: 36px;
         width: 80%;
-        margin: auto auto 25px auto;
-      }
-
-      .input {
-        display: block;
-        font-size: 2em;
-        width: 1200px;
-        margin: auto auto 10px auto;
-        input {
-          padding: 0.5em 1em;
-          border-radius: 2em;
-          width: 100%;
+        p {
+          line-height: 38px;
+          margin-bottom: 35px;
+        }
+        p:first-child {
+          margin-bottom: 0;
+        }
+        p:last-child {
+          margin-bottom: 70px;
         }
       }
 
-      .ui.button {
-        font-size: 2em;
-        padding: 0.75em 3.5em;
-        border-radius: 1.75em;
+      .input {
+        font-size: 30px;
+        width: 600px;
+        input {
+          padding: 0.5em 1em;
+          width: 100%;
+          background-color: #f5ccba;
+        }
+        input::placeholder {
+          color: #e47e64;
+        }
+      }
+
+      .button {
+        font-size: 30px;
+        padding: 16px 30px;
+        margin-left: 20px;
+        color: black;
+        background-color: white;
+        border-style: solid;
       }
     }
   }
@@ -511,15 +578,38 @@
 
 @media screen and (max-width: 2170px) {
   .survey {
+    height: 420px;
     .surveySegment {
       width: 1404px;
+      height: 420px;
+      img {
+        width: 700px;
+        height: 321px;
+        top: 56px;
+      }
       .segment {
+        width: 704px;
+        padding: 40px 35px;
         .header {
-          font-size: 50px;
-          width: 300px;
+          font-size: 36px;
+          width: 200px;
+        }
+        .paragraph {
+          font-size: 28px;
+          p {
+            line-height: 30px;
+          }
+          p:last-child {
+            margin-bottom: 30px;
+          }
         }
         .input {
-          width: 800px;
+          font-size: 22px;
+          width: 460px;
+        }
+        .button {
+          font-size: 22px;
+          padding: 11px 15px;
         }
       }
     }
@@ -528,20 +618,40 @@
 
 @media screen and (max-width: 1420px) {
   .survey {
-    height: 452px;
+    height: 310px;
     .surveySegment {
       width: 972px;
-      height: 452px;
+      height: 310px;
+      img {
+        width: 472px;
+        height: 216px;
+      }
       .segment {
+        width: 500px;
+        padding: 30px 20px;
         .header {
-          font-size: 44px;
-          width: 250px;
+          font-size: 28px;
+          width: 150px;
+          margin-bottom: 15px;
         }
         .paragraph {
+          font-size: 22px;
           width: 100%;
+          p {
+            line-height: 24px;
+            margin-bottom: 20px;
+          }
+          p:last-child {
+            margin-bottom: 20px;
+          }
         }
         .input {
-          width: 700px;
+          width: 300px;
+          font-size: 18px;
+        }
+        .button {
+          font-size: 18px;
+          padding: 7px 10px;
         }
       }
     }
@@ -550,26 +660,21 @@
 
 @media screen and (max-width: 1020px) {
   .survey {
-    height: 362px;
+    height: 302px;
     margin-top: 70px;
     .surveySegment {
       width: 744px;
-      height: 362px;
+      height: 302px;
       .segment {
-        padding: 15px;
-
-        .header {
-          font-size: 40px;
-          width: 225px;
-        }
+        width: 100%;
+        padding: 35px 25px;
 
         .paragraph {
-          font-size: 27px;
+          width: 80%;
         }
 
         .input {
-          width: 600px;
-          font-size: 1.5em;
+          width: 375px;
         }
       }
     }
@@ -578,26 +683,29 @@
 
 @media screen and (max-width: 768px) {
   .survey {
-    height: 371px;
+    height: 314px;
     .surveySegment {
       width: 100%;
-      height: 371px;
+      height: 314px;
       .segment {
+        padding: 15px 10px;
         height: auto;
         border-radius: 0;
+        text-align: center;
         .header {
-          font-size: 36px;
-          width: 210px;
+          margin: auto auto 15px;
         }
         .paragraph {
-          font-size: 24px;
+          width: 432px;
+          margin: auto;
         }
         .input {
-          width: 460px;
-          font-size: 2em;
+          display: block;
+          margin: 10px auto;
+          width: 375px;
         }
-        .ui.button {
-          font-size: 1.5em;
+        .button {
+          margin-left: 0;
         }
       }
     }
@@ -606,25 +714,24 @@
 
 @media screen and (max-width: 500px) {
   .survey {
-    height: 266px;
+    height: 310px;
     margin-top: 30px;
     .surveySegment {
-      height: 266px;
+      height: 310px;
       .segment {
-        padding: 15px 5px;
         .header {
-          font-size: 26px;
-          width: 155px;
+          font-size: 28px;
+          width: 150px;
         }
         .paragraph {
-          font-size: 16px;
+          width: 100%;
+          font-size: 21px;
+          p {
+            line-height: 23px;
+          }
         }
         .input {
-          font-size: 1.5em;
           width: 380px;
-        }
-        .ui.button {
-          font-size: 1em;
         }
       }
     }
@@ -633,18 +740,15 @@
 
 @media screen and (max-width: 400px) {
   .survey {
-    height: 325px;
+    height: 333px;
     .surveySegment {
-      height: 310px;
+      height: 333px;
       .segment {
         .paragraph {
-          font-size: 19px;
+          font-size: 17px;
         }
         .input {
-          width: 300px;
-        }
-        .button {
-          font-size: 1.2em;
+          width: 278px;
         }
       }
     }
@@ -661,33 +765,69 @@
   height: auto;
   margin: auto;
   overflow: hidden;
-  .ui.card {
+  .card {
     margin: 10px;
+    overflow: hidden;
     height: 600px;
     width: 450px;
-    border-radius: 1.5em;
     float: left;
+    border-radius: 0;
+    box-shadow: 0 2px 10px 4px rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15);
 
     .Image {
-      border-radius: 1.5em 1.5em 0 0!important;
-      height: 490px;
+      height: 100%;
       width: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+
+    .black {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      border-radius: 0!important;
+      background: black;
+      opacity: 0;
+      transition: all .4s ease-in-out;
     }
 
     .content {
-      padding: 5px 10px;
-      height: 105px;
-      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      border: none !important;
+      padding: 0;
+      opacity: 0;
+      transition: all .4s ease-in-out;
       .header {
-        font-size: 26px;
-        color: black;
-      }
-      .description {
-        font-size: 16px;
-        margin-top: 0 !important;
-        color: black;
+        font-size: 34px;
+        color: white;
+        padding: 5px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: 0;
+        margin-right: -50%;
+        transform: translate(-50%,-50%);
       }
     }
+  }
+  .card:hover {
+    .black {
+      opacity: 0.7;
+      transition: all .4s ease-in-out;
+    }
+    .content {
+      opacity: 1;
+      transition: all .4s ease-in-out;
+    }
+  }
+  .card:first-child {
+    margin-top: 10px;
   }
 }
 
@@ -696,13 +836,15 @@
     width: 350px;
   }
   .mainArticles {
-    width: 1404px;
+    width: 1360px;
 
-    .ui.card {
+    .card {
       height: 440px;
-      width: 330px;
-      .Image {
-        height: 335px;
+      width: 320px;
+      .content {
+        .header {
+          font-size: 27px;
+        }
       }
     }
   }
@@ -714,19 +856,49 @@
     width: 300px;
   }
   .mainArticles {
-    width: 972px;
+    width: 932px;
 
-    .ui.card {
+    .card {
       height: 297px;
       width: 223px;
-
-      .Image {
-        height: 210px;
-      }
+      margin: 5px;
       .content {
         height: 80px;
         .header {
           font-size: 16px;
+        }
+      }
+    }
+    .card:first-child {
+      margin-top: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mainArticlesContainer {
+    .card {
+      .content {
+        opacity: 1;
+        width: 223px;
+        height: 72px;
+        margin: auto;
+        background-color: white;
+        border: solid !important;
+        border-width: 1px!important;
+        border-color: lightgray !important;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        overflow: hidden;
+
+        .header {
+          font-size: 17px;
+          padding: 5px;
+          margin: auto;
+          color: black;
+          width: 100%;
+          height: 100%;
         }
       }
     }
@@ -744,20 +916,20 @@
   .mainArticles {
     width: 700px;
 
-    .ui.card {
+    .card {
       width: 330px;
       height: 440px;
       margin: 10px;
-
-      .Image {
-        height: 335px;
-      }
       .content {
-        height: 105px;
+        height: 80px;
+        width: 330px;
         .header {
           font-size: 20px;
         }
       }
+    }
+    .card:first-child {
+      margin-top: 10px;
     }
   }
 }
@@ -769,40 +941,37 @@
   .mainArticles {
     width: 500px;
 
-    .ui.card {
+    .card {
       width: 240px;
       height: 320px;
       margin: 5px;
-
-      .Image {
-        height: 240px;
-      }
       .content {
         height: 80px;
+        width: 240px;
         .header {
           font-size: 15px;
         }
       }
+    }
+    .card:first-child {
+      margin-top: 5px;
     }
   }
 }
 
 @media screen and (max-width: 500px) {
   .mainArticlesContainer {
-    width: 332px;
+    width: 350px;
   }
   .mainArticles {
-    width: 332px;
+    width: 350px;
 
-    .ui.card {
+    .card {
       width: 330px;
       height: 440px;
-      margin: 0 1px 20px;
-
-      .Image {
-        height: 335px;
-      }
+      margin: 0 10px 20px;
       .content {
+        width: 330px;
         height: 105px;
         .header {
           font-size: 20px;
@@ -818,17 +987,15 @@
   }
   .mainArticles {
     width: 100%;
-    .ui.card {
+    .card {
       width: 100%;
       height: 400px;
-      border-radius: 0 !important;
+      margin: 0 auto 20px;
       border-style: solid;
       border-width: 1px;
       border-color: lightgray;
-
-      .Image {
-        height: 295px;
-        border-radius: 0 !important;
+      .content {
+        width: 100%;
       }
     }
   }
@@ -844,7 +1011,7 @@
 }
 
 .productCarousel {
-  width: 1980px;
+  width: 1900px;
   margin: auto;
   overflow: hidden;
 
@@ -856,9 +1023,9 @@
   .card {
     width: 100%;
     height: 390px;
-    border-radius: 0;
     padding: 10px;
     box-shadow: none;
+    background-color: transparent;
 
     .productPicture {
       position: relative;
@@ -885,6 +1052,7 @@
       padding: 10px;
       .header {
         font-size: 20px !important;
+        font-weight: 600;
         height: 75px;
         overflow: hidden;
         margin-bottom: 10px;
@@ -905,7 +1073,23 @@
     width: 300px;
   }
   .productCarousel {
-    width: 1404px;
+    width: 1330px;
+    .card {
+      height: 318px;
+      .productPicture {
+        height: 195px;
+      }
+      .content {
+        padding: 5px;
+        .header {
+          font-size: 17px !important;
+          height: 62px;
+        }
+        .description {
+          font-size: 18px;
+        }
+      }
+    }
   }
 }
 
@@ -914,7 +1098,22 @@
     width: 275px;
   }
   .productCarousel {
-    width: 972px;
+    width: 932px;
+    .card {
+      height: 268px;
+      .productPicture {
+        height: 160px;
+      }
+      .content {
+        .header {
+          font-size: 14px !important;
+          height: 50px;
+        }
+        .description {
+          font-size: 14px;
+        }
+      }
+    }
   }
 }
 
@@ -935,7 +1134,6 @@
       overflow: visible;
 
       .card {
-        padding: 2px;
         .content {
           padding: 5px;
           .header {

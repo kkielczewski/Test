@@ -114,10 +114,12 @@ class Video extends React.Component {
           </div>
         </div>
         <div className='whiteContainer videoMainArticles' >
+          <div className='background whiteArticles' />
           <Header className='recomendedProducts mainArticlesHeader' dividing textAlign='center' size='huge' >Najnowsze Artykuły</Header>
           <MainArticles />
         </div>
         <div className='whiteContainer' >
+          <div className='background whiteProduct' />
           <Header className='recomendedProducts productHeader' dividing textAlign='center' size='huge' >Polecane produkty</Header>
           <Slider {...productsSettings} >
             {this.state.allProducts.map(product => <ProductCard product={product} />)}

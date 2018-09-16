@@ -1,5 +1,6 @@
 import React from 'react';
-import { Segment, Header, Input, Button, Form } from 'semantic-ui-react';
+import { Segment, Header, Input, Button, Form, Responsive } from 'semantic-ui-react';
+import SurveyImage from '../assets/images/survey.jpg';
 
 class Survey extends React.Component {
   constructor(props) {
@@ -33,14 +34,19 @@ class Survey extends React.Component {
     return (
       <div className='survey' >
         <div className='surveySegment' >
+          <Responsive minWidth='1021' >
+            <img src={SurveyImage} />
+          </Responsive>
         <Segment raised textAlign='center'>
           <Header textAlign='center' size='huge' >ANKIETA</Header>
-          <div className='paragraph' >Twórz serwis Allecco.tv razem z nami. Weź udział w ankiecie i zdecyduj jakie treści przygotują nasi eksperci. Wpisz swój adres e-mail i odbierz ankiete:</div>
+          <div className='paragraph' >
+            <p>Twórz serwis Allecco.tv razem z nami.</p>
+            <p>Weź udział w ankiecie i zdecyduj jakie treści przygotują nasi eksperci.</p>
+            <p>Wpisz swój adres email i odbierz ankiete:</p>
+          </div>
           <Form onSubmit={this.handleClick}>
           <Input onChange={this.changeEmail} placeholder='Email...' />
-          <div>
-            <Button color='red' >Wyślij</Button>
-          </div>
+          <Button >WYŚLIJ</Button>
           </Form>
         </Segment>
         </div>

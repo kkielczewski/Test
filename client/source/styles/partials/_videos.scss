@@ -20,8 +20,7 @@
     width: 1225px;
     position: relative;
     background-color: white;
-    border-radius: 2em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15);
+    box-shadow: 0 2px 10px 8px rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15);
 
     .videoNav {
       width: 100%;
@@ -35,7 +34,7 @@
       width: 560px;
       height: 315px;
       margin: 35px;
-      border-radius: 2em!important;
+      box-shadow: 0 2px 10px 6px rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15);
 
       .listImage {
         width: 100%;
@@ -44,7 +43,6 @@
         left: 0px;
         top: 0px;
         z-index: 1;
-        border-radius: 2em!important;
       }
     }
 
@@ -55,7 +53,7 @@
     }
 
     .card:nth-child(2) {
-      margin-top: 35px;
+      margin-top: 0px;
     }
   }
 
@@ -69,32 +67,35 @@
     width: 716px;
     margin: 40px!important;
     margin-right: 0 !important;
-    border-radius: 2em!important;
-    padding: 15px !important;
+    padding: 60px !important;
     position: relative;
     top: 15px;
+    box-shadow: 0 2px 10px 8px rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15) !important;
 
     .header {
-      font-size: 34px!important;
+      font-size: 30px!important;
       margin-top: 90px!important;
       margin-bottom: 30px;
       color: #db2828;
     }
     .paragraph {
-      font-size: 49px;
+      font-size: 36px;
       margin-bottom: 80px;
     }
 
     .input {
       width: 600px;
       display: block;
-      font-size : 3em;
+      font-size : 30px;
       margin: auto auto 80px auto;
 
       input {
         padding: 0.5em 0.6em;
-        border-radius: 0.5em;
         width: 100%;
+        background-color: #f5ccba;
+      }
+      input::placeholder {
+        color: #e47e64;
       }
     }
 
@@ -103,24 +104,29 @@
       margin-bottom: 90px;
       line-height: normal;
       label {
-        padding-left: 54px;
+        padding-left: 80px;
+        text-align: justify;
       }
       label::before {
         width: 51px;
         height: 51px;
+        border-color: #db2828;
       }
       label::after {
         font-size: 51px;
         width: 51px;
         height: 51px;
+        border-color: #db2828;
       }
     }
 
     .button {
       margin-bottom: 40px;
-      font-size: 3em;
-      padding: 0.75em 3.5em;
-      border-radius: 1.75rem;
+      font-size: 40px;
+      padding: 20px;
+      color: black;
+      background-color: white;
+      border-style: solid;
     }
   }
 }
@@ -140,7 +146,7 @@
         width: 416px;
         height: 234px;
         margin: 30px;
-        box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+        box-shadow: 0 2px 10px 8px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
       }
   
       .card:nth-child(2) {
@@ -557,9 +563,9 @@
     height: 342px;
     margin: 26px;
     margin-top: 26px !important;
-    border-radius: 2em!important;
+    border-radius: 0!important;
     float: left;
-    box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+    box-shadow: 0 2px 10px 8px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 
     .listImage {
       width: 100%;
@@ -568,7 +574,7 @@
       left: 0px;
       top: 0px;
       z-index: 1;
-      border-radius: 2em!important;
+      border-radius: 0!important;
     }
   }
 }
@@ -660,14 +666,9 @@
       width: 100%;
       height: 196px;
       margin: 0 0 20px!important;
-      border-radius: 0 !important;
       border-style: solid;
       border-width: 1px;
       border-color: white;
-
-      .listImage {
-        border-radius: 0 !important;
-      }
     }
   }
 }

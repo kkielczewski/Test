@@ -182,10 +182,12 @@ class Articles extends React.Component {
         </div>
         </Responsive>
         <div className='whiteContainer whiteMainMovies' >
+          <div className='background whiteMovies' />
           <Header className='recomendedProducts mainMoviesHeader' dividing textAlign='center' size='huge' >Najnowsze Filmy</Header>
           <MainMovies />
         </div>
         <div className='whiteContainer' >
+          <div className='background whiteProduct' />
           <Header className='recomendedProducts productHeader' dividing textAlign='center' size='huge' >Polecane produkty</Header>
           <Slider {...productsSettings} >
             {this.state.allProducts.map(product => <ProductCard product={product} />)}
