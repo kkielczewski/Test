@@ -45,12 +45,12 @@ class Experts extends React.Component {
       { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
       { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' }];
 
-    this.setState({ allProducts: products, allExperts: doctors, currentExperts: doctors.slice(0,9), totalCount: 14 });
+    this.setState({ allProducts: products, allExperts: doctors, currentExperts: doctors.slice(0, 12), totalCount: 14 });
   }
 
   handlePageChange(pageNumber) {
-    const offset = (pageNumber - 1) * 9;
-    const currentItems = this.state.allExperts.slice(offset, offset + 9);
+    const offset = (pageNumber - 1) * 12;
+    const currentItems = this.state.allExperts.slice(offset, offset + 12);
     this.setState({ activePage: pageNumber, currentExperts: currentItems });
   }
 
@@ -99,7 +99,7 @@ class Experts extends React.Component {
         <div className='blueStripe' ></div>
         <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} />
         <div className='doctorsContainer' >
-          <div className='whiteContainer' >
+          <div className='whiteContainer whiteFull' >
           <div className='doctorList' >
           <Header className='recomendedProducts articlesHeader' textAlign='center' size='huge' >Eskperci</Header>
             {this.state.currentExperts.map(expert => <DoctorCard link={expert.link} contentClass='doctorContent' imageClass='Image' />)}
@@ -107,7 +107,7 @@ class Experts extends React.Component {
               <Pagination
               hideFirstLastPages
               activePage={this.state.activePage}
-              itemsCountPerPage={9}
+              itemsCountPerPage={12}
               totalItemsCount={this.state.totalCount}
               pageRangeDisplayed={5}
               activeClass="activeli"
@@ -123,10 +123,12 @@ class Experts extends React.Component {
           </div>
         </div>
         <div className='whiteContainer' >
+          <div className='background whiteMovies' />
           <Header className='recomendedProducts mainMoviesHeader' dividing textAlign='center' size='huge' >Najnowsze Filmy</Header>
           <MainMovies />
         </div>
         <div className='whiteContainer' >
+          <div className='background whiteProduct' />
           <Header className='recomendedProducts productHeader' dividing textAlign='center' size='huge' >Polecane produkty</Header>
           <Slider {...productsSettings} >
             {this.state.allProducts.map(product => <ProductCard product={product} />)}

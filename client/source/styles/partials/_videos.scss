@@ -71,7 +71,7 @@
     position: relative;
     top: 15px;
     box-shadow: 0 2px 10px 8px rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15) !important;
-
+    border-radius: 0;
     .header {
       font-size: 30px!important;
       margin-top: 90px!important;
@@ -93,6 +93,7 @@
         padding: 0.5em 0.6em;
         width: 100%;
         background-color: #f5ccba;
+        border-radius: 0;
       }
       input::placeholder {
         color: #e47e64;
@@ -110,13 +111,12 @@
       label::before {
         width: 51px;
         height: 51px;
-        border-color: #db2828;
+        border-color: #db2828 !important;
       }
       label::after {
         font-size: 51px;
         width: 51px;
         height: 51px;
-        border-color: #db2828;
       }
     }
 
@@ -127,6 +127,7 @@
       color: black;
       background-color: white;
       border-style: solid;
+      border-radius: 0;
     }
   }
 }
@@ -327,7 +328,7 @@
         margin-bottom: 15px;
       }
       .input {
-        width: 640px;
+        width: 635px;
         font-size: 17px;
         margin: 0 auto 15px auto;
         input {
@@ -339,7 +340,8 @@
         line-height: 16px;
         margin-bottom: 10px;
         label {
-          padding-left: 33px;
+          padding-left: 35px;
+          padding-right: 35px;
         }
         label::before {
           width: 20px;
@@ -353,8 +355,8 @@
         }
       }
       .button {
-        font-size: 16px;
-        padding: 10px 35px;
+        font-size: 20px;
+        padding: 10px 20px;
         margin-bottom: 10px;
         margin-top: 10px;
       }
@@ -395,7 +397,6 @@
   
   .newsletter {
     width: 100%;
-    border-radius: 0 !important;
     padding: 10px !important;
 
     .paragraph {
@@ -406,38 +407,11 @@
 
     .input {
       font-size: 17px;
-      width: 420px;
+      width: 475px;
       margin: 0 auto 15px auto;
       input {
         padding: 10px 20px;
       }
-    }
-
-    .checkbox {
-      font-size: 13px;
-      line-height: 15px;
-      margin-bottom: 10px;
-
-      label {
-        padding-left: 24px;
-      }
-      label::before {
-        width: 20px;
-        height: 20px;
-      }
-      label::after {
-        font-size: 20px;
-        width: 20px;
-        height: 20px;
-        top: 2px;
-      }
-    }
-
-    .button {
-      margin-top: 10px;
-      margin-bottom: 10px;
-      font-size: 16px;
-      padding: 10px 35px;
     }
   }
   }
@@ -463,7 +437,6 @@
   }
   
   .newsletter {
-    border-radius: 0 !important;
     padding: 5px !important;
 
     .header {
@@ -476,8 +449,7 @@
     }
 
     .input {
-      width: 340px;
-      font-size: 17px;
+      width: 390px;
       input {
         padding: 8px 15px;
       }
@@ -485,10 +457,11 @@
 
     .checkbox {
       font-size: 12px;
+      line-height: 13px;
     }
 
     .button {
-      padding: 10px 30px;
+      font-size: 17px;
     }
   }
   }

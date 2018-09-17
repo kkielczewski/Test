@@ -8,7 +8,7 @@
 .doctorList {
   margin: 20px auto auto;
   height: auto;
-  width: 1380px;
+  width: 1850px;
 
   .articlesHeader {
     position: relative;
@@ -22,13 +22,11 @@
   }
 
   .card {
-    width: 460px;
-    height: 460px;
-    margin: 0;
+    width: 400px;
+    height: 512px;
+    margin: 50px;
     border-radius: 0!important;
-    border-style: solid;
-    border-color: white;
-    border-width: 2px;
+    box-shadow: 0 2px 10px 4px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 
     .Image {
       width: 100%;
@@ -37,7 +35,6 @@
       left: 0px;
       top: 0px;
       z-index: 1;
-      border-radius: 0!important;
     }
 
     .black {
@@ -88,16 +85,22 @@
     }
   }
 
-  .card:nth-child(3n+2) {
+  .card:nth-child(4n+2) {
     clear: left;
     float: left;
     margin-top: 0;
   }
 
-  .card:nth-child(3n+3) {
-      float: left;
-      margin-top: 0;
-      margin-left: 0;
+  .card:nth-child(4n+3) {
+    float: left;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .card:nth-child(4n+4) {
+    float: left;
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .card:nth-child(2) {
@@ -107,21 +110,24 @@
 
 @media screen and (max-width: 2170px) {
   .doctorList {
-    width: 1260px;
+    width: 1350px;
     .card {
-      width: 420px;
-      height: 420px;
+      width: 300px;
+      height: 384px;
+      margin: 30px;
     }
   }
 }
 
 @media screen and (max-width: 1420px) {
   .doctorList {
-    width: 870px;
+    width: 955px;
 
     .card {
-      width: 290px;
-      height: 290px;
+      width: 220px;
+      height: 281px;
+      margin: 15px;
+      box-shadow: 0 2px 10px 2px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
     }
   }
 }
@@ -162,22 +168,24 @@
     }
 
     .card {
-      width: 230px;
-      height: 230px;
+      width: 300px;
+      height: 384px;
+      margin: 30px;
+    }
+    .card:nth-child(4n+4) {
+      margin-left: 30px;
     }
   }
 }
 
 @media screen and (max-width: 768px) {
   .doctorList {
-    width: 496px;
+    width: 470px;
 
     .card {
-      width: 496px;
-      height: 496px;
-      margin-bottom: 10px;
-      clear: none;
-      float: none;
+      width: 220px;
+      height: 281px;
+      margin: 10px;
 
       .doctorContent {
         height: 75px;
@@ -187,21 +195,23 @@
         }
       }
     }
-    .card:hover {
-      .black {
-        opacity: 0;
-      }
+    .card:nth-child(4n+4) {
+      margin-left: 10px;
     }
   }
 }
 
 @media screen and (max-width: 500px) {
   .doctorList {
-    width: 400px;
+    width: 340px;
 
     .card {
-      width: 400px;
-      height: 400px;
+      width: 340px;
+      height: 435px;
+      margin: 30px 0;
+    }
+    .card:nth-child(4n+4) {
+      margin-left: 0;
     }
   }
 }
@@ -212,7 +222,7 @@
 
     .card {
       width: 100%;
-      height: 350px;
+      height: 410px;
     }
   }
 }

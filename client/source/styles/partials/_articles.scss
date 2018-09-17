@@ -110,7 +110,8 @@
     position: relative;
     top: 80px;
     box-shadow: 0 2px 10px 6px rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15) !important;
-
+    border-radius: 0;
+    
     .header {
       font-size: 30px!important;
       margin-top: 95px!important;
@@ -130,6 +131,7 @@
         padding: 0.5em 0.6em;
         width: 100%;
         background-color: #f5ccba;
+        border-radius: 0;
       }
       input::placeholder {
         color: #e47e64;
@@ -146,13 +148,12 @@
       label::before {
         width: 51px;
         height: 51px;
-        border-color: #db2828;
+        border-color: #db2828 !important;
       }
       label::after {
         font-size: 51px;
         width: 51px;
         height: 51px;
-        border-color: #db2828;
       }
     }
     .button {
@@ -162,6 +163,7 @@
       color: black;
       background-color: white;
       border-style: solid;
+      border-radius: 0;
     }
   }
 }
@@ -390,7 +392,7 @@
         margin-bottom: 15px;
       }
       .input {
-        width: 640px;
+        width: 635px;
         font-size: 17px;
         margin: 0 auto 15px auto;
         input {
@@ -398,11 +400,12 @@
         }
       }
       .checkbox {
-        line-height: 15px;
+        font-size: 15px;
         line-height: 16px;
         margin-bottom: 10px;
         label {
-          padding-left: 33px;
+          padding-left: 35px;
+          padding-right: 35px;
         }
         label::before {
           width: 20px;
@@ -416,8 +419,8 @@
         }
       }
       .button {
-        font-size: 16px;
-        padding: 10px 35px;
+        font-size: 20px;
+        padding: 10px 20px;
         margin-bottom: 10px;
         margin-top: 10px;
       }
@@ -484,14 +487,13 @@
       }
     }
     .newsletterContainer {
+      height: auto;
       margin: 30px auto;
     }
     .newsletter {
-      height: 100%;
       width: 100%;
       padding: 10px !important;
       border-radius: 0;
-      box-shadow: 0 2px 10px 6px rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15) !important;
 
       .header {
         color: #db2828;
@@ -506,23 +508,25 @@
       }
       .input {
         font-size: 17px;
-        width: 420px;
+        width: 475px;
         margin: 0 auto 15px auto;
         input {
           padding: 10px 20px;
           background-color: #f5ccba;
+          border-radius: 0;
         }
         input::placeholder {
           color: #e47e64;
         }
       }
       .checkbox {
-        font-size: 13px;
-        line-height: 15px;
+        font-size: 15px;
+        line-height: 16px;
         margin-bottom: 10px;
         text-align: justify;
         label {
-          padding-left: 24px;
+          padding-left: 35px;
+          padding-right: 35px;
         }
         label::before {
           width: 20px;
@@ -540,11 +544,12 @@
       .button {
         margin-top: 10px;
         margin-bottom: 10px;
-        font-size: 16px;
-        padding: 10px 35px;
+        font-size: 20px;
+        padding: 10px 20px;
         color: black;
         background-color: white;
         border-style: solid;
+        border-radius: 0;
       }
     }
   }
@@ -580,16 +585,17 @@
         line-height: 23px;
       }
       .input {
-        width: 340px;
+        width: 390px;
         input {
           padding: 8px 15px;
         }
       }
       .checkbox {
         font-size: 12px;
+        line-height: 13px;
       }
       .button {
-        padding: 10px 30px;
+        font-size: 17px;
       }
     }
   }

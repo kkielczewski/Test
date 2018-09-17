@@ -2,7 +2,7 @@
   margin-top: 20px;
   .description {
     width: 1900px;
-    margin: auto;
+    margin: auto auto 30px;
     min-height: 690px;
 
     .articlesHeader {
@@ -13,6 +13,7 @@
     img {
       width: 604px;
       float: left;
+      box-shadow: 0px 2px 10px 4px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
     }
 
     .text {
@@ -46,7 +47,9 @@
   .newsletter {
     width: 1980px;
     margin: auto;
-    padding: 20px 60px;
+    padding: 20px 180px;
+    border-radius: 0;
+    box-shadow: 0 2px 10px 8px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15) !important;
     .header {
       font-size: 34px;
       margin-top: 20px;
@@ -59,23 +62,30 @@
     }
     .input {
       font-size: 30px;
-      width: 1770px;
+      width: 1500px;
       margin-bottom: 20px;
       input {
-        border-radius: 0.5em;
         padding: 20px 34px;
+        background-color: #f5ccba;
+        border-radius: 0;
+      }
+      input::placeholder {
+        color: #e47e64;
       }
     }
     .checkbox {
       font-size: 23px;
       line-height: 26px;
       margin-bottom: 20px;
+      text-align: justify;
       label {
-        padding-left: 42px;
+        padding-left: 60px;
+        padding-right: 60px;
       }
       label::before {
         width: 40px;
         height: 40px;
+        border-color: #db2828 !important;
       }
       label::after {
         font-size: 40px;
@@ -86,10 +96,13 @@
     }
     .button {
       font-size: 34px;
-      padding: 25px 100px;
-      border-radius: 0.5em;
+      padding: 25px 40px;
       margin-top: 20px;
       margin-bottom: 20px;
+      color: black;
+      background-color: white;
+      border-style: solid;
+      border-radius: 0;
     }
   }
 }
@@ -131,6 +144,7 @@
   .infoNewsletter {
     .newsletter {
       width: 1404px;
+      padding: 20px 130px;
       .header {
         font-size: 24px;
         margin-top: 10px;
@@ -143,7 +157,7 @@
       }
       .input {
         font-size: 20px;
-        width: 1200px;
+        width: 1050px;
         margin-bottom: 15px;
       }
       .checkbox {
@@ -151,7 +165,8 @@
         line-height: 18px;
         margin-bottom: 10px;
         label {
-          padding-left: 33px;
+          padding-left: 45px;
+          padding-right: 45px;
         }
         label::before {
           width: 30px;
@@ -165,8 +180,8 @@
         }
       }
       .button {
-        font-size: 20px;
-        padding: 20px 70px;
+        font-size: 26px;
+        padding: 15px 35px;
         margin-top: 10px;
         margin-bottom: 10px;
       }
@@ -214,8 +229,9 @@
   .infoNewsletter {
     .newsletter {
       width: 972px;
+      padding: 20px 70px;
       .header {
-        font-size: 22px;
+        font-size: 24px;
       }
       .paragraph {
         font-size: 25px;
@@ -223,14 +239,12 @@
       }
       .input {
         font-size: 18px;
-        width: 785px;
+        width: 740px;
         input {
           padding: 15px 25px;
         }
       }
       .checkbox {
-        font-size: 14px;
-        line-height: 15px;
         label::before {
           width: 27px;
           height: 27px;
@@ -243,8 +257,8 @@
         }
       }
       .button {
-        font-size: 18px;
-        padding: 15px 50px;
+        font-size: 24px;
+        padding: 15px 25px;
       }
     }
   }
@@ -277,24 +291,28 @@
   .infoNewsletter {
     .newsletter {
       width: 746px;
-      padding: 20px 20px;
+      padding: 20px;
       .header {
         font-size: 19px;
       }
       .paragraph {
-        font-size: 21px;
-        line-height: 22px;
+        font-size: 26px;
+        line-height: 28px;
       }
       .input {
         font-size: 17px;
-        width: 640px;
+        width: 635px;
         input {
           padding: 10px 20px;
         }
       }
       .checkbox {
-        font-size: 13px;
-        line-height: 14px;
+        font-size: 15px;
+        line-height: 16px;
+        label {
+          padding-left: 35px;
+          padding-right: 35px;
+        }
         label::before {
           width: 20px;
           height: 20px;
@@ -307,8 +325,8 @@
         }
       }
       .button {
-        font-size: 16px;
-        padding: 10px 35px;
+        font-size: 20px;
+        padding: 10px 20px;
       }
     }
   }
@@ -338,31 +356,18 @@
   .infoNewsletter {
     .newsletter {
       width: 100%;
-      padding: 10px 10px;
-      .header {
-        font-size: 19px;
-      }
+      padding: 10px;
       .paragraph {
         font-size: 25px;
         line-height: 27px;
       }
       .input {
         display: block;
-        width: 420px;
+        width: 475px;
         margin: 0 auto 15px auto;
         input {
           width: 100%;
         }
-      }
-      .checkbox {
-        font-size: 12px;
-        label {
-          padding-left: 24px;
-        }
-      }
-      .button {
-        font-size: 16px;
-        padding: 10px 35px;
       }
     }
   }
@@ -395,7 +400,7 @@
         line-height: 23px;
       }
       .input {
-        width: 340px;
+        width: 390px;
         font-size: 17px;
         input {
           padding: 8px 15px;
@@ -403,10 +408,10 @@
       }
       .checkbox {
         font-size: 12px;
+        line-height: 13px;
       }
       .button {
-        font-size: 16px;
-        padding: 10px 30px;
+        font-size: 17px;
       }
     }
   }

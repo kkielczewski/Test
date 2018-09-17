@@ -188,6 +188,7 @@ class VideoPage extends React.Component {
         </div>
         <Advice />
         <div className='otherMovies' >
+          <div className='background whiteMovies' />
           <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Inne filmy experta:</Header>
             <div className='expertMovies' >
             {this.state.expertVideos.slice(0, 6).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
@@ -203,6 +204,7 @@ class VideoPage extends React.Component {
           <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Ostatnie Artykuły</Header>
           <MainArticles />
         </Responsive>
+        <div className='background whiteProduct' />
         <Header dividing className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>
         <Slider {...productsSettings} >
           {this.state.allProducts.map(product => <ProductCard product={product} />)}

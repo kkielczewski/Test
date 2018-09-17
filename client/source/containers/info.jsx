@@ -73,6 +73,7 @@ class Info extends React.Component {
         <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} />
         <div className='infoDescriptionContainer' >
           <div className='whiteContainer' >
+          <div className='background whiteFull' />
           <div className='description' >
             <Header className='recomendedProducts articlesHeader' textAlign='center' size='huge' >O Nas</Header>
             <img src={Default} />
@@ -98,6 +99,7 @@ class Info extends React.Component {
           <Newsletter />
         </div>
         <div className='whiteContainer' >
+          <div className='background whiteProduct' />
           <Header className='recomendedProducts productHeader' dividing textAlign='center' size='huge' >Polecane produkty</Header>
           <Slider {...productsSettings} >
             {this.state.allProducts.map(product => <ProductCard product={product} />)}
