@@ -1,5 +1,4 @@
 .otherMovies {
-  margin-bottom: 30px;
   .header {
     font-size: 38px !important;
     clear: left;
@@ -26,14 +25,23 @@
 }
 
 .videoPageContainer {
-  width: 1980px;
+  width: 2000px;
   margin: 25px auto auto;
+  height: auto;
+  overflow: hidden;
   .main {
-    margin: auto 0 60px auto;
+    margin: 10px 0 60px 10px;
     float: left;
+    background-color: white;
+    box-shadow: 0 2px 10px 6px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+
     .card {
-      width: 1408px;
-      height: 792px;
+      width: 1248px;
+      height: 702px;
+      margin: 60px auto 40px;
+      border-radius: 0;
+      box-shadow: 0 2px 10px 6px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+
 
       .content {
         border: none;
@@ -46,17 +54,22 @@
       position: absolute;
       left: 0px;
       top: 0px;
+      border-radius: 0 !important;
       z-index: 1;
     }
 
     .title {
       width: 1408px;
-      padding: 0 15px;
+      padding: 0 80px;
+      height: auto;
+      overflow: hidden;
       .header {
+        color: #db2828;
         float: left;
-        width: 80%;
+        width: 75%;
         font-size: 32px;
-        margin-bottom: 15px;
+        margin-bottom: 0;
+        padding-top: 10px;
       }
 
       .buttons {
@@ -64,6 +77,10 @@
 
         .button {
           font-size: 20px;
+          border-radius: 0;
+          color: black;
+          background-color: white;
+          border-style: solid;
         }
       }
     }
@@ -71,9 +88,13 @@
     .description {
       clear: both;
       width: 1408px;
-      font-size: 21px;
-      padding: 0 16px;
-      margin-bottom: 20px;
+      font-size: 28px;
+      padding: 0 80px;
+      margin: 20px auto 60px;
+
+      .paragraph {
+        margin-bottom: 5px;
+      }
 
       .header {
         font-size: 26px;
@@ -85,60 +106,147 @@
     float: left;
 
     .center {
-      margin: auto auto auto 60px;
+      margin: 10px auto 10px 60px;
       width: 512px;
+      background-color: white;
+      box-shadow: 0 2px 10px 6px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 
       .header {
-        font-size: 23px;
+        font-size: 38px;
+        width: 240px;
+        margin: 0 auto 120px;
+        position: relative;
+        top: 60px;
+        border-style: solid;
+        color: #db2828;
+        text-align: center;
       }
 
       .social {
-        width: 281px;
+        width: 107px;
         margin: auto;
+        padding-bottom: 40px;
 
         .button {
-          font-size: 3em;
-          padding: 20px 40px;
+          font-size: 45px;
+          padding: 0;
+          background-color: transparent;
+          margin: 0;
         }
       }
       .lastAM {
         .card {
-          width: 512px;
-          height: 395px;
+          width: 400px;
+          height: 550px;
+          margin: 30px auto;
+          box-shadow: 0 2px 10px 8px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
 
-          .content {
-            border: none;
-            height: 100px;
-            overflow: hidden;
-            padding: 5px 10px;
-            .header {
-              font-size: 26px !important;
-              color: black;
-            }
+          a {
+            height: 100%;
           }
 
+          .content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            border: none !important;
+            padding: 0;
+            opacity: 0;
+            transition: all .4s ease-in-out;
+            .header {
+              font-size: 30px;
+              color: white;
+              padding: 5px;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              margin: 0;
+              margin-right: -50%;
+              transform: translate(-50%,-50%);
+              width: auto;
+              border-style: none;
+            }
+          }
+          .black {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            border-radius: 0!important;
+            background: black;
+            opacity: 0;
+            transition: all .4s ease-in-out;
+          }
           .Image {
             width: 100%;
-            height: 288px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            border-radius: 0;
+          }
+        }
+        .card:hover {
+          .black {
+            opacity: 0.7;
+            transition: all .4s ease-in-out;
+          }
+          .content {
+            opacity: 1;
+            transition: all .4s ease-in-out;
           }
         }
       }
       .lastAMVideo {
         .card {
-          width: 512px;
-          height: 288px;
+          width: 448px;
+          height: 252px;
+          margin: 30px auto;
+          box-shadow: 0 2px 10px 8px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+
 
           .Image {
             width: 100%;
-            height: 288px;
+            height: 100%;
           }
         }
       }
+      .share {
+        border: none;
+        color: black;
+        font-size: 28px;
+        top: 0;
+        margin: 60px auto 20px;
+        width: 100%;
+      }
+    }
+    .articleProductsContainer {
+      margin: 80px auto 10px 60px;
+      width: 512px;
+      height: auto;
+      overflow: hidden;
+      background-color: white;
+      box-shadow: 0 2px 10px 6px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+      .header {
+        font-size: 38px;
+        width: 260px;
+        padding: 10px;
+        margin: 0 auto 120px;
+        position: relative;
+        top: 60px;
+        border-style: solid;
+        color: #db2828;
+        text-align: center;
+      }
       .articleProducts {
+        margin-bottom: 60px;
         .card {
           width: 250px;
-          margin: 3px;
-          float: left;
+          margin: 30px auto;
+          border-radius: 0;
+          box-shadow: 0 2px 10px 6px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
           .imageContainer {
             position: relative;
             height: 270px;
@@ -178,54 +286,106 @@
 .expertContainer {
   width: 1980px;
   margin: auto;
+  padding: 80px 80px 0;
 
   .imageContainer {
     float: left;
     .expertImage {
-      margin: auto 20px auto auto;
+      margin: auto 80px auto auto;
       width: 480px;
+      box-shadow: 0 2px 10px 8px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
     }
   }
   .details{
     padding-top: 20px; 
     .header {
       font-size: 38px;
+      color: #db2828;
     }
 
     .description {
-      font-size: 21px;
-      min-height: 410px;
+      font-size: 28px;
+      min-height: 350px;
     }
   }
 }
+.doctorInfo {
+  margin-bottom: 130px !important;
+}
+
+.otherArticlesHeader {
+  width: 430px;
+}
 
 .otherArticles {
-  width: 1980px;
+  width: 1880px;
   margin: auto;
+  height: auto;
+  overflow: hidden;
 
   .card {
-    width: 640px;
-    height: 470px;
     margin: 10px;
-    margin-top: 10px !important;
+    overflow: hidden;
+    height: 600px;
+    width: 450px;
     float: left;
+    border-radius: 0;
+    box-shadow: 0 2px 10px 4px rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15);
 
     .Image {
+      height: 100%;
       width: 100%;
-      height: 360px;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+
+    .black {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      border-radius: 0!important;
+      background: black;
+      opacity: 0;
+      transition: all .4s ease-in-out;
     }
   
     .articleContent {
-      border-style: none;
-      height: 105px;
-      padding: 5px 10px;
-      overflow: hidden;
-
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      border: none !important;
+      padding: 0;
+      opacity: 0;
+      transition: all .4s ease-in-out;
       .header {
-        font-size: 26px !important;
-        color: black;
+        font-size: 34px !important;
+        color: white;
+        padding: 5px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: 0;
+        margin-right: -50%;
+        transform: translate(-50%,-50%);
       }
     }
+  }
+  .card:hover {
+    .black {
+      opacity: 0.7;
+      transition: all .4s ease-in-out;
+    }
+    .content {
+      opacity: 1;
+      transition: all .4s ease-in-out;
+    }
+  }
+  .card:first-child {
+    margin-top: 10px;
   }
 }
 
@@ -239,27 +399,32 @@
     font-size: 32px;
   }
   .videoPageContainer {
-    width: 1404px;
+    width: 1424px;
     .main {
+      margin: 10px 0 10px 10px;
       .card {
-        width: 960px;
-        height: 540px;
+        width: 848px;
+        height: 477px;
+        margin: 60px auto 20px;
       }
       .title {
-        width: 960px;
+        width: 950px;
+        padding: 0 40px;
         .header {
-          width: 60%;
-          font-size: 26px;
+          width: 68%;
+          font-size: 28px;
           .buttons {
             .button {
-              font-size: 18px;
+              font-size: 22px;
+              padding: 10px 20px;
             }
           }
         }
       }
       .description {
-        width: 960px;
-        font-size: 20px;
+        width: 950px;
+        font-size: 24px;
+        padding: 0 40px;
 
         .header {
           font-size: 24px;
@@ -269,30 +434,40 @@
 
     .sidePanel {
       .center {
-        width: 384px;
+        width: 394px;
 
+        .header {
+          font-size: 30px;
+          width: 180px;
+          top: 40px;
+          margin: 0 auto 80px;
+        }
+        .share {
+          font-size: 22px;
+          margin: 0 auto 20px;
+          top: 0;
+        }
         .lastAM {
           .card {
-            width: 384px;
-            height: 300px;
-            .Image {
-              height: 216px;
-            }
+            width: 320px;
+            height: 440px;
             .content {
-              height: 80px;
               .header {
-                font-size: 20px !important;
+                font-size: 26px;
               }
             }
           }
         }
         .lastAMVideo {
           .card {
-            width: 384px;
-            height: 216px;
-            .Image {
-              height: 216px;
-            }
+            width: 320px;
+            height: 180px;
+          }
+        }
+        .social {
+          width: 95px;
+          .button {
+            font-size: 40px;
           }
         }
         .articleProducts {
@@ -302,29 +477,58 @@
           }
         }
       }
+      .articleProductsContainer {
+        margin: 60px auto 10px 60px;
+        width: 394px;
+        .header {
+          font-size: 30px;
+          width: 215px;
+          margin: 0 auto 80px;
+          top: 40px;
+        }
+        .articleProducts {
+          .card {
+            width: 215px;
+            margin: 20px auto;
+            .imageContainer {
+              height: 225px;
+            }
+          }
+        }
+      }
     }
   }
   .expertContainer {
     width: 1404px;
+    padding: 80px 40px 0;
+    .imageContainer {
+      .expertImage {
+        margin: auto 40px auto auto;
+      }
+    }
     .details {
       .header {
-        font-size: 26px;
+        font-size: 32px;
       }
       .description {
-        font-size: 20px;
-        min-height: 417px;
+        font-size: 24px;
       }
     }
   }
+  .otherArticlesHeader {
+    width: 350px;
+  }
   .otherArticles {
-    width: 1404px;
+    width: 1360px;
 
     .card {
-      width: 448px;
-      height: 360px;
+      height: 440px;
+      width: 320px;
 
-      .Image {
-        height: 252px;
+      .content {
+        .header {
+          font-size: 27px !important;
+        }
       }
     }
   }
@@ -356,21 +560,24 @@
     }
   }
   .videoPageContainer {
-    width: 972px;
+    width: 992px;
     .main {
       .card {
-        width: 640px;
-        height: 360px;
+        width: 560px;
+        height: 315px;
       }
       .title {
-        width: 640px;
+        width: 630px;
+        padding: 0 35px;
         .header {
-          width: 64%;
-          font-size: 22px;
+          width: 70%;
+          font-size: 24px;
+          padding-top: 5px;
         }
         .buttons {
           .button {
-            font-size: 12px;
+            font-size: 14px;
+            padding: 10px;
           }
         }
       }
@@ -378,31 +585,39 @@
         .header {
           font-size: 18px;
         }
-        width: 640px;
-        font-size: 16px;
+        width: 630px;
+        font-size: 20px;
+        padding: 0 35px;
+        margin: 10px auto 30px;
       }
     }
     .sidePanel {
       .center {
-        margin: auto auto auto 32px;
-        width: 300px;
+        margin: 10px auto auto 32px;
+        width: 310px;
+
+        .header {
+          font-size: 22px;
+          width: 130px;
+          top: 20px;
+          margin: 0 auto 40px;
+        }
 
         .lastAM {
           .card {
-            width: 300px;
-            height: 255px;
-            .Image {
-              height: 171px;
+            width: 210px;
+            height: 288px;
+            .content {
+              .header {
+                font-size: 18px;
+              }
             }
           }
         }
         .lastAMVideo {
           .card {
-            width: 300px;
-            height: 171px;
-            .Image {
-              height: 171px;
-            }
+            width: 272px;
+            height: 153px;
           }
         }
         .articleProducts {
@@ -414,10 +629,34 @@
           }
         }
         .social {
-          width: 201px;
+          width: 71px;
           .button {
-            font-size: 2em;
-            padding: 15px 30px;
+            font-size: 30px;
+          }
+        }
+        .share {
+          font-size: 18px;
+          width: 150px;
+          margin: 0 auto 10px;
+          top: 0;
+        }
+      }
+      .articleProductsContainer {
+        margin: 40px auto 10px 32px;
+        width: 310px;
+        .header {
+          font-size: 22px;
+          margin: 0 auto 40px;
+          top: 20px;
+          width: 162px;
+        }
+        .articleProducts {
+          margin-bottom: 40px;
+          .card {
+            width: 162px;
+            .imageContainer {
+              height: 175px;
+            }
           }
         }
       }
@@ -425,42 +664,104 @@
   }
   .expertContainer {
     width: 972px;
+    padding: 40px 30px 0;
 
     .imageContainer {
       .expertImage {
         width: 320px;
+        margin: auto 20px auto auto;
       }
     }
     .details {
       padding-top: 20px;
       .header {
-        font-size: 20px;
+        font-size: 24px;
       }
       .description {
-        font-size: 16px;
-        min-height: 264px;
+        font-size: 20px;
+        min-height: 215px;
+        margin-bottom: 10px;
       }
     }
   }
-
+  .doctorInfo {
+    margin-bottom: 70px !important;
+  }
+  .otherArticlesHeader {
+    width: 310px;
+  }
   .otherArticles {
-    width: 972px;
+    width: 932px;
 
     .card {
-      width: 304px;
-      height: 255px;
-
-      .Image {
-        height: 171px;;
-      }
-
-      .articleContent {
-        height: 80px;
+      height: 283px;
+      width: 213px;
+      .content {
         .header {
-          font-size: 20px !important;
+          font-size: 16px !important;
         }
-        .description {
-          font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .videoPageContainer {
+    .sidePanel {
+      .center {
+        .lastAM {
+          .card {
+            .content {
+              opacity: 1;
+              width: 100%;
+              height: 72px;
+              margin: auto;
+              background-color: white;
+              border: solid !important;
+              border-width: 1px!important;
+              border-color: lightgray !important;
+              display: flex;
+              position: absolute;
+              bottom: 0;
+              overflow: hidden;
+      
+              .header {
+                font-size: 17px;
+                padding: 5px;
+                margin: auto;
+                color: black;
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .otherArticles {
+    .card {
+      .content {
+        opacity: 1;
+        width: 100%;
+        height: 72px;
+        margin: auto;
+        background-color: white;
+        border: solid !important;
+        border-width: 1px!important;
+        border-color: lightgray !important;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        overflow: hidden;
+
+        .header {
+          font-size: 17px !important;
+          padding: 5px;
+          margin: auto;
+          color: black;
+          width: 100%;
+          height: 100%;
         }
       }
     }
@@ -473,27 +774,36 @@
     font-size: 24px;
   }
   .videoPageContainer {
-    width: 736px;
+    width: 766px;
     .main {
       clear: both;
       .card {
-        width: 736px;
-        height: 374px;
+        width: 672px;
+        height: 378px;
       }
       .title {
-        width: 736px;
+        width: 746px;
         margin: 10px auto;
+        .header {
+          font-size: 23px;
+        }
         .buttons {
           .social {
-            margin-top: 2px;
+            width: 95px;
+            margin: 0;
+            height: auto;
+            overflow: hidden;
             .button {
-              width: 72px;
+              border: none;
+              font-size: 40px;
+              padding: 0;
+              margin: 0;
             }
           }
         }
       }
       .description {
-        width: 736px;
+        width: 746px;
       }
     }
     .sidePanel {
@@ -501,16 +811,21 @@
     }
   }
   .articleProductsSmall {
-    width: 744px;
+    width: 708px;
     margin: auto;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 10px;
     .card {
-      height: 380px;
-      width: 228px;
-      margin: 10px !important;
+      height: 225px;
+      width: 216px;
+      margin: 10px!important;
       float: left;
+      border-radius: 0;
+      box-shadow: 0 2px 10px 6px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
       .imageContainer {
         position: relative;
-        height: 260px;
+        height: 225px;
         .Image {
           max-width: 100%;
           max-height: 100%;
@@ -554,20 +869,34 @@
     }
   }
   .otherArticles {
-    width: 744px;
+    width: 700px;
+    padding-bottom: 20px;
 
     .card {
-      width: 368px;
-      height: 290px;
-      margin-top: 2px !important;
-      margin: 2px;
-      .Image {
-        height: 207px;
+      width: 330px;
+      height: 440px;
+      margin: 10px;
+      .content {
+        height: 80px;
+        .header {
+          font-size: 20px !important;
+        }
       }
+    }
+    .card:first-child {
+      margin-top: 10px;
     }
   }
   .recomendedProducts {
     font-size: 24px !important;
+  }
+  .mentionedProducts {
+    margin: 20px auto !important;
+    color: #db2828 !important;
+    border-style: solid !important;
+    border-color: #db2828 !important;
+    width: 175px;
+    padding: 10px !important;
   }
 }
 
@@ -579,16 +908,18 @@
     width: 496px;
   }
   .videoPageContainer {
-    width: 496px;
+    width: 100%;
     .main {
-      margin: auto 0 30px auto;
+      width: 100%;
+      margin: 30px 0 30px auto;
       .card {
         width: 496px;
         height: 279px;
-        margin: auto;
+        margin: 30px auto 10px;
       }
       .title {
         width: 496px;
+        padding: 0;
         .header {
           width: 100%;
         }
@@ -596,27 +927,31 @@
           float: none;
           .button {
             font-size: 18px;
-          }
-          .blue {
             float: left;
           }
           .social {
+            width: 111px;
             .button {
-              width: 117px;
+              font-size: 44px;
             }
           }
         }
       }
       .description {
         width: 496px;
+        padding: 0;
       }
     }
   }
   .articleProductsSmall {
     width: 496px;
+    .card {
+      box-shadow: 0 2px 10px 2px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+    }
   }
   .expertContainer {
     width: 496px;
+    padding: 20px 0;
 
     .imageContainer {
       float: none;
@@ -638,25 +973,25 @@
       }
     }
   }
+  .doctorInfo {
+    margin-bottom: 30px !important;
+  }
   .otherArticles {
-    width: 496px;
+    width: 500px;
     .card {
-      width: 496px;
-      height: 385px;
-      margin: 10px auto;
-
-      .Image {
-        height: 279px;
-      }
-      .articleContent {
-        height: 105px;
+      width: 240px;
+      height: 320px;
+      margin: 5px;
+      box-shadow: 0 2px 10px 2px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+      .content {
+        height: 80px;
         .header {
-          font-size: 26px !important;
-        }
-        .description {
-          font-size: 16px;
+          font-size: 15px;
         }
       }
+    }
+    .card:first-child {
+      margin-top: 5px;
     }
   }
 }
@@ -666,7 +1001,6 @@
     width: 400px;
   }
   .videoPageContainer {
-    width: 400px;
     .main {
       .card {
         width: 400px;
@@ -678,8 +1012,11 @@
           .button {
             font-size: 15.5px;
           }
-          .blue {
-            float: none;
+          .social {
+            width: 144px;
+            .button {
+              font-size: 41px;
+            }
           }
         }
       }
@@ -691,11 +1028,11 @@
   .articleProductsSmall {
     width: 400px;
     .card {
-      width: 190px;
-      height: 350px;
-      margin: 5px !important;
+      width: 180px;
+      height: 190px;
+      margin: 10px !important;
       .imageContainer {
-        height: 230px;
+        height: 190px;
       }
       .content {
         padding: 5px;
@@ -712,21 +1049,16 @@
     width: 400px;
   }
   .otherArticles {
-    width: 400px;
-    .card {
-      width: 400px;
-      height: 310px;
+    width: 350px;
 
-      .Image {
-        height: 225px;
-      }
-      .articleContent {
-        height: 80px;
+    .card {
+      width: 330px;
+      height: 440px;
+      margin: 0 10px 20px;
+      .content {
+        height: 105px;
         .header {
-          font-size: 20px !important;
-        }
-        .description {
-          font-size: 12px;
+          font-size: 20px;
         }
       }
     }
@@ -747,6 +1079,11 @@
       .title {
         width: 100%;
         padding: 0 8px;
+        .buttons {
+          .social {
+            width: 240px;
+          }
+        }
       }
       .description {
         width: 100%;
@@ -757,11 +1094,14 @@
   .articleProductsSmall {
     width: 100%;
     .card {
-      width: 49%;
-      height: 325px;
-      margin: 5px auto !important;
+      width: 50%;
+      margin: 0 !important;
+      box-shadow: none;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #ededed;
       .imageContainer {
-        height: 200px;
+        height: 188px;
       }
       .content {
         padding: 10px;
@@ -790,15 +1130,11 @@
     width: 100%;
     .card {
       width: 100%;
-      height: 280px;
-      margin: 0 0 20px!important;
+      height: 400px;
+      margin: 0 auto 20px;
       border-style: solid;
       border-width: 1px;
-      border-color: white;
-
-      .Image {
-        height: 196px;
-      }
+      border-color: lightgray;
     }
   }
   .mentionedProducts {

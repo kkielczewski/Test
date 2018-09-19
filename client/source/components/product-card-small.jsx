@@ -1,7 +1,10 @@
 import React from 'react';
 import { Card, Image } from 'semantic-ui-react';
-import Alantan from '../assets/products/allergy/alantan.jpg';
-import Alerbon from '../assets/products/allergy/alerbon.jpg';
+
+// <Card.Content className={this.props.contentClass} >
+// <Card.Header>{this.props.product.name}</Card.Header>
+// <Card.Description>{`${this.props.product.price} zł`}</Card.Description>
+// </Card.Content>;
 
 class DoctorCard extends React.Component {
   constructor(props) {
@@ -30,10 +33,6 @@ class DoctorCard extends React.Component {
       <Card>
         <a draggable='false' href={`//allecco.pl/${this.props.product.link}`} >
           <div className='imageContainer' ><Image src={`//allecco.pl/${this.props.product.thumbnail}`} className={this.props.imageClass} /></div>
-          <Card.Content className={this.props.contentClass} >
-            <Card.Header>{this.props.product.name}</Card.Header>
-            <Card.Description>{`${this.props.product.price} zł`}</Card.Description>
-          </Card.Content>
         </a>
       </Card>
     );

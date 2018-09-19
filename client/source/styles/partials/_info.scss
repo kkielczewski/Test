@@ -67,10 +67,16 @@
       input {
         padding: 20px 34px;
         background-color: #f5ccba;
+        color: #e47e64;
         border-radius: 0;
       }
       input::placeholder {
         color: #e47e64;
+      }
+      input:focus {
+        background-color: #f5ccba;
+        color: #e47e64;
+        border-radius: 0;
       }
     }
     .checkbox {

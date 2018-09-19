@@ -187,13 +187,13 @@ class VideoPage extends React.Component {
   }
 
   shareFacebook() {
-    const facebookWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.youtube.com/watch?v=' + this.state.id, 'facebook-popup', 'height=350,width=600');
+    const facebookWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + window.location.href, 'facebook-popup', 'height=350,width=600');
     if (facebookWindow.focus) { facebookWindow.focus(); }
     return false;
   }
 
   shareTwitter() {
-    const twitterWindow = window.open('https://twitter.com/share?url=https://www.youtube.com/watch?v=' + this.state.id, 'twitter-popup', 'height=350,width=600');
+    const twitterWindow = window.open('https://twitter.com/share?url=' + window.location.href, 'twitter-popup', 'height=350,width=600');
     if (twitterWindow.focus) { twitterWindow.focus(); }
     return false;
   }
@@ -268,7 +268,7 @@ class VideoPage extends React.Component {
             <div className='title' >
               <Header>{this.state.title}</Header>
               <div className='buttons' >
-                <Button color='blue' onClick={this.subscribe} ><Icon name='share' />Subskrybuj na YT</Button>
+                <Button onClick={this.subscribe} >SUBSKRYBUJ NA YT</Button>
                 <Responsive maxWidth='1020' >
                 <div className='social' >
                   <Button onClick={this.shareFacebook} color='facebook' icon='facebook' />
@@ -287,16 +287,17 @@ class VideoPage extends React.Component {
               <div className='lastAMVideo' >
                 {this.state.allVideos.slice(0, 3).map(video => <VideoCard imageClass='Image' video={video} />)}
               </div>
-              <Header>UDOSTĘPNIJ</Header>
+              <Header className='share' >UDOSTĘPNIJ NA:</Header>
               <div className='social' >
-                <Button onClick={this.shareFacebook} color='facebook' icon='facebook' />
-                <Button onClick={this.shareTwitter} color='twitter' icon='twitter' />
+                <Button onClick={this.shareFacebook} icon='facebook' />
+                <Button onClick={this.shareTwitter} icon='twitter' />
               </div>
             </div>
           </div>
         </div>
         <div style={{ clear: 'both', marginBottom: '30px' }} >
-        <div className='whiteContainer' >
+        <div className='whiteContainer doctorInfo' >
+        <div className='background whiteHundred' />
         <div className='expertContainer' >
           <div className='imageContainer' >
             <Image src={Avatar} className='expertImage' />
@@ -310,8 +311,9 @@ class VideoPage extends React.Component {
         </div>
         <Advice />
         <div className='whiteContainer' >
+        <div className='background whiteDoctorMovies' />
+          <Header className='recomendedProducts productHeader' dividing textAlign='center' size='huge' >Inne filmy experta</Header>
           <div className='otherMovies' >
-            <Header className='recomendedProducts productHeader' dividing textAlign='center' size='huge' >Inne filmy experta</Header>
             <div className='mainMovies' >
               {this.state.expertVideos.slice(0, 6).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
             </div>
@@ -320,7 +322,7 @@ class VideoPage extends React.Component {
         <Responsive maxWidth='1020' >
           <div className='whiteContainer' >
             <div className='background whiteMovies' />
-            <Header className='recomendedProducts mainMoviesHeader' dividing textAlign='center' size='huge' >Najnowsze Filmy</Header>
+            <Header className='recomendedProducts mainMoviesHeader' dividing textAlign='center' size='huge' >Ostatnie Filmy</Header>
             <MainMovies />
           </div>
         </Responsive>

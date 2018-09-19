@@ -26,10 +26,14 @@ class Advice extends React.Component {
   render() {
     return (
       <Segment className='advice' textAlign='center'>
-        <Header textAlign='center' size='medium' >Co chciałbyś zobaczyć w następnym filmie lub artykule tego eksperta?</Header>
+        <Header textAlign='center' size='medium' >
+          <p>Co chciałbyś zobaczyć</p>
+          <p>w następnym filmie lub artykule tego</p>
+          <p><b>eksperta?</b></p>
+          </Header>
         <Form onSubmit={this.handleClick} >
           <TextArea onChange={this.changeText} placeholder='...' />
-          <Button color='red' >Wyślij</Button>
+          <Button>Wyślij</Button>
         </Form>
       </Segment>
     );

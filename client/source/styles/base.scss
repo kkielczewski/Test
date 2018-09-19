@@ -42,7 +42,9 @@ body {
     background-color: white;
     z-index: -1;
   }
-
+  .whiteHundred {
+    height: 100%;
+  }
   .whiteVideos {
     height: 90%;
   }
@@ -53,9 +55,12 @@ body {
     height: 85%;
   }
   .whiteProduct {
-    height: 90%;
+    height: 85%;
   }
   .whiteMovies {
+    height: 90%;
+  }
+  .whiteDoctorMovies {
     height: 90%;
   }
 }
@@ -79,13 +84,6 @@ body {
 @media screen and (max-width: 1020px) {
   .whiteContainer {
     width: 746px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .whiteContainer {
-    width: 100%;
-    margin: 30px auto;
     .whiteVideos {
       height: 100%;
     }
@@ -98,6 +96,16 @@ body {
     .whiteMovies {
       height: 100%;
     }
+    .whiteDoctorMovies {
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .whiteContainer {
+    width: 100%;
+    margin: 30px auto;
   }
 }
 
