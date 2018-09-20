@@ -593,7 +593,7 @@
       img {
         width: 700px;
         height: 321px;
-        top: 56px;
+        top: 48px;
       }
       .segment {
         width: 704px;
@@ -603,9 +603,9 @@
           width: 200px;
         }
         .paragraph {
-          font-size: 28px;
+          font-size: 24px;
           p {
-            line-height: 30px;
+            line-height: 26px;
           }
           p:last-child {
             margin-bottom: 30px;
@@ -643,10 +643,10 @@
           margin-bottom: 15px;
         }
         .paragraph {
-          font-size: 22px;
+          font-size: 21px;
           width: 100%;
           p {
-            line-height: 24px;
+            line-height: 23px;
             margin-bottom: 20px;
           }
           p:last-child {
@@ -733,9 +733,9 @@
         }
         .paragraph {
           width: 100%;
-          font-size: 21px;
+          font-size: 18px;
           p {
-            line-height: 23px;
+            line-height: 20px;
           }
         }
         .input {
@@ -748,12 +748,13 @@
 
 @media screen and (max-width: 400px) {
   .survey {
-    height: 333px;
+    height: 370px;
+    margin-top: 70px;
     .surveySegment {
-      height: 333px;
+      height: 370px;
       .segment {
         .paragraph {
-          font-size: 17px;
+          font-size: 15px;
         }
         .input {
           width: 278px;
