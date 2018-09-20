@@ -1,6 +1,7 @@
 import React from 'react';
-import { Header, Input, Responsive, Segment } from 'semantic-ui-react';
+import { Header, Input, Responsive, Segment, Image } from 'semantic-ui-react';
 import Slider from 'react-slick';
+import Pagination from 'react-js-pagination';
 import VideoCard from '../components/video-card';
 import VideoCardBig from '../components/video-card-big';
 import ArticleCard from '../components/article-card';
@@ -17,9 +18,17 @@ class VideoPage extends React.Component {
     this.state = {
       allProducts: [],
       expertArticles: [],
+      currentArticles: [],
+      totalCountArticle: null,
+      activePageArticle: 1,
       expertVideos: [],
+      currentVideos: [],
+      totalCountVideo: null,
+      activePageVideo: 1,
       name: 'Wanda Baltaza'
     };
+    this.handlePageChangeVideo = this.handlePageChangeVideo.bind(this);
+    this.handlePageChangeArticle = this.handlePageChangeArticle.bind(this);
   }
 
   async componentDidMount() {
@@ -46,7 +55,9 @@ class VideoPage extends React.Component {
       { link: '/article/9', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet.', thumbnails: '' },
       { link: '/article/10', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', thumbnails: '' },
       { link: '/article/11', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', thumbnails: '' },
-      { link: '/article/12', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Lucyna Malec', description: 'Lorem ipsum dolor sit amet, consectetur.', thumbnails: '' }];
+      { link: '/article/12', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Lucyna Malec', description: 'Lorem ipsum dolor sit amet, consectetur.', thumbnails: '' },
+      { link: '/article/11', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', thumbnails: '' },
+      { link: '/article/11', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', author: 'Wanda Baltaza', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', thumbnails: '' }];
 
     const allArticles = [];
 
@@ -65,7 +76,19 @@ class VideoPage extends React.Component {
       { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
       { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' }];
 
-    this.setState({ allProducts: products, expertArticles: allArticles, expertVideos: all });
+    this.setState({ allProducts: products, expertArticles: allArticles, currentArticles: allArticles.slice(0,8), totalCountArticle: allArticles.length, expertVideos: all, currentVideos: all.slice(0,6), totalCountVideo: all.length });
+  }
+
+  handlePageChangeVideo(pageNumber) {
+    const offset = (pageNumber - 1) * 6;
+    const currentItems = this.state.expertVideos.slice(offset, offset + 6);
+    this.setState({ activePageVideo: pageNumber, currentVideos: currentItems });
+  }
+
+  handlePageChangeArticle(pageNumber) {
+    const offset = (pageNumber - 1) * 8;
+    const currentItems = this.state.expertArticles.slice(offset, offset + 8);
+    this.setState({ activePageArticle: pageNumber, currentArticles: currentItems });
   }
 
   render() {
@@ -111,45 +134,77 @@ class VideoPage extends React.Component {
     return (
       <div className='mainContainer' >
         <div className='blueStripe' ></div>
-        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} >
-          <div style={{ position: 'absolute', left: '0', bottom: '0', width: '100%'}} ><div className='pictureHeader' >{this.state.name}</div></div>
-        </div>
-        <div className='expertInfo'>
-          <div className='expertDescription' >
-            Opis filmu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} />
+        <div style={{ clear: 'both', marginBottom: '30px' }} >
+          <div className='whiteContainer doctorInfo' >
+            <div className='background whiteHundred' />
+            <div className='expertContainer' >
+              <div className='imageContainer' >
+                <Image src={Avatar} className='expertImage' />
+              </div>
+              <div className='details' >
+                <Header>{this.state.name}</Header>
+                <div className='description' >KILKA SLOW O EKSPERCIE Opis filmu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div className='doctorContainer' >
-          <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Filmy eksperta</Header>
-          <Responsive minWidth={1021} >
-            <div className='expertMovieList' >
-            {this.state.expertVideos.slice(0, 9).map(video => <VideoCard imageClass='Image' contentClass='listContent' video={video} />)}
-            </div>
-          </Responsive>
-          <Responsive maxWidth={1020} >
-            <div className='expertMovieList' >
-            {this.state.expertVideos.slice(0, 8).map(video => <VideoCard imageClass='Image' contentClass='listContent' video={video} />)}
-            </div>
-          </Responsive>
+        <div className='whiteContainer' >
+          <div className='background' />
+          <Header className='recomendedProducts productHeader' dividing textAlign='center' size='huge' >Filmy eksperta</Header>
+          <div className='mainMovies' >
+            {this.state.currentVideos.map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
+          </div>
+          <div className='videoNav' >
+            <Pagination
+            hideFirstLastPages
+            activePage={this.state.activePageVideo}
+            itemsCountPerPage={6}
+            totalItemsCount={this.state.totalCountVideo}
+            pageRangeDisplayed={5}
+            activeClass="activeli"
+            activeLinkClass="active"
+            linkClassPrev="prev"
+            linkClassNext="next"
+            prevPageText="<"
+            nextPageText='>'
+            onChange={this.handlePageChangeVideo}
+            />
+          </div>
         </div>
         <Advice />
-        <div className='doctorContainerArticles' >
-          <Header className='recomendedProducts' dividing textAlign='center' size='huge' >Artykuły eksperta</Header>
-          <Responsive minWidth={1021} >
-            <div className='expertArticleList' >
-            {this.state.expertArticles.slice(0, 9).map(article => <ArticleCard id='1' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
+        <div className='whiteContainer' >
+          <div className='background' />
+          <Header className='recomendedProducts productHeader' dividing textAlign='center' size='huge' >Artykuły eksperta</Header>
+          <div className='mainArticlesContainer' >
+            <div className='mainArticles' >
+              {this.state.currentArticles.map(article => <ArticleCard id='1' className='articleCard mainArticleCard' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
             </div>
-          </Responsive>
-          <Responsive maxWidth={1020} >
-            <div className='expertArticleList' >
-            {this.state.expertArticles.slice(0, 8).map(article => <ArticleCard id='1' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
-            </div>
-          </Responsive>
+          </div>
+          <div className='videoNav' >
+            <Pagination
+            hideFirstLastPages
+            activePage={this.state.activePageArticle}
+            itemsCountPerPage={8}
+            totalItemsCount={this.state.totalCountArticle}
+            pageRangeDisplayed={5}
+            activeClass="activeli"
+            activeLinkClass="active"
+            linkClassPrev="prev"
+            linkClassNext="next"
+            prevPageText="<"
+            nextPageText='>'
+            onChange={this.handlePageChangeArticle}
+            />
+          </div>
         </div>
-        <Header dividing className='recomendedProducts' textAlign='center' size='huge' >Polecane produkty</Header>
-        <Slider {...productsSettings} >
-          {this.state.allProducts.map(product => <ProductCard product={product} />)}
-        </Slider>
+        <div className='whiteContainer' >
+          <div className='background whiteProduct' />
+          <Header dividing className='recomendedProducts productHeader' textAlign='center' size='huge' >Polecane produkty</Header>
+          <Slider {...productsSettings} >
+            {this.state.allProducts.map(product => <ProductCard product={product} />)}
+          </Slider>
+        </div>
       </div>
     );
   }
