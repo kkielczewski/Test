@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, Image } from 'semantic-ui-react';
-import { withRouter } from 'react-router-dom';
 
 class VideoCard extends React.Component {
   render() {
@@ -14,4 +13,4 @@ class VideoCard extends React.Component {
   }
 }
 
-export default withRouter(VideoCard);
+export default VideoCard;

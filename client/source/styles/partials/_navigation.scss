@@ -1,0 +1,334 @@
+//NavBar and main Container
+
+.mainRoot {
+  overflow: visible !important;
+}
+
+.mainContainer {
+  flex: 1 0 auto; /* 2 */
+  padding: var(--space) var(--space) 0;
+  width: 100%;
+  margin-top: 106px;
+  position: relative;
+}
+
+.mainContainer::after {
+  content: '\00a0'; /* &nbsp; */
+  display: block;
+  margin-top: var(--space);
+  height: 0px;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .mainContainer {
+    margin-top: 53px;
+  }
+}
+
+.mainSidebar {
+  background: #db2828 !important;
+  z-index: 102 !important;
+  position: fixed !important;
+  top: 52px !important;
+  overflow: hidden;
+  overflow-y: hidden !important;
+  width: 260px;
+  .menu {
+    width: 270px;
+    height: 100%;
+    overflow: auto;
+    padding-right: 15px;
+    box-sizing: content-box;
+    border-radius: 0;
+    .form {
+      width: 259px;
+      .input {
+        width: 259px;
+        font-size: 17px;
+        input {
+          border: none;
+        }
+      }
+    }
+    .active {
+      background-color: #f0f0f0 !important;
+      color: #db2828 !important;
+    }
+  }
+}
+
+.mainOverlay {
+  z-index: 101 !important;
+}
+
+.mainContent {
+  overflow: visible !important;
+  .mobileNavbar {
+    height: 53px;
+    .left.menu {
+      margin-right: 0 !important;
+      .button {
+        width: 65px;
+        margin: 0;
+        padding: 0 25px;
+        i {
+          margin: 0;
+          font-size: 2em;
+        }
+      }
+    }
+
+    img {
+      padding: 6.5px 65px 6.5px 0 !important;
+      width: 190px;
+      height: 53px;
+      margin: auto auto auto 0;
+    }
+  }
+}
+
+.socialTab {
+  height: 53px;
+  width: 84px;
+  float: right;
+
+  .button {
+    margin: 9px auto;
+    background-color: transparent;
+    padding: 0 !important;
+    font-size: 35px;
+    color: black;
+  }
+}
+
+.navBarContainer {
+  width: 1980px;
+  margin: auto;
+  .navSearchBar {
+    height: 53px;
+    .form {
+      float: right;
+      margin-top: 15px;
+      margin-right: 7px;
+      .input {
+        width: 260px;
+      }
+    }
+  }
+  .menu {
+    float: right;
+    .item {
+      height: 53px;
+      font-size: 20px;
+      padding: 7px 30px !important;
+    }
+    .item:hover {
+      background-color: #f0f0f0 !important;
+      color: #db2828 !important;
+    }
+    .active {
+      color: #db2828 !important;
+    }
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .navBarContainer {
+    width: 1404px;
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .navBarContainer {
+    width: 972px;
+    .menu {
+      .item {
+        padding: 7px 20px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .navBarContainer {
+    width: 746px;
+    .menu {
+      .item {
+        padding: 13px 12px !important;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+// Footer
+
+.footer {
+  flex: none;
+  background-color: white;
+  .footerContent {
+    width: 1980px;
+    margin: auto;
+    height: 100px;
+    position: relative;
+
+    .copyright {
+      font-size: 20px;
+      padding: 5px;
+    }
+    .goToTop {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto auto 20px auto;
+      width: 131px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .footer {
+    .footerContent {
+      width: 1404px;
+    }
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .footer {
+    .footerContent {
+      width: 972px;
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .footer {
+    .footerContent {
+      width: 746px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    .footerContent {
+      width: 100%;
+      .goToTop {
+        display: none;
+      }
+    }
+  }
+}
+
+// Pagination
+
+.pagination {
+  list-style: none;
+  display: inline-block;
+  border-radius: 50px;
+  margin: 10px auto;
+  -webkit-margin-before: 10px;
+  -webkit-margin-after: 10px;
+  -webkit-margin-start: auto;
+  -webkit-margin-end: auto;
+  -webkit-padding-start: unset;
+  padding: 0;
+}
+.pagination li {
+  display: inline;
+  text-align: center;
+}
+.pagination a {
+  float: left;
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 5px 12px;
+  margin-left: -1px;
+  border: 1px solid transparent;
+  line-height: 1.5;
+  border-color: #ddd;
+  color: #000;
+  background: #fff;
+  padding: 10px 15px;
+}
+.pagination a.active {
+  cursor: default;
+}
+.pagination a:active {
+  outline: none;
+}
+
+.pagination a:hover {
+  color: #E34E48;
+  background-color: #eee;
+}
+.pagination a.prev {
+  -moz-border-radius: 50px 0 0 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px 0 0 50px;
+  width: 50px;
+  position: relative;
+  color: #fff;
+  background: #d82923;
+  font-size: 23px;
+  padding: 4px;
+  font-family: monospace;
+}
+
+.pagination a.prev:hover {
+  background: #E34E48;
+}
+
+.pagination a.prev:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+.pagination a.next {
+  -moz-border-radius: 0 50px 50px 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 50px 50px 0;
+  width: 50px;
+  position: relative;
+  color: #fff;
+  background: #d82923;
+  font-size: 23px;
+  padding: 4px;
+  font-family: monospace;
+}
+
+.pagination a.next:hover {
+  background: #E34E48;
+}
+
+.pagination a.next:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.pagination a.active {
+  border-color: #bbb;
+  background: #d82923;
+  color: #fff;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25) inset;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.25) inset;
+}

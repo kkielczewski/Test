@@ -1,0 +1,156 @@
+// Video Carousel
+.videoHeader {
+  width: 740px;
+}
+.videoCarousel {
+  width: 1600px;
+  margin: auto;
+  .videoCard {
+    padding: 13px;
+    outline-color: white;
+    height: 900px;
+    .card {
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
+      .image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+    }
+  }
+  .slick-arrow {
+    width: 80px;
+    height: 80px;
+    z-index: 1;
+    background-color: white;
+    border-radius: 50%;
+  }
+  .slick-arrow::before {
+    opacity: 1;
+    color: #db2828;
+    z-index: 1;
+    font-size: 100px;
+    position: relative;
+    left: -10px;
+    top: -3px;
+  }
+  .slick-prev {
+    left: -77px;
+  }
+  .slick-next {
+    right: -77px;
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .videoHeader {
+    width: 640px;
+  }
+  .videoCarousel {
+    width: 1200px;
+    .videoCard {
+      height: 675px;
+    }
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .videoHeader {
+    width: 580px;
+  }
+  .videoCarousel {
+    width: 800px;
+    .videoCard {
+      height: 450px;
+    }
+    .slick-arrow {
+      width: 50px;
+      height: 50px;
+    }
+    .slick-arrow::before {
+      font-size: 64px;
+    }
+    .slick-prev {
+      left: -40px;
+    }
+    .slick-next {
+      right: -46px;
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .videoHeader {
+    width: 470px;
+  }
+}
+
+.homeVideosContainer {
+  .homeVideos {
+    width: 700px;
+    margin: auto;
+    .card {
+      width: 672px;
+      height: 378px;
+      margin: 0 14px 20px;
+      border-radius: 0;
+      box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
+      .image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+    }
+    .videoNav {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homeVideosContainer {
+    .homeVideos {
+      width: 496px;
+      .card {
+        width: 496px;
+        height: 279px;
+        margin: 0 0 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .videoHeader {
+    width: 325px;
+  }
+  .homeVideosContainer {
+    .homeVideos {
+      width: 400px;
+      .card {
+        width: 400px;
+        height: 225px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .videoHeader {
+    width: 275px;
+  }
+  .homeVideosContainer {
+    .homeVideos {
+      width: 100%;
+      .card {
+        width: 100%;
+        height: 196px;
+      }
+    }
+  }
+}

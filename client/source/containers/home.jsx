@@ -1,230 +1,23 @@
 import React from 'react';
-import { Header, Responsive } from 'semantic-ui-react';
-import Slider from 'react-slick';
-import Pagination from 'react-js-pagination';
-import VideoCard from '../components/video-card';
-import DoctorCard from '../components/doctor-card';
-import ProductCard from '../components/product-card';
+import VideoCarousel from './video-carousel';
+import ExpertCarousel from './expert-carousel';
+import ProductCarousel from './product-carousel';
 import Survey from '../components/survey';
 import MainArticles from './main-articles';
-import { getSomeVideos } from '../utils/youtube-utils';
-import VideoPlaceholder from '../assets/images/video-placeholder.jpg';
 import MoviesPlaceholder from '../assets/images/movies-placeholder.png';
 
+
 class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      allVideos: [],
-      currentVideos: [],
-      activeVideos: 1,
-      totalVideos: null,
-      allDoctors: [],
-      currentDoctors: [],
-      activePage: 1,
-      totalCount: null,
-      allProducts: []
-    };
-    this.handlePageChange = this.handlePageChange.bind(this);
-    this.handleVideosChange = this.handleVideosChange.bind(this);
-  }
-
-  async componentDidMount() {
-    const object = await getSomeVideos('UUlYlNvdBOuwuQZrCle9BrcA');
-
-    const doctors = [{ link: '/expert/1', thumbnail: '' },
-      { link: '/expert/2', thumbnail: '' },
-      { link: '/expert/3', thumbnail: '' },
-      { link: '/expert/4', thumbnail: '' },
-      { link: '/expert/5', thumbnail: '' },
-      { link: '/expert/6', thumbnail: '' },
-      { link: '/expert/7', thumbnail: '' }];
-
-    const products = [{ link: '1050,daktarin-krem-15-g.html', name: 'Daktarin krem 15 g', price: '20,16', thumbnail: '/img/product/1050/kind/1' },
-      { link: '21180,4-flex-30-saszetki-kolagen-nowej-generacji-witamina-c.html', name: '4 Flex 30 sasz.-zdrowe kości ,stawy,ścięgna', price: '77,70', thumbnail: '/img/product/21180/kind/1' },
-      { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
-      { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' },
-      { link: '1050,daktarin-krem-15-g.html', name: 'Daktarin krem 15 g', price: '20,16', thumbnail: '/img/product/1050/kind/1' },
-      { link: '21180,4-flex-30-saszetki-kolagen-nowej-generacji-witamina-c.html', name: '4 Flex 30 sasz.-zdrowe kości ,stawy,ścięgna', price: '77,70', thumbnail: '/img/product/21180/kind/1' },
-      { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
-      { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' }];
-
-    this.setState({ allVideos: object.videos, currentVideos: object.videos.slice(0, 4), totalVideos: object.totalCount, allDoctors: doctors, currentDoctors: doctors.slice(0, 4), totalCount: 7, allProducts: products });
-  }
-
-  handlePageChange(pageNumber) {
-    const offset = (pageNumber - 1) * 4;
-    const currentItems = this.state.allDoctors.slice(offset, offset + 4);
-    this.setState({ activePage: pageNumber, currentDoctors: currentItems });
-  }
-
-  handleVideosChange(pageNumber) {
-    const offset = (pageNumber - 1) * 4;
-    const currentItems = this.state.allVideos.slice(offset, offset + 4);
-    this.setState({ activeVideos: pageNumber, currentVideos: currentItems });
-  }
-
   render() {
-    const videoSettings = {
-      className: 'videoCarousel',
-      centerMode: true,
-      infinite: true,
-      centerPadding: '0px',
-      slidesToShow: 1,
-      speed: 500,
-      swipeToSlide: true
-    };
-    const doctorSettings = {
-      className: 'doctorCarousel',
-      centerMode: true,
-      infinite: true,
-      centerPadding: '0px',
-      slidesToShow: 5,
-      speed: 300,
-      swipeToSlide: true,
-      autoplaySpeed: 3000,
-      responsive: [
-        {
-          breakpoint: 2170,
-          settings: {
-            slidesToShow: 4
-          }
-        },
-        {
-          breakpoint: 1420,
-          settings: {
-            slidesToShow: 4
-          }
-        },
-        {
-          breakpoint: 1020,
-          settings: {
-            slidesToShow: 3
-          }
-        }
-      ]
-    };
-    const productsSettings = {
-      className: 'productCarousel',
-      centerMode: true,
-      infinite: true,
-      centerPadding: '0px',
-      slidesToShow: 7,
-      slidesToScroll: 3,
-      speed: 300,
-      swipeToSlide: true,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      responsive: [
-        {
-          breakpoint: 2170,
-          settings: {
-            slidesToShow: 6
-          }
-        },
-        {
-          breakpoint: 1420,
-          settings: {
-            slidesToShow: 5
-          }
-        },
-        {
-          breakpoint: 1020,
-          settings: {
-            slidesToShow: 4
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToScroll: 2
-          }
-        }
-      ]
-    };
     return (
       <div className='mainContainer' >
         <div className='blueStripe' ></div>
-        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center`, boxShadow: 'rgba(34, 36, 38, 0.12) 0px 2px 10px 8px, rgba(34, 36, 38, 0.15) 0px 2px 10px 0px' }} />
-        <div className='whiteContainer' >
-          <div className='background whiteVideos' />
-          <Header className='recomendedProducts videoHeader' textAlign='center' size='huge' >Allecco.tv TWÓJ PORTAL O ZDROWIU</Header>
-          <Responsive minWidth='769' >
-            <Slider {...videoSettings} >
-              {this.state.allVideos.map(video => <div className='videoCard'><VideoCard video={video} image={VideoPlaceholder} imageClass='videoImage' contentClass='videoContent' /></div>)}
-            </Slider>
-          </Responsive>
-          <Responsive maxWidth='768' >
-            <div className='homeVideosContainer' >
-              <div className='homeVideos' >
-              {this.state.currentVideos.map(video => <div className='videoCard'><VideoCard video={video} image={VideoPlaceholder} imageClass='videoImage' contentClass='videoContent' /></div>)}
-                <div className='videoNav' >
-                  <Pagination
-                  hideFirstLastPages
-                  activePage={this.state.activeVideos}
-                  itemsCountPerPage={4}
-                  totalItemsCount={this.state.totalVideos}
-                  pageRangeDisplayed={5}
-                  activeClass="activeli"
-                  activeLinkClass="active"
-                  linkClassPrev="prev"
-                  linkClassNext="next"
-                  prevPageText="<"
-                  nextPageText='>'
-                  onChange={this.handleVideosChange}
-                  />
-                </div>
-              </div>
-            </div>
-          </Responsive>
-        </div>
-        <div className='whiteContainer' >
-          <div className='background whiteArticles' />
-          <Header className='recomendedProducts mainArticlesHeader' textAlign='center' size='huge' >Najnowsze Artykuły</Header>
-          <MainArticles />
-        </div>
-        <div className='whiteContainer' >
-          <div className='background whiteDoctor' />
-          <Header className='recomendedProducts doctorHeader' textAlign='center' size='huge' >Wybierz swojego eksperta</Header>
-          <Responsive minWidth='769' >
-            <Slider {...doctorSettings} >
-              {this.state.allDoctors.map(doctor => <DoctorCard contentClass='doctorContent' imageClass='Image' link={doctor.link} />)}
-            </Slider>
-          </Responsive>
-          <Responsive maxWidth='768' >
-            <div className='homeExpertsContainer' >
-              <div className='homeExperts' >
-                {this.state.currentDoctors.map(doctor => <DoctorCard contentClass='doctorContent' imageClass='Image' link={doctor.link} />)}
-                <div className='videoNav' >
-                  <Pagination
-                  hideFirstLastPages
-                  activePage={this.state.activePage}
-                  itemsCountPerPage={4}
-                  totalItemsCount={this.state.totalCount}
-                  pageRangeDisplayed={5}
-                  activeClass="activeli"
-                  activeLinkClass="active"
-                  linkClassPrev="prev"
-                  linkClassNext="next"
-                  prevPageText="<"
-                  nextPageText='>'
-                  onChange={this.handlePageChange}
-                  />
-                </div>
-              </div>
-            </div>
-          </Responsive>
-        </div>
+        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center`, boxShadow: '0px 6px 12px 0px rgba(0,0,0,0.3)' }} />
+        <VideoCarousel />
+        <MainArticles />
+        <ExpertCarousel />
         <Survey/>
-        <div className='whiteContainer' >
-          <div className='background whiteProduct' />
-          <Header className='recomendedProducts productHeader' textAlign='center' size='huge' >Polecane produkty</Header>
-          <div>
-            <Slider {...productsSettings} >
-              {this.state.allProducts.map(product => <ProductCard imageClass='Image' product={product} />)}
-            </Slider>
-          </div>
-        </div>
+        <ProductCarousel />
       </div>
     );
   }

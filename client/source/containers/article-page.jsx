@@ -1,27 +1,28 @@
 import React from 'react';
-import { Header, Button, Image, Input, Responsive, Segment } from 'semantic-ui-react';
-import Slider from 'react-slick';
+import { Header, Button, Responsive } from 'semantic-ui-react';
 import { getSomeVideos } from '../utils/youtube-utils';
-import VideoCard from '../components/video-card';
 import ArticleCard from '../components/article-card';
 import ArticleCardBig from '../components/article-card-big';
 import MainArticles from './main-articles';
-import ProductCard from '../components/product-card';
 import ProductCardSmall from '../components/product-card-small';
-import Advice from '../components/advice';
 import Avatar from '../assets/images/avatarPlaceholder.png';
+import ExpertInfo from './expert-info';
+import Advice from '../components/advice';
+import ExpertMovies from './expert-movies';
+import ExpertArticles from './expert-articles';
 import ArticlePlaceholder from '../assets/images/article-placeholder.png';
+import ProductCarousel from './product-carousel';
 
 class VideoPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      allProducts: [],
       allArticles: [],
       expertVideos: [],
       expertArticles: [],
       title: '',
-      content: []
+      content: [],
+      allProducts: []
     };
 
     this.resolveDescription = this.resolveDescription.bind(this);
@@ -40,6 +41,15 @@ class VideoPage extends React.Component {
       }
     });
 
+    const products = [{ link: '1050,daktarin-krem-15-g.html', name: 'Daktarin krem 15 g', price: '20,16', thumbnail: '/img/product/1050/kind/1' },
+      { link: '21180,4-flex-30-saszetki-kolagen-nowej-generacji-witamina-c.html', name: '4 Flex 30 sasz.-zdrowe kości ,stawy,ścięgna', price: '77,70', thumbnail: '/img/product/21180/kind/1' },
+      { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
+      { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' },
+      { link: '1050,daktarin-krem-15-g.html', name: 'Daktarin krem 15 g', price: '20,16', thumbnail: '/img/product/1050/kind/1' },
+      { link: '21180,4-flex-30-saszetki-kolagen-nowej-generacji-witamina-c.html', name: '4 Flex 30 sasz.-zdrowe kości ,stawy,ścięgna', price: '77,70', thumbnail: '/img/product/21180/kind/1' },
+      { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
+      { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' }];
+
     const object = [
       { type: 'title', text: 'Czy istnieje skuteczna szczepionka na odporność? Czy można szczepić za pomocą doustnych granulek? Po jakie preparaty wzmacniające odporność możemy sięgnąć bez recepty? Oto porady eksperta allecco.pl.'},
       { type: 'paragraph', text: 'Szczepionka na odporność zawiera lizaty bakteryjne, czyli zabite komórki bakterii lub ich fragmenty. Mają one na celu aktywowanie naszego układu odpornościowego, stymulowanie jego komórek do pracy. Szczepionka wywołuje cały szereg reakcji w naszym organizmie, podobnych do tych, które mają miejsce kiedy dochodzi do prawdziwego zachorowania. Jednak w przypadku szczepionki, komórki odpornościowe uczą się radzić sobie z bakteriami, bez ryzyka wywołania choroby.'},
@@ -52,21 +62,12 @@ class VideoPage extends React.Component {
       { type: 'paragraph', text: 'Wspomniane wyżej szczepionki dostępne są tylko po wizycie u lekarza, który może wypisać na nie receptę. Mamy jednak szeroki wybór środków wspierających układ immunologiczny bez recepty, stanowiących świetną alternatywę. Można je zastosować zarówno u dzieci, jak i u osób dorosłych.'}
     ];
 
-    const products = [{ link: '1050,daktarin-krem-15-g.html', name: 'Daktarin krem 15 g', price: '20,16', thumbnail: '/img/product/1050/kind/1' },
-      { link: '21180,4-flex-30-saszetki-kolagen-nowej-generacji-witamina-c.html', name: '4 Flex 30 sasz.-zdrowe kości ,stawy,ścięgna', price: '77,70', thumbnail: '/img/product/21180/kind/1' },
-      { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
-      { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' },
-      { link: '1050,daktarin-krem-15-g.html', name: 'Daktarin krem 15 g', price: '20,16', thumbnail: '/img/product/1050/kind/1' },
-      { link: '21180,4-flex-30-saszetki-kolagen-nowej-generacji-witamina-c.html', name: '4 Flex 30 sasz.-zdrowe kości ,stawy,ścięgna', price: '77,70', thumbnail: '/img/product/21180/kind/1' },
-      { link: '28063,4-lacti-20-kaps.html', name: '4 lacti 20 kaps.', price: '8,84', thumbnail: '/img/product/28063/kind/1' },
-      { link: '42622,acai-berry-strong-90-tabletek.html', name: 'Acai Berry strong 90 tabletek', price: '24,99', thumbnail: '/img/product/42622/kind/1' }];
-
-    const articles = [{ link: '/article/1', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', thumbnails: '' },
-      { link: '/article/2', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', thumbnails: '' },
-      { link: '/article/3', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', description: 'Lorem ipsum dolor sit amet.', thumbnails: '' },
-      { link: '/article/4', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', thumbnails: '' },
-      { link: '/article/5', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', thumbnails: '' },
-      { link: '/article/6', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', description: 'Lorem ipsum dolor sit amet, consectetur.', thumbnails: '' }];
+    const articles = [{ link: '/blog/1', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', thumbnails: '' },
+      { link: '/blog/2', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', thumbnails: '' },
+      { link: '/blog/3', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', description: 'Lorem ipsum dolor sit amet.', thumbnails: '' },
+      { link: '/blog/4', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', thumbnails: '' },
+      { link: '/blog/5', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.', thumbnails: '' },
+      { link: '/blog/6', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', description: 'Lorem ipsum dolor sit amet, consectetur.', thumbnails: '' }];
 
     this.setState({ allProducts: products, allArticles: articles, expertVideos: all, expertArticles: articles, expert: 'Wanda Baltaza', title: 'Szczepionki na odporność - jak działają, czy są skuteczne?', content: object });
   }
@@ -96,51 +97,12 @@ class VideoPage extends React.Component {
   }
 
   render() {
-    const productsSettings = {
-      className: 'productCarousel',
-      centerMode: true,
-      infinite: true,
-      centerPadding: '0px',
-      slidesToShow: 7,
-      slidesToScroll: 3,
-      speed: 300,
-      focusOnSelect: true,
-      swipeToSlide: true,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      responsive: [
-        {
-          breakpoint: 2170,
-          settings: {
-            slidesToShow: 6
-          }
-        },
-        {
-          breakpoint: 1420,
-          settings: {
-            slidesToShow: 5
-          }
-        },
-        {
-          breakpoint: 1020,
-          settings: {
-            slidesToShow: 4
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToScroll: 2
-          }
-        }
-      ]
-    };
     return (
       <div className='mainContainer' >
         <div className='blueStripe' ></div>
         <div className='videoPageContainer' >
           <div className='main' >
-            <ArticleCardBig imageClass='videoImage' image={ArticlePlaceholder} />
+            <ArticleCardBig image={ArticlePlaceholder} />
             <div className='title' >
               <Header>{this.state.title}</Header>
               <Responsive maxWidth='1020' >
@@ -156,82 +118,45 @@ class VideoPage extends React.Component {
               {this.resolveDescription()}
             </div>
           </div>
-          <div className='sidePanel' >
-            <div className='center' >
-              <Header>OSTATNIE ARTYKUŁY</Header>
-              <div className='lastAM' >
-                {this.state.allArticles.slice(0, 2).map(article => <ArticleCard id='1' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
+          <Responsive minWidth='1021' >
+            <div className='sidePanel' >
+              <div className='center' >
+                <Header>OSTATNIE ARTYKUŁY</Header>
+                <div className='lastAM' >
+                  {this.state.allArticles.slice(0, 2).map(article => <ArticleCard id='1' image={ArticlePlaceholder} article={article} />)}
+                </div>
+                <Header className='share' >UDOSTĘPNIJ NA:</Header>
+                <div className='social' >
+                  <Button onClick={this.shareFacebook} icon='facebook' />
+                  <Button onClick={this.shareTwitter} icon='twitter' />
+                </div>
               </div>
-              <Header className='share' >UDOSTĘPNIJ NA:</Header>
-              <div className='social' >
-                <Button onClick={this.shareFacebook} icon='facebook' />
-                <Button onClick={this.shareTwitter} icon='twitter' />
+              <div className='articleProductsContainer' >
+                <Header>PRODUKTY Z ARTYKUŁU</Header>
+                <div className='articleProducts' >
+                  {this.state.allProducts.slice(0, 4).map(product => <ProductCardSmall contentClass='content' product={product} />)}
+                </div>
               </div>
             </div>
-            <div className='articleProductsContainer' >
-              <Header>PRODUKTY Z ARTYKUŁU</Header>
-              <div className='articleProducts' >
-                {this.state.allProducts.slice(0, 4).map(product => <ProductCardSmall imageClass='Image' contentClass='content' product={product} />)}
-              </div>
-            </div>
-          </div>
+          </Responsive>
         </div>
         <Responsive style={{ clear: 'both', marginBottom: '30px' }} maxWidth='1020' >
           <div className='whiteContainer doctorInfo' >
             <div className='background whiteHundred' />
             <Header className='mentionedProducts productHeader' textAlign='center' size='huge' >PRODUKTY Z ARTYKUŁU</Header>
             <div className='articleProductsSmall' >
-              {this.state.allProducts.slice(0, 4).map(product => <ProductCardSmall imageClass='Image' contentClass='content' product={product} />)}
+              {this.state.allProducts.slice(0, 4).map(product => <ProductCardSmall contentClass='content' product={product} />)}
             </div>
           </div>
         </Responsive>
-        <div style={{ clear: 'both', marginBottom: '30px' }} >
-        <div className='whiteContainer doctorInfo' >
-          <div className='background whiteHundred' />
-            <div className='expertContainer' >
-              <div className='imageContainer' >
-                <Image src={Avatar} className='expertImage' />
-              </div>
-              <div className='details' >
-                <Header>{this.state.expert}</Header>
-                <div className='description' >KILKA SLOW O EKSPERCIE Opis filmu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <ExpertInfo avatar={Avatar} expert={this.state.expert} />
         <Advice />
-        <div className='whiteContainer' >
-          <div className='background whiteMovies' />
-          <div className='otherMovies' >
-            <Header className='recomendedProducts productHeader' dividing textAlign='center' size='huge' >Inne filmy experta</Header>
-            <div className='expertMovies' >
-              {this.state.expertVideos.slice(0, 6).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
-            </div>
-          </div>
-        </div>
-        <div className='whiteContainer' >
-          <div className='background whiteArticles' />
-          <Header className='recomendedProducts otherArticlesHeader' dividing textAlign='center' size='huge' >Inne artykuły experta</Header>
-          <div className='otherMovies' >
-              <div className='otherArticles' >
-              {this.state.expertArticles.slice(0, 4).map(article => <ArticleCard id='2' contentClass='articleContent' imageClass='Image' image={ArticlePlaceholder} article={article} />)}
-              </div>
-          </div>
-        </div>
+        <ExpertMovies expertVideos={this.state.expertVideos} />
+        <ExpertArticles expertArticles={this.state.expertArticles} placeholder={ArticlePlaceholder} />
         <Responsive maxWidth='1020' >
-          <div className='whiteContainer' >
-            <div className='background whiteArticles' />
-            <Header className='recomendedProducts mainMoviesHeader' dividing textAlign='center' size='huge' >Ostatnie Artykuły</Header>
-            <MainArticles />
-          </div>
+          <MainArticles />
         </Responsive>
-        <div className='whiteContainer' >
-          <div className='background whiteProduct' />
-          <Header dividing className='recomendedProducts productHeader' textAlign='center' size='huge' >Polecane produkty</Header>
-          <Slider {...productsSettings} >
-            {this.state.allProducts.map(product => <ProductCard product={product} />)}
-          </Slider>
-        </div>
+        <ProductCarousel />
       </div>
     );
   }

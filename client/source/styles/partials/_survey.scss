@@ -1,0 +1,259 @@
+//Survey
+
+.survey {
+  position: relative;
+  height: 565px;
+  margin-top: 70px;
+  .surveySegment {
+    width: 1980px;
+    height: 565px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    img {
+      width: 980px;
+      height: 450px;
+      float: left;
+      position: relative;
+      top: 65px;
+      box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
+    }
+    .segment{
+      width: 1000px;
+      float: right;
+      text-align: left;
+      padding: 60px 35px;
+      box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
+      border-radius: 0;
+      .header {
+        font-size: 50px;
+        color: #db2828;
+        border-style: solid;
+        width: 300px;
+        margin-bottom: 40px;
+      }
+      .paragraph {
+        font-size: 36px;
+        width: 80%;
+        p {
+          line-height: 38px;
+          margin-bottom: 35px;
+        }
+        p:first-child {
+          margin-bottom: 0;
+        }
+        p:last-child {
+          margin-bottom: 70px;
+        }
+      }
+      .input {
+        font-size: 30px;
+        width: 600px;
+        input {
+          padding: 0.5em 1em;
+          width: 100%;
+          border-radius: 0;
+          background-color: #f5ccba;
+          color: #e47e64;
+        }
+        input::placeholder {
+          color: #e47e64;
+        }
+        input:focus {
+          background-color: #f5ccba;
+          color: #e47e64;
+          border-radius: 0;
+        }
+      }
+      .button {
+        font-size: 30px;
+        padding: 16px 30px;
+        margin-left: 20px;
+        color: black;
+        background-color: white;
+        border-style: solid;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .survey {
+    height: 420px;
+    .surveySegment {
+      width: 1404px;
+      height: 420px;
+      img {
+        width: 700px;
+        height: 321px;
+        top: 48px;
+      }
+      .segment {
+        width: 704px;
+        padding: 40px 35px;
+        .header {
+          font-size: 36px;
+          width: 200px;
+        }
+        .paragraph {
+          font-size: 24px;
+          p {
+            line-height: 26px;
+          }
+          p:last-child {
+            margin-bottom: 30px;
+          }
+        }
+        .input {
+          font-size: 22px;
+          width: 460px;
+        }
+        .button {
+          font-size: 22px;
+          padding: 11px 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .survey {
+    height: 310px;
+    .surveySegment {
+      width: 972px;
+      height: 310px;
+      img {
+        width: 472px;
+        height: 216px;
+      }
+      .segment {
+        width: 500px;
+        padding: 30px 20px;
+        .header {
+          font-size: 28px;
+          width: 150px;
+          margin-bottom: 15px;
+        }
+        .paragraph {
+          font-size: 21px;
+          width: 100%;
+          p {
+            line-height: 23px;
+            margin-bottom: 20px;
+          }
+          p:last-child {
+            margin-bottom: 20px;
+          }
+        }
+        .input {
+          width: 300px;
+          font-size: 18px;
+        }
+        .button {
+          font-size: 18px;
+          padding: 7px 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .survey {
+    height: 302px;
+    margin-top: 70px;
+    .surveySegment {
+      width: 744px;
+      height: 302px;
+      .segment {
+        width: 100%;
+        padding: 35px 25px;
+        .paragraph {
+          width: 80%;
+        }
+        .input {
+          width: 375px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .survey {
+    height: 314px;
+    .surveySegment {
+      width: 100%;
+      height: 314px;
+      .segment {
+        padding: 15px 10px;
+        height: auto;
+        border-radius: 0;
+        text-align: center;
+        .header {
+          margin: auto auto 15px;
+        }
+        .paragraph {
+          width: 432px;
+          margin: auto;
+        }
+        .input {
+          display: block;
+          margin: 10px auto;
+          width: 375px;
+        }
+        .button {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .survey {
+    height: 310px;
+    margin-top: 30px;
+    .surveySegment {
+      height: 310px;
+      .segment {
+        .header {
+          font-size: 28px;
+          width: 150px;
+        }
+        .paragraph {
+          width: 100%;
+          font-size: 18px;
+          p {
+            line-height: 20px;
+          }
+        }
+        .input {
+          width: 380px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .survey {
+    height: 370px;
+    margin-top: 70px;
+    .surveySegment {
+      height: 370px;
+      .segment {
+        .paragraph {
+          font-size: 15px;
+        }
+        .input {
+          width: 278px;
+        }
+      }
+    }
+  }
+}

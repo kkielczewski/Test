@@ -1,0 +1,293 @@
+// Doctor Carousel
+.expertHeader {
+  width: 530px;
+}
+.expertCarousel {
+  width: 1820px;
+  margin: 10px auto;
+  .card {
+    border-radius: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 465px;
+    padding: 20px;
+    background-color: transparent;
+    box-shadow: none;
+    a {
+      box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
+    }
+    .Image {
+      width: 324px;
+      height: 425px;
+      position: absolute;
+      left: 20px;
+      top: 20px;
+    }
+    .black {
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: 0;
+      transition: all .4s ease-in-out;
+    }
+    .expertContent {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      border: none !important;
+      padding: 0;
+      opacity: 0;
+      transition: all .4s ease-in-out;
+      position: relative;
+      .header {
+        font-size: 34px;
+        width: 324px;
+        color: white;
+        padding: 5px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: 0;
+        margin-right: -50%;
+        transform: translate(-50%,-50%);
+      }
+    }
+  }
+  .card:hover {
+    .black {
+      opacity: 0.7;
+      transition: all .4s ease-in-out;
+      .expertContent {
+        opacity: 1;
+        transition: all .4s ease-in-out;
+      }
+    }
+  }
+  .ui.card>:only-child {
+    border-radius: 0!important;
+  }
+  .slick-arrow {
+    width: 64px;
+    height: 64px;
+    z-index: 1;
+    background-color: white;
+    border-radius: 50%;
+  }
+  .slick-arrow::before {
+    opacity: 1;
+    color: #db2828;
+    z-index: 1;
+    font-size: 80px;
+    position: relative;
+    left: -7px;
+  }
+  .slick-prev {
+    left: -50px;
+  }
+  .slick-next {
+    right: -50px;
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .expertHeader {
+    width: 450px;
+  }
+  .expertCarousel {
+    width: 1270px;
+    .card {
+      height: 407px;
+      .Image {
+        width: 278px;
+        height: 367px;
+      }
+      .expertContent {
+        .header {
+          width: 278px;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .expertHeader {
+    width: 385px;
+  }
+  .expertCarousel {
+    width: 900px;
+    .slick-prev {
+      left: -30px;
+    }
+    .slick-next {
+      right: -30px;
+    }
+    .card {
+      padding: 10px;
+      height: 288px;
+      .Image {
+        top: 10px;
+        left: 10px;
+        width: 205px;
+        height: 268px;
+      }
+      .expertContent {
+        .header {
+          font-size: 15px;
+          width: 205px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .expertCarousel {
+    .card {
+      .black {
+        display: none;
+      }
+      .expertContent {
+        opacity: 1;
+        width: 205px;
+        height: 46px;
+        margin: auto;
+        background-color: white;
+        border: solid !important;
+        border-width: 1px!important;
+        border-color: lightgray !important;
+        display: flex;
+        position: absolute;
+        bottom: 10px;
+        overflow: hidden;
+        .header {
+          padding: 5px;
+          margin: auto;
+          color: black;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .expertHeader {
+    width: 325px;
+  }
+  .expertCarousel {
+    width: 672px;
+    .card {
+      height: 255px;
+      .Image {
+        width: 204px;
+        height: 235px;
+      }
+      .expertContent {
+        width: 204px;
+      }
+    }
+    .slick-prev {
+      left: -33px;
+    }
+    .slick-next {
+      right: -33px;
+    }
+  }
+}
+.homeExpertsContainer {
+  .homeExperts {
+    width: 660px;
+    margin: auto;
+    height: auto;
+    overflow: hidden;
+    .card {
+      width: 300px;
+      height: 384px;
+      margin: 15px;
+      border-radius: 0;
+      float: left;
+      box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
+      .Image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+      .expertContent {
+        position: absolute;
+        bottom: -1px;
+        width: 100%;
+        height: 50px;
+        margin: auto;
+        background-color: white;
+        text-align: center;
+        border: solid !important;
+        border-width: 1px 0 0 0 !important;
+        border-color: lightgray !important;
+        overflow: hidden;
+        display: flex;
+        .header {
+          font-size: 18px;
+          padding: 5px;
+          margin: auto;
+          color: black;
+        }
+      }
+    }
+    .videoNav {
+      width: 100%;
+      text-align: center;
+      clear: both;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homeExpertsContainer {
+    .homeExperts {
+      width: 480px;
+      .card {
+        width: 220px;
+        height: 281px;
+        margin: 10px;
+        .expertContent {
+          height: 45px;
+          .header {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .homeExpertsContainer {
+    .homeExperts {
+      width: 360px;
+      .card {
+        width: 340px;
+        height: 435px;
+        margin: 0 10px 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .expertHeader {
+    width: 275px;
+  }
+  .homeExpertsContainer {
+    .homeExperts {
+      width: 100%;
+      .card {
+        width: 100%;
+        height: 410px;
+        margin: 0 0 30px;
+      }
+    }
+  }
+}

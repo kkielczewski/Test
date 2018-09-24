@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, Image, Responsive } from 'semantic-ui-react';
-import { withRouter } from 'react-router-dom';
 import DoctorPlaceholder from '../assets/images/avatarPlaceholder.png';
 
 class DoctorCard extends React.Component {
@@ -27,4 +26,4 @@ class DoctorCard extends React.Component {
   }
 }
 
-export default withRouter(DoctorCard);
+export default DoctorCard;

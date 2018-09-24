@@ -1,12 +1,11 @@
 import React from 'react';
 import { Card, Image, Responsive } from 'semantic-ui-react';
-import { NavLink } from 'react-router-dom';
 
 class ArticleCard extends React.Component {
   render() {
     return (
       <Card>
-        <a draggable='false' href={`/article/${this.props.id}`} >
+        <a draggable='false' href={this.props.article.link} >
           <Image src={this.props.image} className={this.props.imageClass} />
           <Responsive minWidth='1025' style={{ height: '100%' }} >
             <div className='black'>

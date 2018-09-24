@@ -9,19 +9,19 @@
   position: relative;
   top: 10px;
 }
+// Pages and Newsletter
 .videoContainer {
   display: flex;
   width: 1980px;
   margin: 130px auto auto;
-
+  // Pages
   .videoList {
     margin: 0 0 auto auto;
     height: 1610px;
     width: 1225px;
     position: relative;
     background-color: white;
-    box-shadow: 0 2px 10px 8px rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15);
-
+    box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
     .videoNav {
       width: 100%;
       text-align: center;
@@ -29,52 +29,44 @@
       bottom: 0;
       clear: both;
     }
-
     .card {
       width: 560px;
       height: 315px;
       margin: 35px;
-      box-shadow: 0 2px 10px 6px rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15);
-
-      .listImage {
+      box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
+      .image {
         width: 100%;
         height: 100%;
         position: absolute;
-        left: 0px;
-        top: 0px;
-        z-index: 1;
       }
     }
-
     .card:nth-child(even) {
       clear: left;
       float: left;
       margin-top: 0;
     }
-
     .card:nth-child(2) {
       margin-top: 0px;
     }
   }
-
+  // Newsletter
   .newsletterContainer {
     height: 1559px;
     width: 755px;
   }
-
   .newsletter {
     height: 1452px;
     width: 716px;
     margin: 40px!important;
-    margin-right: 0 !important;
-    padding: 60px !important;
+    margin-right: 0;
+    padding: 60px;
     position: relative;
     top: 40px;
-    box-shadow: 0 2px 10px 8px rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15) !important;
+    box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3) !important;
     border-radius: 0;
     .header {
-      font-size: 30px!important;
-      margin-top: 30px!important;
+      font-size: 30px;
+      margin-top: 30px;
       margin-bottom: 30px;
       color: #db2828;
     }
@@ -82,13 +74,11 @@
       font-size: 36px;
       margin-bottom: 80px;
     }
-
     .input {
       width: 600px;
       display: block;
       font-size : 30px;
       margin: auto auto 80px auto;
-
       input {
         padding: 0.5em 0.6em;
         width: 100%;
@@ -105,7 +95,6 @@
         border-radius: 0;
       }
     }
-
     .checkbox {
       font-size: 23px;
       margin-bottom: 90px;
@@ -125,7 +114,6 @@
         height: 51px;
       }
     }
-
     .button {
       margin-bottom: 40px;
       font-size: 40px;
@@ -142,47 +130,43 @@
   .moviesHeader {
     width: 145px;
   }
+  // Pages and Newsletter
   .videoContainer {
     width: 1404px;
-
+    // Pages
     .videoList {
       height: 1240px;
       width: 922px;
-
       .card {
         width: 416px;
         height: 234px;
         margin: 30px;
       }
     }
-  
+    // Newsletter
     .newsletterContainer {
       height: 1200px;
       width: 482px;
     }
-  
     .newsletter {
       height: 1083px;
       width: 458px;
-      padding: 25px !important;
+      padding: 25px;
       margin: 25px !important;
       top: 55px;
-
       .header {
-        font-size: 31px!important;
-        margin-top: 25px!important;
+        font-size: 31px;
+        margin-top: 25px;
       }
       .paragraph {
         font-size: 26px;
         margin-bottom: 40px;
       }
-  
       .input {
         width: 375px;
-        font-size: 28px;
+        font-size: 24px;
         margin: auto auto 40px auto;
       }
-  
       .checkbox {
         font-size: 18px;
         margin-bottom: 50px;
@@ -199,7 +183,6 @@
           font-size: 34px;
         }
       }
-  
       .button {
         font-size: 28px;
       }
@@ -214,50 +197,46 @@
   .videoPicture {
     height: 250px;
   }
+  // Pages and Newsletter
   .videoContainer {
     width: 972px;
     margin: 70px auto auto;
+    // Pages
     .videoList {
       height: 915px;
       width: 653px;
-
       .card {
         width: 304px;
         height: 171px;
         margin: 15px;
-        box-shadow: 0 2px 10px 4px rgba(34,36,38,.12), 0 2px 10px 0 rgba(34,36,38,.15);
       }
     }
-  
+    // Newsletter
     .newsletterContainer {
       height: 875px;
       width: 319px;
     }
-  
     .newsletter {
       height: 766px;
       width: 302px;
       margin: 15px !important;
-      margin-right: 0 !important;
-      padding: 15px !important;
+      margin-right: 0;
+      padding: 15px;
       top: 60px;
-
       .header {
-        font-size: 18px!important;
-        margin-top: 25px!important;
+        font-size: 18px;
+        margin-top: 25px;
         margin-bottom: 20px;
       }
       .paragraph {
         font-size: 17px;
         margin-bottom: 30px;
       }
-  
       .input {
         font-size : 20px;
         margin: auto auto 30px auto;
         width: 230px;
       }
-  
       .checkbox {
         font-size: 13px;
         margin-bottom: 20px;
@@ -274,7 +253,6 @@
           font-size: 28px;
         }
       }
-  
       .button {
         font-size: 20px;
         padding: 15px 20px;
@@ -290,32 +268,30 @@
   .videoPicture {
     height: 200px;
   }
-    .videoContainer {
-      display: inline;
-      position: relative;
-
+  // Pages and Newsletter
+  .videoContainer {
+    display: inline;
+    position: relative;
+    // Pages
     .videoList {
       height: auto;
       width: 749px;
       margin: 70px auto;
-
       .videoNav {
         position: relative;
       }
-
       .card {
         width: 352px;
         height: 198px;
         margin: 15px;
       }
     }
-  
+    // Newsletter
     .newsletterContainer {
       height: auto;
       width: 100%;
       margin: 70px auto;
     }
-  
     .newsletter {
       top: 0;
       height: auto;
@@ -323,7 +299,6 @@
       margin: auto !important;
       padding: 20px !important; 
       border-radius: 0;
-
       .header {
         margin-bottom: 10px;
         margin-top: 10px !important;
@@ -375,256 +350,119 @@
   .videoPicture {
     height: 175px;
   }
+  // Pages and Newsletter
   .videoContainer {
-  .videoList {
-    width: 100%;
-    margin: 30px auto;
-
-    .card {
-      width: 480px;
-      height: 270px;
-      margin: 10px auto;
-    }
-    .card:nth-child(2) {
-      margin-top: 25px;
-    }
-
-    .card:first-child {
-      margin-top: 20px;
-    }
-    .card:nth-child(even) {
-      float: none;
-    }
-  }
-
-  .newsletterContainer {
-    height: auto;
-    margin: 30px auto;
-  }
-  
-  .newsletter {
-    width: 100%;
-    padding: 10px !important;
-
-    .paragraph {
-      font-size: 25px;
-      line-height: 27px;
-      margin-bottom: 15px;
-    }
-
-    .input {
-      font-size: 17px;
-      width: 475px;
-      margin: 0 auto 15px auto;
-      input {
-        padding: 10px 20px;
-      }
-    }
-  }
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .videoContainer {
-  .videoList {
-    border-radius: 0;
-    .card {
-      width: 400px;
-      height: 225px;
-      margin: 10px auto;
-
-      .listContent {
-        font-size: 13px;
-      }
-    }
-
-    .card:first-child {
-      margin-top: 20px;
-    }
-  }
-  
-  .newsletter {
-    padding: 5px !important;
-
-    .header {
-      font-size: 17px !important;
-    }
-
-    .paragraph {
-      font-size: 21px;
-      line-height: 23px;
-    }
-
-    .input {
-      width: 390px;
-      input {
-        padding: 8px 15px;
-      }
-    }
-
-    .checkbox {
-      font-size: 12px;
-      line-height: 13px;
-    }
-
-    .button {
-      font-size: 17px;
-    }
-  }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .videoContainer {
-  .videoList {
-    width: 100%;
-    margin: auto;
-
-    .card {
+    // Pages
+    .videoList {
       width: 100%;
-      height: 198px;
-      margin: 0 0 20px;
-      border-radius: 0 !important;
-      border-style: solid;
-      border-width: 1px;
-      border-color: white;
-
-      .listContent {
-        padding: 10px;
+      margin: 30px auto;
+      .card {
+        width: 480px;
+        height: 270px;
+        margin: 0 auto 20px;
       }
-
-      .listImage {
-        border-radius: 0 !important;
+      .card:nth-child(2) {
+        margin-top: 25px;
+      }
+      .card:first-child {
+        margin-top: 20px;
+      }
+      .card:nth-child(even) {
+        float: none;
       }
     }
-
-    .card:first-child {
-      margin-top: 20px;
+    // Newsletter
+    .newsletterContainer {
+      height: auto;
+      margin: 30px auto;
     }
-  }
-  .newsletter {
-    width: 100%;
-    .input {
-      width: 280px;
-    }
-  }
-  }
-}
-
-// Main Movies
-
-.mainMoviesHeader {
-  width: 350px;
-}
-
-.whiteMainMovies {
-  height: auto;
-}
-
-.mainMovies {
-  width: 1944px;
-  margin: auto;
-  overflow: hidden;
-  padding-bottom: 10px;
-
-  .card {
-    width: 608px;
-    height: 342px;
-    margin: 20px;
-    margin-top: 20px !important;
-    border-radius: 0;
-    float: left;
-    box-shadow: 0 2px 10px 6px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
-
-    .listImage {
+    .newsletter {
       width: 100%;
-      height: 100%;
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      z-index: 1;
-    }
-  }
-}
-
-@media screen and (max-width: 2170px) {
-  .mainMoviesHeader {
-    width: 290px;
-  }
-  .mainMovies {
-    width: 1356px;
-
-    .card {
-      width: 432px;
-      height: 243px;
-      margin: 10px;
-      margin-top: 10px !important;
-    }
-  }
-}
-
-@media screen and (max-width: 1420px) {
-  .mainMoviesHeader {
-    width: 250px;
-  }
-  .mainMovies {
-    width: 924px;
-
-    .card {
-      width: 288px;
-      height: 162px;
-    }
-  }
-}
-
-@media screen and (max-width: 1020px) {
-  .mainMoviesHeader {
-    width: 225px;
-  }
-  .mainMovies {
-    width: 712px;
-
-    .card {
-      width: 336px;
-      height: 189px;
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .mainMovies {
-    width: 500px;
-
-    .card {
-      width: 480px;
-      height: 270px;
-      margin: 10px;
+      padding: 10px !important;
+      .paragraph {
+        font-size: 25px;
+        line-height: 27px;
+        margin-bottom: 15px;
+      }
+      .input {
+        font-size: 17px;
+        width: 475px;
+        margin: 0 auto 15px auto;
+        input {
+          padding: 10px 20px;
+        }
+      }
     }
   }
 }
 
 @media screen and (max-width: 500px) {
-  .mainMovies {
-    width: 394px;
-    .card {
-      width: 384px;
-      height: 216px;
-      margin: 5px;
-      box-shadow: 0 2px 10px 2px rgba(34, 36, 38, 0.12), 0 2px 10px 0 rgba(34, 36, 38, 0.15);
+  // Pages and Newsletter
+  .videoContainer {
+    // Pages
+    .videoList {
+      .card {
+        width: 400px;
+        height: 225px;
+        .listContent {
+          font-size: 13px;
+        }
+      }
+      .card:first-child {
+        margin-top: 20px;
+      }
+    }
+    // Newsletter
+    .newsletter {
+      padding: 5px !important;
+      .header {
+        font-size: 17px !important;
+      }
+      .paragraph {
+        font-size: 21px;
+        line-height: 23px;
+      }
+      .input {
+        width: 390px;
+        input {
+          padding: 8px 15px;
+        }
+      }
+      .checkbox {
+        font-size: 12px;
+        line-height: 13px;
+      }
+      .button {
+        font-size: 17px;
+      }
     }
   }
 }
 
 @media screen and (max-width: 400px) {
-  .mainMovies {
-    width: 100%;
-    .card {
+  // Pages and Newsletter
+  .videoContainer {
+    // Pages
+    .videoList {
       width: 100%;
-      height: 196px;
-      margin: 0 0 20px!important;
-      border-style: solid;
-      border-width: 1px;
-      border-color: white;
+      margin: auto;
+      .card {
+        width: 100%;
+        height: 198px;
+        .listContent {
+          padding: 10px;
+        }
+      }
+      .card:first-child {
+        margin-top: 20px;
+      }
+    }
+    // Newsletter
+    .newsletter {
+      width: 100%;
+      .input {
+        width: 280px;
+      }
     }
   }
 }

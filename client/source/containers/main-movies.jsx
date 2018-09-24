@@ -1,4 +1,5 @@
 import React from 'react';
+import { Header } from 'semantic-ui-react';
 import VideoCard from '../components/video-card';
 import { getSomeVideos } from '../utils/youtube-utils';
 
@@ -18,9 +19,11 @@ class MainArticles extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='whiteContainer whiteMainMovies' >
+        <div className='background whiteMovies' />
+        <Header className='recomendedProducts mainMoviesHeader' dividing textAlign='center' size='huge' >Najnowsze Filmy</Header>
         <div className='mainMovies' >
-        {this.state.allVideos.slice(0, 6).map(video => <VideoCard imageClass='listImage' contentClass='listContent' video={video} />)}
+          {this.state.allVideos.slice(0, 6).map(video => <VideoCard video={video} />)}
         </div>
       </div>
     );

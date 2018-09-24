@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import NavBar from '../components/nav-bar';
 import Home from './home';
-import Video from './video';
+import Video from './videos';
 import Articles from './articles';
 import VideoPage from './video-page';
 import ArticlePage from './article-page';
@@ -19,19 +19,19 @@ import Footer from './footer';
 class App extends React.Component {
   render() {
     return (
-      <BrowserRouter forceRefresh={true} >
+      <BrowserRouter>
         <div style={{ height: '100%' }} >
           <NavBar>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/video" component={Video} />
             <Route exact path="/blog" component={Articles} />
-            <Route exact path="/video/:id" component={VideoPage} />
-            <Route exact path="/article/:id" component={ArticlePage} />
+            <Route path="/video/:id" component={VideoPage} />
+            <Route path="/blog/:id" component={ArticlePage} />
             <Route exact path="/expert" component={Experts} />
-            <Route exact path="/expert/:id" component={ExpertPage} />
-            <Route exact path="/info" component={Info} />
-            <Route exact path="/contact" component={Contact} />
+            <Route path="/expert/:id" component={ExpertPage} />
+            <Route path="/info" component={Info} />
+            <Route path="/contact" component={Contact} />
           </Switch>
           <Footer />
           </NavBar>

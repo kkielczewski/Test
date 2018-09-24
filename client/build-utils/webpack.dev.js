@@ -27,7 +27,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
     modules: [
       path.resolve('./source'),
-      path.resolve('./node_modules')
+      './node_modules'
     ]
   },
   module: {
