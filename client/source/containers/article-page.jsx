@@ -105,9 +105,14 @@ class VideoPage extends React.Component {
             <ArticleCardBig image={ArticlePlaceholder} />
             <div className='title' >
               <Header>{this.state.title}</Header>
+              <Responsive maxWidth='1020' >
                 <div className='buttons' >
-                  <Button className='facebook' onClick={this.shareFacebook} icon='facebook' />
+                  <div className='social' >
+                    <Button onClick={this.shareFacebook} icon='facebook' />
+                    <Button onClick={this.shareTwitter} icon='twitter' />
+                  </div>
                 </div>
+              </Responsive>
             </div>
             <div className='description' >
               {this.resolveDescription()}
@@ -119,6 +124,11 @@ class VideoPage extends React.Component {
                 <Header>OSTATNIE ARTYKUŁY</Header>
                 <div className='lastAM' >
                   {this.state.allArticles.slice(0, 2).map(article => <ArticleCard id='1' image={ArticlePlaceholder} article={article} />)}
+                </div>
+                <Header className='share' >UDOSTĘPNIJ NA:</Header>
+                <div className='social' >
+                  <Button onClick={this.shareFacebook} icon='facebook' />
+                  <Button onClick={this.shareTwitter} icon='twitter' />
                 </div>
               </div>
               <div className='articleProductsContainer' >

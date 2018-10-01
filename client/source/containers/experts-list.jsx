@@ -45,7 +45,7 @@ class ExpertsList extends React.Component {
       <div className='doctorsContainer' >
         <div className='whiteContainer whiteFull' >
           <div className='doctorList' >
-          <Header className='recomendedProducts expertsHeader' textAlign='center' size='huge' >Eksperci</Header>
+          <Header className='recomendedProducts articlesHeader' textAlign='center' size='huge' >Eskperci</Header>
             {this.state.currentExperts.map(expert => <DoctorCard link={expert.link} />)}
             <div className='doctorNav' >
               <Pagination

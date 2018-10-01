@@ -65,7 +65,7 @@ class VideoPage extends React.Component {
       }
     });
 
-    this.setState({ expertArticles: allArticles, currentArticles: allArticles.slice(0, 8), totalCountArticle: allArticles.length, expertVideos: all, currentVideos: all.slice(0,6), totalCountVideo: all.length });
+    this.setState({ expertArticles: allArticles, currentArticles: allArticles.slice(0,8), totalCountArticle: allArticles.length, expertVideos: all, currentVideos: all.slice(0,6), totalCountVideo: all.length });
   }
 
   handlePageChangeVideo(pageNumber) {
@@ -88,7 +88,7 @@ class VideoPage extends React.Component {
         <ExpertInfo expert={this.state.name} avatar={Avatar} />
         <div className='whiteContainer' >
           <div className='background' />
-          <Header className='recomendedProducts expertMoviesHeader' textAlign='center' size='huge' >Filmy eksperta</Header>
+          <Header className='recomendedProducts productHeader' dividing textAlign='center' size='huge' >Filmy eksperta</Header>
           <div className='mainMovies' >
             {this.state.currentVideos.map(video => <VideoCard video={video} />)}
           </div>
@@ -112,7 +112,7 @@ class VideoPage extends React.Component {
         <Advice />
         <div className='whiteContainer' >
           <div className='background' />
-          <Header className='recomendedProducts expertArticlesHeader' textAlign='center' size='huge' >Artykuły eksperta</Header>
+          <Header className='recomendedProducts productHeader' dividing textAlign='center' size='huge' >Artykuły eksperta</Header>
           <div className='mainArticlesContainer' >
             <div className='mainArticles' >
               {this.state.currentArticles.map(article => <ArticleCard id='1' image={ArticlePlaceholder} article={article} />)}

@@ -1,9 +1,5 @@
 
 // Videos List
-.expertsHeader {
-  width: 180px;
-  margin: 40px auto 50px !important;
-}
 .doctorsContainer {
   margin-bottom: 30px;
   margin-top: 30px;
@@ -12,6 +8,10 @@
   margin: 20px auto auto;
   height: auto;
   width: 1850px;
+  .articlesHeader {
+    position: relative;
+    top: -10px;
+  }
   .doctorNav {
     width: 100%;
     text-align: center;
@@ -43,13 +43,13 @@
       left: 0;
       right: 0;
       width: 100%;
-      height: 80px;
+      height: 40px;
       margin: auto;
       text-align: center;
       opacity: 0;
       transition: all .4s ease-in-out;
       .header {
-        font-size: 32px;
+        font-size: 30px;
         color: white;
         padding: 5px;
       }
@@ -86,10 +86,6 @@
 }
 
 @media screen and (max-width: 2170px) {
-  .expertsHeader {
-    width: 130px;
-    margin: 20px auto 30px !important;
-  }
   .doctorList {
     width: 1350px;
     .card {
@@ -97,20 +93,15 @@
       height: 384px;
       margin: 30px;
       .content {
-        height: 60px;
         .header {
-          font-size: 22px;
+          font-size: 24px;
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 1440px) {
-  .expertsHeader {
-    width: 100px;
-    margin: 20px auto 15px !important;
-  }
+@media screen and (max-width: 1420px) {
   .doctorList {
     width: 955px;
     .card {
@@ -118,9 +109,8 @@
       height: 281px;
       margin: 15px;
       .content {
-        height: 40px;
         .header {
-          font-size: 16px;
+          font-size: 15px;
         }
       }
     }
@@ -136,7 +126,7 @@
       .content {
         opacity: 1;
         background-color: white;
-        height: 60px;
+        height: 50px;
         top: auto;
         border: solid !important;
         border-width: 1px 0 0 0 !important;
@@ -145,7 +135,7 @@
         overflow: hidden;
         .header {
           color: black;
-          font-size: 19px;
+          font-size: 18px;
           margin: auto;
         }
       }
@@ -154,9 +144,6 @@
 }
 
 @media screen and (max-width: 1020px) {
-  .expertsHeader {
-    width: 110px;
-  }
   .doctorList {
     width: 690px;
     .doctorNav {
@@ -181,9 +168,9 @@
       height: 281px;
       margin: 20px;
       .content {
-        height: 55px;
+        height: 45px;
         .header {
-          font-size: 18px;
+          font-size: 15px;
         }
       }
     }
@@ -214,45 +201,5 @@
       width: 100%;
       height: 410px;
     }
-  }
-}
-
-// Expert Movies & Articles Header
-
-.expertMoviesHeader {
-  width: 280px;
-  margin: 30px auto 5px !important;
-}
-.expertArticlesHeader {
-  width: 340px;
-  margin: 30px auto 5px !important;
-}
-
-@media screen and (max-width: 2170px) {
-  .expertMoviesHeader {
-    width: 200px;
-    margin: 20px auto 5px !important;
-  }
-  .expertArticlesHeader {
-    width: 240px;
-    margin: 20px auto 5px !important;
-  }
-}
-
-@media screen and (max-width: 1440px) {
-  .expertMoviesHeader {
-    width: 160px;
-  }
-  .expertArticlesHeader {
-    width: 190px;
-  }
-}
-
-@media screen and (max-width: 1440px) {
-  .expertMoviesHeader {
-    width: 180px;
-  }
-  .expertArticlesHeader {
-    width: 210px;
   }
 }
