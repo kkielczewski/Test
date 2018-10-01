@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import { Menu, Responsive, Button, Icon } from 'semantic-ui-react';
 import Sidebar from 'react-sidebar';
 import SearchAll from './search-all';
@@ -9,7 +9,9 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sidebarOpen: false
+      sidebarOpen: false,
+      toSearch: false,
+      searchValue: null
     };
     this.toggleSidebar = this.toggleSidebar.bind(this);
     this.searchAll = this.searchAll.bind(this);
@@ -18,8 +20,8 @@ class NavBar extends React.Component {
   }
 
   searchAll(value) {
-    if (value.length !== 0) {
-      console.log(value);
+    if (value.length > 1) {
+      this.setState({ toSearch: true, searchValue: value });
     }
   }
 
@@ -43,18 +45,19 @@ class NavBar extends React.Component {
 
   render() {
     const { children } = this.props;
+    const redirect = this.state.toSearch ? <Redirect to={{ pathname: '/search', search: `?v=${this.state.searchValue}` }} /> : <div></div>;
     const MobileBar = () => (<Menu as={Menu} icon="labeled" vertical >
       <SearchAll onSearch={this.searchAll} />
       <NavLink onClick={this.closeSidebar} className= "item" exact to='/' style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }}>HOME</NavLink>
       <NavLink onClick={this.closeSidebar} className="item" exact to="/video" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >VIDEO</NavLink>
       <NavLink onClick={this.closeSidebar} className="item" to="/blog" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >BLOG</NavLink>
       <NavLink onClick={this.closeSidebar} className="item" exact to="/expert" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >EKSPERCI</NavLink>
-      <a className="item" href="//allecco.pl" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >SKLEP</a>
       <NavLink onClick={this.closeSidebar} className="item" to="/info" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >O NAS</NavLink>
       <NavLink onClick={this.closeSidebar} className="item" to="/contact" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >KONTAKT</NavLink>
       </Menu>);
     return (
       <div style={{ height: '100%' }} >
+        {redirect}
         <Responsive minWidth='769' style={{ display: 'flex', flexDirection: 'column', height: '100%' }} >
           <Menu borderless fixed='top' style={{ flex: 'none', boxShadow: '0px 6px 12px 0px rgba(0,0,0,0.3)' }}  >
             <div className='navBarContainer' >
@@ -71,7 +74,6 @@ class NavBar extends React.Component {
               <NavLink onClick={this.scrollToTop} className="item" to="/video" >VIDEO</NavLink>
               <NavLink onClick={this.scrollToTop} className="item" to="/blog" >BLOG</NavLink>
               <NavLink onClick={this.scrollToTop} className="item" to="/expert" >EKSPERCI</NavLink>
-              <a className="item" href="//allecco.pl" >SKLEP</a>
               <NavLink onClick={this.scrollToTop} className="item" to="/info" >O NAS</NavLink>
               <NavLink onClick={this.scrollToTop} className="item" to="/contact" >KONTAKT</NavLink>
             </Menu.Menu>

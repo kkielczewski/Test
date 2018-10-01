@@ -38,19 +38,29 @@
       .header {
         color: #db2828;
         float: left;
-        width: 75%;
+        width: 73%;
         font-size: 32px;
         margin-bottom: 0;
-        padding-top: 10px;
       }
       .buttons {
         float: right;
-        .button {
-          font-size: 20px;
+        .subscribe {
+          font-size: 25px;
           border-radius: 0;
           color: black;
           background-color: white;
           border-style: solid;
+          float: left;
+          margin: 0;
+          padding: 13px 20px;
+        }
+        .facebook {
+          border: none;
+          font-size: 57px;
+          padding: 0;
+          margin: 0;
+          background-color: white;
+          color: black;
         }
       }
     }
@@ -80,28 +90,17 @@
       .header {
         font-size: 38px;
         width: 240px;
-        margin: 0 auto 120px;
+        margin: 0 auto 60px;
         position: relative;
         top: 60px;
         border-style: solid;
         color: #db2828;
         text-align: center;
       }
-      // Social Buttons
-      .social {
-        width: 107px;
-        margin: auto;
-        padding-bottom: 40px;
-        .button {
-          font-size: 45px;
-          padding: 0;
-          background-color: transparent;
-          margin: 0;
-          color: black;
-        }
-      }
       // Last Articles
       .lastAM {
+        height: auto;
+        overflow: hidden;
         .card {
           width: 400px;
           height: 550px;
@@ -159,6 +158,8 @@
       }
       // Last Videos
       .lastAMVideo {
+        height: auto;
+        overflow: hidden;
         .card {
           width: 448px;
           height: 252px;
@@ -169,15 +170,6 @@
             height: 100%;
           }
         }
-      }
-      // Share Buttons
-      .share {
-        border: none;
-        color: black;
-        font-size: 28px;
-        top: 0;
-        margin: 60px auto 20px;
-        width: 100%;
       }
     }
     // Products Mentioned in Article
@@ -261,13 +253,16 @@
         width: 950px;
         padding: 0 40px;
         .header {
-          width: 68%;
+          width: 70%;
           font-size: 28px;
-          .buttons {
-            .button {
-              font-size: 22px;
-              padding: 10px 20px;
-            }
+        }
+        .buttons {
+          .subscribe {
+            font-size: 18px;
+            padding: 10px 20px;
+          }
+          .facebook {
+            font-size: 44px;
           }
         }
       }
@@ -289,13 +284,7 @@
           font-size: 30px;
           width: 180px;
           top: 40px;
-          margin: 0 auto 80px;
-        }
-        // Share Buttons
-        .share {
-          font-size: 22px;
-          margin: 0 auto 20px;
-          top: 0;
+          margin: 0 auto 40px;
         }
         // Last Articles
         .lastAM {
@@ -314,13 +303,6 @@
           .card {
             width: 320px;
             height: 180px;
-          }
-        }
-        // Social Buttons
-        .social {
-          width: 95px;
-          .button {
-            font-size: 40px;
           }
         }
         .articleProducts {
@@ -359,7 +341,7 @@
   }
 }
 
-@media screen and (max-width: 1420px) {
+@media screen and (max-width: 1440px) {
   .otherMovies {
     .header {
       font-size: 28px !important;
@@ -379,14 +361,17 @@
         width: 630px;
         padding: 0 35px;
         .header {
-          width: 70%;
+          width: 69%;
           font-size: 24px;
           padding-top: 5px;
         }
         .buttons {
-          .button {
-            font-size: 14px;
-            padding: 10px;
+          .subscribe {
+            font-size: 12px;
+            padding: 8px;
+          }
+          .facebook {
+            font-size: 34px;
           }
         }
       }
@@ -410,7 +395,7 @@
           font-size: 22px;
           width: 130px;
           top: 20px;
-          margin: 0 auto 40px;
+          margin: 0 auto 10px;
         }
         // Last Articles
         .lastAM {
@@ -438,20 +423,6 @@
               height: 200px;
             }
           }
-        }
-        // Social Buttons
-        .social {
-          width: 71px;
-          .button {
-            font-size: 30px;
-          }
-        }
-        // Share Buttons
-        .share {
-          font-size: 18px;
-          width: 150px;
-          margin: 0 auto 10px;
-          top: 0;
         }
       }
       // Products Mentioned in Article
@@ -533,21 +504,7 @@
         margin: 10px auto;
         .header {
           font-size: 23px;
-        }
-        .buttons {
-          // Social Buttons
-          .social {
-            width: 95px;
-            margin: 0;
-            height: auto;
-            overflow: hidden;
-            .button {
-              border: none;
-              font-size: 40px;
-              padding: 0;
-              margin: 0;
-            }
-          }
+          width: 74%;
         }
       }
       // Content
@@ -645,16 +602,11 @@
         }
         .buttons {
           float: none;
-          .button {
+          .subscribe {
             font-size: 18px;
-            float: left;
           }
-          // Social Buttons
-          .social {
-            width: 111px;
-            .button {
-              font-size: 44px;
-            }
+          .facebook {
+            font-size: 40px;
           }
         }
       }
@@ -687,15 +639,11 @@
       .title {
         width: 400px;
         .buttons {
-          .button {
+          .subscribe {
             font-size: 15.5px;
           }
-          // Social Buttons
-          .social {
-            width: 144px;
-            .button {
-              font-size: 41px;
-            }
+          .facebook {
+            font-size: 37px;
           }
         }
       }
@@ -742,12 +690,6 @@
       .title {
         width: 100%;
         padding: 0 8px;
-        .buttons {
-          // Social Buttons
-          .social {
-            width: 240px;
-          }
-        }
       }
       // Content
       .description {

@@ -3,12 +3,18 @@
   width: 740px;
 }
 .videoCarousel {
-  width: 1600px;
+  width: 1776px;
   margin: auto;
+  margin-top: 30px;
   .videoCard {
-    padding: 13px;
+    padding: 10px;
     outline-color: white;
-    height: 900px;
+    height: 333px;
+    width: 592px;
+    position: relative;
+    left: 0;
+    top: 0;
+    transition: width 0.5s, height 0.5s, left 0.5s, top 0.5s;
     .card {
       overflow: hidden;
       width: 100%;
@@ -21,6 +27,20 @@
         position: absolute;
       }
     }
+  }
+  .slick-center {
+    .videoCard {
+      width: 1184px !important;
+      height: 666px;
+      z-index: 1;
+      left: -296px;
+      top: -166px;
+      transition: width 2s, height 2s, left 2s, top 2s;
+    }
+  }
+  .slick-track {
+    top: 166px;
+    height: 671px;
   }
   .slick-arrow {
     width: 80px;
@@ -51,21 +71,23 @@
     width: 640px;
   }
   .videoCarousel {
-    width: 1200px;
+    width: 1296px;
+    margin-top: 10px;
     .videoCard {
-      height: 675px;
+      height: 243px;
+      width: 432px;
     }
-  }
-}
-
-@media screen and (max-width: 1420px) {
-  .videoHeader {
-    width: 580px;
-  }
-  .videoCarousel {
-    width: 800px;
-    .videoCard {
-      height: 450px;
+    .slick-center {
+      .videoCard {
+        height: 486px;
+        width: 864px !important;
+        top: -122px;
+        left: -216px;
+      }
+    }
+    .slick-track {
+      top: 122px;
+      height: 491px;
     }
     .slick-arrow {
       width: 50px;
@@ -83,9 +105,50 @@
   }
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1440px) {
   .videoHeader {
-    width: 470px;
+    width: 580px;
+  }
+  .videoCarousel {
+    width: 864px;
+    .videoCard {
+      height: 162px;
+      width: 288px;
+    }
+    .slick-center {
+      .videoCard {
+        height: 324px;
+        width: 576px !important;
+        top: -81px;
+        left: -144px;
+      }
+    }
+    .slick-track {
+      top: 81px;
+      height: 329px;
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .videoCarousel {
+    width: 640px;
+    .videoCard {
+      width: 100%;
+      height: 360px;
+    }
+    .slick-center {
+      .videoCard {
+        width: 100% !important;
+        height: 360px;
+        top: 0;
+        left: 0;
+      }
+    }
+    .slick-track {
+      top: 0;
+      height: auto;
+    }
   }
 }
 
@@ -93,6 +156,7 @@
   .homeVideos {
     width: 700px;
     margin: auto;
+    margin-top: 30px;
     .card {
       width: 672px;
       height: 378px;

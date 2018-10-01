@@ -11,7 +11,7 @@
 
   .header {
     font-weight: 100;
-    font-size: 60px!important;
+    font-size: 56px!important;
     color: #db2828;
     float: left;
     width: 980px;
@@ -63,7 +63,7 @@
     width: 1404px;
 
     .header {
-      font-size: 40px!important;
+      font-size: 38px!important;
       width: 660px;
       p {
         line-height: 42px;
@@ -85,13 +85,13 @@
   }
 }
 
-@media screen and (max-width: 1420px) {
+@media screen and (max-width: 1440px) {
   .advice {
     width: 972px;
     padding: 15px 20px !important;
 
     .header {
-      font-size: 28px!important;
+      font-size: 29px!important;
       width: 512px;
       p {
         line-height: 34px;
@@ -116,7 +116,7 @@
     width: 746px;
 
     .header {
-      font-size: 28px !important;
+      font-size: 30px !important;
       float: none;
       width: 100%;
       text-align: center !important;
@@ -138,6 +138,12 @@
 @media screen and (max-width: 768px) {
   .advice {
     width: 100%;
+    .header {
+      font-size: 25px !important;
+      p {
+        line-height: 27px;
+      }
+    }
     .form {
       textarea {
         width: 456px;
@@ -153,11 +159,14 @@
     border-radius: 0 !important;
     padding: 15px 5px !important;
     .header {
-      font-size: 24px !important;
+      font-size: 21px !important;
+      p {
+        line-height: 23px;
+      }
     }
     .form {
       textarea {
-          width: 390px;
+          width: 360px;
       }
       .button {
         padding: 10px 10px;
@@ -169,7 +178,7 @@
 @media screen and (max-width: 400px) {
   .advice {
     .header {
-      font-size: 18px !important;
+      font-size: 17px !important;
       font-weight: 600;
       p {
         line-height: 20px;
@@ -178,7 +187,7 @@
     .form {
       textarea {
         font-size: 16px;
-        width: 300px;
+        width: 290px;
         height: 70px;
       }
     }

@@ -1,19 +1,13 @@
 // Product Carousel
-.productHeader {
-  width: 360px;
-}
 .recomendedProducts {
   position: relative;
   font-size: 38px !important;
-  margin: auto !important;
   color: #db2828 !important;
-  border-style: solid !important;
-  padding: 10px !important;
-  border-bottom-color: #db2828 !important;
-  border-bottom-width: 2px !important;
-  margin-bottom: 50px !important;
-  margin-top: 40px !important;
   clear: both;
+}
+.productHeader {
+  width: 340px;
+  margin: 30px auto 5px !important;
 }
 .productCarousel {
   width: 1904px;
@@ -73,12 +67,12 @@
 }
 
 @media screen and (max-width: 2170px) {
-  .productHeader {
-    width: 300px;
-  }
   .recomendedProducts {
-    font-size: 32px !important;
-    margin-bottom: 35px !important;
+    font-size: 28px !important;
+  }
+  .productHeader {
+    margin: 20px auto 5px !important;
+    width: 250px;
   }
   .productCarousel {
     width: 1332px;
@@ -101,10 +95,12 @@
   }
 }
 
-@media screen and (max-width: 1420px) {
+@media screen and (max-width: 1440px) {
   .recomendedProducts {
-    font-size: 32px !important;
-    margin-bottom: 35px !important;
+    font-size: 22px !important;
+  }
+  .productHeader {
+    width: 200px;
   }
   .productCarousel {
     width: 935px;
@@ -127,11 +123,11 @@
 }
 
 @media screen and (max-width: 1020px) {
-  .productHeader {
-    width: 235px;
-  }
   .recomendedProducts {
     font-size: 24px !important;
+  }
+  .productHeader {
+    width: 220px;
   }
   .productCarousel {
     width: 746px;
@@ -139,9 +135,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .recomendedProducts {
-    margin-bottom: 10px !important;
-  }
   .productCarousel {
     width: 100%;
     .slick-list {
@@ -171,12 +164,6 @@
 }
 
 @media screen and (max-width: 400px) {
-  .productHeader {
-    width: 200px;
-  }
-  .recomendedProducts {
-    font-size: 20px !important;
-  }
   .productCarousel {
     .slick-list {
       .card {
