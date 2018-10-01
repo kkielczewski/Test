@@ -9,7 +9,7 @@ class InfoDescription extends React.Component {
         <div className='whiteContainer' >
         <div className='background whiteFull' />
           <div className='description' >
-            <Header className='recomendedProducts articlesHeader' textAlign='center' size='huge' >O Nas</Header>
+            <Header className='recomendedProducts infoHeader' textAlign='center' size='huge' >O Nas</Header>
             <img src={Default} />
             <div className='text' >
               <p className='title'>Kim jesteśmy?</p>

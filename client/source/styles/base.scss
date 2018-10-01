@@ -23,6 +23,8 @@
 @import "partials/info";
 @import "partials/newsletter";
 
+@import "partials/search-results";
+
 // Main Page
 * {
   box-sizing: border-box;
@@ -32,7 +34,7 @@ body {
   background: #e2dedf;
   margin: 0;
   line-height: normal;
-  font-family: 'Arbutus Slab', sans-serif;
+  font-family: 'Open Sans', sans-serif !important; 
 }
 
 // White Container
@@ -86,7 +88,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1420px) {
+@media screen and (max-width: 1440px) {
   .whiteContainer {
     width: 972px;
   }
@@ -139,7 +141,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1420px) {
+@media screen and (max-width: 1440px) {
   .blueStripe {
     width: 800px;
   }

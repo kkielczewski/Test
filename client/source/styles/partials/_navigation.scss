@@ -22,7 +22,7 @@
 
 @media screen and (max-width: 768px) {
   .mainContainer {
-    margin-top: 53px;
+    margin-top: 52px;
   }
 }
 
@@ -33,9 +33,10 @@
   top: 52px !important;
   overflow: hidden;
   overflow-y: hidden !important;
-  width: 260px;
+  width: 250px;
   .menu {
-    width: 270px;
+    position: relative;
+    width: 270px !important;
     height: 100%;
     overflow: auto;
     padding-right: 15px;
@@ -43,6 +44,7 @@
     border-radius: 0;
     .form {
       width: 259px;
+      position: relative;
       .input {
         width: 259px;
         font-size: 17px;
@@ -50,6 +52,9 @@
           border: none;
         }
       }
+    }
+    .item {
+      position: relative;
     }
     .active {
       background-color: #f0f0f0 !important;
@@ -139,7 +144,7 @@
   }
 }
 
-@media screen and (max-width: 1420px) {
+@media screen and (max-width: 1440px) {
   .navBarContainer {
     width: 972px;
     .menu {
@@ -198,7 +203,7 @@
   }
 }
 
-@media screen and (max-width: 1420px) {
+@media screen and (max-width: 1440px) {
   .footer {
     .footerContent {
       width: 972px;
@@ -331,4 +336,20 @@
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25) inset;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25) inset;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.25) inset;
+}
+
+@media screen and (max-width: 2170px) {
+  .pagination a {
+    padding: 5px 12px;
+  }
+  .pagination a.next {
+    border-radius: 0 33px 33px 0;
+    width: 33px;
+    font-size: 16px;
+  }
+  .pagination a.prev {
+    border-radius: 33px 0 0 33px;
+    width: 33px;
+    font-size: 16px;
+  }
 }
