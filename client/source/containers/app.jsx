@@ -14,7 +14,6 @@ import Experts from './experts';
 import ExpertPage from './expert-page';
 import Info from './info';
 import Contact from './contact';
-import SearchResults from './search-results';
 import Footer from './footer';
 
 class App extends React.Component {
@@ -33,7 +32,6 @@ class App extends React.Component {
             <Route path="/expert/:id" component={ExpertPage} />
             <Route path="/info" component={Info} />
             <Route path="/contact" component={Contact} />
-            <Route path="/search" component={SearchResults} />
           </Switch>
           <Footer />
           </NavBar>

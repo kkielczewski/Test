@@ -1,17 +1,13 @@
-.infoHeader {
-  width: 125px;
-  margin: 20px auto 15px !important;
-}
-.contactHeader {
-  width: 170px;
-  margin: 20px auto 15px !important;
-}
 .infoDescriptionContainer {
   margin-top: 20px;
   .description {
     width: 1900px;
     margin: auto auto 30px;
-    min-height: 675px;
+    min-height: 730px;
+    .articlesHeader {
+      position: relative;
+      top: -10px;
+    }
     img {
       width: 604px;
       float: left;
@@ -19,16 +15,15 @@
     }
     .text {
       width: 1286px;
-      margin-left: 625px;
+      margin-left: 614px;
       p {
         font-style: italic;
-        font-size: 26px;
+        font-size: 22px;
         margin-bottom: 3px;
-        line-height: 27px;
       }
       ul {
         font-style: italic;
-        font-size: 26px;
+        font-size: 22px;
         margin: 4px;
       }
       .title {
@@ -38,29 +33,22 @@
       .paragraphTitle {
         font-size: 28px;
         font-weight: 600;
-        line-height: 30px;
       }
     }
   }
 }
 
 @media screen and (max-width: 2170px) {
-  .infoHeader {
-    width: 95px;
-  }
-  .contactHeader {
-    width: 120px;
-  }
   .infoDescriptionContainer {
     .description {
       width: 1350px;
-      min-height: 555px;
+      min-height: 600px;
       img {
         width: 500px;
       }
       .text {
         width: 840px;
-        margin-left: 520px;
+        margin-left: 510px;
         p {
           font-size: 18px;
           line-height: 21px;
@@ -82,15 +70,7 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
-  .infoHeader {
-    width: 75px;
-    margin: 20px auto 10px !important;
-  }
-  .contactHeader {
-    width: 95px;
-    margin: 20px auto 10px !important;
-  }
+@media screen and (max-width: 1420px) {
   .infoDescriptionContainer {
     .description {
       width: 932px;
@@ -98,7 +78,7 @@
       img {
         width: 355px;
         height: 355px;
-        margin-right: 15px;
+        margin-right: 6px;
       }
       .text {
         width: 932px;
@@ -106,7 +86,7 @@
         p {
           font-size: 17px;
           line-height: 18px;
-          margin-bottom: 4px;
+          margin-bottom: 5px;
         }
         ul {
           font-size: 16px;
@@ -133,22 +113,14 @@
       img {
         width: 300px;
         height: 300px;
+        margin-right: 10px;
       }
       .text {
         width: 706px;
         margin: 0px;
-        .title {
-          font-size: 20px;
-          line-height: 22px;
-        }
-        .paragraphTitle {
-          font-size: 18px;
-          line-height: 19px;
-        }
         p {
-          margin-bottom: 3px;
           line-height: 18px;
-          font-size: 16px;
+          margin-bottom: 3px;
         }
       }
     }
@@ -169,24 +141,7 @@
       }
       .text {
         width: 486px;
-        margin: 10px 5px;
-        .title {
-          font-size: 28px;
-          line-height: 28px;
-        }
-        .paragraphTitle {
-          font-size: 22px;
-          line-height: 23px;
-        }
-        p {
-          font-size: 20px;
-          line-height: 20px;
-          margin-bottom: 7px;
-        }
-        ul {
-          font-size: 20px;
-          line-height: 20px;
-        }
+        margin: 10px;
       }
     }
   }
@@ -202,7 +157,6 @@
       }
       .text {
         width: 380px;
-        margin: 10px;
       }
     }
   }

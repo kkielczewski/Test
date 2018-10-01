@@ -1,5 +1,5 @@
 import React from 'react';
-import { Responsive } from 'semantic-ui-react';
+import { Header, Responsive } from 'semantic-ui-react';
 import Slider from 'react-slick';
 import Pagination from 'react-js-pagination';
 import VideoCard from '../components/video-card';
@@ -35,21 +35,14 @@ class VideoCarousel extends React.Component {
       centerMode: true,
       infinite: true,
       centerPadding: '0px',
-      slidesToShow: 3,
+      slidesToShow: 1,
       speed: 500,
-      swipeToSlide: true,
-      responsive: [
-        {
-          breakpoint: 1020,
-          settings: {
-            slidesToShow: 1
-          }
-        }
-      ]
+      swipeToSlide: true
     };
     return (
       <div className='whiteContainer' >
         <div className='background whiteVideos' />
+        <Header className='recomendedProducts videoHeader' textAlign='center' size='huge' >Allecco.tv TWÓJ PORTAL O ZDROWIU</Header>
         <Responsive minWidth='1021' >
           <Slider {...videoSettings} >
             {this.state.allVideos.map(video => <div className='videoCard'><VideoCard video={video} /></div>)}

@@ -1,8 +1,13 @@
 
 // Videos List
+
+.videoPicture {
+  height: 300px;
+}
 .moviesHeader {
-  width: 110px;
-  margin: 30px auto 35px !important;
+  width: 175px;
+  position: relative;
+  top: 10px;
 }
 // Pages and Newsletter
 .videoContainer {
@@ -12,7 +17,7 @@
   // Pages
   .videoList {
     margin: 0 0 auto auto;
-    height: 1565px;
+    height: 1610px;
     width: 1225px;
     position: relative;
     background-color: white;
@@ -46,6 +51,7 @@
   }
   // Newsletter
   .newsletterContainer {
+    height: 1559px;
     width: 755px;
   }
   .newsletter {
@@ -53,19 +59,19 @@
     width: 716px;
     margin: 40px!important;
     margin-right: 0;
-    padding: 35px;
+    padding: 60px;
     position: relative;
-    top: 18px;
+    top: 40px;
     box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3) !important;
     border-radius: 0;
     .header {
-      font-size: 34px;
-      margin-top: 20px;
+      font-size: 30px;
+      margin-top: 30px;
       margin-bottom: 30px;
       color: #db2828;
     }
     .paragraph {
-      font-size: 44px;
+      font-size: 36px;
       margin-bottom: 80px;
     }
     .input {
@@ -90,8 +96,8 @@
       }
     }
     .checkbox {
-      font-size: 24px;
-      margin-bottom: 60px;
+      font-size: 23px;
+      margin-bottom: 90px;
       line-height: normal;
       label {
         padding-left: 80px;
@@ -122,15 +128,14 @@
 
 @media screen and (max-width: 2170px) {
   .moviesHeader {
-    widows: 90px;
-    margin: 20px auto 30px !important;
+    width: 145px;
   }
   // Pages and Newsletter
   .videoContainer {
     width: 1404px;
     // Pages
     .videoList {
-      height: 1180px;
+      height: 1240px;
       width: 922px;
       .card {
         width: 416px;
@@ -140,6 +145,7 @@
     }
     // Newsletter
     .newsletterContainer {
+      height: 1200px;
       width: 482px;
     }
     .newsletter {
@@ -147,13 +153,13 @@
       width: 458px;
       padding: 25px;
       margin: 25px !important;
-      top: 25px;
+      top: 55px;
       .header {
-        font-size: 24px;
-        margin-top: 40px;
+        font-size: 31px;
+        margin-top: 25px;
       }
       .paragraph {
-        font-size: 27px;
+        font-size: 26px;
         margin-bottom: 40px;
       }
       .input {
@@ -163,7 +169,7 @@
       }
       .checkbox {
         font-size: 18px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         label {
           padding-left: 38px;
         }
@@ -184,10 +190,12 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1420px) {
   .moviesHeader {
-    width: 70px;
-    margin: 20px auto 15px !important;
+    width: 120px;
+  }
+  .videoPicture {
+    height: 250px;
   }
   // Pages and Newsletter
   .videoContainer {
@@ -195,7 +203,7 @@
     margin: 70px auto auto;
     // Pages
     .videoList {
-      height: 855px;
+      height: 915px;
       width: 653px;
       .card {
         width: 304px;
@@ -205,6 +213,7 @@
     }
     // Newsletter
     .newsletterContainer {
+      height: 875px;
       width: 319px;
     }
     .newsletter {
@@ -213,19 +222,19 @@
       margin: 15px !important;
       margin-right: 0;
       padding: 15px;
-      top: 30px;
+      top: 60px;
       .header {
-        font-size: 15px;
-        margin-top: 15px;
+        font-size: 18px;
+        margin-top: 25px;
         margin-bottom: 20px;
       }
       .paragraph {
-        font-size: 18px;
+        font-size: 17px;
         margin-bottom: 30px;
       }
       .input {
-        font-size : 16px;
-        margin: auto auto 25px auto;
+        font-size : 20px;
+        margin: auto auto 30px auto;
         width: 230px;
       }
       .checkbox {
@@ -254,7 +263,10 @@
 
 @media screen and (max-width: 1020px) {
   .moviesHeader {
-    padding-top: 15px !important;
+    width: 100px;
+  }
+  .videoPicture {
+    height: 200px;
   }
   // Pages and Newsletter
   .videoContainer {
@@ -276,6 +288,7 @@
     }
     // Newsletter
     .newsletterContainer {
+      height: auto;
       width: 100%;
       margin: 70px auto;
     }
@@ -284,12 +297,12 @@
       height: auto;
       width: 746px;
       margin: auto !important;
-      padding: 20px; 
+      padding: 20px !important; 
       border-radius: 0;
       .header {
         margin-bottom: 10px;
-        margin-top: 10px;
-        font-size: 19px;
+        margin-top: 10px !important;
+        font-size: 19px !important;
       }
       .paragraph {
         font-size: 26px;
@@ -305,8 +318,8 @@
         }
       }
       .checkbox {
-        font-size: 13px;
-        line-height: 14px;
+        font-size: 15px;
+        line-height: 16px;
         margin-bottom: 10px;
         label {
           padding-left: 35px;
@@ -324,8 +337,8 @@
         }
       }
       .button {
-        font-size: 18px;
-        padding: 10px 15px;
+        font-size: 20px;
+        padding: 10px 20px;
         margin-bottom: 10px;
         margin-top: 10px;
       }
@@ -334,6 +347,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .videoPicture {
+    height: 175px;
+  }
   // Pages and Newsletter
   .videoContainer {
     // Pages
@@ -362,7 +378,7 @@
     }
     .newsletter {
       width: 100%;
-      padding: 10px;
+      padding: 10px !important;
       .paragraph {
         font-size: 25px;
         line-height: 27px;
@@ -370,7 +386,7 @@
       }
       .input {
         font-size: 17px;
-        width: 460px;
+        width: 475px;
         margin: 0 auto 15px auto;
         input {
           padding: 10px 20px;
@@ -398,16 +414,16 @@
     }
     // Newsletter
     .newsletter {
-      padding: 5px;
+      padding: 5px !important;
       .header {
-        font-size: 17px;
+        font-size: 17px !important;
       }
       .paragraph {
         font-size: 21px;
         line-height: 23px;
       }
       .input {
-        width: 360px;
+        width: 390px;
         input {
           padding: 8px 15px;
         }
@@ -415,10 +431,6 @@
       .checkbox {
         font-size: 12px;
         line-height: 13px;
-        label {
-          padding-left: 30px;
-          padding-right: 15px;
-        }
       }
       .button {
         font-size: 17px;
@@ -450,11 +462,6 @@
       width: 100%;
       .input {
         width: 280px;
-      }
-      .checkbox {
-        label {
-          padding-right: 5px;
-        }
       }
     }
   }

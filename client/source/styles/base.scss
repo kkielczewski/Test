@@ -23,8 +23,6 @@
 @import "partials/info";
 @import "partials/newsletter";
 
-@import "partials/search-results";
-
 // Main Page
 * {
   box-sizing: border-box;
@@ -34,7 +32,7 @@ body {
   background: #e2dedf;
   margin: 0;
   line-height: normal;
-  font-family: 'Open Sans', sans-serif !important; 
+  font-family: 'Arbutus Slab', sans-serif;
 }
 
 // White Container
@@ -88,7 +86,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1420px) {
   .whiteContainer {
     width: 972px;
   }
@@ -141,7 +139,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1420px) {
   .blueStripe {
     width: 800px;
   }

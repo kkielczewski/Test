@@ -18,7 +18,7 @@
       height: 450px;
       float: left;
       position: relative;
-      top: 60px;
+      top: 65px;
       box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
     }
     .segment{
@@ -36,10 +36,10 @@
         margin-bottom: 40px;
       }
       .paragraph {
-        font-size: 38px;
+        font-size: 36px;
         width: 80%;
         p {
-          line-height: 36px;
+          line-height: 38px;
           margin-bottom: 35px;
         }
         p:first-child {
@@ -99,7 +99,7 @@
           width: 200px;
         }
         .paragraph {
-          font-size: 25px;
+          font-size: 24px;
           p {
             line-height: 26px;
           }
@@ -120,7 +120,7 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1420px) {
   .survey {
     height: 310px;
     .surveySegment {
@@ -129,7 +129,6 @@
       img {
         width: 472px;
         height: 216px;
-        top: 51px;
       }
       .segment {
         width: 500px;
@@ -175,13 +174,9 @@
         padding: 35px 25px;
         .paragraph {
           width: 80%;
-          font-size: 26px;
-          p {
-            line-height: 28px;
-          }
         }
         .input {
-          width: 400px;
+          width: 375px;
         }
       }
     }
@@ -190,11 +185,10 @@
 
 @media screen and (max-width: 768px) {
   .survey {
-    height: 310px;
-    margin-top: 30px;
+    height: 314px;
     .surveySegment {
       width: 100%;
-      height: 310px;
+      height: 314px;
       .segment {
         padding: 15px 10px;
         height: auto;
@@ -206,10 +200,6 @@
         .paragraph {
           width: 432px;
           margin: auto;
-          font-size: 21px;
-          p {
-            line-height: 23px;
-          }
         }
         .input {
           display: block;
@@ -226,10 +216,10 @@
 
 @media screen and (max-width: 500px) {
   .survey {
-    height: 292px;
+    height: 310px;
     margin-top: 30px;
     .surveySegment {
-      height: 292px;
+      height: 310px;
       .segment {
         .header {
           font-size: 28px;
@@ -243,8 +233,7 @@
           }
         }
         .input {
-          width: 360px;
-          font-size: 15px;
+          width: 380px;
         }
       }
     }
@@ -253,22 +242,16 @@
 
 @media screen and (max-width: 400px) {
   .survey {
-    height: 297px;
+    height: 370px;
+    margin-top: 70px;
     .surveySegment {
-      height: 297px;
+      height: 370px;
       .segment {
         .paragraph {
-          font-size: 16px;
-          p {
-            line-height: 18px;
-          }
+          font-size: 15px;
         }
         .input {
-          font-size: 14px;
           width: 278px;
-        }
-        .button {
-          font-size: 15px;
         }
       }
     }
