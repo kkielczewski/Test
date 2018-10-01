@@ -1,7 +1,8 @@
 // Main Articles
 
 .mainArticlesHeader {
-  width: 375px;
+  width: 380px;
+  margin: 30px auto 5px !important;
 }
 .mainArticles {
   width: 1880px;
@@ -40,7 +41,7 @@
       opacity: 0;
       transition: all .4s ease-in-out;
       .header {
-        font-size: 34px;
+        font-size: 35px;
         color: white;
         padding: 5px;
         position: absolute;
@@ -69,7 +70,8 @@
 
 @media screen and (max-width: 2170px) {
   .mainArticlesHeader {
-    width: 350px;
+    width: 280px;
+    margin: 20px auto 5px !important;
   }
   .mainArticles {
     width: 1360px;
@@ -78,7 +80,7 @@
       width: 320px;
       .content {
         .header {
-          font-size: 24px;
+          font-size: 25px;
         }
       }
     }
@@ -86,9 +88,9 @@
 }
 
 
-@media screen and (max-width: 1420px) {
+@media screen and (max-width: 1440px) {
   .mainArticlesHeader {
-    width: 300px;
+    width: 215px;
   }
   .mainArticles {
     width: 932px;
@@ -97,7 +99,7 @@
       width: 213px;
       .content {
         .header {
-          font-size: 15px;
+          font-size: 16px;
         }
       }
     }
@@ -110,7 +112,7 @@
       .content {
         opacity: 1;
         width: 100%;
-        height: 72px;
+        height: 70px;
         margin: auto;
         background-color: white;
         border: solid !important;
@@ -122,12 +124,13 @@
         overflow: hidden;
         text-align: left;
         .header {
-          font-size: 17px;
+          font-size: 16px;
           padding: 5px;
           margin: auto;
           color: black;
           width: 100%;
           height: 100%;
+          line-height: 20px;
         }
       }
     }
@@ -136,7 +139,7 @@
 
 @media screen and (max-width: 1020px) {
   .mainArticlesHeader {
-    width: 270px;
+    width: 240px;
   }
   .mainArticles {
     width: 700px;
@@ -146,9 +149,10 @@
       height: 440px;
       margin: 10px;
       .content {
-        height: 84px;
+        height: 80px;
         .header {
           font-size: 20px;
+          line-height: 24px;
         }
       }
     }
@@ -166,9 +170,10 @@
       height: 306px;
       box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
       .content {
-        height: 66px;
+        height: 68px;
         .header {
           font-size: 15px;
+          line-height: 19px;
         }
       }
     }
@@ -183,9 +188,10 @@
       height: 440px;
       margin: 0 10px 20px;
       .content {
-        height: 86px;
+        height: 80px;
         .header {
           font-size: 20px;
+          line-height: 24px;
         }
       }
     }
@@ -208,16 +214,24 @@
 
 // Expert Other Articles Header
 .otherArticlesHeader {
-  width: 430px;
+  width: 400px;
+  margin: 30px auto 5px !important;
 }
 @media screen and (max-width: 2170px) {
   .otherArticlesHeader {
-    width: 350px;
+    width: 295px;
+    margin: 20px auto 5px !important;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .otherArticlesHeader {
+    width: 230px;
   }
 }
 
 @media screen and (max-width: 1020px) {
   .otherArticlesHeader {
-    width: 275x;
+    width: 250px;
   }
 }

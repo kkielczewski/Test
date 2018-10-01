@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import { Header, Button, Responsive } from 'semantic-ui-react';
 import toastr from 'toastr';
 import MainMovies from './main-movies';
@@ -147,6 +148,7 @@ class VideoPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      noVideo: false,
       allVideos: [],
       expertVideos: [],
       id: '',
@@ -165,6 +167,10 @@ class VideoPage extends React.Component {
     handleClientLoad();
     const object = await getVideo(this.props.match.params.id);
     const allObject = await getSomeVideos('UUlYlNvdBOuwuQZrCle9BrcA');
+
+    if (object === undefined) {
+      this.setState({ noVideo: true });
+    }
 
     const all = [];
 
@@ -211,6 +217,7 @@ class VideoPage extends React.Component {
   }
 
   render() {
+    const redirect = this.state.noVideo ? <Redirect to="/video"/> : <div></div>;
     return (
       <div className='mainContainer' >
         <div className='blueStripe' ></div>
@@ -220,13 +227,8 @@ class VideoPage extends React.Component {
             <div className='title' >
               <Header>{this.state.title}</Header>
               <div className='buttons' >
-                <Button onClick={this.subscribe} >SUBSKRYBUJ NA YT</Button>
-                <Responsive maxWidth='1020' >
-                <div className='social' >
-                  <Button onClick={this.shareFacebook} icon='facebook' />
-                  <Button onClick={this.shareTwitter} icon='twitter' />
-                </div>
-                </Responsive>
+                <Button className='subscribe' onClick={this.subscribe} >SUBSKRYBUJ NA YT</Button>
+                <Button className='facebook' onClick={this.shareFacebook} icon='facebook' />
               </div>
             </div>
             <div className='description' >
@@ -240,11 +242,6 @@ class VideoPage extends React.Component {
                 <div className='lastAMVideo' >
                   {this.state.allVideos.slice(0, 3).map(video => <VideoCard video={video} />)}
                 </div>
-                <Header className='share' >UDOSTĘPNIJ NA:</Header>
-                <div className='social' >
-                  <Button onClick={this.shareFacebook} icon='facebook' />
-                  <Button onClick={this.shareTwitter} icon='twitter' />
-                </div>
               </div>
             </div>
           </Responsive>
@@ -256,6 +253,7 @@ class VideoPage extends React.Component {
           <MainMovies />
         </Responsive>
         <ProductCarousel />
+        {redirect}
       </div>
     );
   }
