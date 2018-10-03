@@ -73,6 +73,7 @@ class ArticlesList extends React.Component {
         <Responsive minWidth='769' onUpdate={this.handleUpdate} >
         <div className='articleContainer' >
           <div className='videoList' >
+            <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
             <Header className='recomendedProducts articlesHeader' textAlign='center' size='huge' >Artykuły</Header>
             {this.state.currentArticles.map(article => <ArticleCard id='1' article={article} image={ArticlePlaceholder} />)}
             <div className='videoNav' >
@@ -101,6 +102,7 @@ class ArticlesList extends React.Component {
         <div className='articleContainerSmall' >
           <div className='videoList' >
             <div className='smallArticlesContainer'>
+            <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
             <Header className='recomendedProducts articlesHeader' textAlign='center' size='huge' >Artykuły</Header>
             {this.state.currentArticles.map(article => <ArticleCard id='1' article={article} image={ArticlePlaceholder} />)}
             <div className='videoNav' >

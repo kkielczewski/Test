@@ -88,6 +88,7 @@ class VideoPage extends React.Component {
         <ExpertInfo expert={this.state.name} avatar={Avatar} />
         <div className='whiteContainer' >
           <div className='background' />
+          <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
           <Header className='recomendedProducts expertMoviesHeader' textAlign='center' size='huge' >Filmy eksperta</Header>
           <div className='mainMovies' >
             {this.state.currentVideos.map(video => <VideoCard video={video} />)}
@@ -112,6 +113,7 @@ class VideoPage extends React.Component {
         <Advice />
         <div className='whiteContainer' >
           <div className='background' />
+          <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
           <Header className='recomendedProducts expertArticlesHeader' textAlign='center' size='huge' >Artykuły eksperta</Header>
           <div className='mainArticlesContainer' >
             <div className='mainArticles' >

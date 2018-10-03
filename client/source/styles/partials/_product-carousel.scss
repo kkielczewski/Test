@@ -6,8 +6,10 @@
   clear: both;
 }
 .productHeader {
-  width: 340px;
+  width: 370px;
   margin: 30px auto 5px !important;
+  background-color: white;
+  z-index: 2;
 }
 .productCarousel {
   width: 1904px;
@@ -72,7 +74,7 @@
   }
   .productHeader {
     margin: 20px auto 5px !important;
-    width: 250px;
+    width: 270px;
   }
   .productCarousel {
     width: 1332px;
@@ -100,7 +102,7 @@
     font-size: 22px !important;
   }
   .productHeader {
-    width: 200px;
+    width: 220px;
   }
   .productCarousel {
     width: 935px;
@@ -127,7 +129,7 @@
     font-size: 24px !important;
   }
   .productHeader {
-    width: 220px;
+    width: 240px;
   }
   .productCarousel {
     width: 746px;

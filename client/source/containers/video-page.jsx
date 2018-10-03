@@ -238,7 +238,8 @@ class VideoPage extends React.Component {
           <Responsive minWidth='1021' >
             <div className='sidePanel' >
               <div className='center' >
-                <Header>OSTATNIE FILMY</Header>
+                <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
+                <Header className='lastVideosCenter' >OSTATNIE FILMY</Header>
                 <div className='lastAMVideo' >
                   {this.state.allVideos.slice(0, 3).map(video => <VideoCard video={video} />)}
                 </div>

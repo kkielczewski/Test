@@ -48,6 +48,7 @@ class Newsletter extends React.Component {
   render() {
     return (
       <Segment className='newsletter' raised textAlign='center'>
+        <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
         <Header textAlign='center' size='medium' >Zapisz się do newslettera</Header>
         <div className='paragraph' >Twórz serwis Allecco.tv razem z nami. Weż udział w ankiecie i zdecyduj jakie treści przygotują nasi eksperci. Wpisz swój adres email i odbierz ankiete:</div>
         <Form onSubmit={this.handleClick} >

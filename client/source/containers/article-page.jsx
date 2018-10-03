@@ -116,12 +116,14 @@ class VideoPage extends React.Component {
           <Responsive minWidth='1021' >
             <div className='sidePanel' >
               <div className='center' >
+                <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
                 <Header>OSTATNIE ARTYKUŁY</Header>
                 <div className='lastAM' >
                   {this.state.allArticles.slice(0, 2).map(article => <ArticleCard id='1' image={ArticlePlaceholder} article={article} />)}
                 </div>
               </div>
               <div className='articleProductsContainer' >
+                <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
                 <Header>PRODUKTY Z ARTYKUŁU</Header>
                 <div className='articleProducts' >
                   {this.state.allProducts.slice(0, 4).map(product => <ProductCardSmall contentClass='content' product={product} />)}
@@ -133,7 +135,8 @@ class VideoPage extends React.Component {
         <Responsive style={{ clear: 'both', marginBottom: '30px' }} maxWidth='1020' >
           <div className='whiteContainer doctorInfo' >
             <div className='background whiteHundred' />
-            <Header className='mentionedProducts productHeader' textAlign='center' size='huge' >PRODUKTY Z ARTYKUŁU</Header>
+            <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
+            <Header className='mentionedProducts productHeader' textAlign='center' size='huge' >Produkty z artykułu</Header>
             <div className='articleProductsSmall' >
               {this.state.allProducts.slice(0, 4).map(product => <ProductCardSmall contentClass='content' product={product} />)}
             </div>

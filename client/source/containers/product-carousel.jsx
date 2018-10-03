@@ -67,6 +67,7 @@ class ProductCarousel extends React.Component {
     return (
       <div className='whiteContainer' >
         <div className='background whiteProduct' />
+        <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
         <Header className='recomendedProducts productHeader' textAlign='center' size='huge' >Polecane produkty</Header>
         <div>
           <Slider {...productsSettings} >

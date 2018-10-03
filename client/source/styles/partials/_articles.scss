@@ -1,9 +1,10 @@
-
 // Videos List
 
 .articlesHeader {
   width: 185px;
   margin: 30px auto 40px !important;
+  background-color: white;
+  z-index: 2;
 }
 // Pages and Newsletter
 .articleContainer {
@@ -77,17 +78,17 @@
         transition: all .4s ease-in-out;
       }
     }
-    .card:nth-child(3n+2) {
+    .card:nth-child(3n+3) {
       clear: left;
       float: left;
       margin-top: 0;
     }
-    .card:nth-child(3n+3) {
+    .card:nth-child(3n+4) {
       float: left;
       margin-left: 0;
       margin-top: 0;
     }
-    .card:nth-child(3n+6) {
+    .card:nth-child(3n+7) {
       margin-top: 0;
     }
   }
@@ -96,6 +97,9 @@
     width: 740px;
   }
   .newsletter {
+    .redLine {
+      visibility: hidden;
+    }
     height: 1520px;
     width: 700px;
     margin: 40px!important;
@@ -349,7 +353,7 @@
 @media screen and (max-width: 1020px) {
   .articlesHeader {
     width: 110px;
-    padding-top: 10px !important;
+    padding-top: 20px !important;
     margin: 20px auto 18px !important;
   }
   // Pages and Newsletter
@@ -377,6 +381,9 @@
       margin: 70px auto;
     }
     .newsletter {
+      .redLine {
+        visibility: visible;
+      }
       top: 0;
       height: auto;
       width: 746px;
@@ -385,8 +392,11 @@
       border-radius: 0;
       .header {
         font-size: 19px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin: 4px auto 10px;
+        width: 260px;
+        background-color: white;
+        z-index: 2;
+        position: relative;
       }
       .paragraph {
         font-size: 26px;
@@ -501,8 +511,11 @@
       box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3) !important;
       .header {
         color: #db2828;
-        margin-bottom: 10px;
-        margin-top: 10px;
+        margin: 14px auto 10px;
+        width: 260px;
+        background-color: white;
+        z-index: 2;
+        position: relative;
         font-size: 19px;
       }
       .paragraph {
@@ -589,6 +602,8 @@
       padding: 5px;
       .header {
         font-size: 17px;
+        margin: 20px auto 10px;
+        width: 220px;
       }
       .paragraph {
         font-size: 21px;

@@ -1,0 +1,43 @@
+.redLine {
+  width: 95%;
+  height: 2px;
+  background-color: #db2828;
+  position: absolute;
+  top: 55px;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  margin: auto;
+  .leftDot {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: #db2828;
+  }
+  .rightDot {
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: #db2828;
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .redLine {
+    width: 93%;
+    top: 40px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .redLine {
+    top: 35px;
+    width: 94%;
+  }
+}

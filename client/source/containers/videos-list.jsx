@@ -33,6 +33,7 @@ class VideosList extends React.Component {
     return (
       <div className='videoContainer' >
         <div className='videoList' >
+          <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
           <Header className='recomendedProducts moviesHeader' textAlign='center' size='huge' >Filmy</Header>
           {this.state.currentVideos.map(video => <VideoCard video={video} />)}
           <div className='videoNav' >

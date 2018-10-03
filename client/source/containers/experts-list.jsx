@@ -44,6 +44,7 @@ class ExpertsList extends React.Component {
     return (
       <div className='doctorsContainer' >
         <div className='whiteContainer whiteFull' >
+          <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
           <div className='doctorList' >
           <Header className='recomendedProducts expertsHeader' textAlign='center' size='huge' >Eksperci</Header>
             {this.state.currentExperts.map(expert => <DoctorCard link={expert.link} />)}

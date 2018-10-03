@@ -26,6 +26,7 @@ class MainArticles extends React.Component {
     return (
       <div className='whiteContainer' >
         <div className='background whiteArticles' />
+        <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
         <Header className='recomendedProducts mainArticlesHeader' textAlign='center' size='huge' >Najnowsze Artykuły</Header>
         <div className='mainArticles' >
           {this.state.allArticles.slice(0, 4).map(article => <ArticleCard id='1' image={ArticlePlaceholder} article={article} />)}

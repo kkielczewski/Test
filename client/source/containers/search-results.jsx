@@ -1,13 +1,13 @@
 import React from 'react';
 import { Tab } from 'semantic-ui-react';
 import Pagination from 'react-js-pagination';
+import queryString from 'query-string';
 import VideoCard from '../components/video-card';
 import ArticleCard from '../components/article-card';
 import ArticlePlaceholder from '../assets/images/article-placeholder.png';
 import DoctorCard from '../components/doctor-card';
 import ProductCarousel from './product-carousel';
 import { getSomeVideos } from '../utils/youtube-utils';
-import queryString from 'query-string';
 
 class SearchResults extends React.Component {
   constructor(props) {

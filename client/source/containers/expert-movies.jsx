@@ -7,6 +7,7 @@ class ExpertMovies extends React.Component {
     return (
       <div className='whiteContainer' >
         <div className='background whiteDoctorMovies' />
+        <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
         <Header className='recomendedProducts productHeader' textAlign='center' size='huge' >Inne filmy experta</Header>
         <div className='otherMovies' >
           <div className='mainMovies' >

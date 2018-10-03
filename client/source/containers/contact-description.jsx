@@ -10,6 +10,7 @@ class ContactDescription extends React.Component {
         <div className='whiteContainer' >
           <div className='background whiteFull' />
           <div className='description' >
+            <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
             <Header className='recomendedProducts contactHeader' textAlign='center' size='huge' >Kontakt</Header>
             <img src={Default} />
             <div className='text' >

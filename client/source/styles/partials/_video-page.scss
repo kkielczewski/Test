@@ -87,15 +87,20 @@
       width: 512px;
       background-color: white;
       box-shadow: 4px 6px 12px 0px rgba(0, 0, 0, 0.3);
+      position: relative;
       .header {
-        font-size: 38px;
-        width: 240px;
-        margin: 0 auto 60px;
+        font-size: 34px;
+        width: 360px;
+        margin: 0 auto 30px;
         position: relative;
-        top: 60px;
-        border-style: solid;
+        top: 33px;
         color: #db2828;
         text-align: center;
+        background-color: white;
+        z-index: 2;
+      }
+      .lastVideosCenter {
+        width: 295px !important;
       }
       // Last Articles
       .lastAM {
@@ -118,7 +123,7 @@
             opacity: 0;
             transition: all .4s ease-in-out;
             .header {
-              font-size: 30px;
+              font-size: 31px;
               color: white;
               padding: 5px;
               position: absolute;
@@ -180,16 +185,17 @@
       overflow: hidden;
       background-color: white;
       box-shadow: 4px 6px 12px 0px rgba(0, 0, 0, 0.3);
+      position: relative;
       .header {
-        font-size: 38px;
-        width: 260px;
-        padding: 10px;
-        margin: 0 auto 120px;
+        font-size: 34px;
+        width: 410px;
+        margin: 0 auto 60px;
         position: relative;
-        top: 60px;
-        border-style: solid;
+        top: 33px;
         color: #db2828;
         text-align: center;
+        background-color: white;
+        z-index: 2;
       }
       .articleProducts {
         margin-bottom: 60px;
@@ -281,10 +287,13 @@
       .center {
         width: 394px;
         .header {
-          font-size: 30px;
-          width: 180px;
-          top: 40px;
-          margin: 0 auto 40px;
+          font-size: 24px;
+          width: 260px;
+          top: 25px;
+          margin: 0 auto 15px;
+        }
+        .lastVideosCenter {
+          width: 210px !important;
         }
         // Last Articles
         .lastAM {
@@ -293,7 +302,7 @@
             height: 440px;
             .content {
               .header {
-                font-size: 26px;
+                font-size: 25px;
               }
             }
           }
@@ -317,10 +326,10 @@
         margin: 60px auto 10px 60px;
         width: 394px;
         .header {
-          font-size: 30px;
-          width: 215px;
-          margin: 0 auto 80px;
-          top: 40px;
+          font-size: 24px;
+          width: 290px;
+          margin: 0 auto 40px;
+          top: 25px;
         }
         .articleProducts {
           .card {
@@ -392,10 +401,13 @@
         margin: 10px auto auto 32px;
         width: 310px;
         .header {
-          font-size: 22px;
-          width: 130px;
-          top: 20px;
-          margin: 0 auto 10px;
+          font-size: 20px;
+          width: 210px;
+          top: 23px;
+          margin: 0 auto 5px;
+        }
+        .lastVideosCenter {
+          width: 175px !important;
         }
         // Last Articles
         .lastAM {
@@ -404,7 +416,7 @@
             height: 288px;
             .content {
               .header {
-                font-size: 18px;
+                font-size: 16px;
               }
             }
           }
@@ -430,10 +442,10 @@
         margin: 40px auto 10px 32px;
         width: 310px;
         .header {
-          font-size: 22px;
-          margin: 0 auto 40px;
-          top: 20px;
-          width: 162px;
+          font-size: 20px;
+          margin: 0 auto 30px;
+          top: 23px;
+          width: 240px;
         }
         .articleProducts {
           margin-bottom: 40px;
@@ -461,7 +473,7 @@
             .content {
               opacity: 1;
               width: 100%;
-              height: 72px;
+              height: 75px;
               margin: auto;
               background-color: white;
               border: solid !important;
@@ -472,12 +484,13 @@
               bottom: 0;
               overflow: hidden;
               .header {
-                font-size: 17px;
+                font-size: 16px;
                 padding: 5px;
                 margin: auto;
                 color: black;
                 width: 100%;
                 height: 100%;
+                text-align: left;
               }
             }
           }
@@ -573,10 +586,10 @@
   .mentionedProducts {
     margin: 20px auto !important;
     color: #db2828 !important;
-    border-style: solid !important;
-    border-color: #db2828 !important;
-    width: 175px;
-    padding: 10px !important;
+    width: 245px;
+    position: relative;
+    background-color: white;
+    z-index: 2;
   }
 }
 
@@ -587,7 +600,7 @@
     // Big Container
     .main {
       width: 100%;
-      margin: 30px 0 30px auto;
+      margin: 0 0 30px auto;
       .card {
         width: 496px;
         height: 279px;
@@ -721,8 +734,5 @@
         }
       }
     }
-  }
-  .mentionedProducts {
-    font-size: 20px !important;
   }
 }

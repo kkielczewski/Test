@@ -1,8 +1,10 @@
 // Main Movies
 
 .mainMoviesHeader {
-  width: 310px;
+  width: 330px;
   margin: 30px auto 5px !important;
+  background-color: white;
+  z-index: 2;
 }
 .whiteMainMovies {
   height: auto;
@@ -31,7 +33,7 @@
 @media screen and (max-width: 2170px) {
   .mainMoviesHeader {
     margin: 20px auto 5px !important;
-    width: 230px;
+    width: 240px;
   }
   .mainMovies {
     width: 1356px;
@@ -46,7 +48,7 @@
 
 @media screen and (max-width: 1440px) {
   .mainMoviesHeader {
-    width: 180px;
+    width: 200px;
   }
   .mainMovies {
     width: 924px;
@@ -59,7 +61,7 @@
 
 @media screen and (max-width: 1020px) {
   .mainMoviesHeader {
-    width: 200px;
+    width: 215px;
   }
   .mainMovies {
     width: 712px;
