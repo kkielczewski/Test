@@ -30,24 +30,21 @@
   background: white !important;
   z-index: 102 !important;
   position: fixed !important;
-  -webkit-backface-visibility: hidden;
   top: 52px !important;
   overflow: hidden;
   overflow-y: hidden !important;
   width: 250px;
   height: auto;
   .menu {
-    position: fixed;
+    position: absolute;
     width: 270px !important;
     height: auto;
     overflow: hidden;
     padding-right: 15px;
     box-sizing: content-box;
     border-radius: 0;
-    -webkit-backface-visibility: hidden;
     .form {
       width: 259px;
-      -webkit-backface-visibility: hidden;
       .input {
         width: 259px;
         font-size: 17px;
@@ -58,7 +55,6 @@
     }
     .item {
       width: 259px;
-      -webkit-backface-visibility: hidden;
     }
     .active {
       background-color: #f0f0f0 !important;
