@@ -124,7 +124,7 @@ class VideoPage extends React.Component {
               </div>
               <div className='articleProductsContainer' >
                 <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
-                <Header>PRODUKTY Z ARTYKUŁU</Header>
+                <Header className='articleHeader' >PRODUKTY Z ARTYKUŁU</Header>
                 <div className='articleProducts' >
                   {this.state.allProducts.slice(0, 4).map(product => <ProductCardSmall contentClass='content' product={product} />)}
                 </div>

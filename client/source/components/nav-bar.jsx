@@ -21,7 +21,7 @@ class NavBar extends React.Component {
 
   searchAll(value) {
     if (value.length > 1) {
-      this.setState({ toSearch: true, searchValue: value });
+      this.setState({ toSearch: true, searchValue: value, sidebarOpen: false });
     }
   }
 

@@ -45,7 +45,7 @@ class ProductCarousel extends React.Component {
           }
         },
         {
-          breakpoint: 1420,
+          breakpoint: 1440,
           settings: {
             slidesToShow: 5
           }

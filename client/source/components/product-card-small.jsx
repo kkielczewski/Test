@@ -33,6 +33,10 @@ class DoctorCard extends React.Component {
       <Card>
         <a draggable='false' href={`//allecco.pl/${this.props.product.link}`} >
           <div className='imageContainer' ><Image src={`//allecco.pl/${this.props.product.thumbnail}`} className={this.props.imageClass} /></div>
+          <Card.Content className={this.props.contentClass} >
+            <Card.Header>{this.props.product.name}</Card.Header>
+            <Card.Description>{`${this.props.product.price} zł`}</Card.Description>
+          </Card.Content>
         </a>
       </Card>
     );
