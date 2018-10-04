@@ -27,18 +27,19 @@
 }
 
 .mainSidebar {
-  background: #db2828 !important;
+  background: white !important;
   z-index: 102 !important;
   position: fixed !important;
   top: 52px !important;
   overflow: hidden;
   overflow-y: hidden !important;
   width: 250px;
+  height: auto;
   .menu {
     position: absolute;
     width: 270px !important;
-    height: 100%;
-    overflow: auto;
+    height: auto;
+    overflow: hidden;
     padding-right: 15px;
     box-sizing: content-box;
     border-radius: 0;
