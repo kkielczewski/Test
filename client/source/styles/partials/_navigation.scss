@@ -35,7 +35,7 @@
   overflow-y: hidden !important;
   width: 250px;
   .menu {
-    position: relative;
+    position: absolute;
     width: 270px !important;
     height: 100%;
     overflow: auto;
@@ -51,18 +51,7 @@
         input {
           border: none;
         }
-        .icon {
-          position: relative;
-          top: 20px;
-          right: 35px;
-        }
       }
-    }
-    .item {
-      position: relative;
-    }
-    .item:before {
-      position: relative !important;
     }
     .active {
       background-color: #f0f0f0 !important;
