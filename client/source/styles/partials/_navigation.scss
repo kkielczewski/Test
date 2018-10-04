@@ -27,24 +27,13 @@
 }
 
 .mainSidebar {
-  background: #db2828 !important;
+  background: white !important;
   z-index: 102 !important;
-  position: fixed !important;
   top: 52px !important;
   overflow: hidden;
   overflow-y: hidden !important;
   width: 250px;
   height: auto;
-  .ui.vertical.menu {
-    .item:before {
-      position: relative;
-    }
-  }
-  .ui.menu {
-    .item:before {
-      position: relative;
-    }
-  }
   .menu {
     position: absolute;
     width: 270px !important;
@@ -54,6 +43,7 @@
     box-sizing: content-box;
     border-radius: 0;
     .form {
+      width: 259px;
       .input {
         width: 259px;
         font-size: 17px;
@@ -63,7 +53,6 @@
       }
     }
     .item {
-      background-color: white !important;
       width: 259px;
     }
     .active {
