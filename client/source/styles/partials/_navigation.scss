@@ -54,8 +54,6 @@
     box-sizing: content-box;
     border-radius: 0;
     .form {
-      width: 259px;
-      position: relative;
       .input {
         width: 259px;
         font-size: 17px;
@@ -66,6 +64,7 @@
     }
     .item {
       background-color: white !important;
+      width: 259px;
     }
     .active {
       background-color: #f0f0f0 !important;
