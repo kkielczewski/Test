@@ -29,6 +29,8 @@
 .mainSidebar {
   background: white !important;
   z-index: 102 !important;
+  position: fixed !important;
+  -webkit-backface-visibility: hidden;
   top: 52px !important;
   overflow: hidden;
   overflow-y: hidden !important;
