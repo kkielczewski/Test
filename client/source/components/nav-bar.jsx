@@ -84,7 +84,7 @@ class NavBar extends React.Component {
           {children}
         </Responsive>
         <Responsive maxWidth='768' >
-          <Sidebar touch={false} contentClassName='mainContent' rootClassName='mainRoot' sidebarClassName='mainSidebar' overlayClassName='mainOverlay' sidebar={<MobileBar/>} open={this.state.sidebarOpen} onSetOpen={this.toggleSidebar} >
+          <Sidebar transitions={false} touch={false} contentClassName='mainContent' rootClassName='mainRoot' sidebarClassName='mainSidebar' overlayClassName='mainOverlay' sidebar={<MobileBar/>} open={this.state.sidebarOpen} onSetOpen={this.toggleSidebar} >
             <Menu className='mobileNavbar' fixed='top' >
               <Menu.Menu position='left' >
                 <Button className='item' onClick={() => {this.toggleSidebar()}} ><Icon name='sidebar' /></Button>

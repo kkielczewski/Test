@@ -43,8 +43,7 @@
     padding-right: 15px;
     box-sizing: content-box;
     border-radius: 0;
-    left: 0;
-    transition: left 5s;
+    left: -288px;
     .form {
       width: 259px;
       .input {
@@ -65,7 +64,6 @@
   }
   .active {
     left: 0;
-    transition: left 5s;
   }
 }
 
