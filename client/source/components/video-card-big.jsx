@@ -5,8 +5,8 @@ class VideoCardBig extends React.Component {
   render() {
     return (
       <Card>
-        <a draggable='false' href={`//youtube.com/watch?v=${this.props.id}`} className={this.props.imageClass} />
-        <Image src={this.props.image} className={this.props.imageClass} />
+        <a draggable='false' href={`//youtube.com/watch?v=${this.props.id}`} />
+        <Image src={this.props.image} />
       </Card>
     );
   }

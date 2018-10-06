@@ -73,6 +73,9 @@
 
 .mainContent {
   overflow: visible !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   .mobileNavbar {
     height: 53px;
     .left.menu {

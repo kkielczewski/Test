@@ -1,0 +1,241 @@
+.mainContestHeader {
+  width: 420px;
+  padding-top: 30px !important;
+  margin: 0 auto 5px !important;
+  background-color: white;
+  z-index: 2;
+}
+.contestContainer {
+  width: 1980px;
+  margin: 70px auto;
+  background-color: white;
+  box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
+  .contest {
+    overflow: hidden;
+    height: auto;
+    padding: 40px 40px 0;
+    .card {
+      float: left;
+      width: 1280px;
+      border-radius: 0;
+      .image {
+        border-radius: 0 !important;
+      }
+    }
+    .contestInfo {
+      width: 500px;
+      margin: auto 60px;
+      float: left;
+      min-height: 720px;
+      text-align: justify;
+      position: relative;
+      .header {
+        font-size: 40px;
+      }
+      p {
+        font-size: 26px;
+        margin-bottom: 70px;
+      }
+      .buttonWrapper {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 362px;
+        .button {
+          background-color: white;
+          color: black;
+          border-style: solid;
+          border-radius: 0;
+          padding: 15px 30px;
+          font-size: 32px;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .contestMovies {
+    position: relative;
+    .contestCarousel {
+      width: 1776px;
+      margin: auto;
+      margin-top: 30px;
+      padding-bottom: 30px;
+      .contestCard {
+        padding: 10px;
+        height: 333px;
+        width: 592px;
+        .card {
+          width: 100%;
+          border-radius: 0;
+          box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
+        }
+      }
+      .slick-list {
+        height: 342px;
+      }
+      .slick-arrow {
+        width: 80px;
+        height: 80px;
+        z-index: 1;
+        background-color: white;
+        border-radius: 50%;
+      }
+      .slick-arrow::before {
+        opacity: 1;
+        color: #db2828;
+        z-index: 1;
+        font-size: 100px;
+        position: relative;
+        left: -10px;
+        top: -3px;
+      }
+      .slick-prev {
+        left: -77px;
+      }
+      .slick-next {
+        right: -77px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .mainContestHeader {
+    width: 300px;
+    padding-top: 22px !important;
+  }
+  .contestContainer {
+    width: 1404px;
+    .contest {
+      .card {
+        width: 912px;
+      }
+      .contestInfo {
+        width: 332px;
+        margin: auto 40px;
+        min-height: 513px;
+        .header {
+          font-size: 28px;
+        }
+        p {
+          font-size: 20px;
+          margin-bottom: 47px;
+        }
+        .buttonWrapper {
+          width: 231px;
+          .button {
+            font-size: 20px;
+            padding: 10px 20px;
+          }
+        }
+      }
+    }
+    .contestMovies {
+      .contestCarousel {
+        width: 1296px;
+        margin-top: 10px;
+        .contestCard {
+          height: 243px;
+          width: 432px;
+        }
+        .slick-list {
+          height: 253px;
+        }
+        .slick-arrow {
+          width: 50px;
+          height: 50px;
+        }
+        .slick-arrow::before {
+          font-size: 66px;
+        }
+        .slick-prev {
+          left: -40px;
+        }
+        .slick-next {
+          right: -46px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .mainContestHeader {
+    padding-top: 21px !important;
+    width: 235px;
+  }
+  .contestContainer {
+    width: 972px;
+    .contest {
+      padding: 20px 20px 0;
+      .card {
+        width: 640px;
+      }
+      .contestInfo {
+        width: 262px;
+        margin: auto 15px;
+        min-height: 360px;
+        .header {
+          font-size: 20px;
+          margin-bottom: 5px;
+        }
+        p {
+          font-size: 14px;
+          margin-bottom: 47px;
+        }
+        .buttonWrapper {
+          width: 156px;
+          .button {
+            font-size: 14px;
+            padding: 10px 10px;
+          }
+        }
+      }
+    }
+    .contestMovies {
+      .contestCarousel {
+        padding-bottom: 10px;
+        width: 864px;
+        .contestCard {
+          height: 162px;
+          width: 288px;
+        }
+        .slick-list {
+          height: 172px;
+        }
+        .slick-arrow {
+          width: 30px;
+          height: 30px;
+        }
+        .slick-arrow::before {
+          font-size: 39px;
+          left: -4px;
+          top: -2px;
+        }
+        .slick-prev {
+          left: -25px;
+        }
+        .slick-next {
+          right: -25px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .contestContainer {
+    width: 746px;
+    .contestMovies {
+      .contestCarousel {
+        width: 640px;
+        .contestCard {
+          width: 100%;
+          height: 360px;
+        }
+      }
+    }
+  }
+}
