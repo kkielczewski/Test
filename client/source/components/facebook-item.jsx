@@ -4,8 +4,6 @@ class FacebookItem extends React.Component {
   render() {
     return (
         <iframe src={this.props.source}
-        width={this.props.width}
-        height={this.props.height}
         className="facebookItem"
         style={{ border: 'none', overflow: 'hidden' }}
         scrolling="no"

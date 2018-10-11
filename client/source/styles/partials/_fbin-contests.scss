@@ -1,0 +1,173 @@
+.oursContestsHeader {
+  width: 310px;
+  margin: 30px auto 5px !important;
+  padding-top: 30px !important;
+  background-color: white;
+  z-index: 2;
+}
+.fbinContainer {
+  width: 1980px;
+  margin: 70px auto;
+  background-color: white;
+  box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
+  position: relative;
+  .fbinContests {
+    width: 1880px;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    padding: 10px 0 40px;
+    .facebookPost {
+      width: 450px;
+      float: left;
+      margin: 10px;
+      box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
+    }
+    .instagramPost {
+      width: 450px;
+      float: left;
+      margin: 10px;
+      box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
+      iframe {
+        margin: 0 !important;
+        border: none !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .oursContestsHeader {
+    width: 230px;
+    margin: 20px auto 5px !important;
+    padding-top: 22px !important;
+  }
+  .fbinContainer {
+    width: 1404px;
+    .fbinContests {
+      width: 1360px;
+      padding: 10px 0 20px;
+      .facebookPost {
+        width: 320px;
+      }
+      .instagramPost {
+        width: 320px;
+      }
+    }
+  }
+  .fb_iframe_widget {
+    iframe {
+      width: 320px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .oursContestsHeader {
+    width: 180px;
+    padding-top: 20px !important;
+  }
+  .fbinContainer {
+    width: 972px;
+    .fbinContests {
+      width: 800px;
+      padding: 0 0 10px;
+      .facebookPost {
+        width: 380px;
+      }
+      .instagramPost {
+        width: 380px;
+      }
+    }
+  }
+  .fb_iframe_widget {
+    iframe {
+      width: 380px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .oursContestsHeader {
+    width: 190px;
+  }
+  .fbinContainer {
+    width: 746px;
+    .fbinContests {
+      width: 700px;
+      .facebookPost {
+        width: 330px;
+      }
+      .instagramPost {
+        width: 330px;
+      }
+    }
+  }
+  .fb_iframe_widget {
+    iframe {
+      width: 330px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fbinContainer {
+    width: 100%;
+    margin: 30px auto;
+    .fbinContests {
+      width: 470px;
+      .facebookPost {
+        width: 450px;
+      }
+      .instagramPost {
+        width: 450px;
+      }
+    }
+  }
+  .fb_iframe_widget {
+    iframe {
+      width: 450px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .fbinContainer {
+    .fbinContests {
+      width: 400px;
+      .facebookPost {
+        width: 380px;
+      }
+      .instagramPost {
+        width: 380px;
+      }
+    }
+  }
+  .fb_iframe_widget {
+    iframe {
+      width: 380px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .fbinContainer {
+    .fbinContests {
+      width: 320px;
+      .facebookPost {
+        width: 300px;
+      }
+      .instagramPost {
+        width: 300px;
+        iframe {
+          min-width: 300px !important;
+        }
+      }
+    }
+  }
+  .fb_iframe_widget {
+    iframe {
+      width: 300px !important;
+    }
+  }
+}

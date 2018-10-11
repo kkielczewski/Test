@@ -8,11 +8,13 @@
     "build": "cross-env NODE_ENV=production webpack -p --progress --profile --colors --env.env=production"
   },
   "dependencies": {
+    "facebook-plugins": "^1.0.5",
     "jquery": "^3.3.1",
     "promise-polyfill": "^8.0.0",
     "query-string": "5",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-instagram-embed": "^1.4.0",
     "react-js-pagination": "^3.0.2",
     "react-onclickoutside": "^6.7.1",
     "react-responsive": "^5.0.0",

@@ -3,7 +3,7 @@ import { Header } from 'semantic-ui-react';
 import VideoCard from '../components/video-card';
 import { getSomeVideos } from '../utils/youtube-utils';
 
-class MainMovies extends React.Component {
+class ContestWinners extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,15 +20,15 @@ class MainMovies extends React.Component {
   render() {
     return (
       <div className='whiteContainer whiteMainMovies' >
-        <div className='background whiteMovies' />
+        <div className='background whiteContestWinners' />
         <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
-        <Header className='recomendedProducts mainMoviesHeader' textAlign='center' size='huge' >Najnowsze Filmy</Header>
-        <div className='mainMovies' >
-          {this.state.allVideos.slice(0, 6).map(video => <VideoCard video={video} />)}
+        <Header className='recomendedProducts contestWinnersHeader' textAlign='center' size='huge' >Zwycięzcy Konkursów</Header>
+        <div className='winnersMovies' >
+          {this.state.allVideos.slice(0, 3).map(video => <div className='winnerContainer' ><Header className='recomendedProducts contestName' textAlign='center'>NAZWA KONKURSU</Header><Header className='recomendedProducts winnerHeader' textAlign='center'>IMIĘ NAZWISKO</Header><VideoCard video={video} /></div>)}
         </div>
       </div>
     );
   }
 }
 
-export default MainMovies;
+export default ContestWinners;

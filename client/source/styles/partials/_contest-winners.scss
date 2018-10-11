@@ -1,0 +1,163 @@
+.contestWinnersHeader {
+  width: 410px;
+  margin: 30px auto 5px !important;
+  background-color: white;
+  z-index: 2;
+}
+.winnersMovies {
+  width: 1944px;
+  margin: auto;
+  overflow: hidden;
+  padding-bottom: 10px;
+  .winnerContainer {
+    float: left;
+    .contestName {
+      width: 608px;
+      margin: 20px auto 0;
+    }
+    .winnerHeader {
+      width: 608px;
+      margin: 0 auto 0;
+    }
+    .card {
+      width: 608px;
+      height: 342px;
+      margin: 20px;
+      margin-top: 20px !important;
+      border-radius: 0;
+      box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
+      .image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .contestWinnersHeader {
+    width: 300px;
+    margin: 20px auto 5px !important;
+  }
+  .winnersMovies {
+    width: 1356px;
+    .winnerContainer {
+      .contestName {
+        width: 432px;
+        margin: 10px auto 0;
+      }
+      .winnerHeader {
+        width: 432px;
+      }
+      .card {
+        width: 432px;
+        height: 243px;
+        margin: 10px;
+        margin-top: 10px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .contestWinnersHeader {
+    width: 235px;
+  }
+  .winnersMovies {
+    width: 924px;
+    .winnerContainer {
+      .contestName {
+        width: 288px;
+        margin: 5px auto 0;
+      }
+      .winnerHeader {
+        width: 288px;
+      }
+      .card {
+        width: 288px;
+        height: 162px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .contestWinnersHeader {
+    width: 260px;
+  }
+  .winnersMovies {
+    width: 700px;
+    .winnerContainer {
+      .contestName {
+        width: 672px;
+      }
+      .winnerHeader {
+        width: 672px;
+      }
+      .card {
+        width: 672px;
+        height: 378px;
+        margin: 0 14px 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .winnersMovies {
+    width: 500px;
+    .winnerContainer {
+      .contestName {
+        width: 480px;
+      }
+      .winnerHeader {
+        width: 480px;
+      }
+      .card {
+        width: 480px;
+        height: 270px;
+        margin: 0 10px 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .winnersMovies {
+    width: 400px;
+    .winnerContainer {
+      .contestName {
+        width: 380px;
+      }
+      .winnerHeader {
+        width: 380px;
+      }
+      .card {
+        width: 380px;
+        height: 213px;
+        margin: 0 10px 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .winnersMovies {
+    width: 100%;
+    .winnerContainer {
+      width: 100%;
+      .contestName {
+        width: 100%;
+      }
+      .winnerHeader {
+        width: 100%;
+      }
+      .card {
+        width: 100%;
+        height: 196px;
+        margin: 0 0 20px;
+      }
+    }
+  }
+}

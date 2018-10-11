@@ -28,6 +28,8 @@
 @import "partials/red-line";
 
 @import "partials/main-contest";
+@import "partials/contest-winners";
+@import "partials/fbin-contests";
 
 // Main Page
 * {
@@ -80,6 +82,9 @@ body {
   .whiteDoctorMovies {
     height: 90%;
   }
+  .whiteContestWinners {
+    height: 85%;
+  }
 }
 .whiteFull {
   box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
@@ -114,6 +119,9 @@ body {
       height: 100%;
     }
     .whiteDoctorMovies {
+      height: 100%;
+    }
+    .whiteContestWinners {
       height: 100%;
     }
   }
