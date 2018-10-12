@@ -33,13 +33,14 @@
   top: 52px !important;
   overflow: hidden;
   overflow-y: hidden !important;
-  width: 250px;
+  width: 255px;
   height: auto;
   .menu {
     position: absolute;
     width: 270px !important;
     height: 100%;
     overflow: hidden;
+    overflow-y: auto;
     padding-right: 15px;
     box-sizing: content-box;
     border-radius: 0;
