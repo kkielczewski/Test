@@ -54,6 +54,7 @@ class NavBar extends React.Component {
       <NavLink onClick={this.closeSidebar} className="item" exact to="/video" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >VIDEO</NavLink>
       <NavLink onClick={this.closeSidebar} className="item" to="/blog" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >BLOG</NavLink>
       <NavLink onClick={this.closeSidebar} className="item" exact to="/expert" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >EKSPERCI</NavLink>
+      <NavLink onClick={this.closeSidebar} className="item" exact to="/sales" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >PROMOCJE</NavLink>
       <NavLink onClick={this.closeSidebar} className="item" exact to="/contests" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >KONKURSY</NavLink>
       <NavLink onClick={this.closeSidebar} className="item" to="/info" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >O NAS</NavLink>
       <NavLink onClick={this.closeSidebar} className="item" to="/contact" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >KONTAKT</NavLink>
@@ -77,6 +78,7 @@ class NavBar extends React.Component {
               <NavLink onClick={this.scrollToTop} className="item" to="/video" >VIDEO</NavLink>
               <NavLink onClick={this.scrollToTop} className="item" to="/blog" >BLOG</NavLink>
               <NavLink onClick={this.scrollToTop} className="item" to="/expert" >EKSPERCI</NavLink>
+              <NavLink onClick={this.scrollToTop} className="item" to="/sales" >PROMOCJE</NavLink>
               <NavLink onClick={this.scrollToTop} className="item" to="/contests" >KONKURSY</NavLink>
               <NavLink onClick={this.scrollToTop} className="item" to="/info" >O NAS</NavLink>
               <NavLink onClick={this.scrollToTop} className="item" to="/contact" >KONTAKT</NavLink>

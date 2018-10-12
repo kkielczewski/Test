@@ -16,6 +16,7 @@ import Info from './info';
 import Contact from './contact';
 import SearchResults from './search-results';
 import Contests from './contests';
+import Sales from './sales';
 import Footer from './footer';
 
 class App extends React.Component {
@@ -36,6 +37,7 @@ class App extends React.Component {
             <Route path="/contact" component={Contact} />
             <Route path="/search" component={SearchResults} />
             <Route path="/contests" component={Contests} />
+            <Route path="/sales" component={Sales} />
           </Switch>
           <Footer />
           </NavBar>

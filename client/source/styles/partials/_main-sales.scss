@@ -1,0 +1,129 @@
+.mainSalesHeader {
+  width: 320px;
+  margin: 30px auto 5px !important;
+  padding-top: 30px !important;
+  background-color: white;
+  z-index: 2;
+}
+.salesContainer {
+  width: 1980px;
+  margin: 70px auto;
+  background-color: white;
+  box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
+  position: relative;
+  .mainSales {
+    position: relative;
+    height: 670px;
+    width: 1860px;
+    margin: auto;
+    overflow: hidden;
+    padding: 10px 0 40px;
+    .sale {
+      position: absolute;
+      width: 620px;
+      height: 620px;
+      z-index: 1;
+      background-color: white;
+      a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+      }
+      .image {
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 340px;
+      }
+    }
+    .sale:nth-child(1) {
+      left: 0px;
+      transition: width 1s, z-index 0s 1s;
+    }
+    .sale:nth-child(2) {
+      left: 620px;
+      transition: width 1s 0.5s, z-index 0s 1.5s, left 0.5s;
+    }
+    .sale:nth-child(3) {
+      right: 0;
+      transition: width 1s, z-index 0s 1s;
+    }
+    .sale:nth-child(odd):hover {
+      width: 1860px;
+      z-index: 2;
+      transition: width 1s;
+    }
+    .sale:nth-child(2):hover {
+      left: 0;
+      width: 1860px;
+      z-index: 2;
+      transition: left 0.5s 0.5s, width 1s;
+    }
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .mainSalesHeader {
+    width: 240px;
+    margin: 20px auto 5px !important;
+    padding-top: 22px !important;
+  }
+  .salesContainer {
+    width: 1404px;
+    .mainSales {
+      height: 493px;
+      width: 1329px;
+      padding: 0 0 20px;
+      .sale {
+        width: 443px;
+        height: 443px;
+        .image {
+          width: 240px;
+        }
+      }
+      .sale:nth-child(2) {
+        left: 443px;
+      }
+      .sale:nth-child(odd):hover {
+        width: 1329px;
+      }
+      .sale:nth-child(2):hover {
+        width: 1329px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .mainSalesHeader {
+    width: 200px;
+    padding-top: 21px !important;
+  }
+  .salesContainer {
+    width: 972px;
+    .mainSales {
+      height: 320px;
+      width: 900px;
+      .sale {
+        width: 300px;
+        height: 300px;
+        .image {
+          width: 165px;
+        }
+      }
+      .sale:nth-child(2) {
+        left: 300px;
+      }
+      .sale:nth-child(odd):hover {
+        width: 900px;
+      }
+      .sale:nth-child(2):hover {
+        width: 900px;
+      }
+    }
+  }
+}
