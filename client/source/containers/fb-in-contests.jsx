@@ -10,8 +10,6 @@ class FbInContests extends React.Component {
         <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
         <Header className='recomendedProducts oursContestsHeader' textAlign='center' size='huge' >Nasze Konkursy</Header>
         <div className='fbinContests' >
-          <div className='facebookPost' ><FBEmbedPost appId='261243031198838' href='https://www.facebook.com/Allecco/posts/2069247059792412' width='450' /></div>
-          <div className='facebookPost' ><FBEmbedPost appId='261243031198838' href='https://www.facebook.com/Allecco/posts/2049753141741804' width='450' /></div>
           <div className='instagramPost' ><InstagramEmbed
             url='https://instagr.am/p/BoRICjtFK6e/'
             maxWidth={450}
@@ -36,6 +34,8 @@ class FbInContests extends React.Component {
             onAfterRender={() => {}}
             onFailure={() => {}}
           /></div>
+          <div className='facebookPost' ><FBEmbedPost appId='261243031198838' href='https://www.facebook.com/Allecco/posts/2069247059792412' width='450' /></div>
+          <div className='facebookPost' ><FBEmbedPost appId='261243031198838' href='https://www.facebook.com/Allecco/posts/2049753141741804' width='450' /></div>
         </div>
       </div>
     );
