@@ -36,7 +36,7 @@ class NavBar extends React.Component {
   }
 
   closeSidebar() {
-    this.setState({ sidebarOpen: false });
+    this.setState({ sidebarOpen: false, sideClass: '' });
     this.scrollToTop();
   }
 
