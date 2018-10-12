@@ -48,7 +48,7 @@
 
 @media screen and (max-width: 1440px) {
   .mainMoviesHeader {
-    width: 200px;
+    width: 190px;
   }
   .mainMovies {
     width: 924px;
@@ -60,6 +60,9 @@
 }
 
 @media screen and (max-width: 1020px) {
+  .mainMoviesHeader {
+    width: 210px;
+  }
   .mainMovies {
     width: 712px;
     .card {
