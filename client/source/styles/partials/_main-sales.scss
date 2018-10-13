@@ -127,3 +127,128 @@
     }
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .salesContainer {
+    .mainSales {
+      .sale:nth-child(1) {
+        transition: none;
+      }
+      .sale:nth-child(2) {
+        transition: none;
+      }
+      .sale:nth-child(3) {
+        transition: none;
+      }
+      .sale:nth-child(odd):hover {
+        width: 300px;
+        transition: none;
+      }
+      .sale:nth-child(2):hover {
+        width: 300px;
+        left: 300px;
+        transition: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .mainSalesHeader {
+    width: 220px;
+  }
+  .salesContainer {
+    width: 746px;
+    .mainSales {
+      height: 260px;
+      width: 720px;
+      .sale {
+        width: 240px;
+        height: 240px;
+        .image {
+          width: 125px;
+        }
+      }
+      .sale:nth-child(2) {
+        left: 240px;
+      }
+      .sale:nth-child(odd):hover {
+        width: 240px;
+      }
+      .sale:nth-child(2):hover {
+        width: 240px;
+        left: 240px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .salesContainer {
+    width: 100%;
+    margin: 30px auto;
+    .mainSales {
+      height: auto;
+      width: 463px;
+      .sale {
+        width: 443px;
+        height: 443px;
+        position: relative;
+        margin: 10px;
+        .image {
+          width: 240px;
+        }
+      }
+      .sale:nth-child(2) {
+        left: 0;
+      }
+      .sale:nth-child(odd):hover {
+        width: 443px;
+      }
+      .sale:nth-child(2):hover {
+        width: 443px;
+        left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .salesContainer {
+    .mainSales {
+      width: 400px;
+      .sale {
+        width: 380px;
+        height: 380px;
+        .image {
+          width: 200px;
+        }
+      }
+      .sale:nth-child(odd):hover {
+        width: 380px;
+      }
+      .sale:nth-child(2):hover {
+        width: 380px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .salesContainer {
+    .mainSales {
+      width: 100%;
+      .sale {
+        width: 100%;
+        height: 380px;
+        margin: 10px 0;
+      }
+      .sale:nth-child(odd):hover {
+        width: 100%;
+      }
+      .sale:nth-child(2):hover {
+        width: 100%;
+      }
+    }
+  }
+}

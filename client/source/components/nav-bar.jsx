@@ -62,7 +62,7 @@ class NavBar extends React.Component {
     return (
       <div style={{ height: '100%' }} >
         {redirect}
-        <Responsive minWidth='769' style={{ display: 'flex', flexDirection: 'column', height: '100%' }} >
+        <Responsive minWidth='1021' style={{ display: 'flex', flexDirection: 'column', height: '100%' }} >
           <Menu borderless fixed='top' style={{ flex: 'none', boxShadow: '0px 6px 12px 0px rgba(0,0,0,0.3)' }}  >
             <div className='navBarContainer' >
             <div className='navSearchBar' >
@@ -87,7 +87,7 @@ class NavBar extends React.Component {
           </Menu>
           {children}
         </Responsive>
-        <Responsive maxWidth='768' >
+        <Responsive maxWidth='1020' >
           <Sidebar transitions={false} touch={false} contentClassName='mainContent' rootClassName='mainRoot' sidebarClassName='mainSidebar' overlayClassName='mainOverlay' sidebar={<MobileBar/>} open={this.state.sidebarOpen} onSetOpen={this.toggleSidebar} >
             <Menu className='mobileNavbar' fixed='top' >
               <Menu.Menu position='left' >

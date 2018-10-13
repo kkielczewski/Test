@@ -20,7 +20,7 @@
   visibility: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1020px) {
   .mainContainer {
     margin-top: 52px;
   }
@@ -133,7 +133,7 @@
     float: right;
     .item {
       height: 53px;
-      font-size: 20px;
+      font-size: 24px;
       padding: 7px 30px !important;
     }
     .item:hover {
@@ -149,6 +149,11 @@
 @media screen and (max-width: 2170px) {
   .navBarContainer {
     width: 1404px;
+    .menu {
+      .item {
+        font-size: 20px;
+      }
+    }
   }
 }
 
@@ -157,7 +162,8 @@
     width: 972px;
     .menu {
       .item {
-        padding: 7px 17px !important;
+        padding: 7px 12px !important;
+        font-size: 18px;
       }
     }
   }

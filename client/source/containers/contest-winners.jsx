@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header } from 'semantic-ui-react';
-import VideoCard from '../components/video-card';
+import YoutubeCard from '../components/youtube-card';
 import { getSomeVideos } from '../utils/youtube-utils';
 
 class ContestWinners extends React.Component {
@@ -24,7 +24,7 @@ class ContestWinners extends React.Component {
         <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
         <Header className='recomendedProducts contestWinnersHeader' textAlign='center' size='huge' >Zwycięzcy Konkursów</Header>
         <div className='winnersMovies' >
-          {this.state.allVideos.slice(0, 3).map(video => <div className='winnerContainer' ><Header className='recomendedProducts contestName' textAlign='center'>NAZWA KONKURSU</Header><Header className='recomendedProducts winnerHeader' textAlign='center'>IMIĘ NAZWISKO</Header><VideoCard video={video} /></div>)}
+          {this.state.allVideos.slice(0, 3).map(video => <div className='winnerContainer' ><Header className='recomendedProducts contestName' textAlign='center'>NAZWA KONKURSU</Header><Header className='recomendedProducts winnerHeader' textAlign='center'>IMIĘ NAZWISKO</Header><YoutubeCard video={video} /></div>)}
         </div>
       </div>
     );

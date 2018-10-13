@@ -2,8 +2,7 @@ import React from 'react';
 import { Header, Responsive } from 'semantic-ui-react';
 import Slider from 'react-slick';
 import Pagination from 'react-js-pagination';
-import VideoCardBig from '../components/video-card-big';
-import VideoCard from '../components/video-card';
+import YoutubeCard from '../components/youtube-card';
 import { getVideo, getSomeVideos } from '../utils/youtube-utils';
 
 class MainContest extends React.Component {
@@ -54,7 +53,7 @@ class MainContest extends React.Component {
     return (
       <div className='contestContainer' >
         <div className='contest' >
-          <VideoCardBig id={this.state.id} image={this.state.url} />
+          <iframe src={'https://www.youtube.com/embed/' + this.state.id + '?rel=0'} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen />
           <div className='contestInfo' >
             <Header>Nazwa Konkursu</Header>
             <p>Zasady konkursu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum</p>
@@ -65,13 +64,13 @@ class MainContest extends React.Component {
           <Header className='recomendedProducts mainContestHeader' textAlign='center' >FILMY UCZESTNIKÓW</Header>
           <Responsive minWidth='1021' >
             <Slider {...videoSettings} >
-              {this.state.allVideos.map(video => <div className='contestCard' ><VideoCard video={video} /></div>)}
+              {this.state.allVideos.map(video => <div className='contestCard' ><YoutubeCard video={video} /></div>)}
             </Slider>
           </Responsive>
           <Responsive maxWidth='1020' >
             <div className='contestVideosContainer' >
               <div className='contestVideos' >
-              {this.state.currentVideos.map(video => <div className='contestCard'><VideoCard video={video} /></div>)}
+              {this.state.currentVideos.map(video => <div className='contestCard'><YoutubeCard video={video} /></div>)}
                 <div className='videoNav' >
                   <Pagination
                   hideFirstLastPages

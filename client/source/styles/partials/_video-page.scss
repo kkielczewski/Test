@@ -22,6 +22,11 @@
       margin: 60px auto 40px;
       border-radius: 0;
       box-shadow: 4px 6px 12px 0px rgba(0, 0, 0, 0.3);
+      a {
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+      }
       .image {
         width: 100%;
         height: 100%;
@@ -49,10 +54,15 @@
           border-radius: 0;
           color: black;
           background-color: white;
+          transition: background-color 0.5s;
           border-style: solid;
           float: left;
           margin: 0;
           padding: 13px 20px;
+        }
+        .subscribe:hover {
+          background-color: rgba(0,0,0,.05);
+          transition: background-color 0.5s;
         }
         .facebook {
           border: none;

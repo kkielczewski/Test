@@ -119,8 +119,13 @@
       padding: 20px;
       color: black;
       background-color: white;
+      transition: background-color 0.5s;
       border-style: solid;
       border-radius: 0;
+    }
+    .button:hover {
+      background-color: rgba(0,0,0,.05);
+      transition: background-color 0.5s;
     }
   }
 }
