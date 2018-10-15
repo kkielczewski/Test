@@ -1,0 +1,136 @@
+.allContestsHeader {
+  width: 230px;
+  padding-top: 30px !important;
+  margin: 0 auto 5px !important;
+  background-color: white;
+  z-index: 2;
+}
+.allContests {
+  position: relative;
+  width: 1980px;
+  margin: 70px auto;
+  background-color: white;
+  box-shadow: 4px 6px 12px 0px rgba(0,0,0,0.3);
+  height: auto;
+  overflow: hidden;
+  .mainContest {
+    padding: 20px 0 20px;
+    float: left;
+    width: 976px;
+    margin: 0 28px;
+    iframe {
+      width: 976px;
+      height: 549px;
+      border-radius: 0;
+      box-shadow: 4px 6px 12px 0px rgba(0, 0, 0, 0.3);
+    }
+  }
+  .otherContests {
+    margin: auto;
+    overflow: hidden;
+    padding-top: 3px;
+    width: 948px;
+    .card {
+      border-radius: 0;
+      float: left;
+      box-shadow: 4px 6px 12px 0px rgba(0, 0, 0, 0.3);
+      margin: 20px 17px 20px 9px;
+      width: 448px;
+      height: 252px;
+      .image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 0 !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 2170px) {
+  .allContestsHeader {
+    width: 170px;
+    padding-top: 22px !important;
+  }
+  .allContests {
+    width: 1404px;
+    .mainContest {
+      padding-top: 10px;
+      margin: 0 18px;
+      width: 720px;
+      iframe {
+        width: 720px;
+        height: 405px;
+      }
+    }
+    .otherContests {
+      width: 648px;
+      padding-top: 1px;
+      .card {
+        width: 304px;
+        height: 171px;
+        margin: 20px 15px 20px 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .allContestsHeader {
+    width: 140px;
+    padding-top: 20px !important;
+  }
+  .allContests {
+    width: 972px;
+    .mainContest {
+      padding-top: 10px;
+      margin: 0 10px;
+      width: 480px;
+      iframe {
+        width: 480px;
+        height: 270px;
+        box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.2);
+      }
+    }
+    .otherContests {
+      width: 472px;
+      .card {
+        width: 224px;
+        height: 126px;
+        margin: 9px 9px 9px 3px;
+        box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .allContestsHeader {
+    width: 140px;
+    padding-top: 20px !important;
+  }
+  .allContests {
+    width: 746px;
+    .mainContest {
+      padding-top: 10px;
+      margin: 0 53px;
+      width: 640px;
+      iframe {
+        width: 640px;
+        height: 360px;
+        box-shadow: 4px 6px 12px 0px rgba(0, 0, 0, 0.3);
+      }
+    }
+    .otherContests {
+      width: 648px;
+      padding-top: 0;
+      padding-bottom: 15px;
+      .card {
+        width: 304px;
+        height: 171px;
+        margin: 10px;
+        box-shadow: 3px 5px 10px 0px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
