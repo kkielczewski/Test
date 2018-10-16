@@ -26,6 +26,12 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .mainContainer {
+    margin-top: 20px;
+  }
+}
+
 .mainSidebar {
   background: white !important;
   z-index: 102 !important;

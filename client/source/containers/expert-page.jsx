@@ -84,8 +84,7 @@ class VideoPage extends React.Component {
     return (
       <div className='mainContainer' >
         <div className='blueStripe' ></div>
-        <div className='videoPicture' style={{ position: 'relative', width: '100%', overflow: 'hidden', background: `url(${MoviesPlaceholder}) no-repeat center` }} />
-        <ExpertInfo expert={this.state.name} avatar={Avatar} />
+        <ExpertInfo expertClass='mainExpertInfo' expert={this.state.name} avatar={Avatar} />
         <div className='whiteContainer' >
           <div className='background' />
           <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>

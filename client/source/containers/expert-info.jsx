@@ -5,7 +5,7 @@ class ExpertInfo extends React.Component {
   render() {
     return (
       <div style={{ clear: 'both', marginBottom: '30px' }} >
-        <div className='whiteContainer doctorInfo' >
+        <div className={`whiteContainer doctorInfo ${this.props.expertClass}`} >
           <div className='background whiteHundred' />
           <div className='expertContainer' >
             <div className='imageContainer' >
