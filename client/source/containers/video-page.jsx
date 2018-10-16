@@ -250,9 +250,6 @@ class VideoPage extends React.Component {
         <ExpertInfo avatar={Avatar} expert={this.state.expert} />
         <Advice />
         <ExpertMovies expertVideos={this.state.expertVideos} />
-        <Responsive maxWidth='1020' >
-          <MainMovies />
-        </Responsive>
         <ProductCarousel />
         {redirect}
       </div>
