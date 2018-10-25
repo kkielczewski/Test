@@ -1,5 +1,8 @@
 import React from 'react';
 import { Segment, Header, Input, Button, Checkbox, Form } from 'semantic-ui-react';
+import toastr from 'toastr';
+
+toastr.options = { closeButton: true, positionClass: 'toast-bottom-right' };
 
 class Newsletter extends React.Component {
   constructor(props) {
@@ -7,7 +10,8 @@ class Newsletter extends React.Component {
     this.state = {
       email: '',
       firstCheck: false,
-      secondCheck: false
+      secondCheck: false,
+      disabled: false
     }
     this.changeCheckOne = this.changeCheckOne.bind(this);
     this.changeCheckTwo = this.changeCheckTwo.bind(this);
@@ -36,7 +40,8 @@ class Newsletter extends React.Component {
   handleClick() {
     if (this.validateEmail(this.state.email)) {
       if (this.state.firstCheck && this.state.secondCheck) {
-        console.log('Przeszło.');
+        toastr.info('Dziękujemy za zapisanie się do newslettera.');
+        this.setState({ disabled: true });
       } else {
         console.log('Zaakceptuj regulamin i coś tam.');
       }
@@ -56,7 +61,7 @@ class Newsletter extends React.Component {
         <Checkbox value={true} onChange={this.changeCheckOne} label="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also." />
         <Checkbox value={true} onChange={this.changeCheckTwo} label="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-orless normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their." />
         <div>
-          <Button >Zapisz</Button>
+          <Button disabled={this.state.disabled} >Zapisz</Button>
         </div>
         </Form>
       </Segment>

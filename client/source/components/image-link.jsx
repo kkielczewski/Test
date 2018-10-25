@@ -5,8 +5,9 @@ class ImageLink extends React.Component {
   render() {
     return (
       <Card>
-        <a draggable='false' href={this.props.link} />
-        <Image src={this.props.image} />
+        <a draggable='false' href={this.props.link} >
+          <Image src={this.props.image} />
+        </a>
       </Card>
     );
   }

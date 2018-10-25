@@ -1,12 +1,14 @@
 import React from 'react';
 import { Segment, Header, TextArea, Button, Form } from 'semantic-ui-react';
+import toastr from 'toastr';
 
 class Advice extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: ''
-    }
+      text: '',
+      disabled: false
+    };
     this.changeText = this.changeText.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
@@ -17,7 +19,8 @@ class Advice extends React.Component {
 
   handleClick() {
     if (this.state.text) {
-      console.log('Przeszło.');
+      toastr.info('Dziękujemy za informacje.');
+      this.setState({ disabled: true });
     } else {
       console.log('Zostawiłeś puste pole.');
     }
@@ -33,7 +36,7 @@ class Advice extends React.Component {
           </Header>
         <Form onSubmit={this.handleClick} >
           <TextArea onChange={this.changeText} placeholder='...' />
-          <Button>Wyślij</Button>
+          <Button disabled={this.state.disabled} >Wyślij</Button>
         </Form>
       </Segment>
     );

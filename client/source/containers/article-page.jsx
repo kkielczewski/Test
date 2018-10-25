@@ -104,7 +104,7 @@ class VideoPage extends React.Component {
           <div className='main' >
             <ArticleCardBig image={ArticlePlaceholder} />
             <div className='title' >
-              <Header>{this.state.title}</Header>
+              <Header className='articleTitle' >{this.state.title}</Header>
                 <div className='buttons' >
                   <Button className='facebook' onClick={this.shareFacebook} icon='facebook' />
                 </div>

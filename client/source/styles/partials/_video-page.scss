@@ -47,6 +47,9 @@
         font-size: 32px;
         margin-bottom: 0;
       }
+      .articleTitle {
+        width: 92%;
+      }
       .buttons {
         float: right;
         .subscribe {
@@ -133,6 +136,7 @@
             opacity: 0;
             transition: all .4s ease-in-out;
             .header {
+              background-color: transparent;
               font-size: 31px;
               color: white;
               padding: 5px;
@@ -272,6 +276,9 @@
           width: 70%;
           font-size: 28px;
         }
+        .articleTitle {
+          width: 92%;
+        }
         .buttons {
           .subscribe {
             font-size: 18px;
@@ -390,6 +397,9 @@
           width: 69%;
           font-size: 24px;
           padding-top: 5px;
+        }
+        .articleTitle {
+          width: 92%;
         }
         .buttons {
           .subscribe {
@@ -541,6 +551,9 @@
         .header {
           font-size: 23px;
           width: 74%;
+        }
+        .articleTitle {
+          width: 92%;
         }
       }
       // Content

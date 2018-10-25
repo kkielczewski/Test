@@ -154,12 +154,11 @@ class VideoPage extends React.Component {
       id: '',
       image: '',
       title: '',
-      expert: ''
+      expert: '',
+      disabled: false
     };
 
     this.shareFacebook = this.shareFacebook.bind(this);
-    this.shareTwitter = this.shareTwitter.bind(this);
-    this.likeVideo = this.likeVideo.bind(this);
     this.subscribe = this.subscribe.bind(this);
   }
 
@@ -189,19 +188,6 @@ class VideoPage extends React.Component {
     return false;
   }
 
-  shareTwitter() {
-    const twitterWindow = window.open('https://twitter.com/share?url=' + window.location.href, 'twitter-popup', 'height=350,width=600');
-    if (twitterWindow.focus) { twitterWindow.focus(); }
-    return false;
-  }
-
-  async likeVideo() {
-    if (!GoogleAuth.isSignedIn.get()) {
-      await GoogleAuth.signIn();
-    }
-    defineRequest(this.state.id, 'like');
-  }
-
   async subscribe() {
     if (!GoogleAuth.isSignedIn.get()) {
       await GoogleAuth.signIn();
@@ -214,6 +200,7 @@ class VideoPage extends React.Component {
         'snippet.resourceId.channelId': 'UClYlNvdBOuwuQZrCle9BrcA'
       },
       'subscribe');
+    this.setState({ disabled: true });
   }
 
   render() {
@@ -227,7 +214,7 @@ class VideoPage extends React.Component {
             <div className='title' >
               <Header>{this.state.title}</Header>
               <div className='buttons' >
-                <Button className='subscribe' onClick={this.subscribe} >SUBSKRYBUJ NA YT</Button>
+                <Button disabled={this.state.disabled} className='subscribe' onClick={this.subscribe} >SUBSKRYBUJ NA YT</Button>
                 <Button className='facebook' onClick={this.shareFacebook} icon='facebook' />
               </div>
             </div>

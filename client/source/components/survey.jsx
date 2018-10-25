@@ -1,12 +1,16 @@
 import React from 'react';
 import { Segment, Header, Input, Button, Form, Responsive } from 'semantic-ui-react';
+import toastr from 'toastr';
 import SurveyImage from '../assets/images/survey.jpg';
+
+toastr.options = { closeButton: true, positionClass: 'toast-bottom-right' };
 
 class Survey extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: ''
+      email: '',
+      disabled: false
     }
     this.changeEmail = this.changeEmail.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -24,7 +28,8 @@ class Survey extends React.Component {
 
   handleClick() {
     if (this.validateEmail(this.state.email)) {
-      console.log('Przeszło.');
+      toastr.info('Email został wysłany.');
+      this.setState({ disabled: true });
     } else {
       console.log('Niepoprawny email');
     }
@@ -46,7 +51,7 @@ class Survey extends React.Component {
           </div>
           <Form onSubmit={this.handleClick}>
           <Input onChange={this.changeEmail} placeholder='Email...' />
-          <Button >WYŚLIJ</Button>
+          <Button disabled={this.state.disabled} >WYŚLIJ</Button>
           </Form>
         </Segment>
         </div>
