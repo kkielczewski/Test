@@ -81,13 +81,22 @@
     .description {
       clear: both;
       width: 1408px;
-      font-size: 28px;
+      font-size: 26px;
       padding: 0 80px;
       margin: 20px auto 60px;
       .paragraph {
         margin-bottom: 5px;
       }
       .header {
+        font-size: 26px;
+      }
+      h3 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 26px;
+      }
+      ul {
         font-size: 26px;
       }
     }
@@ -274,7 +283,7 @@
         padding: 0 40px;
         .header {
           width: 70%;
-          font-size: 28px;
+          font-size: 26px;
         }
         .articleTitle {
           width: 92%;
@@ -292,10 +301,19 @@
       // Content
       .description {
         width: 950px;
-        font-size: 24px;
+        font-size: 22px;
         padding: 0 40px;
         .header {
-          font-size: 24px;
+          font-size: 26px;
+        }
+        h3 {
+          font-size: 26px;
+        }
+        p {
+          font-size: 22px;
+        }
+        ul {
+          font-size: 22px;
         }
       }
     }
@@ -395,7 +413,7 @@
         padding: 0 35px;
         .header {
           width: 69%;
-          font-size: 24px;
+          font-size: 22px;
           padding-top: 5px;
         }
         .articleTitle {
@@ -414,11 +432,23 @@
       // Content
       .description {
         width: 630px;
-        font-size: 20px;
+        font-size: 18px;
         padding: 0 35px;
         margin: 10px auto 30px;
         .header {
-          font-size: 20px;
+          font-size: 22px;
+        }
+        h3 {
+          font-size: 22px;
+          margin: 10px 0;
+        }
+        p {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+        ul {
+          font-size: 18px;
+          margin: 10px 0;
         }
       }
     }
@@ -648,6 +678,7 @@
         padding: 0;
         .header {
           width: 100%;
+          font-size: 20px;
         }
         .buttons {
           float: none;
@@ -663,6 +694,19 @@
       .description {
         width: 496px;
         padding: 0;
+        font-size: 16px;
+        .header {
+          font-size: 20px;
+        }
+        h3 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 16px;
+        }
+        ul {
+          font-size: 16px;
+        }
       }
     }
   }
