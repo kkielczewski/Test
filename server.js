@@ -24,6 +24,13 @@ const app = new Koa()
   .use(serve(path.join(__dirname, '/client/dist')))
   .use(function* index() {
     yield send(this, '/client/dist/index.html');
+  })
+  .use(function(req, res, next) {  
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Credentials");
+    res.header("Access-Control-Allow-Credentials", "true");
+    next();
   });
 
 const server = app.listen(config.server.port);
