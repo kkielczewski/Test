@@ -19,11 +19,6 @@ const responseValidator = function responseValidator(req, fields) {
     if (!isPresent && isRequired) {
       switch (fields[i].name) {
         case 'email': errors.push({ error: ERRORS.INVALID_EMAIL }); break;
-        case 'name':
-          if (!req.name || !req.name.first || !req.name.last) {
-            errors.push({ error: ERRORS.INVALID_NAME });
-          }
-          break;
         case 'password': errors.push({ error: ERRORS.INVALID_PASSWORD }); break;
         case 'passwordConfirm': errors.push({ error: ERRORS.PASSWORD_MUST_MATCH }); break;
         default: errors.push({ error: ERRORS.INVALID_ENTRY }); break;
@@ -36,11 +31,6 @@ const responseValidator = function responseValidator(req, fields) {
         // req[fields[i].name] = validator.escape(req[fields[i].name]);
       }
 
-      if (fields[i].name === 'email') {
-        if (!validator.isEmail(req.email)) {
-          errors.push({ error: ERRORS.INVALID_EMAIL });
-        }
-      }
       if (fields[i].name === 'password') {
         if (req.password && req.password.length < 8) {
           errors.push({ error: ERRORS.PASSWORD_TOO_SHORT });

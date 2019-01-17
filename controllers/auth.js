@@ -1,14 +1,10 @@
-const crypto = require('crypto-promise');
-const moment = require('moment');
 const { passport } = require('../config');
 const User = require('../models/user');
 const userUtils = require('../utils/user-utils');
-const emailUtils = require('../utils/email-utils');
 const validationUtils = require('../utils/validation-utils');
 const { ERRORS } = require('../constants');
 
 const { standardizeUser, generateJWT, getRole } = userUtils;
-const { sendEmail } = emailUtils;
 const { responseValidator } = validationUtils;
 
 /**
@@ -69,10 +65,10 @@ exports.login = (ctx, next) => passport.authenticate('local', async (err, user) 
  *            address does not already exist.
  */
 exports.register = async (ctx, next) => {
+  console.log(ctx.request.body);
   // Check for registration errors
   const validation = responseValidator(ctx.request.body, [
     { name: 'email', required: true },
-    { name: 'name', required: true },
     { name: 'password', required: true }
   ]);
 
@@ -82,9 +78,9 @@ exports.register = async (ctx, next) => {
     await next();
   }
 
-  const { email, password, name } = validation;
+  const { email, password } = validation;
 
-  if (email && password && name) {
+  if (email && password) {
     const formattedEmail = email.toLowerCase();
     try {
       let user = await User.findOne({ email: formattedEmail });
@@ -95,7 +91,6 @@ exports.register = async (ctx, next) => {
         await next();
       } else {
         user = new User({
-          name,
           password,
           email
         });
@@ -107,80 +102,6 @@ exports.register = async (ctx, next) => {
     } catch (err) {
       ctx.throw(500, err);
     }
-  }
-};
-
-
-/**
- * forgotPassword - Allows a user to request a password reset, but does not
- *                  actually reset a password. Sends link in email for security.
- */
-exports.forgotPassword = async (ctx, next) => {
-  const { email } = ctx.request.body;
-  try {
-    const buffer = await crypto.randomBytes(48);
-    const resetToken = buffer.toString('hex');
-    const user = await User.findOneAndUpdate(
-      { email },
-      {
-        resetPasswordToken: resetToken,
-        resetPasswordExpires: moment().add(1, 'hour')
-      }
-    );
-
-    // If a user was actually updated, send an email
-    if (user) {
-      const message = {
-        subect: 'Reset Password',
-        text: `${'You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\n' +
-          'Please click on the following link, or paste this into your browser to complete the process:\n\n' +
-          'http://'}${ctx.host}/reset-password/${resetToken}\n\n` +
-          'If you did not request this, please ignore this email and your password will remain unchanged.\n'
-      };
-
-      await sendEmail(email, message);
-    }
-
-    ctx.body = {
-      message: `We sent an email to ${email} containing a password reset link. It will expire in one hour.`
-    };
-
-    await next();
-  } catch (err) {
-    ctx.throw(500, err);
-  }
-};
-
-
-/**
- * resetPassword  - Allows user with token from email to reset their password
- */
-exports.resetPassword = async (ctx, next) => {
-  const { password, confirmPassword } = ctx.request.body;
-  const { resetToken } = ctx.params;
-
-  try {
-    if (password && confirmPassword && password !== confirmPassword) {
-      ctx.status = 422;
-      ctx.body = { errors: [{ error: ERRORS.PASSWORD_CONFIRM_FAIL }] };
-    } else {
-      const user = await User.findOneAndUpdate(
-        { resetPasswordToken: resetToken, resetPasswordExpires: { $gt: Date.now() } },
-        { password, resetPasswordToken: undefined, resetPasswordExpires: undefined }
-      );
-
-      if (!user) {
-        // If no user was found, their reset request likely expired. Tell them that.
-        ctx.status = 422;
-        ctx.body = { errors: [{ error: ERRORS.PASSWORD_RESET_EXPIRED }] };
-      } else {
-        // If the user reset their password successfully, let them know
-        ctx.body = { message: 'Your password has been successfully updated. Please login with your new password.' };
-      }
-      await next();
-    }
-  } catch (err) {
-    ctx.throw(500, err);
   }
 };
 
