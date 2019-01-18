@@ -6,6 +6,8 @@ import {
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureStore from '../redux';
+import RequireAuth from "./require-auth";
+import AuthenticatedRoutes from "../components/authenticated";
 import NavBar from '../components/nav-bar';
 import Home from './home';
 import Video from './videos';
@@ -19,6 +21,8 @@ import Contact from './contact';
 import SearchResults from './search-results';
 import Contests from './contests';
 import Sales from './sales';
+import Login from './login';
+import Register from './register';
 import Footer from './footer';
 
 const store = configureStore();
@@ -43,6 +47,14 @@ class App extends React.Component {
               <Route path="/search" component={SearchResults} />
               <Route path="/contests" component={Contests} />
               <Route path="/sales" component={Sales} />
+              <Route path="/login" component={Login} />
+              <Route path="/register" component={Register} />
+              <Route path="/cms_homecontests" component={RequireAuth(AuthenticatedRoutes)} />
+              <Route path="/cms_articles" component={RequireAuth(AuthenticatedRoutes)} />
+              <Route path="/cms_videos" component={RequireAuth(AuthenticatedRoutes)} />
+              <Route path="/cms_experts" component={RequireAuth(AuthenticatedRoutes)} />
+              <Route path="/cms_contests" component={RequireAuth(AuthenticatedRoutes)} />
+              <Route path="/cms_winners" component={RequireAuth(AuthenticatedRoutes)} />
             </Switch>
             <Footer />
             </NavBar>

@@ -34,7 +34,7 @@ export const login = (credentials, desiredPath) => async (dispatch) => {
       if (desiredPath) {
         window.location.href = `${getAppUrl()}${desiredPath}`;
       } else {
-        window.location.href = `${getAppUrl()}/dashboard`;
+        window.location.href = `${getAppUrl()}/cms_homecontests`;
       }
     }
   } catch (err) {

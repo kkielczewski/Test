@@ -2,8 +2,11 @@ import React from 'react';
 import { NavLink, Redirect } from 'react-router-dom';
 import { Menu, Responsive, Button, Icon } from 'semantic-ui-react';
 import Sidebar from 'react-sidebar';
+import { connect } from 'react-redux';
 import SearchAll from './search-all';
 import miniLogo from '../assets/icons/mini_logo.png';
+import { getAuthenticatedUser } from '../redux/modules/user';
+import { logoutUser } from '../redux/modules/authentication';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -46,11 +49,48 @@ class NavBar extends React.Component {
   }
 
   render() {
+    const links = [
+      {
+        name: 'Home Page Contests',
+        link: 'cms_homecontests',
+        authenticated: true
+      },
+      {
+        name: 'Articles',
+        link: 'cms_articles',
+        authenticated: true
+      },
+      {
+        name: 'Videos',
+        link: 'cms_videos',
+        authenticated: true
+      },
+      {
+        name: 'Experts',
+        link: 'cms_experts',
+        authenticated: true
+      },
+      {
+        name: 'Contests',
+        link: 'cms_contests',
+        authenticated: true
+      },
+      {
+        name: 'Contests Winners',
+        link: 'cms_winners',
+        authenticated: true
+      },
+      {
+        name: 'Sign out',
+        onClick: this.props.logoutUser,
+        authenticated: true
+      }
+    ];
     const { children } = this.props;
     const redirect = this.state.toSearch ? <Redirect to={{ pathname: '/search', search: `?v=${this.state.searchValue}` }} /> : <div></div>;
     const MobileBar = () => (<Menu as={Menu} icon="labeled" vertical className={this.state.sideClass} >
       <SearchAll onSearch={this.searchAll} />
-      <NavLink onClick={this.closeSidebar} className= "item" exact to='/' style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }}>HOME</NavLink>
+      <NavLink onClick={this.closeSidebar} className="item" exact to='/' style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }}>HOME</NavLink>
       <NavLink onClick={this.closeSidebar} className="item" exact to="/video" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >VIDEO</NavLink>
       <NavLink onClick={this.closeSidebar} className="item" to="/blog" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >BLOG</NavLink>
       <NavLink onClick={this.closeSidebar} className="item" exact to="/expert" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >EKSPERCI</NavLink>
@@ -58,7 +98,11 @@ class NavBar extends React.Component {
       <NavLink onClick={this.closeSidebar} className="item" exact to="/contests" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >KONKURSY</NavLink>
       <NavLink onClick={this.closeSidebar} className="item" to="/info" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >O NAS</NavLink>
       <NavLink onClick={this.closeSidebar} className="item" to="/contact" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >KONTAKT</NavLink>
+      {links.filter(link => link.authenticated === this.props.authenticated).map(link => (
+        <NavLink onClick={this.closeSidebar} className="item" exact to={link.link} style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }}>{link.name}</NavLink>
+      ))}
       </Menu>);
+
     return (
       <div style={{ height: '100%' }} >
         {redirect}
@@ -82,6 +126,9 @@ class NavBar extends React.Component {
               <NavLink onClick={this.scrollToTop} className="item" to="/contests" >KONKURSY</NavLink>
               <NavLink onClick={this.scrollToTop} className="item" to="/info" >O NAS</NavLink>
               <NavLink onClick={this.scrollToTop} className="item" to="/contact" >KONTAKT</NavLink>
+              {links.filter(link => link.authenticated === this.props.authenticated).map(link => (
+                <NavLink onClick={this.scrollToTop} className="item" exact to={link.link} >{link.name}</NavLink>
+              ))}
             </Menu.Menu>
             </div>
           </Menu>
@@ -103,4 +150,9 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar;
+const mapStateToProps = ({ user, authentication }) => ({
+  user: getAuthenticatedUser({ user, authentication }),
+  authenticated: authentication.authenticated
+});
+
+export default connect(mapStateToProps, { logoutUser })(NavBar);
