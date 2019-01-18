@@ -107,7 +107,7 @@ class NavBar extends React.Component {
       <div style={{ height: '100%' }} >
         {redirect}
         <Responsive minWidth='1021' style={{ display: 'flex', flexDirection: 'column', height: '100%' }} >
-          <Menu borderless fixed='top' style={{ flex: 'none', boxShadow: '0px 6px 12px 0px rgba(0,0,0,0.3)' }}  >
+          <Menu borderless fixed='top' style={{ flex: 'none', boxShadow: '0px 6px 12px 0px rgba(0,0,0,0.3)' }} >
             <div className='navBarContainer' >
             <div className='navSearchBar' >
               <SearchAll onSearch={this.searchAll} />
@@ -138,7 +138,7 @@ class NavBar extends React.Component {
           <Sidebar transitions={false} touch={false} contentClassName='mainContent' rootClassName='mainRoot' sidebarClassName='mainSidebar' overlayClassName='mainOverlay' sidebar={<MobileBar/>} open={this.state.sidebarOpen} onSetOpen={this.toggleSidebar} >
             <Menu className='mobileNavbar' fixed='top' >
               <Menu.Menu position='left' >
-                <Button className='item' onClick={() => {this.toggleSidebar()}} ><Icon name='sidebar' /></Button>
+                <Button className='item' onClick={() => { this.toggleSidebar(); }} ><Icon name='sidebar' /></Button>
               </Menu.Menu>
               <img src={miniLogo} className='item' />
             </Menu>
