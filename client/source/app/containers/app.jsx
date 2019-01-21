@@ -33,8 +33,8 @@ class App extends React.Component {
       <Provider store={store} >
         <BrowserRouter>
           <div style={{ height: '100%' }} >
-            <NavBar />
             <Switch>
+            <NavBar>
               <Route exact path="/" component={Home} />
               <Route exact path="/video" component={Video} />
               <Route exact path="/blog" component={Articles} />
@@ -55,6 +55,7 @@ class App extends React.Component {
               <Route path="/cms_experts" component={RequireAuth(AuthenticatedRoutes)} />
               <Route path="/cms_contests" component={RequireAuth(AuthenticatedRoutes)} />
               <Route path="/cms_winners" component={RequireAuth(AuthenticatedRoutes)} />
+            </NavBar>
             </Switch>
             <Footer />
           </div>
