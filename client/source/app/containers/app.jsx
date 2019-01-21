@@ -6,9 +6,6 @@ import {
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import configureStore from '../redux';
-import RequireAuth from "./require-auth";
-import AuthenticatedRoutes from "../components/authenticated";
-import NavBar from '../components/nav-bar';
 import Home from './home';
 import Video from './videos';
 import Articles from './articles';
@@ -23,6 +20,9 @@ import Contests from './contests';
 import Sales from './sales';
 import Login from './login';
 import Register from './register';
+import RequireAuth from './require-auth';
+import AuthenticatedRoutes from '../components/authenticated';
+import NavBar from '../components/nav-bar';
 import Footer from './footer';
 
 const store = configureStore();
@@ -33,7 +33,7 @@ class App extends React.Component {
       <Provider store={store} >
         <BrowserRouter>
           <div style={{ height: '100%' }} >
-            <NavBar>
+            <NavBar />
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/video" component={Video} />
@@ -57,7 +57,6 @@ class App extends React.Component {
               <Route path="/cms_winners" component={RequireAuth(AuthenticatedRoutes)} />
             </Switch>
             <Footer />
-            </NavBar>
           </div>
         </BrowserRouter>
       </Provider>

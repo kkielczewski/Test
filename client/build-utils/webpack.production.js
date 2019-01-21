@@ -46,7 +46,6 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './source/index.html',
-      favicon: './source/assets/images/favicon.ico',
       minify: {
         collapseWhitespace: true,
         preserveLineBreaks: false
