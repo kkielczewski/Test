@@ -162,6 +162,7 @@ class Header extends Component {
           <Menu.Menu position="right">
           </Menu.Menu>
         </Menu>
+        {children}
         </Responsive>
       </div>
     );
