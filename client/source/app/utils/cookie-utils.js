@@ -9,12 +9,11 @@ const cookies = new Cookies();
  * @param {String} value    Value to save in cookie
  * @param {Object} options  Options to override defaults
  */
-export const setCookie = (name, value, options = {}) =>
-  cookies.set(name, value, Object.assign({
-    path: '/',
-    maxAge: 604800,
-    secure: getEnvironment() === 'production'
-  }, options));
+export const setCookie = (name, value, options = {}) => cookies.set(name, value, Object.assign({
+  path: '/',
+  maxAge: 7200,
+  secure: getEnvironment() === 'production'
+}, options));
 
 
 /**

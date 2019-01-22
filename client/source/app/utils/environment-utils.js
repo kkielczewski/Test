@@ -14,11 +14,11 @@ export const getEnvironment = () => process.env.NODE_ENV ? process.env.NODE_ENV 
 export const getApiUrl = () => {
   switch (getEnvironment()) {
     case 'production':
-      return 'https://alleccocms.herokuapp.com';
+      return 'https://allecco.herokuapp.com';
     case 'stage':
-      return 'https://alleccocms.herokuapp.com';
+      return 'https://allecco.herokuapp.com';
     case 'test':
-      return 'https://alleccocms.herokuapp.com';
+      return 'https://allecco.herokuapp.com';
     case 'development':
     default:
       return 'http://localhost:3000';
@@ -33,11 +33,11 @@ export const getApiUrl = () => {
 export const getAppUrl = () => {
   switch (getEnvironment()) {
     case 'production':
-      return 'https://alleccocms.herokuapp.com';
+      return 'https://allecco.herokuapp.com';
     case 'stage':
-      return 'https://alleccocms.herokuapp.com';
+      return 'https://allecco.herokuapp.com';
     case 'test':
-      return 'https://alleccocms.herokuapp.com';
+      return 'https://allecco.herokuapp.com';
     case 'development':
     default:
       return 'http://localhost:8080';

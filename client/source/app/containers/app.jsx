@@ -34,28 +34,28 @@ class App extends React.Component {
         <BrowserRouter>
           <div style={{ height: '100%' }} >
             <Switch>
-            <NavBar>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/video" component={Video} />
-              <Route exact path="/blog" component={Articles} />
-              <Route path="/video/:id" component={VideoPage} />
-              <Route path="/blog/:id" component={ArticlePage} />
-              <Route exact path="/expert" component={Experts} />
-              <Route path="/expert/:id" component={ExpertPage} />
-              <Route path="/info" component={Info} />
-              <Route path="/contact" component={Contact} />
-              <Route path="/search" component={SearchResults} />
-              <Route path="/contests" component={Contests} />
-              <Route path="/sales" component={Sales} />
-              <Route path="/login" component={Login} />
-              <Route path="/register" component={Register} />
-              <Route path="/cms_homecontests" component={RequireAuth(AuthenticatedRoutes)} />
-              <Route path="/cms_articles" component={RequireAuth(AuthenticatedRoutes)} />
-              <Route path="/cms_videos" component={RequireAuth(AuthenticatedRoutes)} />
-              <Route path="/cms_experts" component={RequireAuth(AuthenticatedRoutes)} />
-              <Route path="/cms_contests" component={RequireAuth(AuthenticatedRoutes)} />
-              <Route path="/cms_winners" component={RequireAuth(AuthenticatedRoutes)} />
-            </NavBar>
+              <NavBar>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/video" component={Video} />
+                <Route exact path="/blog" component={Articles} />
+                <Route path="/video/:id" component={VideoPage} />
+                <Route path="/blog/:id" component={ArticlePage} />
+                <Route exact path="/expert" component={Experts} />
+                <Route path="/expert/:id" component={ExpertPage} />
+                <Route path="/info" component={Info} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/search" component={SearchResults} />
+                <Route path="/contests" component={Contests} />
+                <Route path="/sales" component={Sales} />
+                <Route path="/login" component={Login} />
+                <Route path="/register" component={Register} />
+                <Route path="/cms_homecontests" component={RequireAuth(AuthenticatedRoutes)} />
+                <Route path="/cms_articles" component={RequireAuth(AuthenticatedRoutes)} />
+                <Route path="/cms_videos" component={RequireAuth(AuthenticatedRoutes)} />
+                <Route path="/cms_experts" component={RequireAuth(AuthenticatedRoutes)} />
+                <Route path="/cms_contests" component={RequireAuth(AuthenticatedRoutes)} />
+                <Route path="/cms_winners" component={RequireAuth(AuthenticatedRoutes)} />
+              </NavBar>
             </Switch>
             <Footer />
           </div>

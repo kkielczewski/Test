@@ -51,6 +51,16 @@ class NavBar extends React.Component {
   render() {
     const links = [
       {
+        name: 'Login',
+        link: 'login',
+        authenticated: false
+      },
+      {
+        name: 'Register',
+        link: 'register',
+        authenticated: false
+      },
+      {
         name: 'Home Page Contests',
         link: 'cms_homecontests',
         authenticated: true

@@ -34,7 +34,7 @@ export const login = (credentials, desiredPath) => async (dispatch) => {
       if (desiredPath) {
         window.location.href = `${getAppUrl()}${desiredPath}`;
       } else {
-        window.location.href = `${getAppUrl()}/dashboard`;
+        window.location.href = `${getAppUrl()}/`;
       }
     }
   } catch (err) {
@@ -53,7 +53,7 @@ export const register = formData => async (dispatch) => {
     // If the registration was successful, set the JWT as a cookie
     if (response) {
       setCookie('token', response.token, { maxAge: response.tokenExpiration });
-      window.location.href = `${getAppUrl()}/dashboard`;
+      window.location.href = `${getAppUrl()}/`;
     }
   } catch (err) {
     await handleError(dispatch, err, CHANGE_AUTH);

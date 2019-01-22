@@ -81,8 +81,7 @@ const httpRequest = async (dispatch, requestType = GET, actionType = '', opts = 
  *
  * @returns {Promise}
  */
-export const post = (dispatch, type, endpoint, data, requiresAuth) =>
-  httpRequest(dispatch, POST, type, { endpoint, data, requiresAuth });
+export const post = (dispatch, type, endpoint, data, requiresAuth) => httpRequest(dispatch, POST, type, { endpoint, data, requiresAuth });
 
 /**
  * put - Generic action to make a PUT request with axios
@@ -94,8 +93,7 @@ export const post = (dispatch, type, endpoint, data, requiresAuth) =>
  *
  * @returns {Promise}
  */
-export const put = async (dispatch, type, endpoint, data, requiresAuth) =>
-  httpRequest(dispatch, PUT, type, { endpoint, data, requiresAuth });
+export const put = async (dispatch, type, endpoint, data, requiresAuth) => httpRequest(dispatch, PUT, type, { endpoint, data, requiresAuth });
 
 /**
  * get - Generic action to make a GET request with axios
@@ -106,8 +104,7 @@ export const put = async (dispatch, type, endpoint, data, requiresAuth) =>
  *
  * @returns {Promise}
  */
-export const get = async (dispatch, type, endpoint, requiresAuth) =>
-  httpRequest(dispatch, GET, type, { endpoint, requiresAuth });
+export const get = async (dispatch, type, endpoint, requiresAuth) => httpRequest(dispatch, GET, type, { endpoint, requiresAuth });
 
 /**
  * del - Generic action to make a DELETE request with axios
@@ -118,5 +115,4 @@ export const get = async (dispatch, type, endpoint, requiresAuth) =>
  *
  * @returns {Promise}
  */
-export const del = async (dispatch, type, endpoint, requiresAuth) =>
-  httpRequest(dispatch, DELETE, type, { endpoint, requiresAuth });
+export const del = async (dispatch, type, endpoint, requiresAuth) => httpRequest(dispatch, DELETE, type, { endpoint, requiresAuth });
