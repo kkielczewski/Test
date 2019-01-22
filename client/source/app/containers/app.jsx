@@ -22,7 +22,7 @@ import Login from './login';
 import Register from './register';
 import RequireAuth from './require-auth';
 import AuthenticatedRoutes from '../components/authenticated';
-import NavBar from '../components/nav-bar';
+import Header from '../components/header/header';
 import Footer from './footer';
 
 const store = configureStore();
@@ -34,7 +34,7 @@ class App extends React.Component {
         <BrowserRouter>
           <div style={{ height: '100%' }} >
             <Switch>
-              <NavBar>
+              <Header>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/video" component={Video} />
                 <Route exact path="/blog" component={Articles} />
@@ -55,7 +55,7 @@ class App extends React.Component {
                 <Route path="/cms_experts" component={RequireAuth(AuthenticatedRoutes)} />
                 <Route path="/cms_contests" component={RequireAuth(AuthenticatedRoutes)} />
                 <Route path="/cms_winners" component={RequireAuth(AuthenticatedRoutes)} />
-              </NavBar>
+              </Header>
             </Switch>
             <Footer />
           </div>

@@ -3,10 +3,13 @@ import { connect } from 'react-redux';
 import {
   Icon,
   Menu,
-  Sidebar,
+  Button,
   Responsive
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
+import Sidebar from 'react-sidebar';
+import SearchAll from '../search-all';
+import miniLogo from '../../assets/icons/mini_logo.png';
 import { getAuthenticatedUser } from '../../redux/modules/user';
 import { logoutUser } from '../../redux/modules/authentication';
 
@@ -14,50 +17,117 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: false
+      sidebarOpen: false,
+      toSearch: false,
+      searchValue: null,
+      sideClass: '',
+      left: '-288px'
     };
+    this.toggleSidebar = this.toggleSidebar.bind(this);
+    this.searchAll = this.searchAll.bind(this);
+    this.closeSidebar = this.closeSidebar.bind(this);
+    this.scrollToTop = this.scrollToTop.bind(this);
   }
 
-  handlePusher() {
-    const { visible } = this.state;
-
-    if (visible) this.setState({ visible: false });
+  searchAll(value) {
+    if (value.length > 1) {
+      this.setState({ toSearch: true, searchValue: value, sidebarOpen: false });
+    }
   }
 
-  handleToggle() {
-    this.setState({ visible: !this.state.visible });
+  toggleSidebar() {
+    if (this.state.sidebarOpen) {
+      this.setState({ sidebarOpen: false, sideClass: '' });
+    } else {
+      this.setState({ sidebarOpen: true, sideClass: 'active' });
+    }
+  }
+
+  closeSidebar() {
+    this.setState({ sidebarOpen: false, sideClass: '' });
+    this.scrollToTop();
+  }
+
+  scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
 
   buildNavigation() {
     const links = [
       {
+        name: 'VIDEO',
+        link: 'video',
+        authenticated: false
+      },
+      {
+        name: 'BLOG',
+        link: 'blog',
+        authenticated: false
+      },
+      {
+        name: 'EKSPERCI',
+        link: 'expert',
+        authenticated: false
+      },
+      {
+        name: 'PROMOCJE',
+        link: 'sales',
+        authenticated: false
+      },
+      {
+        name: 'KONKURSY',
+        link: 'contests',
+        authenticated: false
+      },
+      {
+        name: 'O NAS',
+        link: 'info',
+        authenticated: false
+      },
+      {
+        name: 'KONTAKT',
+        link: 'contact',
+        authenticated: false
+      },
+      {
+        name: 'Login',
+        link: 'login',
+        authenticated: false
+      },
+      {
+        name: 'Register',
+        link: 'register',
+        authenticated: false
+      },
+      {
         name: 'Home Page Contests',
-        link: 'homecontests',
+        link: 'cms_homecontests',
         authenticated: true
       },
       {
         name: 'Articles',
-        link: 'articles',
+        link: 'cms_articles',
         authenticated: true
       },
       {
         name: 'Videos',
-        link: 'videos',
+        link: 'cms_videos',
         authenticated: true
       },
       {
         name: 'Experts',
-        link: 'experts',
+        link: 'cms_experts',
         authenticated: true
       },
       {
         name: 'Contests',
-        link: 'contests',
+        link: 'cms_contests',
         authenticated: true
       },
       {
         name: 'Contests Winners',
-        link: 'winners',
+        link: 'cms_winners',
         authenticated: true
       },
       {
@@ -78,7 +148,8 @@ class Header extends Component {
   }
 
   render() {
-    const { visible } = this.state;
+    const { children } = this.props;
+    const redirect = this.state.toSearch ? <Redirect to={{ pathname: '/search', search: `?v=${this.state.searchValue}` }} /> : <div></div>;
 
     return (
       <div>
@@ -97,8 +168,8 @@ class Header extends Component {
               </Menu.Menu>
             </Menu>
         </Responsive>
-        <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-        <Menu fixed="top" inverted>
+        <Responsive minWidth='1021' style={{ display: 'flex', flexDirection: 'column', height: '100%' }} >
+        <Menu borderless fixed="top" style={{ flex: 'none', boxShadow: '0px 6px 12px 0px rgba(0,0,0,0.3)' }} >
           <li className='item' key='Home' >
             <Link exact to='/' >Home</Link>
           </li>
