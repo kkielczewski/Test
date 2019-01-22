@@ -1,93 +1,63 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { NavLink, Redirect } from 'react-router-dom';
-import { Menu, Responsive, Button, Icon } from 'semantic-ui-react';
-import Sidebar from 'react-sidebar';
-import SearchAll from './search-all';
-import miniLogo from '../assets/icons/mini_logo.png';
+import {
+  Icon,
+  Menu,
+  Sidebar,
+  Responsive
+} from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 import { getAuthenticatedUser } from '../redux/modules/user';
 import { logoutUser } from '../redux/modules/authentication';
 
-class NavBar extends React.Component {
+class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sidebarOpen: false,
-      toSearch: false,
-      searchValue: null,
-      sideClass: '',
-      left: '-288px'
+      visible: false
     };
-    this.toggleSidebar = this.toggleSidebar.bind(this);
-    this.searchAll = this.searchAll.bind(this);
-    this.closeSidebar = this.closeSidebar.bind(this);
-    this.scrollToTop = this.scrollToTop.bind(this);
   }
 
-  searchAll(value) {
-    if (value.length > 1) {
-      this.setState({ toSearch: true, searchValue: value, sidebarOpen: false });
-    }
+  handlePusher() {
+    const { visible } = this.state;
+
+    if (visible) this.setState({ visible: false });
   }
 
-  toggleSidebar() {
-    if (this.state.sidebarOpen) {
-      this.setState({ sidebarOpen: false, sideClass: '' });
-    } else {
-      this.setState({ sidebarOpen: true, sideClass: 'active' });
-    }
+  handleToggle() {
+    this.setState({ visible: !this.state.visible });
   }
 
-  closeSidebar() {
-    this.setState({ sidebarOpen: false, sideClass: '' });
-    this.scrollToTop();
-  }
-
-  scrollToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-
-  render() {
+  buildNavigation() {
     const links = [
       {
-        name: 'Login',
-        link: 'login',
-        authenticated: false
-      },
-      {
-        name: 'Register',
-        link: 'register',
-        authenticated: false
-      },
-      {
         name: 'Home Page Contests',
-        link: 'cms_homecontests',
+        link: 'homecontests',
         authenticated: true
       },
       {
         name: 'Articles',
-        link: 'cms_articles',
+        link: 'articles',
         authenticated: true
       },
       {
         name: 'Videos',
-        link: 'cms_videos',
+        link: 'videos',
         authenticated: true
       },
       {
         name: 'Experts',
-        link: 'cms_experts',
+        link: 'experts',
         authenticated: true
       },
       {
         name: 'Contests',
-        link: 'cms_contests',
+        link: 'contests',
         authenticated: true
       },
       {
         name: 'Contests Winners',
-        link: 'cms_winners',
+        link: 'winners',
         authenticated: true
       },
       {
@@ -96,64 +66,49 @@ class NavBar extends React.Component {
         authenticated: true
       }
     ];
+
+    return (
+      links.filter(link => link.authenticated === this.props.authenticated).map(link => (
+        <li className='item' key={link.name}>
+          {link.link && <Link to={link.link}>{link.name}</Link>}
+          {link.onClick && <a href='javascript:void(null);' onClick={link.onClick}>{link.name}</a>}
+        </li>
+      ))
+    );
+  }
+
+  render() {
+    const { visible } = this.state;
     const { children } = this.props;
-    const redirect = this.state.toSearch ? <Redirect to={{ pathname: '/search', search: `?v=${this.state.searchValue}` }} /> : <div></div>;
-    const MobileBar = () => (<Menu as={Menu} icon="labeled" vertical className={this.state.sideClass} >
-      <SearchAll onSearch={this.searchAll} />
-      <NavLink onClick={this.closeSidebar} className="item" exact to='/' style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }}>HOME</NavLink>
-      <NavLink onClick={this.closeSidebar} className="item" exact to="/video" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >VIDEO</NavLink>
-      <NavLink onClick={this.closeSidebar} className="item" to="/blog" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >BLOG</NavLink>
-      <NavLink onClick={this.closeSidebar} className="item" exact to="/expert" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >EKSPERCI</NavLink>
-      <NavLink onClick={this.closeSidebar} className="item" exact to="/sales" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >PROMOCJE</NavLink>
-      <NavLink onClick={this.closeSidebar} className="item" exact to="/contests" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >KONKURSY</NavLink>
-      <NavLink onClick={this.closeSidebar} className="item" to="/info" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >O NAS</NavLink>
-      <NavLink onClick={this.closeSidebar} className="item" to="/contact" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >KONTAKT</NavLink>
-      {links.filter(link => link.authenticated === this.props.authenticated).map(link => (
-        <NavLink onClick={this.scrollToTop} className="item" to={link.link} style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >{link.name}</NavLink>
-      ))}
-      </Menu>);
 
     return (
       <div>
-        {redirect}
-        <Responsive minWidth='1021' style={{ display: 'flex', flexDirection: 'column', height: '100%' }} >
-          <Menu borderless fixed='top' style={{ flex: 'none', boxShadow: '0px 6px 12px 0px rgba(0,0,0,0.3)' }} >
-            <div className='navBarContainer' >
-            <div className='navSearchBar' >
-              <SearchAll onSearch={this.searchAll} />
-            </div>
-            <img src={miniLogo} className='item' style={{ padding: '9px', float: 'left' }} />
-            <div className='socialTab' >
-              <a href='//facebook.com/Allecco/'><Button className='navSocialButtonFacebook' icon='facebook' /></a>
-              <a href='//instagram.com/allecco_pl/'><Button className='navSocialButtonInstagram' icon='instagram' /></a>
-            </div>
-            <Menu.Menu position='right' >
-              <NavLink onClick={this.scrollToTop} className="item" exact to="/" >HOME</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/video" >VIDEO</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/blog" >BLOG</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/expert" >EKSPERCI</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/sales" >PROMOCJE</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/contests" >KONKURSY</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/info" >O NAS</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/contact" >KONTAKT</NavLink>
-              {links.filter(link => link.authenticated === this.props.authenticated).map(link => (
-                <NavLink onClick={this.scrollToTop} className="item" to={link.link} >{link.name}</NavLink>
-              ))}
-            </Menu.Menu>
-            </div>
-          </Menu>
-          {children}
-        </Responsive>
-        <Responsive maxWidth='1020' >
-          <Sidebar transitions={false} touch={false} contentClassName='mainContent' rootClassName='mainRoot' sidebarClassName='mainSidebar' overlayClassName='mainOverlay' sidebar={<MobileBar/>} open={this.state.sidebarOpen} onSetOpen={this.toggleSidebar} >
-            <Menu className='mobileNavbar' fixed='top' >
-              <Menu.Menu position='left' >
-                <Button className='item' onClick={() => { this.toggleSidebar(); }} ><Icon name='sidebar' /></Button>
+        <Responsive maxWidth={Responsive.onlyTablet.minWidth} >
+            <Sidebar as={Menu} animation="overlay" width='thin' icon="labeled" inverted vertical visible={visible} >
+              <li className='item' key='Home' >
+                <Link exact to='/' >Home</Link>
+              </li>
+              {this.buildNavigation()}
+            </Sidebar>
+            <Menu fixed="top" inverted>
+              <Menu.Item onClick={this.handleToggle}>
+                <Icon name="sidebar" />
+              </Menu.Item>
+              <Menu.Menu position="right">
               </Menu.Menu>
-              <img src={miniLogo} className='item' />
             </Menu>
             {children}
-          </Sidebar>
+        </Responsive>
+        <Responsive minWidth={Responsive.onlyTablet.minWidth}>
+        <Menu fixed="top" inverted>
+          <li className='item' key='Home' >
+            <Link exact to='/' >Home</Link>
+          </li>
+          {this.buildNavigation()}
+          <Menu.Menu position="right">
+          </Menu.Menu>
+        </Menu>
+        {children}
         </Responsive>
       </div>
     );
@@ -165,4 +120,4 @@ const mapStateToProps = ({ user, authentication }) => ({
   authenticated: authentication.authenticated
 });
 
-export default connect(mapStateToProps, { logoutUser })(NavBar);
+export default connect(mapStateToProps, { logoutUser })(Header);
