@@ -153,21 +153,6 @@ class Header extends Component {
 
     return (
       <div>
-        <Responsive maxWidth={Responsive.onlyTablet.minWidth} >
-            <Sidebar as={Menu} animation="overlay" width='thin' icon="labeled" inverted vertical visible={visible} >
-              <li className='item' key='Home' >
-                <Link exact to='/' >Home</Link>
-              </li>
-              {this.buildNavigation()}
-            </Sidebar>
-            <Menu fixed="top" inverted>
-              <Menu.Item onClick={this.handleToggle}>
-                <Icon name="sidebar" />
-              </Menu.Item>
-              <Menu.Menu position="right">
-              </Menu.Menu>
-            </Menu>
-        </Responsive>
         <Responsive minWidth='1021' style={{ display: 'flex', flexDirection: 'column', height: '100%' }} >
         <Menu borderless fixed="top" style={{ flex: 'none', boxShadow: '0px 6px 12px 0px rgba(0,0,0,0.3)' }} >
           <li className='item' key='Home' >
