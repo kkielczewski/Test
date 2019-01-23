@@ -119,27 +119,27 @@ class NavBar extends React.Component {
         <Responsive minWidth='1021' style={{ display: 'flex', flexDirection: 'column', height: '100%' }} >
           <Menu borderless fixed='top' style={{ flex: 'none', boxShadow: '0px 6px 12px 0px rgba(0,0,0,0.3)' }} >
             <div className='navBarContainer' >
-            <div className='navSearchBar' >
-              <SearchAll onSearch={this.searchAll} />
-            </div>
-            <img src={miniLogo} className='item' style={{ padding: '9px', float: 'left' }} />
-            <div className='socialTab' >
-              <a href='//facebook.com/Allecco/'><Button className='navSocialButtonFacebook' icon='facebook' /></a>
-              <a href='//instagram.com/allecco_pl/'><Button className='navSocialButtonInstagram' icon='instagram' /></a>
-            </div>
-            <Menu.Menu position='right' >
-              <NavLink onClick={this.scrollToTop} className="item" exact to="/" >HOME</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/video" >VIDEO</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/blog" >BLOG</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/expert" >EKSPERCI</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/sales" >PROMOCJE</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/contests" >KONKURSY</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/info" >O NAS</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/contact" >KONTAKT</NavLink>
-              {links.filter(link => link.authenticated === this.props.authenticated).map(link => (
-                <NavLink onClick={this.scrollToTop} className="item" to={link.link} >{link.name}</NavLink>
-              ))}
-            </Menu.Menu>
+              <div className='navSearchBar' >
+                <SearchAll onSearch={this.searchAll} />
+              </div>
+              <img src={miniLogo} className='item' style={{ padding: '9px', float: 'left' }} />
+              <div className='socialTab' >
+                <a href='//facebook.com/Allecco/'><Button className='navSocialButtonFacebook' icon='facebook' /></a>
+                <a href='//instagram.com/allecco_pl/'><Button className='navSocialButtonInstagram' icon='instagram' /></a>
+              </div>
+              <Menu.Menu position='right' >
+                <NavLink onClick={this.scrollToTop} className="item" exact to="/" >HOME</NavLink>
+                <NavLink onClick={this.scrollToTop} className="item" to="/video" >VIDEO</NavLink>
+                <NavLink onClick={this.scrollToTop} className="item" to="/blog" >BLOG</NavLink>
+                <NavLink onClick={this.scrollToTop} className="item" to="/expert" >EKSPERCI</NavLink>
+                <NavLink onClick={this.scrollToTop} className="item" to="/sales" >PROMOCJE</NavLink>
+                <NavLink onClick={this.scrollToTop} className="item" to="/contests" >KONKURSY</NavLink>
+                <NavLink onClick={this.scrollToTop} className="item" to="/info" >O NAS</NavLink>
+                <NavLink onClick={this.scrollToTop} className="item" to="/contact" >KONTAKT</NavLink>
+                {links.filter(link => link.authenticated === this.props.authenticated).map(link => (
+                  <NavLink onClick={this.scrollToTop} className="item" to={link.link} >{link.name}</NavLink>
+                ))}
+              </Menu.Menu>
             </div>
           </Menu>
           {children}

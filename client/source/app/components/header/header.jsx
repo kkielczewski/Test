@@ -153,14 +153,14 @@ class Header extends Component {
               <a href='//instagram.com/allecco_pl'><Button className='navSocialButtonInstagram' icon='instagram'/></a>
             </div>
             <Menu.Menu position='right'>
-              <NavLink onClick={this.scrollToTop} className='item' exact to='/' >HOME</NavLink>
-              <NavLink onClick={this.scrollToTop} className='item' to='/video' >VIDEO</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/blog" >BLOG</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/expert" >EKSPERCI</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/sales" >PROMOCJE</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/contests" >KONKURSY</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/info" >O NAS</NavLink>
-              <NavLink onClick={this.scrollToTop} className="item" to="/contact" >KONTAKT</NavLink>
+              {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className='item' exact to='/' >HOME</NavLink>}
+              {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className='item' to='/video' >VIDEO</NavLink>}
+              {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/blog" >BLOG</NavLink>}
+              {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/expert" >EKSPERCI</NavLink>}
+              {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/sales" >PROMOCJE</NavLink>}
+              {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/contests" >KONKURSY</NavLink>}
+              {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/info" >O NAS</NavLink>}
+              {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/contact" >KONTAKT</NavLink>}
               {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_homecontests" >Home Page Contests</NavLink>}
               {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_articles" >Articles</NavLink>}
               {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_videos" >Videos</NavLink>}
