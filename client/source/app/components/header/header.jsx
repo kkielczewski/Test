@@ -6,7 +6,7 @@ import {
   Button,
   Responsive
 } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink, Redirect } from 'react-router-dom';
 import Sidebar from 'react-sidebar';
 import SearchAll from '../search-all';
 import miniLogo from '../../assets/icons/mini_logo.png';
@@ -91,16 +91,6 @@ class Header extends Component {
         authenticated: false
       },
       {
-        name: 'Login',
-        link: 'login',
-        authenticated: false
-      },
-      {
-        name: 'Register',
-        link: 'register',
-        authenticated: false
-      },
-      {
         name: 'Home Page Contests',
         link: 'cms_homecontests',
         authenticated: true
@@ -139,10 +129,7 @@ class Header extends Component {
 
     return (
       links.filter(link => link.authenticated === this.props.authenticated).map(link => (
-        <li className='item' key={link.name}>
-          {link.link && <Link to={link.link}>{link.name}</Link>}
-          {link.onClick && <a href='javascript:void(null);' onClick={link.onClick}>{link.name}</a>}
-        </li>
+        <NavLink className='item' to={link.link} onClick={this.scrollToTop} >{link.name}</NavLink>
       ))
     );
   }
@@ -153,14 +140,36 @@ class Header extends Component {
 
     return (
       <div>
+        {redirect}
         <Responsive minWidth='1021' style={{ display: 'flex', flexDirection: 'column', height: '100%' }} >
         <Menu borderless fixed="top" style={{ flex: 'none', boxShadow: '0px 6px 12px 0px rgba(0,0,0,0.3)' }} >
-          <li className='item' key='Home' >
-            <Link exact to='/' >Home</Link>
-          </li>
-          {this.buildNavigation()}
-          <Menu.Menu position="right">
-          </Menu.Menu>
+          <div className='navBarContainer' >
+            <div className='navSearchBar' >
+              <SearchAll onSearch={this.searchAll} />
+            </div>
+            <img src={miniLogo} className='item' style={{ padding: '9px', float: 'left' }} />
+            <div className='socialTab' >
+              <a href='//facebook.com/Allecco'><Button className='navSocialButtonFacebook' icon='facebook'/></a>
+              <a href='//instagram.com/allecco_pl'><Button className='navSocialButtonInstagram' icon='instagram'/></a>
+            </div>
+            <Menu.Menu position='right'>
+              <NavLink onClick={this.scrollToTop} className='item' exact to='/' >HOME</NavLink>
+              <NavLink onClick={this.scrollToTop} className='item' to='/video' >VIDEO</NavLink>
+              <NavLink onClick={this.scrollToTop} className="item" to="/blog" >BLOG</NavLink>
+              <NavLink onClick={this.scrollToTop} className="item" to="/expert" >EKSPERCI</NavLink>
+              <NavLink onClick={this.scrollToTop} className="item" to="/sales" >PROMOCJE</NavLink>
+              <NavLink onClick={this.scrollToTop} className="item" to="/contests" >KONKURSY</NavLink>
+              <NavLink onClick={this.scrollToTop} className="item" to="/info" >O NAS</NavLink>
+              <NavLink onClick={this.scrollToTop} className="item" to="/contact" >KONTAKT</NavLink>
+              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_homecontests" >Home Page Contests</NavLink>}
+              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_articles" >Articles</NavLink>}
+              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_videos" >Videos</NavLink>}
+              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_experts" >Experts</NavLink>}
+              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_contests" >Contests</NavLink>}
+              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_winners" >Contests Winners</NavLink>}
+              {this.props.authenticated && <a className='item' href='javascript:void(null);' onClick={this.props.logoutUser}>LOG OUT</a>}
+            </Menu.Menu>
+          </div>
         </Menu>
         {children}
         </Responsive>
