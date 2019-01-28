@@ -139,7 +139,7 @@ class Header extends Component {
     const redirect = this.state.toSearch ? <Redirect to={{ pathname: '/search', search: `?v=${this.state.searchValue}` }} /> : <div></div>;
 
     return (
-      <div>
+      <div style={{ height: '100%' }} >
         {redirect}
         <Responsive minWidth='1021' style={{ display: 'flex', flexDirection: 'column', height: '100%' }} >
         <Menu borderless fixed="top" style={{ flex: 'none', boxShadow: '0px 6px 12px 0px rgba(0,0,0,0.3)' }} >
@@ -167,7 +167,7 @@ class Header extends Component {
               {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_experts" >Experts</NavLink>}
               {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_contests" >Contests</NavLink>}
               {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_winners" >Contests Winners</NavLink>}
-              {this.props.authenticated && <a className='item' href='javascript:void(null);' onClick={this.props.logoutUser}>LOG OUT</a>}
+              {this.props.authenticated && <a className='item' href='javascript:void(null);' onClick={this.props.logoutUser}>Log Out</a>}
             </Menu.Menu>
           </div>
         </Menu>

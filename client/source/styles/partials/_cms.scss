@@ -1,0 +1,122 @@
+.auth-box {
+  width: 425px;
+  margin: 126px auto 0;
+  flex: 1 0 auto;
+
+  .button {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    text-align: center;
+    white-space: nowrap;
+    padding: 10px 20px;
+    background: #0474D8;
+    color: white;
+    font-size: 20px;
+
+    &:hover {
+      background: darken(#0474D8, 5%);
+    }
+  }
+
+  .form {
+    border-radius: 2px;
+    box-sizing: border-box;
+
+    .is-hidden {
+      display: none;
+    }
+  
+    &-list {
+      margin-bottom: 30px;
+      padding: 0;
+  
+      li {
+        margin-bottom: 25px;
+        list-style-type: none;
+
+        .form-label {
+          font-size: 24px;
+          display: block;
+          margin-bottom: 8px;
+          text-transform: uppercase;
+          font-weight: bold;
+          &.has-error {
+            color: #f96161;
+          }
+        }
+      }
+    }
+  
+    &-control, .StripeElement {
+      background: rgba(#FFF, .56);
+      border: 1px solid #dbdbdb;
+      border-radius: 2px;
+      box-sizing: border-box;
+      display: block;
+      font-size: 20px;
+      height: 40px;
+      font-weight: 300;
+      padding: 0 15px;
+      width: 100%;
+    }
+  }
+}
+
+.homeContests {
+  width: 800px;
+  margin: 126px auto 0 !important;
+  .header {
+    font-size: 22px;
+  }
+  .labeled {
+    margin: 10px;
+    font-size: 20px;
+    .label {
+      padding: 8px !important;
+    }
+    input {
+      padding: 5px;
+      width: 550px !important;
+    }
+  }
+  .form-control {
+    height: auto;
+    padding: 0;
+    margin: 10px auto;
+    width: 700px;
+  }
+  .button {
+    font-size: 20px;
+    padding: 5px 15px;
+  }
+}
+
+.articles {
+  width: 800px;
+  margin: 126px auto 0 !important;
+  .header {
+    font-size: 22px !important;
+  }
+  .labeled {
+    margin: 10px;
+    font-size: 20px;
+    .label {
+      padding: 8px !important;
+    }
+    input {
+      padding: 5px !important;
+      width: 550px !important;
+    }
+  }
+  .form-control {
+    height: auto;
+    padding: 0 !important;
+    margin: 10px auto !important;
+    width: 700px !important;
+    font-size: 20px !important;
+  }
+  .button {
+    font-size: 20px;
+    padding: 5px 15px;
+  }
+}
