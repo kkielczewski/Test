@@ -70,7 +70,7 @@ class Experts extends Component {
         <Form onSubmit={this.handleClick} >
           <Input onChange={this.changeTitle} label='Imie i Nazwisko' />
           <Input onChange={this.changeText} label='Opis' />
-          <Header>Zdjecie Eksperta</Header>
+          <Header>Zdjęcie Eksperta</Header>
           <input className="form-control " type="file" onChange={this.changeThumbnail} multiple/>
           <Input onChange={this.changePlaylist} label='Id playlisty' />
           <div>
@@ -78,7 +78,7 @@ class Experts extends Component {
           </div>
         </Form>
         <Segment>
-          <Header>Ekspert do usuniecia</Header>
+          <Header>Ekspert do usunięcia</Header>
           <Input onChange={this.handleIdDelete} label='Id Eksperta' />
           <Button onClick={this.handleDelete} >OK</Button>
         </Segment>

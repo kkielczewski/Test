@@ -137,7 +137,17 @@ class Header extends Component {
   render() {
     const { children } = this.props;
     const redirect = this.state.toSearch ? <Redirect to={{ pathname: '/search', search: `?v=${this.state.searchValue}` }} /> : <div></div>;
-
+    const MobileBar = () => (<Menu as={Menu} icon="labeled" vertical className={this.state.sideClass} >
+      <SearchAll onSearch={this.searchAll} />
+      <NavLink onClick={this.closeSidebar} className= "item" exact to='/' style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }}>HOME</NavLink>
+      <NavLink onClick={this.closeSidebar} className="item" exact to="/video" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >VIDEO</NavLink>
+      <NavLink onClick={this.closeSidebar} className="item" to="/blog" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >BLOG</NavLink>
+      <NavLink onClick={this.closeSidebar} className="item" exact to="/expert" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >EKSPERCI</NavLink>
+      <NavLink onClick={this.closeSidebar} className="item" exact to="/sales" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >PROMOCJE</NavLink>
+      <NavLink onClick={this.closeSidebar} className="item" exact to="/contests" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >KONKURSY</NavLink>
+      <NavLink onClick={this.closeSidebar} className="item" to="/info" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >O NAS</NavLink>
+      <NavLink onClick={this.closeSidebar} className="item" to="/contact" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >KONTAKT</NavLink>
+      </Menu>);
     return (
       <div style={{ height: '100%' }} >
         {redirect}
@@ -172,6 +182,17 @@ class Header extends Component {
           </div>
         </Menu>
         {children}
+        </Responsive>
+        <Responsive maxWidth='1020' >
+          <Sidebar transitions={false} touch={false} contentClassName='mainContent' rootClassName='mainRoot' sidebarClassName='mainSidebar' overlayClassName='mainOverlay' sidebar={<MobileBar/>} open={this.state.sidebarOpen} onSetOpen={this.toggleSidebar} >
+            <Menu className='mobileNavbar' fixed='top' >
+              <Menu.Menu position='left' >
+                <Button className='item' onClick={() => { this.toggleSidebar(); }} ><Icon name='sidebar' /></Button>
+              </Menu.Menu>
+              <img src={miniLogo} className='item' />
+            </Menu>
+            {children}
+          </Sidebar>
         </Responsive>
       </div>
     );

@@ -67,7 +67,7 @@ class Contests extends Component {
           </div>
         </Form>
         <Segment>
-          <Header>Konkurs do usuniecia</Header>
+          <Header>Konkurs do usunięcia</Header>
           <Input onChange={this.handleIdDelete} label='Id Konkursu' />
           <Button onClick={this.handleDelete} >OK</Button>
         </Segment>

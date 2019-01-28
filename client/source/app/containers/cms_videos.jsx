@@ -52,7 +52,7 @@ class Videos extends Component {
           </div>
         </Form>
         <Segment>
-          <Header>Video do usuniecia</Header>
+          <Header>Video do usunięcia</Header>
           <Input onChange={this.handleIdDelete} label='Id Video' />
           <Button onClick={this.handleDelete} >OK</Button>
         </Segment>

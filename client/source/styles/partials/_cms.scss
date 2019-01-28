@@ -64,7 +64,9 @@
 
 .homeContests {
   width: 800px;
-  margin: 126px auto 0 !important;
+  margin: 126px auto 40px !important;
+  flex: 1 0 auto;
+
   .header {
     font-size: 22px;
   }
@@ -93,7 +95,9 @@
 
 .articles {
   width: 800px;
-  margin: 126px auto 0 !important;
+  margin: 126px auto 40px !important;
+  flex: 1 0 auto;
+  
   .header {
     font-size: 22px !important;
   }

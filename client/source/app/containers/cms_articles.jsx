@@ -90,7 +90,7 @@ class Articles extends Component {
           <Input onChange={this.changeText} label='HTML Text' />
           <Header>Pionowy thumbnail</Header>
           <input className="form-control " type="file" onChange={this.changeThumbnail} multiple/>
-          <Header>Zdjecie artykułu</Header>
+          <Header>Zdjęcie artykułu</Header>
           <input className="form-control " type="file" onChange={this.changePhoto} multiple/>
           <Input onChange={this.changeProducts} label='Id produktów' placeholder='po przecinku np. 1,4,6,123,2' />
           <Input onChange={this.changeExpert} label='Id experta' />
@@ -99,7 +99,7 @@ class Articles extends Component {
           </div>
         </Form>
         <Segment>
-          <Header>Artykuł do usuniecia</Header>
+          <Header>Artykuł do usunięcia</Header>
           <Input onChange={this.handleIdDelete} label='Id Artykułu' />
           <Button onClick={this.handleDelete} >OK</Button>
         </Segment>

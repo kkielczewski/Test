@@ -24,12 +24,6 @@ import RequireAuth from './require-auth';
 import AuthenticatedRoutes from '../components/authenticated';
 import Header from '../components/header/header';
 import Footer from './footer';
-import CMS_Homecontests from './cms_homecontests';
-import CMS_Articles from './cms_articles';
-import CMS_Videos from './cms_videos';
-import CMS_Experts from './cms_experts';
-import CMS_Contests from './cms_contests';
-import CMS_Winners from './cms_winners';
 
 const store = configureStore();
 
@@ -55,12 +49,12 @@ class App extends React.Component {
                 <Route path="/sales" component={Sales} />
                 <Route path="/login" component={Login} />
                 <Route path="/register" component={Register} />
-                <Route path="/cms_homecontests" component={CMS_Homecontests} />
-                <Route path="/cms_articles" component={CMS_Articles} />
-                <Route path="/cms_videos" component={CMS_Videos} />
-                <Route path="/cms_experts" component={CMS_Experts} />
-                <Route path="/cms_contests" component={CMS_Contests} />
-                <Route path="/cms_winners" component={CMS_Winners} />
+                <Route path="/cms_homecontests" component={RequireAuth(AuthenticatedRoutes)} />
+                <Route path="/cms_articles" component={RequireAuth(AuthenticatedRoutes)} />
+                <Route path="/cms_videos" component={RequireAuth(AuthenticatedRoutes)} />
+                <Route path="/cms_experts" component={RequireAuth(AuthenticatedRoutes)} />
+                <Route path="/cms_contests" component={RequireAuth(AuthenticatedRoutes)} />
+                <Route path="/cms_winners" component={RequireAuth(AuthenticatedRoutes)} />
                 <Footer />
               </Header>
             </Switch>

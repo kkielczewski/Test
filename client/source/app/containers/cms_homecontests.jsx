@@ -163,28 +163,28 @@ class Homecontests extends Component {
         <Segment raised textAlign='center' >
           <Header>Pierwszy konkurs na Instagramie</Header>
           <Input onChange={this.changeInsta1} label='Link do konkursu' />
-          <Header>Zdjecie konkursu</Header>
+          <Header>Zdjęcie konkursu</Header>
           <input className="form-control " type="file" onChange={this.changeInsta1File} multiple/>
           <Button onClick={this.handleClickInsta1} >Update</Button>
         </Segment>
         <Segment raised textAlign='center' >
           <Header>Drugi konkurs na Instagramie</Header>
           <Input onChange={this.changeInsta2} label='Link do konkursu' />
-          <Header>Zdjecie konkursu</Header>
+          <Header>Zdjęcie konkursu</Header>
           <input className="form-control " type="file" onChange={this.changeInsta2File} multiple/>
           <Button onClick={this.handleClickInsta2} >Update</Button>
         </Segment>
         <Segment raised textAlign='center' >
           <Header>Pierwszy konkurs na Facebooku</Header>
           <Input onChange={this.changeFacebook1} label='Link do konkursu' />
-          <Header>Zdjecie konkursu</Header>
+          <Header>Zdjęcie konkursu</Header>
           <input className="form-control " type="file" onChange={this.changeFacebook1File} multiple/>
           <Button onClick={this.handleClickFacebook1} >Update</Button>
         </Segment>
         <Segment raised textAlign='center' >
           <Header>Drugi konkurs na Facebooku</Header>
           <Input onChange={this.changeFacebook2} label='Link do konkursu' />
-          <Header>Zdjecie konkursu</Header>
+          <Header>Zdjęcie konkursu</Header>
           <input className="form-control " type="file" onChange={this.changeFacebook2File} multiple/>
           <Button onClick={this.handleClickFacebook2} >Update</Button>
         </Segment>
