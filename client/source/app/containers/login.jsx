@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
+import { Redirect } from 'react-router-dom';
 import TextInput from '../components/text-input';
 import GenericForm from '../components/generic-form';
 import { login, CHANGE_AUTH } from '../redux/modules/authentication';
@@ -50,9 +51,11 @@ class Login extends Component {
       message,
       loading
     } = this.props;
+    const redirect = this.props.authenticated ? <Redirect to={{ pathname: '/search', search: `?v=${this.state.searchValue}` }} /> : <div></div>;
 
     return (
       <div className={`auth-box ${loading ? 'is-loading' : ''}`}>
+        {redirect}
         <h1>Login</h1>
         <GenericForm
           onSubmit={handleSubmit(this.handleFormSubmit)}
