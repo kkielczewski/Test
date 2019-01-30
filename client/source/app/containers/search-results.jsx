@@ -32,7 +32,6 @@ class SearchResults extends React.Component {
   }
 
   async componentDidMount() {
-    console.log(queryString.parse(this.props.location.search));
     const object = await getSomeVideos('UUlYlNvdBOuwuQZrCle9BrcA');
 
     const articles = [{ link: '/blog/1', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', thumbnails: '' },

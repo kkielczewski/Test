@@ -8,7 +8,7 @@ class Video extends React.Component {
     return (
       <div className='mainContainer' >
         <div className='blueStripe' ></div>
-        <VideosList />
+        <VideosList query={this.props.location.search} />
         <MainArticles />
         <ProductCarousel />
       </div>
