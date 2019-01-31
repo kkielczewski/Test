@@ -31,7 +31,7 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store} >
-        <BrowserRouter>
+        <BrowserRouter forceRefresh={true} >
           <div style={{ height: '100%' }} >
             <Switch>
               <Header>

@@ -26,7 +26,7 @@ class VideosList extends React.Component {
       if (object.totalCount > (parseInt(queryString.parse(this.props.query).page, 10) - 1) * 8) {
         this.setState({ allVideos: object.videos, activePage: parseInt(queryString.parse(this.props.query).page, 10), currentVideos: object.videos.slice((parseInt(queryString.parse(this.props.query).page, 10) - 1) * 8, parseInt(queryString.parse(this.props.query).page, 10) * 8), totalCount: object.totalCount });
       } else {
-        this.setState({ allVideos: object.videos, currentVideos: object.videos.slice(0, 8), totalCount: object.totalCount });
+        this.setState({ allVideos: object.videos, currentVideos: object.videos.slice(0, 8), totalCount: object.totalCount, pageChange: true });
       }
     } else {
       this.setState({ allVideos: object.videos, currentVideos: object.videos.slice(0, 8), totalCount: object.totalCount });

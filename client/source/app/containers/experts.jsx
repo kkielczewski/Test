@@ -8,7 +8,7 @@ class Experts extends React.Component {
     return (
       <div className='mainContainer' >
         <div className='blueStripe' ></div>
-        <ExpertsList />
+        <ExpertsList query={this.props.location.search} />
         <MainMovies />
         <ProductCarousel />
       </div>

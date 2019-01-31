@@ -1,6 +1,8 @@
 import React from 'react';
 import { Header } from 'semantic-ui-react';
 import Pagination from 'react-js-pagination';
+import { Redirect } from 'react-router-dom';
+import queryString from 'query-string';
 import DoctorCard from '../components/doctor-card';
 
 class ExpertsList extends React.Component {
@@ -10,7 +12,8 @@ class ExpertsList extends React.Component {
       allExperts: [],
       currentExperts: [],
       activePage: 1,
-      totalCount: null
+      totalCount: null,
+      pageChange: false
     };
     this.handlePageChange = this.handlePageChange.bind(this);
   }
@@ -31,18 +34,28 @@ class ExpertsList extends React.Component {
       { link: '/expert/13', thumbnail: '' },
       { link: '/expert/14', thumbnail: '' }];
 
-    this.setState({ allExperts: doctors, currentExperts: doctors.slice(0, 12), totalCount: 14 });
+    if (queryString.parse(this.props.query).page) {
+      if (doctors.length > (parseInt(queryString.parse(this.props.query).page, 10) - 1) * 12) {
+        this.setState({ allExperts: doctors, activePage: parseInt(queryString.parse(this.props.query).page, 10), currentExperts: doctors.slice((parseInt(queryString.parse(this.props.query).page, 10) - 1) * 12, parseInt(queryString.parse(this.props.query).page, 10) * 12), totalCount: doctors.length });
+      } else {
+        this.setState({ allExperts: doctors, currentExperts: doctors.slice(0, 12), totalCount: doctors.length, pageChange: true });
+      }
+    } else {
+      this.setState({ allExperts: doctors, currentExperts: doctors.slice(0, 12), totalCount: doctors.length });
+    }
   }
 
   handlePageChange(pageNumber) {
     const offset = (pageNumber - 1) * 12;
     const currentItems = this.state.allExperts.slice(offset, offset + 12);
-    this.setState({ activePage: pageNumber, currentExperts: currentItems });
+    this.setState({ activePage: pageNumber, currentExperts: currentItems, pageChange: true });
   }
 
   render() {
+    const redirect = this.state.pageChange ? <Redirect to={{ pathname: '/expert', search: `?page=${this.state.activePage}` }} /> : <div></div>;
     return (
       <div className='doctorsContainer' >
+        {redirect}
         <div className='whiteContainer whiteFull' >
           <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
           <div className='doctorList' >

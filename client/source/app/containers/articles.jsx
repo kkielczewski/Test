@@ -9,7 +9,7 @@ class Articles extends React.Component {
     return (
       <div className='mainContainer' >
         <div className='blueStripe' ></div>
-        <ArticlesList />
+        <ArticlesList query={this.props.location.search} />
         <MainMovies />
         <ProductCarousel />
       </div>
