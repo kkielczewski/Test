@@ -1,7 +1,7 @@
 module.exports = () => {
   // Default to dev presets
   const dbConfig = {
-    url: process.env.MONGODB_URI || 'mongodb://gryv:lorrcenesrch1@ds163694.mlab.com:63694/alleccocms',
+    url: 'mongodb://alleccocms:alleccocms1@ds251284.mlab.com:51284/alleccocms',
     opts: {
       autoReconnect: true
     }
@@ -13,7 +13,6 @@ module.exports = () => {
     case 'stage':
       break;
     case 'test':
-      Object.assign(dbConfig, { url: process.env.MONGODB_URI || 'mongodb://gryv:lorrcenesrch1@ds163694.mlab.com:63694/alleccocms' });
       break;
     case 'dev':
     default:
