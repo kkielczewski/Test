@@ -140,9 +140,9 @@ class Header extends Component {
     const MobileBar = () => (<Menu as={Menu} icon="labeled" vertical className={this.state.sideClass} >
       <SearchAll onSearch={this.searchAll} />
       <NavLink onClick={this.closeSidebar} className= "item" exact to='/' style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }}>HOME</NavLink>
-      <NavLink onClick={this.closeSidebar} className="item" exact to="/video?page=1" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >VIDEO</NavLink>
-      <NavLink onClick={this.closeSidebar} className="item" to="/blog?page=1" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >BLOG</NavLink>
-      <NavLink onClick={this.closeSidebar} className="item" exact to="/expert?page=1" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >EKSPERCI</NavLink>
+      <NavLink onClick={this.closeSidebar} className="item" exact to="/video" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >VIDEO</NavLink>
+      <NavLink onClick={this.closeSidebar} className="item" to="/blog" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >BLOG</NavLink>
+      <NavLink onClick={this.closeSidebar} className="item" exact to="/expert" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >EKSPERCI</NavLink>
       <NavLink onClick={this.closeSidebar} className="item" exact to="/sales" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >PROMOCJE</NavLink>
       <NavLink onClick={this.closeSidebar} className="item" exact to="/contests" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >KONKURSY</NavLink>
       <NavLink onClick={this.closeSidebar} className="item" to="/info" style={{ fontSize: '24px', padding: '0.5em 0.8em 0.5em 0.8em' }} >O NAS</NavLink>
@@ -164,9 +164,9 @@ class Header extends Component {
             </div>
             <Menu.Menu position='right'>
               {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className='item' exact to='/' >HOME</NavLink>}
-              {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className='item' to='/video?page=1' >VIDEO</NavLink>}
-              {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/blog?page=1" >BLOG</NavLink>}
-              {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/expert?page=1" >EKSPERCI</NavLink>}
+              {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className='item' to='/video' >VIDEO</NavLink>}
+              {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/blog" >BLOG</NavLink>}
+              {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/expert" >EKSPERCI</NavLink>}
               {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/sales" >PROMOCJE</NavLink>}
               {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/contests" >KONKURSY</NavLink>}
               {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/info" >O NAS</NavLink>}

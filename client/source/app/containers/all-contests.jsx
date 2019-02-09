@@ -31,7 +31,7 @@ class MainContest extends React.Component {
         <div className='redLine' ><div className='leftDot'/><div className='rightDot'/></div>
         <Header className='recomendedProducts allContestsHeader' textAlign='center' >KONKURSY</Header>
         <div className='mainContest' >
-          <iframe src={'https://www.youtube.com/embed/' + this.state.id + '?rel=0'} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen />
+          <iframe src={'https://www.youtube.com/embed/' + this.state.id} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen />
         </div>
         <div className='otherContests' >
           {this.state.otherContests.map(contest => <ImageLink link={contest.link} image={contest.image} />)}
