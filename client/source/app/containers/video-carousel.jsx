@@ -3,6 +3,7 @@ import { Responsive } from 'semantic-ui-react';
 import Slider from 'react-slick';
 import Pagination from 'react-js-pagination';
 import VideoCard from '../components/video-card';
+import SliderArrow from '../components/slider-arrow';
 import { getSomeVideos } from '../utils/youtube-utils';
 
 class VideoCarousel extends React.Component {
@@ -34,6 +35,8 @@ class VideoCarousel extends React.Component {
       className: 'videoCarousel',
       centerMode: true,
       infinite: true,
+      prevArrow: <SliderArrow to='prev' side='left' />,
+      nextArrow: <SliderArrow to='next' side='right' />,
       centerPadding: '0px',
       slidesToShow: 3,
       speed: 500,
