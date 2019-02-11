@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Responsive } from 'semantic-ui-react';
+import { Header } from 'semantic-ui-react';
 import ImageLink from '../components/image-link';
 import { getVideo } from '../utils/youtube-utils';
 import VideoPlaceholder from '../assets/images/video-placeholder.jpg';
