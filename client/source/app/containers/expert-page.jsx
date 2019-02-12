@@ -4,7 +4,7 @@ import Pagination from 'react-js-pagination';
 import VideoCard from '../components/video-card';
 import ArticleCard from '../components/article-card';
 import Advice from '../components/advice';
-import { getSomeVideos } from '../utils/youtube-utils';
+import { getSomeVideos, getAllVideos } from '../utils/youtube-utils';
 import Avatar from '../assets/images/avatarPlaceholder.png';
 import MoviesPlaceholder from '../assets/images/movies-placeholder.png';
 import ArticlePlaceholder from '../assets/images/article-placeholder.png';
@@ -30,14 +30,12 @@ class VideoPage extends React.Component {
   }
 
   async componentDidMount() {
-    const allObject = await getSomeVideos('UUlYlNvdBOuwuQZrCle9BrcA');
+    const allObject = await getAllVideos('UUlYlNvdBOuwuQZrCle9BrcA');
 
     const all = [];
 
-    allObject.videos.forEach((element) => {
+    allObject.forEach((element) => {
       if (element.snippet.title.indexOf(this.state.name) !== -1) {
-        all.push(element);
-        all.push(element);
         all.push(element);
       }
     });
@@ -65,7 +63,7 @@ class VideoPage extends React.Component {
       }
     });
 
-    this.setState({ expertArticles: allArticles, currentArticles: allArticles.slice(0, 8), totalCountArticle: allArticles.length, expertVideos: all, currentVideos: all.slice(0,6), totalCountVideo: all.length });
+    this.setState({ expertArticles: allArticles, currentArticles: allArticles.slice(0, 8), totalCountArticle: allArticles.length, expertVideos: all, currentVideos: all.slice(0, 6), totalCountVideo: all.length });
   }
 
   handlePageChangeVideo(pageNumber) {

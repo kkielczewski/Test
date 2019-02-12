@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header, Button, Responsive } from 'semantic-ui-react';
 import ReactHtmlParser from 'react-html-parser';
-import { getSomeVideos } from '../utils/youtube-utils';
+import { getSomeVideos, getAllVideos } from '../utils/youtube-utils';
 import ArticleCard from '../components/article-card';
 import ArticleCardBig from '../components/article-card-big';
 import MainArticles from './main-articles';
@@ -32,11 +32,11 @@ class VideoPage extends React.Component {
   }
 
   async componentDidMount() {
-    const allObject = await getSomeVideos('UUlYlNvdBOuwuQZrCle9BrcA');
+    const allObject = await getAllVideos('UUlYlNvdBOuwuQZrCle9BrcA');
 
     const all = [];
 
-    allObject.videos.forEach((element) => {
+    allObject.forEach((element) => {
       if (element.snippet.title.indexOf('Wanda Baltaza') !== -1) {
         all.push(element);
       }

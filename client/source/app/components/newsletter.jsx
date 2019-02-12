@@ -43,10 +43,10 @@ class Newsletter extends React.Component {
         toastr.info('Dziękujemy za zapisanie się do newslettera.');
         this.setState({ disabled: true });
       } else {
-        console.log('Zaakceptuj regulamin i coś tam.');
+        toastr.info('Zaakceptuj regulamin.');
       }
     } else {
-      console.log('Niepoprawny email');
+      toastr.info('Niepoprawny email.');
     }
   }
 

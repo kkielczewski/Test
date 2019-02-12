@@ -57,27 +57,24 @@
       .slick-list {
         height: 342px;
       }
-      .slick-arrow {
-        width: 80px;
-        height: 80px;
+      .arrow {
         z-index: 1;
-        background-color: white;
-        border-radius: 50%;
+        background-color: transparent;
+        position: absolute;
+        top: 35%;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        i {
+          font-size: 100px;
+          color: #db2828;
+        }
       }
-      .slick-arrow::before {
-        opacity: 1;
-        color: #db2828;
-        z-index: 1;
-        font-size: 100px;
-        position: relative;
-        left: -10px;
-        top: -3px;
+      .arrow-left {
+        left: -70px;
       }
-      .slick-prev {
-        left: -77px;
-      }
-      .slick-next {
-        right: -77px;
+      .arrow-right {
+        right: -70px;
       }
     }
   }
@@ -119,18 +116,16 @@
         .slick-list {
           height: 253px;
         }
-        .slick-arrow {
-          width: 50px;
-          height: 50px;
+        .arrow {
+          i {
+            font-size: 66px;
+          }
         }
-        .slick-arrow::before {
-          font-size: 66px;
+        .arrow-left {
+          left: -45px;
         }
-        .slick-prev {
-          left: -40px;
-        }
-        .slick-next {
-          right: -46px;
+        .arrow-right {
+          right: -45px;
         }
       }
     }
@@ -175,20 +170,16 @@
         .slick-list {
           height: 172px;
         }
-        .slick-arrow {
-          width: 30px;
-          height: 30px;
+        .arrow {
+          i {
+            font-size: 55px;
+          }
         }
-        .slick-arrow::before {
-          font-size: 39px;
-          left: -4px;
-          top: -2px;
+        .arrow-left {
+          left: -35px;
         }
-        .slick-prev {
-          left: -25px;
-        }
-        .slick-next {
-          right: -25px;
+        .arrow-right {
+          right: -35px;
         }
       }
     }

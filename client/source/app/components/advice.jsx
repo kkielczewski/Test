@@ -22,7 +22,7 @@ class Advice extends React.Component {
       toastr.info('Dziękujemy za informacje.');
       this.setState({ disabled: true });
     } else {
-      console.log('Zostawiłeś puste pole.');
+      toastr.info('Zostawiłeś puste pole.');
     }
   }
 

@@ -3,6 +3,7 @@ import { Header, Responsive } from 'semantic-ui-react';
 import Slider from 'react-slick';
 import Pagination from 'react-js-pagination';
 import YoutubeCard from '../components/youtube-card';
+import SliderArrow from '../components/slider-arrow';
 import { getVideo, getSomeVideos } from '../utils/youtube-utils';
 
 class MainContest extends React.Component {
@@ -37,6 +38,8 @@ class MainContest extends React.Component {
       className: 'contestCarousel',
       centerMode: true,
       infinite: true,
+      prevArrow: <SliderArrow to='prev' side='left' />,
+      nextArrow: <SliderArrow to='next' side='right' />,
       centerPadding: '0px',
       slidesToShow: 3,
       speed: 500,

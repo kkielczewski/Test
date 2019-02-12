@@ -22,7 +22,6 @@ class VideosList extends React.Component {
 
   async componentDidMount() {
     const object = await getAllVideos('UUlYlNvdBOuwuQZrCle9BrcA');
-    console.log(object);
     if (queryString.parse(this.props.query).page) {
       if (object.totalCount > (parseInt(queryString.parse(this.props.query).page, 10) - 1) * 8) {
         this.setState({ allVideos: object, activePage: parseInt(queryString.parse(this.props.query).page, 10), currentVideos: object.slice((parseInt(queryString.parse(this.props.query).page, 10) - 1) * 8, parseInt(queryString.parse(this.props.query).page, 10) * 8), totalCount: object.length });

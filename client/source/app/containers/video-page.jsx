@@ -2,15 +2,17 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { Header, Button, Responsive } from 'semantic-ui-react';
 import toastr from 'toastr';
-import MainMovies from './main-movies';
+import ReactHtmlParser from 'react-html-parser';
 import VideoCard from '../components/video-card';
 import VideoCardBig from '../components/video-card-big';
-import { getVideo, getSomeVideos } from '../utils/youtube-utils';
+import { getVideo, getAllVideos, getSomeVideos } from '../utils/youtube-utils';
 import Avatar from '../assets/images/avatarPlaceholder.png';
 import ExpertInfo from './expert-info';
 import Advice from '../components/advice';
 import ExpertMovies from './expert-movies';
 import ProductCarousel from './product-carousel';
+
+// https://www.googleapis.com/youtube/v3/search?q=Wanda+Baltaza&key=AIzaSyBAvkC4SNGj2oa19dL-AvWs7W5j-mLZJsk&channelId=UClYlNvdBOuwuQZrCle9BrcA&part=snippet&maxResults=20&type=playlist
 
 // Youtube API
 
@@ -165,21 +167,20 @@ class VideoPage extends React.Component {
   async componentDidMount() {
     handleClientLoad();
     const object = await getVideo(this.props.match.params.id);
-    const allObject = await getSomeVideos('UUlYlNvdBOuwuQZrCle9BrcA');
-
+    const allObject = await getAllVideos('UUlYlNvdBOuwuQZrCle9BrcA');
     if (object === undefined) {
       this.setState({ noVideo: true });
     }
 
     const all = [];
 
-    allObject.videos.forEach((element) => {
+    allObject.forEach((element) => {
       if (element.snippet.title.indexOf(object.snippet.title.slice(0, object.snippet.title.indexOf(','))) !== -1) {
         all.push(element);
       }
     });
 
-    this.setState({ allVideos: allObject.videos, id: object.id, image: object.snippet.thumbnails.maxres.url, title: object.snippet.title, expert: object.snippet.title.slice(0, object.snippet.title.indexOf(',')), expertVideos: all });
+    this.setState({ allVideos: allObject, id: object.id, image: object.snippet.thumbnails.maxres.url, title: object.snippet.title, expert: object.snippet.title.slice(0, object.snippet.title.indexOf(',')), expertVideos: all, description: object.snippet.description.replace(/(\r\n|\n|\r)/gm, '<br />') });
   }
 
   shareFacebook() {
@@ -219,7 +220,7 @@ class VideoPage extends React.Component {
               </div>
             </div>
             <div className='description' >
-            Opis filmu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              {ReactHtmlParser(this.state.description)}
             </div>
           </div>
           <Responsive minWidth='1021' >

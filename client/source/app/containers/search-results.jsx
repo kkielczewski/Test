@@ -2,12 +2,12 @@ import React from 'react';
 import { Tab } from 'semantic-ui-react';
 import Pagination from 'react-js-pagination';
 import queryString from 'query-string';
-import VideoCard from '../components/video-card';
+import SearchVideoCard from '../components/search-video-card';
 import ArticleCard from '../components/article-card';
 import ArticlePlaceholder from '../assets/images/article-placeholder.png';
 import DoctorCard from '../components/doctor-card';
 import ProductCarousel from './product-carousel';
-import { getSomeVideos } from '../utils/youtube-utils';
+import { getSomeVideos, getYoutube } from '../utils/youtube-utils';
 
 class SearchResults extends React.Component {
   constructor(props) {
@@ -32,8 +32,10 @@ class SearchResults extends React.Component {
   }
 
   async componentDidMount() {
-    const object = await getSomeVideos('UUlYlNvdBOuwuQZrCle9BrcA');
-
+    const object2 = await getSomeVideos('UUlYlNvdBOuwuQZrCle9BrcA');
+    const object = await getYoutube(`search?q=${queryString.parse(this.props.location.search).p}&key=AIzaSyBAvkC4SNGj2oa19dL-AvWs7W5j-mLZJsk&channelId=UClYlNvdBOuwuQZrCle9BrcA&part=snippet&maxResults=50&type=video`);
+    console.log(object.items);
+    console.log(object2.videos);
     const articles = [{ link: '/blog/1', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', thumbnails: '' },
       { link: '/blog/2', title: 'Zamienniki leków - czy to to samo co ich oryginalne odpowiedniki?', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.', thumbnails: '' }];
 
@@ -41,7 +43,7 @@ class SearchResults extends React.Component {
       { link: '/expert/2', thumbnail: '' },
       { link: '/expert/3', thumbnail: '' }];
 
-    this.setState({ videos: object.videos, currentVideos: object.videos.slice(0, 6), totalCountVideo: object.videos.length, articles, currentArticles: articles.slice(0, 8), totalCountArticle: articles.length, experts, currentExperts: experts.slice(0, 12), totalCountExpert: experts.length });
+    this.setState({ videos: object.items, currentVideos: object.items.slice(0, 6), totalCountVideo: object.items.length, articles, currentArticles: articles.slice(0, 8), totalCountArticle: articles.length, experts, currentExperts: experts.slice(0, 12), totalCountExpert: experts.length });
   }
 
   handlePageChangeVideo(pageNumber) {
@@ -65,7 +67,7 @@ class SearchResults extends React.Component {
   render() {
     const panes = [];
     if (this.state.videos.length !== 0) {
-      panes.push({ menuItem: 'Filmy', render: () => <Tab.Pane><div className='mainMovies' >{this.state.currentVideos.map(video => <VideoCard video={video} />)}</div><div className='videoNav' ><Pagination hideFirstLastPages activePage={this.state.activePageVideo} itemsCountPerPage={6} totalItemsCount={this.state.totalCountVideo} pageRangeDisplayed={5} activeClass="activeli" activeLinkClass="active" linkClassPrev="prev" linkClassNext="next" prevPageText="<" nextPageText='>' onChange={this.handlePageChangeVideo}/></div></Tab.Pane> });
+      panes.push({ menuItem: 'Filmy', render: () => <Tab.Pane><div className='mainMovies' >{this.state.currentVideos.map(video => <SearchVideoCard video={video} />)}</div><div className='videoNav' ><Pagination hideFirstLastPages activePage={this.state.activePageVideo} itemsCountPerPage={6} totalItemsCount={this.state.totalCountVideo} pageRangeDisplayed={5} activeClass="activeli" activeLinkClass="active" linkClassPrev="prev" linkClassNext="next" prevPageText="<" nextPageText='>' onChange={this.handlePageChangeVideo}/></div></Tab.Pane> });
     }
     if (this.state.articles.length !== 0) {
       panes.push({ menuItem: 'Artykuły', render: () => <Tab.Pane><div className='mainArticles' >{this.state.currentArticles.map(article => <ArticleCard id='1' image={ArticlePlaceholder} article={article} />)}</div><div className='videoNav' ><Pagination hideFirstLastPages activePage={this.state.activePageArticle} itemsCountPerPage={6} totalItemsCount={this.state.totalCountArticle} pageRangeDisplayed={5} activeClass="activeli" activeLinkClass="active" linkClassPrev="prev" linkClassNext="next" prevPageText="<" nextPageText='>' onChange={this.handlePageChangeArticle}/></div></Tab.Pane> });
