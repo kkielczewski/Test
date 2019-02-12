@@ -5,7 +5,7 @@ import Pagination from 'react-js-pagination';
 import queryString from 'query-string';
 import VideoCard from '../components/video-card';
 import Newsletter from '../components/newsletter';
-import { getSomeVideos } from '../utils/youtube-utils';
+import { getSomeVideos, getAllVideos } from '../utils/youtube-utils';
 
 class VideosList extends React.Component {
   constructor(props) {
@@ -21,15 +21,16 @@ class VideosList extends React.Component {
   }
 
   async componentDidMount() {
-    const object = await getSomeVideos('UUlYlNvdBOuwuQZrCle9BrcA');
+    const object = await getAllVideos('UUlYlNvdBOuwuQZrCle9BrcA');
+    console.log(object);
     if (queryString.parse(this.props.query).page) {
       if (object.totalCount > (parseInt(queryString.parse(this.props.query).page, 10) - 1) * 8) {
-        this.setState({ allVideos: object.videos, activePage: parseInt(queryString.parse(this.props.query).page, 10), currentVideos: object.videos.slice((parseInt(queryString.parse(this.props.query).page, 10) - 1) * 8, parseInt(queryString.parse(this.props.query).page, 10) * 8), totalCount: object.totalCount });
+        this.setState({ allVideos: object, activePage: parseInt(queryString.parse(this.props.query).page, 10), currentVideos: object.slice((parseInt(queryString.parse(this.props.query).page, 10) - 1) * 8, parseInt(queryString.parse(this.props.query).page, 10) * 8), totalCount: object.length });
       } else {
-        this.setState({ allVideos: object.videos, currentVideos: object.videos.slice(0, 8), totalCount: object.totalCount, pageChange: true });
+        this.setState({ allVideos: object, currentVideos: object.slice(0, 8), totalCount: object.length, pageChange: true });
       }
     } else {
-      this.setState({ allVideos: object.videos, currentVideos: object.videos.slice(0, 8), totalCount: object.totalCount });
+      this.setState({ allVideos: object, currentVideos: object.slice(0, 8), totalCount: object.length });
     }
   }
 
