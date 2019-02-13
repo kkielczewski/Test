@@ -173,7 +173,6 @@ class Header extends Component {
               {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/contact" >KONTAKT</NavLink>}
               {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_homecontests" >Home Page Contests</NavLink>}
               {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_articles" >Articles</NavLink>}
-              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_videos" >Videos</NavLink>}
               {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_experts" >Experts</NavLink>}
               {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_contests" >Contests</NavLink>}
               {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_winners" >Contests Winners</NavLink>}
