@@ -10,14 +10,12 @@ class Experts extends Component {
       text: '',
       thumbnail: null,
       thumbnailName: '',
-      playlist: '',
       idDelete: null
     };
 
     this.changeName = this.changeName.bind(this);
     this.changeText = this.changeText.bind(this);
     this.changeThumbnail = this.changeThumbnail.bind(this);
-    this.changePlaylist = this.changePlaylist.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleIdDelete = this.handleIdDelete.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
@@ -36,15 +34,11 @@ class Experts extends Component {
     this.setState({ thumbnail: image, thumbnailName: image.name });
   }
 
-  changePlaylist(e, { value }) {
-    this.setState({ playlist: value });
-  }
-
   handleClick() {
-    if (this.state.name !== '' && this.state.text !== '' && this.state.thumbnail !== null && this.state.playlist !== '') {
+    if (this.state.name !== '' && this.state.text !== '' && this.state.thumbnail !== null) {
       const tmp = this.state.thumbnail;
 
-      const tmp2 = { name: this.state.name, text: this.state.text, thumbnailName: this.state.thumbnailName, playlist: this.state.playlist };
+      const tmp2 = { name: this.state.name, text: this.state.text, thumbnailName: this.state.thumbnailName };
       console.log(tmp2);
 
       const data = new FormData();
@@ -72,7 +66,6 @@ class Experts extends Component {
           <Input onChange={this.changeText} label='Opis' />
           <Header>Zdjęcie Eksperta</Header>
           <input className="form-control " type="file" onChange={this.changeThumbnail} multiple/>
-          <Input onChange={this.changePlaylist} label='Id playlisty' />
           <div>
             <Button>Wyślij</Button>
           </div>

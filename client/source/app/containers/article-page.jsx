@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import { Header, Button, Responsive } from 'semantic-ui-react';
 import ReactHtmlParser from 'react-html-parser';
 import { getSomeVideos, getAllVideos } from '../utils/youtube-utils';
@@ -23,7 +24,8 @@ class VideoPage extends React.Component {
       expertArticles: [],
       title: '',
       content: '',
-      allProducts: []
+      allProducts: [],
+      noArticle: false
     };
 
     this.resolveDescription = this.resolveDescription.bind(this);
@@ -88,8 +90,10 @@ class VideoPage extends React.Component {
   }
 
   render() {
+    const redirect = this.state.noArticle ? <Redirect to="/blog"/> : <div></div>;
     return (
       <div className='mainContainer' >
+        {redirect}
         <div className='blueStripe' ></div>
         <div className='videoPageContainer' >
           <div className='main' >

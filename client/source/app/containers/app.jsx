@@ -51,7 +51,6 @@ class App extends React.Component {
                 <Route path="/register" component={Register} />
                 <Route path="/cms_homecontests" component={RequireAuth(AuthenticatedRoutes)} />
                 <Route path="/cms_articles" component={RequireAuth(AuthenticatedRoutes)} />
-                <Route path="/cms_videos" component={RequireAuth(AuthenticatedRoutes)} />
                 <Route path="/cms_experts" component={RequireAuth(AuthenticatedRoutes)} />
                 <Route path="/cms_contests" component={RequireAuth(AuthenticatedRoutes)} />
                 <Route path="/cms_winners" component={RequireAuth(AuthenticatedRoutes)} />
