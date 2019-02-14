@@ -171,11 +171,12 @@ class Header extends Component {
               {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/contests" >KONKURSY</NavLink>}
               {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/info" >O NAS</NavLink>}
               {!this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/contact" >KONTAKT</NavLink>}
-              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_homecontests" >Home Page Contests</NavLink>}
-              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_articles" >Articles</NavLink>}
-              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_experts" >Experts</NavLink>}
-              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_contests" >Contests</NavLink>}
-              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_winners" >Contests Winners</NavLink>}
+              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_homecontests" >Konkursy na stronie głównej</NavLink>}
+              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_articles" >Artykuły</NavLink>}
+              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_experts" >Eksperci</NavLink>}
+              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_contests" >Konkursy</NavLink>}
+              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_winners" >Zwycięzcy Konkursów</NavLink>}
+              {this.props.authenticated && <NavLink onClick={this.scrollToTop} className="item" to="/cms_our_contests" >Nasze Konkursy</NavLink>}
               {this.props.authenticated && <a className='item' href='javascript:void(null);' onClick={this.props.logoutUser}>Log Out</a>}
             </Menu.Menu>
           </div>

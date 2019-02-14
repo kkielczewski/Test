@@ -5,6 +5,7 @@ import Articles from '../containers/cms_articles';
 import Experts from '../containers/cms_experts';
 import Contests from '../containers/cms_contests';
 import Winners from '../containers/cms_winners';
+import OurContests from '../containers/cms_our_contests';
 
 const AuthenticatedRoutes = () => (
   <Switch>
@@ -13,6 +14,7 @@ const AuthenticatedRoutes = () => (
     <Route exact path="/cms_experts" component={() => <Experts />} />
     <Route exact path="/cms_contests" component={() => <Contests />} />
     <Route exact path="/cms_winners" component={() => <Winners />} />
+    <Route exact path="/cms_our_contests" component={() => <OurContests />} />
   </Switch>
 );
 

@@ -54,6 +54,7 @@ class App extends React.Component {
                 <Route path="/cms_experts" component={RequireAuth(AuthenticatedRoutes)} />
                 <Route path="/cms_contests" component={RequireAuth(AuthenticatedRoutes)} />
                 <Route path="/cms_winners" component={RequireAuth(AuthenticatedRoutes)} />
+                <Route path="/cms_our_contests" component={RequireAuth(AuthenticatedRoutes)} />
                 <Footer />
               </Header>
             </Switch>
