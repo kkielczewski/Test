@@ -71,22 +71,22 @@ class OurContests extends Component {
       <Segment className='articles' raised textAlign='center'>
         <Segment raised textAlign='center' >
           <Header>Pierwszy konkurs facebook</Header>
-          <Input onChange={this.changeFacebook1} label='np. https://www.facebook.com/Allecco/posts/2069247059792412' />
+          <Input onChange={this.changeFacebook1} label='link' placeholder='np. https://www.facebook.com/Allecco/posts/2069247059792412' />
           <Button onClick={this.handleClickFace1} >Update</Button>
         </Segment>
         <Segment raised textAlign='center' >
           <Header>Drugi konkurs facebook</Header>
-          <Input onChange={this.changeFacebook2} label='np. https://www.facebook.com/Allecco/posts/2069247059792412' />
+          <Input onChange={this.changeFacebook2} label='link' placeholder='np. https://www.facebook.com/Allecco/posts/2069247059792412' />
           <Button onClick={this.handleClickFace2} >Update</Button>
         </Segment>
         <Segment raised textAlign='center' >
           <Header>Pierwszy konkurs instagram</Header>
-          <Input onChange={this.changeInstagram1} label='np. https://instagr.am/p/BoRICjtFK6e/' />
+          <Input onChange={this.changeInstagram1} label='link' placeholder='np. https://instagr.am/p/BoRICjtFK6e/' />
           <Button onClick={this.handleClickInsta1} >Update</Button>
         </Segment>
         <Segment raised textAlign='center' >
           <Header>Drugi konkurs instagram</Header>
-          <Input onChange={this.changeInstagram2} label='np. https://instagr.am/p/BoRICjtFK6e/' />
+          <Input onChange={this.changeInstagram2} label='link' placeholder='np. https://instagr.am/p/BoRICjtFK6e/' />
           <Button onClick={this.handleClickInsta2} >Update</Button>
         </Segment>
       </Segment>
