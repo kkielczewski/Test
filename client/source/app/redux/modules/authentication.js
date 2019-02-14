@@ -29,7 +29,7 @@ export const login = (credentials, desiredPath) => async (dispatch) => {
 
     // If the login was successful, set the JWT as a cookie
     if (response) {
-      setCookie('token', response.token, { maxAge: response.tokenExpiration });
+      setCookie('token', 'jwt', { maxAge: 15 });
 
       if (desiredPath) {
         window.location.href = `${getAppUrl()}${desiredPath}`;
@@ -52,7 +52,7 @@ export const register = formData => async (dispatch) => {
 
     // If the registration was successful, set the JWT as a cookie
     if (response) {
-      setCookie('token', response.token, { maxAge: response.tokenExpiration });
+      setCookie('token', 'jwt', { maxAge: 15 });
       window.location.href = `${getAppUrl()}/`;
     }
   } catch (err) {
