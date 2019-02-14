@@ -29,6 +29,7 @@ export const login = (credentials, desiredPath) => async (dispatch) => {
 
     // If the login was successful, set the JWT as a cookie
     if (response) {
+      console.log(response.token);
       setCookie('token', response.token, { maxAge: response.tokenExpiration });
 
       if (desiredPath) {
