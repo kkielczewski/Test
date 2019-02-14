@@ -6,8 +6,6 @@ import { getAllCookies } from './app/utils/cookie-utils';
 
 import './styles/base.scss';
 
-console.log(getAllCookies());
-
 if (!window.Promise) {
   window.Promise = Promise;
 }
