@@ -25,6 +25,8 @@ export const setCookie = (name, value, options = {}) => cookies.set(name, value,
  */
 export const getCookie = name => cookies.get(name);
 
+export const getAllCookies = () => cookies.getAll();
+
 /**
  * deleteCookie  - Removes a cookie. Not super necessary, but it
  *                 keeps things uniform
